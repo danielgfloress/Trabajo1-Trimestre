@@ -158,7 +158,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="modelos" layers="0" collapse-mode="2" max-obj-count="7" z-value="0">
+<table name="modelos" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="2509.77" y="78.8889"/>
@@ -171,6 +171,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="nombre" not-null="true">
 		<type name="character varying" length="100"/>
+	</column>
+	<column name="categoria" not-null="true">
+		<type name="character varying" length="30"/>
 	</column>
 	<column name="precio_base" not-null="true">
 		<type name="numeric" length="10" precision="2"/>
@@ -221,7 +224,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<constraint name="chk_talla_valida" type="ck-constr" table="public.almacen">
-			<expression> <![CDATA[((talla >= 28) AND (talla <= 55))]]> </expression>
+			<expression> <![CDATA[talla BETWEEN 36 AND 46]]> </expression>
 	</constraint>
 	<constraint name="chk_stock_no_negativo" type="ck-constr" table="public.almacen">
 			<expression> <![CDATA[(stock_disponible >= 0)]]> </expression>
@@ -286,8 +289,8 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 identity-type="BY DEFAULT" start="1" increment="1" min-value="1" max-value="2147483647" cache="1">
 		<type name="integer" length="0"/>
 	</column>
-	<column name="ref_pedido_custom">
-		<type name="character varying" length="50"/>
+	<column name="ref_odoo" not-null="true">
+		<type name="character varying" length="20"/>
 	</column>
 	<column name="id_cliente" not-null="true">
 		<type name="integer" length="0"/>
@@ -298,8 +301,8 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="fecha_pedido" not-null="true" default-value="CURRENT_TIMESTAMP">
 		<type name="timestamp" length="0"/>
 	</column>
-	<column name="es_custom" not-null="true" default-value="false">
-		<type name="boolean" length="0"/>
+	<column name="tipo" not-null="true" default-value="'ESTANDAR'">
+		<type name="character varying" length="10"/>
 	</column>
 	<column name="estado" not-null="true" default-value="'BORRADOR'">
 		<type name="character varying" length="20"/>
@@ -308,7 +311,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_estado_pedido" type="ck-constr" table="public.pedidos">
-			<expression> <![CDATA[((estado)::text = ANY ((ARRAY['BORRADOR'::character varying, 'CONFIRMADO'::character varying, 'CANCELADO'::character varying])::text[]))]]> </expression>
+			<expression> <![CDATA[estado IN ('BORRADOR', 'CONFIRMADO', 'ENTREGADO', 'CANCELADO')]]> </expression>
 	</constraint>
 	<constraint name="chk_importe_total" type="ck-constr" table="public.pedidos">
 			<expression> <![CDATA[(importe_total >= (0)::numeric)]]> </expression>
@@ -316,8 +319,11 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<constraint name="pedidos_pkey" type="pk-constr" table="public.pedidos">
 		<columns names="id_pedido" ref-type="src-columns"/>
 	</constraint>
-	<constraint name="pedidos_ref_pedido_custom_key" type="uq-constr" table="public.pedidos">
-		<columns names="ref_pedido_custom" ref-type="src-columns"/>
+	<constraint name="pedidos_ref_odoo_key" type="uq-constr" table="public.pedidos">
+		<columns names="ref_odoo" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="chk_tipo_pedido" type="ck-constr" table="public.pedidos">
+			<expression> <![CDATA[tipo IN ('ESTANDAR', 'CUSTOM')]]> </expression>
 	</constraint>
 </table>
 
@@ -349,7 +355,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="precio_unitario" not-null="true">
 		<type name="numeric" length="10" precision="2"/>
 	</column>
-	<column name="subtotal_linea" not-null="true" default-value="0.00">
+	<column name="subtotal_linea" default-value="(cantidad * precio_unitario)" generated="true">
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_cantidad_positiva" type="ck-constr" table="public.lineas_pedido">
@@ -368,7 +374,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="log_eventos" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+<table name="log_eventos" layers="0" collapse-mode="2" max-obj-count="12" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="1949.8" y="150.635"/>
@@ -377,7 +383,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="fecha_hora" not-null="true" default-value="CURRENT_TIMESTAMP">
-		<type name="timestamp" length="0"/>
+		<type name="timestamp" length="0" with-timezone="true"/>
 	</column>
 	<column name="id_usuario">
 		<type name="integer" length="0"/>
@@ -392,10 +398,22 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="resumen_cambios" not-null="true">
-		<type name="character varying" length="255"/>
+		<type name="text" length="0"/>
+	</column>
+	<column name="accion">
+		<type name="varchar" length="60"/>
+	</column>
+	<column name="datos_antiguos">
+		<type name="jsonb" length="0"/>
+	</column>
+	<column name="datos_nuevos">
+		<type name="jsonb" length="0"/>
 	</column>
 	<constraint name="log_eventos_pkey" type="pk-constr" table="public.log_eventos">
 		<columns names="id_evento" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="chk_operacion" type="ck-constr" table="public.log_eventos">
+			<expression> <![CDATA[operacion IN ('INSERT','UPDATE','DELETE')]]> </expression>
 	</constraint>
 </table>
 
@@ -435,7 +453,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <constraint name="fk_lineas_pedido" type="fk-constr" comparison-type="MATCH SIMPLE"
-	 upd-action="CASCADE" del-action="CASCADE" ref-table="public.pedidos" table="public.lineas_pedido">
+	 upd-action="RESTRICT" del-action="RESTRICT" ref-table="public.pedidos" table="public.lineas_pedido">
 	<columns names="id_pedido" ref-type="src-columns"/>
 	<columns names="id_pedido" ref-type="dst-columns"/>
 </constraint>
@@ -447,13 +465,13 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <constraint name="fk_lineas_personalizacion" type="fk-constr" comparison-type="MATCH SIMPLE"
-	 upd-action="CASCADE" del-action="SET NULL" ref-table="public.personalizaciones" table="public.lineas_pedido">
+	 upd-action="CASCADE" del-action="RESTRICT" ref-table="public.personalizaciones" table="public.lineas_pedido">
 	<columns names="id_personalizacion" ref-type="src-columns"/>
 	<columns names="id_personalizacion" ref-type="dst-columns"/>
 </constraint>
 
 <constraint name="fk_log_usuario" type="fk-constr" comparison-type="MATCH SIMPLE"
-	 upd-action="CASCADE" del-action="SET NULL" ref-table="public.usuarios" table="public.log_eventos">
+	 upd-action="CASCADE" del-action="RESTRICT" ref-table="public.usuarios" table="public.log_eventos">
 	<columns names="id_usuario" ref-type="src-columns"/>
 	<columns names="id_usuario" ref-type="dst-columns"/>
 </constraint>
@@ -492,7 +510,11 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 custom-color="#247e8b"
 	 src-table="public.lineas_pedido"
 	 dst-table="public.pedidos" reference-fk="fk_lineas_pedido"
-	 src-required="false" dst-required="true"/>
+	 src-required="false" dst-required="true">
+	<label ref-type="name-label">
+		<position x="0" y="0"/>
+	</label>
+</relationship>
 
 <relationship name="rel_lineas_pedido_almacen" type="relfk" layers="0"
 	 custom-color="#f1759f"
