@@ -27,10 +27,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="nombre_rol" not-null="true">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="descripcion">
-		<type name="character varying" length="200"/>
+		<type name="varchar" length="200"/>
 	</column>
 	<constraint name="roles_pkey" type="pk-constr" table="public.roles">
 		<columns names="id_rol" ref-type="src-columns"/>
@@ -57,7 +57,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="operacion" not-null="true">
-		<type name="character varying" length="60"/>
+		<type name="varchar" length="60"/>
 	</column>
 	<column name="permitido" not-null="true" default-value="false">
 		<type name="boolean" length="0"/>
@@ -84,10 +84,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="username" not-null="true">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="password_hash" not-null="true">
-		<type name="character varying" length="255"/>
+		<type name="varchar" length="255"/>
 	</column>
 	<column name="id_rol" not-null="true">
 		<type name="integer" length="0"/>
@@ -120,25 +120,25 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="codigo_odoo">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="nombre" not-null="true">
-		<type name="character varying" length="100"/>
+		<type name="varchar" length="100"/>
 	</column>
 	<column name="tipo_cliente" not-null="true" default-value="'CLUB'">
-		<type name="character varying" length="30"/>
+		<type name="varchar" length="30"/>
 	</column>
 	<column name="email">
-		<type name="character varying" length="100"/>
+		<type name="varchar" length="100"/>
 	</column>
 	<column name="telefono">
-		<type name="character varying" length="20"/>
+		<type name="varchar" length="20"/>
 	</column>
 	<column name="activo" not-null="true" default-value="true">
 		<type name="boolean" length="0"/>
 	</column>
 	<constraint name="chk_tipo_cliente" type="ck-constr" table="public.clientes">
-			<expression><![CDATA[((tipo_cliente)::text = ANY ((ARRAY['CLUB'::character varying, 'EQUIPO'::character varying, 'PARTICULAR'::character varying])::text[]))]]></expression>
+			<expression><![CDATA[tipo_cliente IN ('CLUB', 'EQUIPO', 'PARTICULAR')]]></expression>
 	</constraint>
 	<constraint name="clientes_pkey" type="pk-constr" table="public.clientes">
 		<columns names="id_cliente" ref-type="src-columns"/>
@@ -165,13 +165,13 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="codigo_modelo" not-null="true">
-		<type name="character varying" length="40"/>
+		<type name="varchar" length="40"/>
 	</column>
 	<column name="nombre" not-null="true">
-		<type name="character varying" length="100"/>
+		<type name="varchar" length="100"/>
 	</column>
 	<column name="categoria" not-null="true">
-		<type name="character varying" length="30"/>
+		<type name="varchar" length="30"/>
 	</column>
 	<column name="precio_base" not-null="true">
 		<type name="numeric" length="10" precision="2"/>
@@ -183,7 +183,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="boolean" length="0"/>
 	</column>
 	<constraint name="chk_precio_base_positivo" type="ck-constr" table="public.modelos">
-			<expression><![CDATA[(precio_base > (0)::numeric)]]></expression>
+			<expression><![CDATA[precio_base > 0]]></expression>
 	</constraint>
 	<constraint name="modelos_pkey" type="pk-constr" table="public.modelos">
 		<columns names="id_modelo" ref-type="src-columns"/>
@@ -213,7 +213,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="color_base" not-null="true">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="stock_disponible" not-null="true" default-value="0">
 		<type name="integer" length="0"/>
@@ -225,7 +225,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 			<expression><![CDATA[talla BETWEEN 36 AND 46]]></expression>
 	</constraint>
 	<constraint name="chk_stock_no_negativo" type="ck-constr" table="public.almacen">
-			<expression><![CDATA[(stock_disponible >= 0)]]></expression>
+			<expression><![CDATA[stock_disponible >= 0]]></expression>
 	</constraint>
 	<constraint name="almacen_pkey" type="pk-constr" table="public.almacen">
 		<columns names="id_almacen" ref-type="src-columns"/>
@@ -249,25 +249,25 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="nombre_diseno" not-null="true">
-		<type name="character varying" length="100"/>
+		<type name="varchar" length="100"/>
 	</column>
 	<column name="color_primario" not-null="true">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="color_secundario">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="texto_bordado">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="escudo_club">
-		<type name="character varying" length="150"/>
+		<type name="varchar" length="150"/>
 	</column>
 	<column name="recargo_unitario" not-null="true" default-value="0.00">
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_recargo_no_negativo" type="ck-constr" table="public.personalizaciones">
-			<expression><![CDATA[(recargo_unitario >= (0)::numeric)]]></expression>
+			<expression><![CDATA[recargo_unitario >= 0]]></expression>
 	</constraint>
 	<constraint name="personalizaciones_pkey" type="pk-constr" table="public.personalizaciones">
 		<columns names="id_personalizacion" ref-type="src-columns"/>
@@ -288,7 +288,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="ref_odoo" not-null="true">
-		<type name="character varying" length="20"/>
+		<type name="varchar" length="20"/>
 	</column>
 	<column name="id_cliente" not-null="true">
 		<type name="integer" length="0"/>
@@ -300,10 +300,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="timestamp" length="0"/>
 	</column>
 	<column name="tipo" not-null="true" default-value="'ESTANDAR'">
-		<type name="character varying" length="10"/>
+		<type name="varchar" length="10"/>
 	</column>
 	<column name="estado" not-null="true" default-value="'BORRADOR'">
-		<type name="character varying" length="20"/>
+		<type name="varchar" length="20"/>
 	</column>
 	<column name="importe_total" not-null="true" default-value="0.00">
 		<type name="numeric" length="10" precision="2"/>
@@ -312,7 +312,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 			<expression><![CDATA[estado IN ('BORRADOR', 'CONFIRMADO', 'ENTREGADO', 'CANCELADO')]]></expression>
 	</constraint>
 	<constraint name="chk_importe_total" type="ck-constr" table="public.pedidos">
-			<expression><![CDATA[(importe_total >= (0)::numeric)]]></expression>
+			<expression><![CDATA[importe_total >= 0]]></expression>
 	</constraint>
 	<constraint name="pedidos_pkey" type="pk-constr" table="public.pedidos">
 		<columns names="id_pedido" ref-type="src-columns"/>
@@ -357,10 +357,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_cantidad_positiva" type="ck-constr" table="public.lineas_pedido">
-			<expression><![CDATA[(cantidad > 0)]]></expression>
+			<expression><![CDATA[cantidad > 0]]></expression>
 	</constraint>
 	<constraint name="chk_precio_unitario_positivo" type="ck-constr" table="public.lineas_pedido">
-			<expression><![CDATA[(precio_unitario >= (0)::numeric)]]></expression>
+			<expression><![CDATA[precio_unitario >= 0]]></expression>
 	</constraint>
 	<constraint name="lineas_pedido_pkey" type="pk-constr" table="public.lineas_pedido">
 		<columns names="id_linea" ref-type="src-columns"/>
@@ -381,22 +381,22 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="fecha_hora" not-null="true" default-value="CURRENT_TIMESTAMP">
-		<type name="timestamp with time zone" length="0" with-timezone="true"/>
+		<type name="timestamp" length="0"/>
 	</column>
 	<column name="id_usuario">
 		<type name="integer" length="0"/>
 	</column>
 	<column name="tabla_afectada" not-null="true">
-		<type name="character varying" length="50"/>
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="operacion" not-null="true">
-		<type name="character varying" length="30"/>
+		<type name="varchar" length="30"/>
 	</column>
 	<column name="id_registro_afectado" not-null="true">
 		<type name="integer" length="0"/>
 	</column>
 	<column name="resumen_cambios" not-null="true">
-		<type name="text" length="0"/>
+		<type name="varchar" length="500"/>
 	</column>
 	<column name="accion">
 		<type name="varchar" length="60"/>
@@ -411,7 +411,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<columns names="id_evento" ref-type="src-columns"/>
 	</constraint>
 	<constraint name="chk_operacion" type="ck-constr" table="public.log_eventos">
-			<expression><![CDATA[operacion IN ('INSERT','UPDATE','DELETE')]]></expression>
+			<expression><![CDATA[operacion IN ('INSERT', 'UPDATE', 'DELETE')]]></expression>
 	</constraint>
 </table>
 
