@@ -3,10 +3,8 @@
 CAUTION: Do not modify this file unless you know what you are doing.
  Unexpected results may occur if the code is changed deliberately.
 -->
-<dbmodel pgmodeler-ver="1.2.3" use-changelog="false" max-obj-count="12"
-	 gen-disabled-objs-code="false" show-sys-schemas-rects="true"
-	 last-position="128,0" last-zoom="0.45" scene-rect="0,0,2914.88,1388.97"
-	 default-schema="public" default-owner="postgres"
+<dbmodel pgmodeler-ver="0.9.4" use-changelog="false" last-position="0,0" last-zoom="1" max-obj-count="12"
+	 default-owner="postgres"
 	 layers="Default layer"
 	 active-layers="0"
 	 layer-name-colors="#000000"
@@ -17,7 +15,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<tablespace name="pg_default"/>
 </database>
 
-<schema name="public" layers="0" fill-color="#e1e1e1" name-color="#000000" sql-disabled="true">
+<schema name="public" layers="0" fill-color="#e1e1e1" sql-disabled="true">
 </schema>
 
 <table name="roles" layers="0" collapse-mode="2" max-obj-count="3" z-value="0">
@@ -140,7 +138,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="boolean" length="0"/>
 	</column>
 	<constraint name="chk_tipo_cliente" type="ck-constr" table="public.clientes">
-			<expression> <![CDATA[((tipo_cliente)::text = ANY ((ARRAY['CLUB'::character varying, 'EQUIPO'::character varying, 'PARTICULAR'::character varying])::text[]))]]> </expression>
+			<expression><![CDATA[((tipo_cliente)::text = ANY ((ARRAY['CLUB'::character varying, 'EQUIPO'::character varying, 'PARTICULAR'::character varying])::text[]))]]></expression>
 	</constraint>
 	<constraint name="clientes_pkey" type="pk-constr" table="public.clientes">
 		<columns names="id_cliente" ref-type="src-columns"/>
@@ -185,7 +183,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="boolean" length="0"/>
 	</column>
 	<constraint name="chk_precio_base_positivo" type="ck-constr" table="public.modelos">
-			<expression> <![CDATA[(precio_base > (0)::numeric)]]> </expression>
+			<expression><![CDATA[(precio_base > (0)::numeric)]]></expression>
 	</constraint>
 	<constraint name="modelos_pkey" type="pk-constr" table="public.modelos">
 		<columns names="id_modelo" ref-type="src-columns"/>
@@ -224,10 +222,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<constraint name="chk_talla_valida" type="ck-constr" table="public.almacen">
-			<expression> <![CDATA[talla BETWEEN 36 AND 46]]> </expression>
+			<expression><![CDATA[talla BETWEEN 36 AND 46]]></expression>
 	</constraint>
 	<constraint name="chk_stock_no_negativo" type="ck-constr" table="public.almacen">
-			<expression> <![CDATA[(stock_disponible >= 0)]]> </expression>
+			<expression><![CDATA[(stock_disponible >= 0)]]></expression>
 	</constraint>
 	<constraint name="almacen_pkey" type="pk-constr" table="public.almacen">
 		<columns names="id_almacen" ref-type="src-columns"/>
@@ -269,7 +267,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_recargo_no_negativo" type="ck-constr" table="public.personalizaciones">
-			<expression> <![CDATA[(recargo_unitario >= (0)::numeric)]]> </expression>
+			<expression><![CDATA[(recargo_unitario >= (0)::numeric)]]></expression>
 	</constraint>
 	<constraint name="personalizaciones_pkey" type="pk-constr" table="public.personalizaciones">
 		<columns names="id_personalizacion" ref-type="src-columns"/>
@@ -311,10 +309,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_estado_pedido" type="ck-constr" table="public.pedidos">
-			<expression> <![CDATA[estado IN ('BORRADOR', 'CONFIRMADO', 'ENTREGADO', 'CANCELADO')]]> </expression>
+			<expression><![CDATA[estado IN ('BORRADOR', 'CONFIRMADO', 'ENTREGADO', 'CANCELADO')]]></expression>
 	</constraint>
 	<constraint name="chk_importe_total" type="ck-constr" table="public.pedidos">
-			<expression> <![CDATA[(importe_total >= (0)::numeric)]]> </expression>
+			<expression><![CDATA[(importe_total >= (0)::numeric)]]></expression>
 	</constraint>
 	<constraint name="pedidos_pkey" type="pk-constr" table="public.pedidos">
 		<columns names="id_pedido" ref-type="src-columns"/>
@@ -323,7 +321,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<columns names="ref_odoo" ref-type="src-columns"/>
 	</constraint>
 	<constraint name="chk_tipo_pedido" type="ck-constr" table="public.pedidos">
-			<expression> <![CDATA[tipo IN ('ESTANDAR', 'CUSTOM')]]> </expression>
+			<expression><![CDATA[tipo IN ('ESTANDAR', 'CUSTOM')]]></expression>
 	</constraint>
 </table>
 
@@ -359,10 +357,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="numeric" length="10" precision="2"/>
 	</column>
 	<constraint name="chk_cantidad_positiva" type="ck-constr" table="public.lineas_pedido">
-			<expression> <![CDATA[(cantidad > 0)]]> </expression>
+			<expression><![CDATA[(cantidad > 0)]]></expression>
 	</constraint>
 	<constraint name="chk_precio_unitario_positivo" type="ck-constr" table="public.lineas_pedido">
-			<expression> <![CDATA[(precio_unitario >= (0)::numeric)]]> </expression>
+			<expression><![CDATA[(precio_unitario >= (0)::numeric)]]></expression>
 	</constraint>
 	<constraint name="lineas_pedido_pkey" type="pk-constr" table="public.lineas_pedido">
 		<columns names="id_linea" ref-type="src-columns"/>
@@ -383,7 +381,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="integer" length="0"/>
 	</column>
 	<column name="fecha_hora" not-null="true" default-value="CURRENT_TIMESTAMP">
-		<type name="timestamp" length="0" with-timezone="true"/>
+		<type name="timestamp with time zone" length="0" with-timezone="true"/>
 	</column>
 	<column name="id_usuario">
 		<type name="integer" length="0"/>
@@ -413,7 +411,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<columns names="id_evento" ref-type="src-columns"/>
 	</constraint>
 	<constraint name="chk_operacion" type="ck-constr" table="public.log_eventos">
-			<expression> <![CDATA[operacion IN ('INSERT','UPDATE','DELETE')]]> </expression>
+			<expression><![CDATA[operacion IN ('INSERT','UPDATE','DELETE')]]></expression>
 	</constraint>
 </table>
 
@@ -477,53 +475,41 @@ CAUTION: Do not modify this file unless you know what you are doing.
 </constraint>
 
 <relationship name="rel_permisos_rol_roles" type="relfk" layers="0"
-	 custom-color="#e9f81e"
 	 src-table="public.permisos_rol"
 	 dst-table="public.roles" reference-fk="fk_permisos_rol"
 	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_usuarios_roles" type="relfk" layers="0"
-	 custom-color="#f204ff"
 	 src-table="public.usuarios"
 	 dst-table="public.roles" reference-fk="fk_usuarios_rol"
 	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_almacen_modelos" type="relfk" layers="0"
-	 custom-color="#8dfed6"
 	 src-table="public.almacen"
 	 dst-table="public.modelos" reference-fk="fk_almacen_modelo"
 	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_pedidos_clientes" type="relfk" layers="0"
-	 custom-color="#89a87e"
 	 src-table="public.pedidos"
 	 dst-table="public.clientes" reference-fk="fk_pedidos_cliente"
 	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_pedidos_usuarios" type="relfk" layers="0"
-	 custom-color="#e4603c"
 	 src-table="public.pedidos"
 	 dst-table="public.usuarios" reference-fk="fk_pedidos_usuario"
 	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_lineas_pedido_pedidos" type="relfk" layers="0"
-	 custom-color="#247e8b"
 	 src-table="public.lineas_pedido"
 	 dst-table="public.pedidos" reference-fk="fk_lineas_pedido"
-	 src-required="false" dst-required="true">
-	<label ref-type="name-label">
-		<position x="0" y="0"/>
-	</label>
-</relationship>
+	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_lineas_pedido_almacen" type="relfk" layers="0"
-	 custom-color="#f1759f"
 	 src-table="public.lineas_pedido"
 	 dst-table="public.almacen" reference-fk="fk_lineas_almacen"
 	 src-required="false" dst-required="true"/>
 
 <relationship name="rel_lineas_pedido_personalizaciones" type="relfk" layers="0"
-	 custom-color="#8638d0"
 	 src-table="public.lineas_pedido"
 	 dst-table="public.personalizaciones" reference-fk="fk_lineas_personalizacion"
 	 src-required="false" dst-required="false"/>
