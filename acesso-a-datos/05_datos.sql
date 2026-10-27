@@ -141,6 +141,13 @@ INSERT INTO clientes (codigo_odoo, nombre, tipo_cliente, email, telefono) VALUES
 	('CLI007', 'Marcos Ruiz Vega', 'PARTICULAR', 'marcos.ruiz@example.com', '600000007')
 ON CONFLICT (codigo_odoo) DO NOTHING;
 
+INSERT INTO usuarios (username, password_hash, id_rol, activo, id_cliente)
+SELECT 'cliente_web1', '$2a$10$oIw//MDDtdA3lpPrwSemS.cUHLMyuSWOyXIs9u2u4.aIKH5UNlnY2', r.id_rol, TRUE, c.id_cliente
+FROM roles r
+JOIN clientes c ON c.codigo_odoo = 'CLI006'
+WHERE r.nombre_rol = 'CLIENTE_WEB'
+ON CONFLICT (username) DO NOTHING;
+
 DO $$
 BEGIN
 	IF EXISTS (SELECT 1 FROM pedidos) THEN
