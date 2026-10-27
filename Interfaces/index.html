@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Kicks · Sneaker culture</title>
+    <meta name="description" content="Tienda de sneakers y taller de personalización para clubes y equipos.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a href="index.html" class="logo"><img class="logo__imagen" src="img/marca/logo-d3-kicks.png" alt="D3 Kicks, sneaker culture" width="480" height="289"></a>
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html" class="menu__enlace menu__enlace--activo">Inicio</a>
+                <a href="paginas/tienda.html" class="menu__enlace">Tienda</a>
+                <a href="paginas/merch.html" class="menu__enlace">Merch</a>
+                <a href="paginas/nosotros.html" class="menu__enlace">Nosotros</a>
+                <a href="paginas/contacto.html" class="menu__enlace">Contacto</a>
+                <a href="paginas/custom.html" class="menu__enlace menu__enlace--custom">D3 Custom</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="contenedor hero__contenido">
+                <div class="hero__texto">
+                    <h1 class="hero__titulo">Más que zapatillas, es cultura.</h1>
+                    <p class="hero__intro">Las sneakers más buscadas, zapatillas para baloncesto, fútbol y boxeo, y nuestro propio modelo, la Runner X, fabricado en nuestro taller con los colores de tu equipo.</p>
+                    <div class="botones">
+                        <a href="paginas/tienda.html" class="boton boton--claro">Ver la tienda</a>
+                        <a href="paginas/custom.html" class="boton boton--borde">Diseñar un Custom</a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <img class="hero__foto" src="img/marca/portada.jpg" alt="Emblema D3 de la marca">
+                    <div class="hero__orbita" aria-hidden="true"></div>
+                    <span class="estrella estrella--grande" aria-hidden="true">✦</span>
+                    <span class="estrella estrella--pequena" aria-hidden="true">✦</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="cinta">
+            <div class="contenedor">
+                <ul class="cinta__lista" aria-label="Marcas disponibles">
+                    <li class="cinta__item">D3</li>
+                    <li class="cinta__item">Jordan</li>
+                    <li class="cinta__item">Nike</li>
+                    <li class="cinta__item">Adidas</li>
+                    <li class="cinta__item">New Balance</li>
+                    <li class="cinta__item">Puma</li>
+                    <li class="cinta__item">Under Armour</li>
+                    <li class="cinta__item">Li-Ning</li>
+                    <li class="cinta__item">Salomon</li>
+                    <li class="cinta__item">Vans</li>
+                    <li class="cinta__item">Venum</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div class="seccion__cabecera">
+                    <div>
+                        <h2>Los más buscados</h2>
+                        <p class="seccion__descripcion">Lo que más se está llevando este mes en la tienda.</p>
+                    </div>
+                    <a href="paginas/tienda.html" class="enlace-destacado">Ver toda la tienda</a>
+                </div>
+                <ul class="galeria">
+                    <li class="producto">
+                        <a href="productos/runner-x.html" class="producto__enlace">
+                            <img class="producto__foto" src="img/productos/runner-x.jpg" alt="D3 Runner X en blanco">
+                            <p class="producto__marca">D3</p>
+                            <h3 class="producto__nombre">Runner X</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">89,90 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="productos/jordan-4-black-cat.html" class="producto__enlace">
+                            <img class="producto__foto" src="img/productos/jordan-4-black-cat.jpg" alt="Jordan Air Jordan 4 Retro en negro">
+                            <p class="producto__marca">Jordan</p>
+                            <h3 class="producto__nombre">Air Jordan 4 Retro</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">229,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="productos/nike-dunk-low.html" class="producto__enlace">
+                            <img class="producto__foto" src="img/productos/nike-dunk-low.jpg" alt="Nike Dunk Low en blanco y negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Dunk Low</h3>
+                            <p class="producto__color">Blanco y negro</p>
+                            <p class="producto__precio">119,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="productos/nike-air-max-plus.html" class="producto__enlace">
+                            <img class="producto__foto" src="img/productos/nike-air-max-plus.jpg" alt="Nike Air Max Plus en negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max Plus</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion seccion--pegada">
+            <div class="contenedor">
+                <div class="bloque-custom">
+                    <img class="bloque-custom__foto" src="img/marca/custom-halcones.jpg" alt="Runner X blanca con el logo D3 Kicks, modelo base de D3 Custom">
+                    <div>
+                        <h2>D3 Custom para clubes y equipos</h2>
+                        <p class="bloque-custom__texto">Fabricamos la Runner X con los colores, el escudo y el nombre de tu club. Desde 20 pares, en las tallas que necesitéis y con una fecha de entrega cerrada.</p>
+                        <ol class="pasos">
+                            <li class="pasos__item">
+                                <span class="pasos__numero">1</span>
+                                <div class="pasos__contenido">
+                                    <h3 class="pasos__titulo">Envíanos tu idea</h3>
+                                    <p class="pasos__texto">Modelo, colores, tallas y fecha en que las necesitáis.</p>
+                                </div>
+                            </li>
+                            <li class="pasos__item">
+                                <span class="pasos__numero">2</span>
+                                <div class="pasos__contenido">
+                                    <h3 class="pasos__titulo">Boceto y presupuesto</h3>
+                                    <p class="pasos__texto">Te respondemos en 48 horas con el diseño y el precio.</p>
+                                </div>
+                            </li>
+                            <li class="pasos__item">
+                                <span class="pasos__numero">3</span>
+                                <div class="pasos__contenido">
+                                    <h3 class="pasos__titulo">Fabricación en el taller</h3>
+                                    <p class="pasos__texto">Con vuestro visto bueno, cortamos, cosemos y montamos cada par.</p>
+                                </div>
+                            </li>
+                            <li class="pasos__item">
+                                <span class="pasos__numero">4</span>
+                                <div class="pasos__contenido">
+                                    <h3 class="pasos__titulo">Entrega al equipo</h3>
+                                    <p class="pasos__texto">Cada par sale etiquetado con su talla, listo para repartir.</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <a href="paginas/custom.html" class="boton boton--claro">Pedir presupuesto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--pegada">
+            <div class="contenedor dos-columnas">
+                <img class="foto-grande" src="img/marca/historia.jpg" alt="Pared con doce modelos de zapatillas de la tienda">
+                <div class="texto-largo">
+                    <h2 class="texto-largo__titulo">Tres amigos, una misma pasión</h2>
+                    <p class="texto-largo__parrafo">D3 Kicks nace de la unión de Dani, Javi y Dani, tres amigos que llevaban años intercambiando pares, buscando lanzamientos y personalizando zapatillas para sus equipos.</p>
+                    <p class="texto-largo__parrafo">Hoy tenemos tienda y taller de fabricación propio, donde hacemos nuestra Runner X y los pedidos personalizados para clubes.</p>
+                    <a href="paginas/nosotros.html" class="boton boton--borde">Conócenos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__columna">
+                <a href="index.html" class="logo logo--pie"><img class="logo__imagen" src="img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">La web</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item"><a href="paginas/tienda.html" class="pie__enlace">Tienda</a></li>
+                    <li class="pie__item"><a href="paginas/merch.html" class="pie__enlace">Merch</a></li>
+                    <li class="pie__item"><a href="paginas/custom.html" class="pie__enlace">D3 Custom</a></li>
+                    <li class="pie__item"><a href="paginas/nosotros.html" class="pie__enlace">Nosotros</a></li>
+                    <li class="pie__item"><a href="paginas/contacto.html" class="pie__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">Contacto</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item">Calle del Cordón, 3 · 28001 Madrid</li>
+                    <li class="pie__item"><a href="tel:+34910000000" class="pie__enlace">910 000 000</a></li>
+                    <li class="pie__item"><a href="mailto:hola@d3kicks.es" class="pie__enlace">hola@d3kicks.es</a></li>
+                </ul>
+            </div>
+            <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Custom para clubes · D3 Kicks</title>
+    <meta name="description" content="Zapatillas personalizadas para clubes y equipos desde 20 pares.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a href="../index.html" class="logo"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks, sneaker culture" width="480" height="289"></a>
+            <nav class="menu" aria-label="Menú principal">
+                <a href="../index.html" class="menu__enlace">Inicio</a>
+                <a href="tienda.html" class="menu__enlace">Tienda</a>
+                <a href="merch.html" class="menu__enlace">Merch</a>
+                <a href="nosotros.html" class="menu__enlace">Nosotros</a>
+                <a href="contacto.html" class="menu__enlace">Contacto</a>
+                <a href="custom.html" class="menu__enlace menu__enlace--custom menu__enlace--activo">D3 Custom</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cabecera-pagina cabecera-pagina--foto cabecera-pagina--custom">
+            <div class="contenedor">
+                <h1 class="cabecera-pagina__titulo">D3 Custom para clubes y equipos</h1>
+                <p class="cabecera-pagina__texto">Fabricamos zapatillas con los colores, el escudo y el nombre de vuestro club. Desde 20 pares, sobre nuestra Runner X.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor dos-columnas">
+                <div class="texto-largo">
+                    <h2 class="texto-largo__titulo">Cómo funciona</h2>
+                    <p class="texto-largo__parrafo">Un pedido Custom tarda entre 4 y 6 semanas desde que aprobáis el diseño. Os acompañamos en cada paso.</p>
+                </div>
+                <ol class="pasos">
+                    <li class="pasos__item">
+                        <span class="pasos__numero">1</span>
+                        <div class="pasos__contenido">
+                            <h3 class="pasos__titulo">Envíanos la solicitud</h3>
+                            <p class="pasos__texto">Rellena el formulario con el modelo, los colores y el reparto de tallas.</p>
+                        </div>
+                    </li>
+                    <li class="pasos__item">
+                        <span class="pasos__numero">2</span>
+                        <div class="pasos__contenido">
+                            <h3 class="pasos__titulo">Boceto y presupuesto en 48 horas</h3>
+                            <p class="pasos__texto">Un comercial revisa la solicitud y os envía el diseño y el precio final.</p>
+                        </div>
+                    </li>
+                    <li class="pasos__item">
+                        <span class="pasos__numero">3</span>
+                        <div class="pasos__contenido">
+                            <h3 class="pasos__titulo">Fabricación en el taller</h3>
+                            <p class="pasos__texto">Cuando aprobáis el presupuesto, el pedido entra en producción: corte, cosido, montaje y control de calidad.</p>
+                        </div>
+                    </li>
+                    <li class="pasos__item">
+                        <span class="pasos__numero">4</span>
+                        <div class="pasos__contenido">
+                            <h3 class="pasos__titulo">Entrega</h3>
+                            <p class="pasos__texto">Enviamos los pares al club, cada uno etiquetado con su talla.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion seccion--pegada">
+            <div class="contenedor dos-columnas">
+                <div class="texto-largo">
+                    <h2 class="texto-largo__titulo">Qué puedes personalizar</h2>
+                    <p class="texto-largo__parrafo">Trabajamos cada zona por separado para que el resultado sea vuestro de verdad.</p>
+                </div>
+                <ul class="lista-zonas">
+                    <li class="lista-zonas__item">
+                        <span class="estrella" aria-hidden="true">✦</span>
+                        <div>
+                            <strong class="lista-zonas__titulo">Color principal</strong>
+                            <span class="lista-zonas__texto">La parte más visible de la zapatilla.</span>
+                        </div>
+                    </li>
+                    <li class="lista-zonas__item">
+                        <span class="estrella" aria-hidden="true">✦</span>
+                        <div>
+                            <strong class="lista-zonas__titulo">Color secundario</strong>
+                            <span class="lista-zonas__texto">Detalles, talón y cordones.</span>
+                        </div>
+                    </li>
+                    <li class="lista-zonas__item">
+                        <span class="estrella" aria-hidden="true">✦</span>
+                        <div>
+                            <strong class="lista-zonas__titulo">Escudo</strong>
+                            <span class="lista-zonas__texto">En la lengüeta, a partir del archivo que nos enviéis.</span>
+                        </div>
+                    </li>
+                    <li class="lista-zonas__item">
+                        <span class="estrella" aria-hidden="true">✦</span>
+                        <div>
+                            <strong class="lista-zonas__titulo">Nombre del club</strong>
+                            <span class="lista-zonas__texto">En el lateral, hasta 12 caracteres.</span>
+                        </div>
+                    </li>
+                    <li class="lista-zonas__item">
+                        <span class="estrella" aria-hidden="true">✦</span>
+                        <div>
+                            <strong class="lista-zonas__titulo">Caja y etiqueta</strong>
+                            <span class="lista-zonas__texto">Caja D3 Kicks con el nombre del equipo.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="seccion seccion--pegada">
+            <div class="contenedor dos-columnas">
+                <img class="foto-grande foto-grande--vertical" src="../img/marca/custom-halcones.jpg" alt="Runner X blanca con el logo D3 Kicks, modelo base de D3 Custom">
+                <div class="texto-largo">
+                    <h2 class="texto-largo__titulo">Ejemplo: Club Halcones</h2>
+                    <p class="texto-largo__parrafo">El club de atletismo Halcones nos ha pedido 40 pares de Runner X para su equipo. Partimos del modelo blanco y lo fabricamos con sus colores.</p>
+                    <dl class="datos">
+                        <div class="datos__fila">
+                            <dt class="datos__nombre">Pedido</dt>
+                            <dd class="datos__valor">SO024</dd>
+                        </div>
+                        <div class="datos__fila">
+                            <dt class="datos__nombre">Modelo</dt>
+                            <dd class="datos__valor">Runner X</dd>
+                        </div>
+                        <div class="datos__fila">
+                            <dt class="datos__nombre">Pares</dt>
+                            <dd class="datos__valor">40</dd>
+                        </div>
+                        <div class="datos__fila">
+                            <dt class="datos__nombre">Tallas</dt>
+                            <dd class="datos__valor">38 a 46</dd>
+                        </div>
+                        <div class="datos__fila">
+                            <dt class="datos__nombre">Diseño</dt>
+                            <dd class="datos__valor">Verde y amarillo, escudo y nombre del club</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--pegada" id="solicitud">
+            <div class="contenedor">
+                <div class="seccion__cabecera">
+                    <div>
+                        <h2>Solicitud de presupuesto</h2>
+                        <p class="seccion__descripcion">Sin compromiso. Te respondemos en 48 horas laborables.</p>
+                    </div>
+                </div>
+                <form class="formulario" action="#" method="post">
+                    <p class="formulario__aviso">Los campos marcados con * son obligatorios.</p>
+                    <fieldset>
+                        <legend>Datos del club</legend>
+                        <div class="formulario__campos">
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="nombre_club">Nombre del club o equipo *</label>
+                                <input class="formulario__control" type="text" id="nombre_club" name="nombre_club" required autocomplete="organization">
+                            </div>
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="persona_contacto">Persona de contacto *</label>
+                                <input class="formulario__control" type="text" id="persona_contacto" name="persona_contacto" required autocomplete="name">
+                            </div>
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="email">Correo electrónico *</label>
+                                <input class="formulario__control" type="email" id="email" name="email" required autocomplete="email">
+                            </div>
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="telefono">Teléfono</label>
+                                <input class="formulario__control" type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="[0-9 +]{9,15}">
+                                <span class="ayuda">Solo números, por ejemplo 600 123 456.</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Modelo y diseño</legend>
+                        <div class="formulario__campos">
+                            <div class="campo campo--ancho">
+                                <label class="campo__etiqueta" for="id_modelo">Modelo base *</label>
+                                <select class="formulario__control" id="id_modelo" name="id_modelo" required>
+                                    <option value="runner-x" selected>D3 Runner X</option>
+                                    <option value="jordan-4-black-cat">Jordan Air Jordan 4 Retro</option>
+                                    <option value="nike-dunk-low">Nike Dunk Low</option>
+                                    <option value="nike-air-max-plus">Nike Air Max Plus</option>
+                                    <option value="new-balance-2002r">New Balance 2002R Protection Pack</option>
+                                    <option value="jordan-4-blanco-negro">Jordan Air Jordan 4 Retro</option>
+                                    <option value="jordan-3-black-cat">Jordan Air Jordan 3 Retro</option>
+                                    <option value="nike-air-force-1">Nike Air Force 1 Low</option>
+                                    <option value="nike-air-max-95">Nike Air Max 95</option>
+                                    <option value="nike-dunk-low-grey-fog">Nike Dunk Low</option>
+                                    <option value="new-balance-1906r">New Balance 1906R</option>
+                                    <option value="nike-shox-tl">Nike Shox TL</option>
+                                    <option value="salomon-xt-6">Salomon XT-6</option>
+                                    <option value="salomon-xt-6-negro">Salomon XT-6</option>
+                                    <option value="nike-air-max-dn">Nike Air Max Dn</option>
+                                    <option value="nike-air-max-dn-negro">Nike Air Max Dn</option>
+                                    <option value="vans-knu-skool">Vans Knu Skool</option>
+                                    <option value="nike-air-force-1-negro">Nike Air Force 1 Low</option>
+                                    <option value="puma-speedcat">Puma Speedcat OG</option>
+                                    <option value="puma-speedcat-rojo">Puma Speedcat OG</option>
+                                    <option value="adidas-campus-00s">Adidas Campus 00s</option>
+                                    <option value="adidas-campus-00s-gris">Adidas Campus 00s</option>
+                                    <option value="adidas-predator-edge">Adidas Predator Edge.3 FG</option>
+                                    <option value="adidas-predator-league">Adidas Predator League FG</option>
+                                    <option value="nike-mercurial-superfly-10">Nike Mercurial Superfly 10 Academy</option>
+                                    <option value="nike-phantom-blanco">Nike Phantom GX 2 Academy</option>
+                                    <option value="nike-phantom-azul">Nike Phantom GX 2 Academy</option>
+                                    <option value="nike-phantom-gx-elite">Nike Phantom GX Elite</option>
+                                    <option value="nike-hyperko-2">Nike HyperKO 2</option>
+                                    <option value="nike-hyperko-blanco">Nike HyperKO</option>
+                                    <option value="nike-hyperko-rosa">Nike HyperKO</option>
+                                    <option value="venum-elite">Venum Elite</option>
+                                    <option value="adidas-hvc">Adidas HVC</option>
+                                    <option value="nike-team-hustle-d11">Nike Team Hustle D 11</option>
+                                    <option value="under-armour-lockdown-6">Under Armour Lockdown 6</option>
+                                    <option value="adidas-ae-1">Adidas AE 1</option>
+                                    <option value="new-balance-omn1s">New Balance OMN1S</option>
+                                    <option value="li-ning-way-of-wade">Li-Ning Way of Wade</option>
+                                    <option value="puma-mb-03-lo">Puma MB.03 Lo</option>
+                                    <option value="adidas-copa-pure">Adidas Copa Pure II League FG</option>
+                                    <option value="puma-future-7-ultimate">Puma Future 7 Ultimate FG</option>
+                                    <option value="nike-tiempo-legend-10">Nike Tiempo Legend 10 Academy</option>
+                                    <option value="jordan-1-high-black-toe">Jordan Air Jordan 1 Retro High OG</option>
+                                    <option value="jordan-1-low-se">Jordan Air Jordan 1 Low SE</option>
+                                    <option value="adidas-handball-spezial">Adidas Handball Spezial</option>
+                                    <option value="adidas-samba-og">Adidas Samba OG</option>
+                                    <option value="new-balance-1906r-negro">New Balance 1906R</option>
+                                    <option value="nike-invincible-3">Nike ZoomX Invincible 3</option>
+                                    <option value="nike-vomero-plus">Nike Vomero Plus</option>
+                                    <option value="puma-suede-classic">Puma Suede Classic</option>
+                                    <option value="salomon-xt-4">Salomon XT-4 OG</option>
+                                    <option value="adidas-superstar">Adidas Superstar</option>
+                                    <option value="adidas-response-cl">Adidas Response CL</option>
+                                    <option value="adidas-campus-light">Adidas Campus Light</option>
+                                    <option value="adidas-forum-low">Adidas Forum Low</option>
+                                    <option value="nike-air-max-90-blanco">Nike Air Max 90</option>
+                                    <option value="nike-air-max-97">Nike Air Max 97</option>
+                                    <option value="new-balance-550-verde">New Balance 550</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="color_principal">Color principal *</label>
+                                <input class="formulario__control formulario__control--color" type="color" id="color_principal" name="color_principal" value="#1E7A4C" required>
+                            </div>
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="color_secundario">Color secundario</label>
+                                <input class="formulario__control formulario__control--color" type="color" id="color_secundario" name="color_secundario" value="#F2C230">
+                            </div>
+                            <div class="campo campo--ancho">
+                                <label class="campo__etiqueta" for="texto_lateral">Nombre en el lateral</label>
+                                <input class="formulario__control" type="text" id="texto_lateral" name="texto_lateral" maxlength="12" placeholder="HALCONES">
+                                <span class="ayuda">Hasta 12 caracteres.</span>
+                            </div>
+                            <div class="campo campo--ancho">
+                                <span class="campo__pregunta">¿Queréis el escudo en la lengüeta?</span>
+                                <div class="opciones-radio">
+                                    <label class="opciones-radio__opcion"><input type="radio" name="escudo" value="si" checked> Sí</label>
+                                    <label class="opciones-radio__opcion"><input type="radio" name="escudo" value="no"> No</label>
+                                </div>
+                                <span class="ayuda">Si es que sí, te pediremos el archivo del escudo al enviarte el boceto.</span>
+                            </div>
+                            <div class="campo campo--ancho">
+                                <label class="campo__etiqueta" for="notas_diseno">Indicaciones para el diseño</label>
+                                <textarea class="formulario__control" id="notas_diseno" name="notas_diseno" placeholder="Por ejemplo: cordones amarillos y el escudo en tamaño pequeño."></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tallas y fecha</legend>
+                        <p class="ayuda">Indica cuántos pares necesitáis de cada talla. El pedido mínimo es de 20 pares en total.</p>
+                        <div class="rejilla-tallas">
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_36">36</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_36" name="talla_36" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_37">37</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_37" name="talla_37" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_38">38</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_38" name="talla_38" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_39">39</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_39" name="talla_39" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_40">40</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_40" name="talla_40" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_41">41</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_41" name="talla_41" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_42">42</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_42" name="talla_42" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_43">43</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_43" name="talla_43" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_44">44</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_44" name="talla_44" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_45">45</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_45" name="talla_45" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                            <div class="rejilla-tallas__talla">
+                                <label class="rejilla-tallas__numero" for="talla_46">46</label>
+                                <input class="rejilla-tallas__cantidad formulario__control" type="number" id="talla_46" name="talla_46" min="0" max="500" value="0" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="formulario__campos formulario__campos--fecha">
+                            <div class="campo">
+                                <label class="campo__etiqueta" for="fecha_objetivo">Fecha en que las necesitáis *</label>
+                                <input class="formulario__control" type="date" id="fecha_objetivo" name="fecha_objetivo" required>
+                                <span class="ayuda">Cuenta con al menos 4 semanas de trabajo en el taller.</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="casilla">
+                        <input type="checkbox" id="privacidad" name="privacidad" required>
+                        <label for="privacidad">Acepto que D3 Kicks use estos datos para preparar el presupuesto. *</label>
+                    </div>
+                    <button class="boton boton--claro" type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__columna">
+                <a href="../index.html" class="logo logo--pie"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">La web</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item"><a href="tienda.html" class="pie__enlace">Tienda</a></li>
+                    <li class="pie__item"><a href="merch.html" class="pie__enlace">Merch</a></li>
+                    <li class="pie__item"><a href="custom.html" class="pie__enlace">D3 Custom</a></li>
+                    <li class="pie__item"><a href="nosotros.html" class="pie__enlace">Nosotros</a></li>
+                    <li class="pie__item"><a href="contacto.html" class="pie__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">Contacto</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item">Calle del Cordón, 3 · 28001 Madrid</li>
+                    <li class="pie__item"><a href="tel:+34910000000" class="pie__enlace">910 000 000</a></li>
+                    <li class="pie__item"><a href="mailto:hola@d3kicks.es" class="pie__enlace">hola@d3kicks.es</a></li>
+                </ul>
+            </div>
+            <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

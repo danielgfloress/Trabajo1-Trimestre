@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda · D3 Kicks</title>
+    <meta name="description" content="Sneakers y zapatillas de baloncesto, fútbol y boxeo.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a href="../index.html" class="logo"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks, sneaker culture" width="480" height="289"></a>
+            <nav class="menu" aria-label="Menú principal">
+                <a href="../index.html" class="menu__enlace">Inicio</a>
+                <a href="tienda.html" class="menu__enlace menu__enlace--activo">Tienda</a>
+                <a href="merch.html" class="menu__enlace">Merch</a>
+                <a href="nosotros.html" class="menu__enlace">Nosotros</a>
+                <a href="contacto.html" class="menu__enlace">Contacto</a>
+                <a href="custom.html" class="menu__enlace menu__enlace--custom">D3 Custom</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cabecera-pagina cabecera-pagina--foto cabecera-pagina--tienda">
+            <div class="contenedor">
+                <h1 class="cabecera-pagina__titulo">Tienda</h1>
+                <p class="cabecera-pagina__texto">Modelos originales en tallas de la 36 a la 46. Cualquiera de ellos puede ser la base de un pedido D3 Custom para tu equipo.</p>
+            </div>
+        </section>
+
+        <div class="cinta">
+            <div class="contenedor">
+                <ul class="cinta__lista" aria-label="Marcas disponibles">
+                    <li class="cinta__item">D3</li>
+                    <li class="cinta__item">Jordan</li>
+                    <li class="cinta__item">Nike</li>
+                    <li class="cinta__item">Adidas</li>
+                    <li class="cinta__item">New Balance</li>
+                    <li class="cinta__item">Puma</li>
+                    <li class="cinta__item">Under Armour</li>
+                    <li class="cinta__item">Li-Ning</li>
+                    <li class="cinta__item">Salomon</li>
+                    <li class="cinta__item">Vans</li>
+                    <li class="cinta__item">Venum</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <ul class="galeria">
+                    <li class="producto">
+                        <a href="../productos/runner-x.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/runner-x.jpg" alt="D3 Runner X en blanco">
+                            <p class="producto__marca">D3</p>
+                            <h3 class="producto__nombre">Runner X</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">89,90 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/jordan-4-black-cat.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/jordan-4-black-cat.jpg" alt="Jordan Air Jordan 4 Retro en negro">
+                            <p class="producto__marca">Jordan</p>
+                            <h3 class="producto__nombre">Air Jordan 4 Retro</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">229,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-dunk-low.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-dunk-low.jpg" alt="Nike Dunk Low en blanco y negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Dunk Low</h3>
+                            <p class="producto__color">Blanco y negro</p>
+                            <p class="producto__precio">119,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-max-plus.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-max-plus.jpg" alt="Nike Air Max Plus en negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max Plus</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/new-balance-2002r.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/new-balance-2002r.jpg" alt="New Balance 2002R Protection Pack en gris oscuro">
+                            <p class="producto__marca">New Balance</p>
+                            <h3 class="producto__nombre">2002R Protection Pack</h3>
+                            <p class="producto__color">Gris oscuro</p>
+                            <p class="producto__precio">169,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/jordan-4-blanco-negro.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/jordan-4-blanco-negro.jpg" alt="Jordan Air Jordan 4 Retro en blanco roto y negro">
+                            <p class="producto__marca">Jordan</p>
+                            <h3 class="producto__nombre">Air Jordan 4 Retro</h3>
+                            <p class="producto__color">Blanco roto y negro</p>
+                            <p class="producto__precio">219,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/jordan-3-black-cat.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/jordan-3-black-cat.jpg" alt="Jordan Air Jordan 3 Retro en negro">
+                            <p class="producto__marca">Jordan</p>
+                            <h3 class="producto__nombre">Air Jordan 3 Retro</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">219,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-force-1.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-force-1.jpg" alt="Nike Air Force 1 Low en blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Force 1 Low</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">129,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-max-95.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-max-95.jpg" alt="Nike Air Max 95 en blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max 95</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-dunk-low-grey-fog.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-dunk-low-grey-fog.jpg" alt="Nike Dunk Low en blanco y gris">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Dunk Low</h3>
+                            <p class="producto__color">Blanco y gris</p>
+                            <p class="producto__precio">119,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/new-balance-1906r.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/new-balance-1906r.jpg" alt="New Balance 1906R en negro">
+                            <p class="producto__marca">New Balance</p>
+                            <h3 class="producto__nombre">1906R</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">159,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-shox-tl.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-shox-tl.jpg" alt="Nike Shox TL en gris y verde oliva">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Shox TL</h3>
+                            <p class="producto__color">Gris y verde oliva</p>
+                            <p class="producto__precio">179,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/salomon-xt-6.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/salomon-xt-6.jpg" alt="Salomon XT-6 en blanco">
+                            <p class="producto__marca">Salomon</p>
+                            <h3 class="producto__nombre">XT-6</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">180,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/salomon-xt-6-negro.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/salomon-xt-6-negro.jpg" alt="Salomon XT-6 en negro">
+                            <p class="producto__marca">Salomon</p>
+                            <h3 class="producto__nombre">XT-6</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">180,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-max-dn.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-max-dn.jpg" alt="Nike Air Max Dn en blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max Dn</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">179,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-max-dn-negro.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-max-dn-negro.jpg" alt="Nike Air Max Dn en negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max Dn</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">179,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/vans-knu-skool.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/vans-knu-skool.jpg" alt="Vans Knu Skool en negro y blanco">
+                            <p class="producto__marca">Vans</p>
+                            <h3 class="producto__nombre">Knu Skool</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">99,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-force-1-negro.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-force-1-negro.jpg" alt="Nike Air Force 1 Low en negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Force 1 Low</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">119,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/puma-speedcat.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/puma-speedcat.jpg" alt="Puma Speedcat OG en negro y blanco">
+                            <p class="producto__marca">Puma</p>
+                            <h3 class="producto__nombre">Speedcat OG</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">110,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/puma-speedcat-rojo.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/puma-speedcat-rojo.jpg" alt="Puma Speedcat OG en rojo y blanco">
+                            <p class="producto__marca">Puma</p>
+                            <h3 class="producto__nombre">Speedcat OG</h3>
+                            <p class="producto__color">Rojo y blanco</p>
+                            <p class="producto__precio">110,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-campus-00s.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-campus-00s.jpg" alt="Adidas Campus 00s en negro y blanco">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Campus 00s</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">120,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-campus-00s-gris.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-campus-00s-gris.jpg" alt="Adidas Campus 00s en gris y blanco">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Campus 00s</h3>
+                            <p class="producto__color">Gris y blanco</p>
+                            <p class="producto__precio">120,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-predator-edge.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-predator-edge.jpg" alt="Adidas Predator Edge.3 FG en rojo y verde">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Predator Edge.3 FG</h3>
+                            <p class="producto__color">Rojo y verde</p>
+                            <p class="producto__precio">89,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-predator-league.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-predator-league.jpg" alt="Adidas Predator League FG en rojo y blanco">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Predator League FG</h3>
+                            <p class="producto__color">Rojo y blanco</p>
+                            <p class="producto__precio">99,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-mercurial-superfly-10.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-mercurial-superfly-10.jpg" alt="Nike Mercurial Superfly 10 Academy en azul claro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Mercurial Superfly 10 Academy</h3>
+                            <p class="producto__color">Azul claro</p>
+                            <p class="producto__precio">109,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-phantom-blanco.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-phantom-blanco.jpg" alt="Nike Phantom GX 2 Academy en blanco y azul">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Phantom GX 2 Academy</h3>
+                            <p class="producto__color">Blanco y azul</p>
+                            <p class="producto__precio">99,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-phantom-azul.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-phantom-azul.jpg" alt="Nike Phantom GX 2 Academy en azul">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Phantom GX 2 Academy</h3>
+                            <p class="producto__color">Azul</p>
+                            <p class="producto__precio">99,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-phantom-gx-elite.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-phantom-gx-elite.jpg" alt="Nike Phantom GX Elite en amarillo y azul">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Phantom GX Elite</h3>
+                            <p class="producto__color">Amarillo y azul</p>
+                            <p class="producto__precio">279,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-hyperko-2.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-hyperko-2.jpg" alt="Nike HyperKO 2 en negro y blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">HyperKO 2</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">219,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-hyperko-blanco.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-hyperko-blanco.jpg" alt="Nike HyperKO en blanco y dorado">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">HyperKO</h3>
+                            <p class="producto__color">Blanco y dorado</p>
+                            <p class="producto__precio">199,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-hyperko-rosa.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-hyperko-rosa.jpg" alt="Nike HyperKO en negro y rosa">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">HyperKO</h3>
+                            <p class="producto__color">Negro y rosa</p>
+                            <p class="producto__precio">199,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/venum-elite.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/venum-elite.jpg" alt="Venum Elite en negro y dorado">
+                            <p class="producto__marca">Venum</p>
+                            <h3 class="producto__nombre">Elite</h3>
+                            <p class="producto__color">Negro y dorado</p>
+                            <p class="producto__precio">149,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-hvc.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-hvc.jpg" alt="Adidas HVC en negro">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">HVC</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">69,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-team-hustle-d11.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-team-hustle-d11.jpg" alt="Nike Team Hustle D 11 en rojo y negro">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Team Hustle D 11</h3>
+                            <p class="producto__color">Rojo y negro</p>
+                            <p class="producto__precio">74,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/under-armour-lockdown-6.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/under-armour-lockdown-6.jpg" alt="Under Armour Lockdown 6 en blanco y negro">
+                            <p class="producto__marca">Under Armour</p>
+                            <h3 class="producto__nombre">Lockdown 6</h3>
+                            <p class="producto__color">Blanco y negro</p>
+                            <p class="producto__precio">79,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-ae-1.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-ae-1.jpg" alt="Adidas AE 1 en rosa y negro">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">AE 1</h3>
+                            <p class="producto__color">Rosa y negro</p>
+                            <p class="producto__precio">129,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/new-balance-omn1s.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/new-balance-omn1s.jpg" alt="New Balance OMN1S en blanco">
+                            <p class="producto__marca">New Balance</p>
+                            <h3 class="producto__nombre">OMN1S</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">149,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/li-ning-way-of-wade.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/li-ning-way-of-wade.jpg" alt="Li-Ning Way of Wade en blanco y dorado">
+                            <p class="producto__marca">Li-Ning</p>
+                            <h3 class="producto__nombre">Way of Wade</h3>
+                            <p class="producto__color">Blanco y dorado</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/puma-mb-03-lo.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/puma-mb-03-lo.jpg" alt="Puma MB.03 Lo en verde">
+                            <p class="producto__marca">Puma</p>
+                            <h3 class="producto__nombre">MB.03 Lo</h3>
+                            <p class="producto__color">Verde</p>
+                            <p class="producto__precio">139,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-copa-pure.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-copa-pure.jpg" alt="Adidas Copa Pure II League FG en negro">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Copa Pure II League FG</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">89,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/puma-future-7-ultimate.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/puma-future-7-ultimate.jpg" alt="Puma Future 7 Ultimate FG en blanco y rosa">
+                            <p class="producto__marca">Puma</p>
+                            <h3 class="producto__nombre">Future 7 Ultimate FG</h3>
+                            <p class="producto__color">Blanco y rosa</p>
+                            <p class="producto__precio">229,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-tiempo-legend-10.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-tiempo-legend-10.jpg" alt="Nike Tiempo Legend 10 Academy en amarillo flúor">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Tiempo Legend 10 Academy</h3>
+                            <p class="producto__color">Amarillo flúor</p>
+                            <p class="producto__precio">84,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/jordan-1-high-black-toe.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/jordan-1-high-black-toe.jpg" alt="Jordan Air Jordan 1 Retro High OG en blanco, negro y rojo">
+                            <p class="producto__marca">Jordan</p>
+                            <h3 class="producto__nombre">Air Jordan 1 Retro High OG</h3>
+                            <p class="producto__color">Blanco, negro y rojo</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/jordan-1-low-se.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/jordan-1-low-se.jpg" alt="Jordan Air Jordan 1 Low SE en marrón y crema">
+                            <p class="producto__marca">Jordan</p>
+                            <h3 class="producto__nombre">Air Jordan 1 Low SE</h3>
+                            <p class="producto__color">Marrón y crema</p>
+                            <p class="producto__precio">139,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-handball-spezial.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-handball-spezial.jpg" alt="Adidas Handball Spezial en verde y negro">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Handball Spezial</h3>
+                            <p class="producto__color">Verde y negro</p>
+                            <p class="producto__precio">110,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-samba-og.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-samba-og.jpg" alt="Adidas Samba OG en blanco y negro">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Samba OG</h3>
+                            <p class="producto__color">Blanco y negro</p>
+                            <p class="producto__precio">120,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/new-balance-1906r-negro.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/new-balance-1906r-negro.jpg" alt="New Balance 1906R en negro mate">
+                            <p class="producto__marca">New Balance</p>
+                            <h3 class="producto__nombre">1906R</h3>
+                            <p class="producto__color">Negro mate</p>
+                            <p class="producto__precio">159,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-invincible-3.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-invincible-3.jpg" alt="Nike ZoomX Invincible 3 en negro y blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">ZoomX Invincible 3</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-vomero-plus.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-vomero-plus.jpg" alt="Nike Vomero Plus en blanco y naranja">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Vomero Plus</h3>
+                            <p class="producto__color">Blanco y naranja</p>
+                            <p class="producto__precio">179,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/puma-suede-classic.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/puma-suede-classic.jpg" alt="Puma Suede Classic en negro y blanco">
+                            <p class="producto__marca">Puma</p>
+                            <h3 class="producto__nombre">Suede Classic</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">85,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/salomon-xt-4.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/salomon-xt-4.jpg" alt="Salomon XT-4 OG en negro">
+                            <p class="producto__marca">Salomon</p>
+                            <h3 class="producto__nombre">XT-4 OG</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">190,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-superstar.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-superstar.jpg" alt="Adidas Superstar en negro y blanco">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Superstar</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">110,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-response-cl.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-response-cl.jpg" alt="Adidas Response CL en crema">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Response CL</h3>
+                            <p class="producto__color">Crema</p>
+                            <p class="producto__precio">150,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-campus-light.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-campus-light.jpg" alt="Adidas Campus Light en marrón y crema">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Campus Light</h3>
+                            <p class="producto__color">Marrón y crema</p>
+                            <p class="producto__precio">160,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/adidas-forum-low.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/adidas-forum-low.jpg" alt="Adidas Forum Low en negro">
+                            <p class="producto__marca">Adidas</p>
+                            <h3 class="producto__nombre">Forum Low</h3>
+                            <p class="producto__color">Negro</p>
+                            <p class="producto__precio">150,00 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-max-90-blanco.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-max-90-blanco.jpg" alt="Nike Air Max 90 en blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max 90</h3>
+                            <p class="producto__color">Blanco</p>
+                            <p class="producto__precio">149,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/nike-air-max-97.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/nike-air-max-97.jpg" alt="Nike Air Max 97 en negro y blanco">
+                            <p class="producto__marca">Nike</p>
+                            <h3 class="producto__nombre">Air Max 97</h3>
+                            <p class="producto__color">Negro y blanco</p>
+                            <p class="producto__precio">189,99 €</p>
+                        </a>
+                    </li>
+                    <li class="producto">
+                        <a href="../productos/new-balance-550-verde.html" class="producto__enlace">
+                            <img class="producto__foto" src="../img/productos/new-balance-550-verde.jpg" alt="New Balance 550 en blanco y verde">
+                            <p class="producto__marca">New Balance</p>
+                            <h3 class="producto__nombre">550</h3>
+                            <p class="producto__color">Blanco y verde</p>
+                            <p class="producto__precio">130,00 €</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__columna">
+                <a href="../index.html" class="logo logo--pie"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">La web</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item"><a href="tienda.html" class="pie__enlace">Tienda</a></li>
+                    <li class="pie__item"><a href="merch.html" class="pie__enlace">Merch</a></li>
+                    <li class="pie__item"><a href="custom.html" class="pie__enlace">D3 Custom</a></li>
+                    <li class="pie__item"><a href="nosotros.html" class="pie__enlace">Nosotros</a></li>
+                    <li class="pie__item"><a href="contacto.html" class="pie__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">Contacto</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item">Calle del Cordón, 3 · 28001 Madrid</li>
+                    <li class="pie__item"><a href="tel:+34910000000" class="pie__enlace">910 000 000</a></li>
+                    <li class="pie__item"><a href="mailto:hola@d3kicks.es" class="pie__enlace">hola@d3kicks.es</a></li>
+                </ul>
+            </div>
+            <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
