@@ -114,7 +114,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="clientes" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+<table name="clientes" layers="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="1381.16" y="1094.44"/>
@@ -126,6 +126,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="varchar" length="50"/>
 	</column>
 	<column name="nombre" not-null="true">
+		<type name="varchar" length="100"/>
+	</column>
+	<column name="persona_contacto">
 		<type name="varchar" length="100"/>
 	</column>
 	<column name="tipo_cliente" not-null="true" default-value="'CLUB'">
@@ -252,7 +255,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="personalizaciones" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+<table name="personalizaciones" layers="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="1880.02" y="946.191"/>
@@ -270,10 +273,13 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="varchar" length="50"/>
 	</column>
 	<column name="texto_bordado">
-		<type name="varchar" length="50"/>
+		<type name="varchar" length="12"/>
 	</column>
 	<column name="escudo_club">
 		<type name="varchar" length="150"/>
+	</column>
+	<column name="notas_diseno">
+		<type name="varchar" length="500"/>
 	</column>
 	<column name="recargo_unitario" not-null="true" default-value="0.00">
 		<type name="numeric" length="10" precision="2"/>
@@ -291,7 +297,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="pedidos" layers="0" collapse-mode="2" max-obj-count="9" z-value="0">
+<table name="pedidos" layers="0" collapse-mode="2" max-obj-count="11" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="833.977" y="797.302"/>
@@ -310,6 +316,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="fecha_pedido" not-null="true" default-value="CURRENT_TIMESTAMP">
 		<type name="timestamp" length="0"/>
+	</column>
+	<column name="fecha_entrega_objetivo">
+		<type name="date" length="0"/>
 	</column>
 	<column name="tipo" not-null="true" default-value="'ESTANDAR'">
 		<type name="varchar" length="10"/>
@@ -334,6 +343,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</constraint>
 	<constraint name="chk_tipo_pedido" type="ck-constr" table="public.pedidos">
 			<expression><![CDATA[tipo IN ('ESTANDAR', 'CUSTOM')]]></expression>
+	</constraint>
+	<constraint name="chk_fecha_entrega" type="ck-constr" table="public.pedidos">
+			<expression><![CDATA[fecha_entrega_objetivo IS NULL OR fecha_entrega_objetivo >= CAST(fecha_pedido AS DATE)]]></expression>
 	</constraint>
 </table>
 

@@ -124,6 +124,11 @@ BEGIN
 			RAISE EXCEPTION 'No se puede confirmar el pedido % porque no tiene líneas', NEW.ref_odoo;
 		END IF;
 
+		IF NEW.tipo = 'CUSTOM' AND (SELECT SUM(cantidad) FROM lineas_pedido WHERE id_pedido = NEW.id_pedido) < 20 THEN
+			RAISE EXCEPTION 'Un pedido CUSTOM necesita al menos 20 pares (el pedido % tiene %)',
+				NEW.ref_odoo, (SELECT SUM(cantidad) FROM lineas_pedido WHERE id_pedido = NEW.id_pedido);
+		END IF;
+
 		FOR v_linea IN
 			SELECT l.id_almacen, SUM(l.cantidad) AS cantidad, m.nombre, a.color_base, a.talla
 			FROM lineas_pedido l
