@@ -1,62 +1,62 @@
 INSERT INTO modelos (codigo_modelo, marca, nombre, categoria, precio_base, admite_custom, altura_perfil) VALUES
-	('D3-001', 'D3', 'Runner X', 'Running', 89.90, TRUE, 'BAJO'),
+	('D3-001', 'D3', 'Runner X', 'Sneakers', 89.90, TRUE, 'BAJO'),
 	('ADI-001', 'ADIDAS', 'AE 1', 'Baloncesto', 129.99, TRUE, 'MEDIO'),
-	('ADI-002', 'ADIDAS', 'Campus 00s', 'Sneakers', 120.00, FALSE, 'BAJO'),
-	('ADI-003', 'ADIDAS', 'Campus 00s', 'Sneakers', 120.00, FALSE, 'BAJO'),
-	('ADI-004', 'ADIDAS', 'Campus Light', 'Sneakers', 160.00, FALSE, 'BAJO'),
+	('ADI-002', 'ADIDAS', 'Campus 00s', 'Sneakers', 120.00, TRUE, 'BAJO'),
+	('ADI-003', 'ADIDAS', 'Campus 00s', 'Sneakers', 120.00, TRUE, 'BAJO'),
+	('ADI-004', 'ADIDAS', 'Campus Light', 'Sneakers', 160.00, TRUE, 'BAJO'),
 	('ADI-005', 'ADIDAS', 'Copa Pure II League FG', 'Fútbol', 89.99, TRUE, 'BAJO'),
-	('ADI-006', 'ADIDAS', 'Forum Low', 'Sneakers', 150.00, FALSE, 'BAJO'),
-	('ADI-007', 'ADIDAS', 'HVC', 'Boxeo', 69.99, FALSE, 'ALTO'),
-	('ADI-008', 'ADIDAS', 'Handball Spezial', 'Sneakers', 110.00, FALSE, 'BAJO'),
+	('ADI-006', 'ADIDAS', 'Forum Low', 'Sneakers', 150.00, TRUE, 'BAJO'),
+	('ADI-007', 'ADIDAS', 'HVC', 'Boxeo', 69.99, TRUE, 'ALTO'),
+	('ADI-008', 'ADIDAS', 'Handball Spezial', 'Sneakers', 110.00, TRUE, 'BAJO'),
 	('ADI-009', 'ADIDAS', 'Predator Edge.3 FG', 'Fútbol', 89.99, TRUE, 'BAJO'),
 	('ADI-010', 'ADIDAS', 'Predator League FG', 'Fútbol', 99.99, TRUE, 'BAJO'),
-	('ADI-011', 'ADIDAS', 'Response CL', 'Sneakers', 150.00, FALSE, 'BAJO'),
-	('ADI-012', 'ADIDAS', 'Samba OG', 'Sneakers', 120.00, FALSE, 'BAJO'),
-	('ADI-013', 'ADIDAS', 'Superstar', 'Sneakers', 110.00, FALSE, 'BAJO'),
-	('JOR-001', 'JORDAN', 'Air Jordan 1 Low SE', 'Sneakers', 139.99, FALSE, 'BAJO'),
-	('JOR-002', 'JORDAN', 'Air Jordan 1 Retro High OG', 'Sneakers', 189.99, FALSE, 'ALTO'),
-	('JOR-003', 'JORDAN', 'Air Jordan 3 Retro', 'Sneakers', 219.99, FALSE, 'MEDIO'),
-	('JOR-004', 'JORDAN', 'Air Jordan 4 Retro', 'Sneakers', 219.99, FALSE, 'MEDIO'),
-	('JOR-005', 'JORDAN', 'Air Jordan 4 Retro', 'Sneakers', 229.99, FALSE, 'MEDIO'),
+	('ADI-011', 'ADIDAS', 'Response CL', 'Sneakers', 150.00, TRUE, 'BAJO'),
+	('ADI-012', 'ADIDAS', 'Samba OG', 'Sneakers', 120.00, TRUE, 'BAJO'),
+	('ADI-013', 'ADIDAS', 'Superstar', 'Sneakers', 110.00, TRUE, 'BAJO'),
+	('JOR-001', 'JORDAN', 'Air Jordan 1 Low SE', 'Sneakers', 139.99, TRUE, 'BAJO'),
+	('JOR-002', 'JORDAN', 'Air Jordan 1 Retro High OG', 'Sneakers', 189.99, TRUE, 'ALTO'),
+	('JOR-003', 'JORDAN', 'Air Jordan 3 Retro', 'Sneakers', 219.99, TRUE, 'MEDIO'),
+	('JOR-004', 'JORDAN', 'Air Jordan 4 Retro', 'Sneakers', 219.99, TRUE, 'MEDIO'),
+	('JOR-005', 'JORDAN', 'Air Jordan 4 Retro', 'Sneakers', 229.99, TRUE, 'MEDIO'),
 	('LIN-001', 'LI-NING', 'Way of Wade', 'Baloncesto', 189.99, TRUE, 'MEDIO'),
-	('NB-001', 'NEW BALANCE', '1906R', 'Sneakers', 159.99, FALSE, 'BAJO'),
-	('NB-002', 'NEW BALANCE', '1906R', 'Sneakers', 159.99, FALSE, 'BAJO'),
-	('NB-003', 'NEW BALANCE', '2002R Protection Pack', 'Sneakers', 169.99, FALSE, 'BAJO'),
-	('NB-004', 'NEW BALANCE', '550', 'Sneakers', 130.00, FALSE, 'BAJO'),
+	('NB-001', 'NEW BALANCE', '1906R', 'Sneakers', 159.99, TRUE, 'BAJO'),
+	('NB-002', 'NEW BALANCE', '1906R', 'Sneakers', 159.99, TRUE, 'BAJO'),
+	('NB-003', 'NEW BALANCE', '2002R Protection Pack', 'Sneakers', 169.99, TRUE, 'BAJO'),
+	('NB-004', 'NEW BALANCE', '550', 'Sneakers', 130.00, TRUE, 'BAJO'),
 	('NB-005', 'NEW BALANCE', 'OMN1S', 'Baloncesto', 149.99, TRUE, 'ALTO'),
-	('NIK-001', 'NIKE', 'Air Force 1 Low', 'Sneakers', 129.99, FALSE, 'BAJO'),
-	('NIK-002', 'NIKE', 'Air Force 1 Low', 'Sneakers', 119.99, FALSE, 'BAJO'),
-	('NIK-003', 'NIKE', 'Air Max 90', 'Sneakers', 149.99, FALSE, 'BAJO'),
-	('NIK-004', 'NIKE', 'Air Max 95', 'Sneakers', 189.99, FALSE, 'BAJO'),
-	('NIK-005', 'NIKE', 'Air Max 97', 'Sneakers', 189.99, FALSE, 'BAJO'),
-	('NIK-006', 'NIKE', 'Air Max Dn', 'Sneakers', 179.99, FALSE, 'BAJO'),
-	('NIK-007', 'NIKE', 'Air Max Dn', 'Sneakers', 179.99, FALSE, 'BAJO'),
-	('NIK-008', 'NIKE', 'Air Max Plus', 'Sneakers', 189.99, FALSE, 'BAJO'),
-	('NIK-009', 'NIKE', 'Dunk Low', 'Sneakers', 119.99, FALSE, 'BAJO'),
-	('NIK-010', 'NIKE', 'Dunk Low', 'Sneakers', 119.99, FALSE, 'BAJO'),
-	('NIK-011', 'NIKE', 'HyperKO', 'Boxeo', 199.99, FALSE, 'ALTO'),
-	('NIK-012', 'NIKE', 'HyperKO', 'Boxeo', 199.99, FALSE, 'ALTO'),
-	('NIK-013', 'NIKE', 'HyperKO 2', 'Boxeo', 219.99, FALSE, 'ALTO'),
+	('NIK-001', 'NIKE', 'Air Force 1 Low', 'Sneakers', 129.99, TRUE, 'BAJO'),
+	('NIK-002', 'NIKE', 'Air Force 1 Low', 'Sneakers', 119.99, TRUE, 'BAJO'),
+	('NIK-003', 'NIKE', 'Air Max 90', 'Sneakers', 149.99, TRUE, 'BAJO'),
+	('NIK-004', 'NIKE', 'Air Max 95', 'Sneakers', 189.99, TRUE, 'BAJO'),
+	('NIK-005', 'NIKE', 'Air Max 97', 'Sneakers', 189.99, TRUE, 'BAJO'),
+	('NIK-006', 'NIKE', 'Air Max Dn', 'Sneakers', 179.99, TRUE, 'BAJO'),
+	('NIK-007', 'NIKE', 'Air Max Dn', 'Sneakers', 179.99, TRUE, 'BAJO'),
+	('NIK-008', 'NIKE', 'Air Max Plus', 'Sneakers', 189.99, TRUE, 'BAJO'),
+	('NIK-009', 'NIKE', 'Dunk Low', 'Sneakers', 119.99, TRUE, 'BAJO'),
+	('NIK-010', 'NIKE', 'Dunk Low', 'Sneakers', 119.99, TRUE, 'BAJO'),
+	('NIK-011', 'NIKE', 'HyperKO', 'Boxeo', 199.99, TRUE, 'ALTO'),
+	('NIK-012', 'NIKE', 'HyperKO', 'Boxeo', 199.99, TRUE, 'ALTO'),
+	('NIK-013', 'NIKE', 'HyperKO 2', 'Boxeo', 219.99, TRUE, 'ALTO'),
 	('NIK-014', 'NIKE', 'Mercurial Superfly 10 Academy', 'Fútbol', 109.99, TRUE, 'ALTO'),
 	('NIK-015', 'NIKE', 'Phantom GX 2 Academy', 'Fútbol', 99.99, TRUE, 'BAJO'),
 	('NIK-016', 'NIKE', 'Phantom GX 2 Academy', 'Fútbol', 99.99, TRUE, 'BAJO'),
 	('NIK-017', 'NIKE', 'Phantom GX Elite', 'Fútbol', 279.99, TRUE, 'BAJO'),
-	('NIK-018', 'NIKE', 'Shox TL', 'Sneakers', 179.99, FALSE, 'BAJO'),
+	('NIK-018', 'NIKE', 'Shox TL', 'Sneakers', 179.99, TRUE, 'BAJO'),
 	('NIK-019', 'NIKE', 'Team Hustle D 11', 'Baloncesto', 74.99, TRUE, 'MEDIO'),
 	('NIK-020', 'NIKE', 'Tiempo Legend 10 Academy', 'Fútbol', 84.99, TRUE, 'BAJO'),
-	('NIK-021', 'NIKE', 'Vomero Plus', 'Sneakers', 179.99, FALSE, 'BAJO'),
-	('NIK-022', 'NIKE', 'ZoomX Invincible 3', 'Sneakers', 189.99, FALSE, 'BAJO'),
+	('NIK-021', 'NIKE', 'Vomero Plus', 'Sneakers', 179.99, TRUE, 'BAJO'),
+	('NIK-022', 'NIKE', 'ZoomX Invincible 3', 'Sneakers', 189.99, TRUE, 'BAJO'),
 	('PUM-001', 'PUMA', 'Future 7 Ultimate FG', 'Fútbol', 229.99, TRUE, 'MEDIO'),
 	('PUM-002', 'PUMA', 'MB.03 Lo', 'Baloncesto', 139.99, TRUE, 'BAJO'),
-	('PUM-003', 'PUMA', 'Speedcat OG', 'Sneakers', 110.00, FALSE, 'BAJO'),
-	('PUM-004', 'PUMA', 'Speedcat OG', 'Sneakers', 110.00, FALSE, 'BAJO'),
-	('PUM-005', 'PUMA', 'Suede Classic', 'Sneakers', 85.00, FALSE, 'BAJO'),
-	('SAL-001', 'SALOMON', 'XT-4 OG', 'Sneakers', 190.00, FALSE, 'BAJO'),
-	('SAL-002', 'SALOMON', 'XT-6', 'Sneakers', 180.00, FALSE, 'BAJO'),
-	('SAL-003', 'SALOMON', 'XT-6', 'Sneakers', 180.00, FALSE, 'BAJO'),
+	('PUM-003', 'PUMA', 'Speedcat OG', 'Sneakers', 110.00, TRUE, 'BAJO'),
+	('PUM-004', 'PUMA', 'Speedcat OG', 'Sneakers', 110.00, TRUE, 'BAJO'),
+	('PUM-005', 'PUMA', 'Suede Classic', 'Sneakers', 85.00, TRUE, 'BAJO'),
+	('SAL-001', 'SALOMON', 'XT-4 OG', 'Sneakers', 190.00, TRUE, 'BAJO'),
+	('SAL-002', 'SALOMON', 'XT-6', 'Sneakers', 180.00, TRUE, 'BAJO'),
+	('SAL-003', 'SALOMON', 'XT-6', 'Sneakers', 180.00, TRUE, 'BAJO'),
 	('UA-001', 'UNDER ARMOUR', 'Lockdown 6', 'Baloncesto', 79.99, TRUE, 'MEDIO'),
-	('VAN-001', 'VANS', 'Knu Skool', 'Sneakers', 99.99, FALSE, 'BAJO'),
-	('VEN-001', 'VENUM', 'Elite', 'Boxeo', 149.99, FALSE, 'ALTO')
+	('VAN-001', 'VANS', 'Knu Skool', 'Sneakers', 99.99, TRUE, 'BAJO'),
+	('VEN-001', 'VENUM', 'Elite', 'Boxeo', 149.99, TRUE, 'ALTO')
 ON CONFLICT (codigo_modelo) DO UPDATE SET
 	marca = EXCLUDED.marca,
 	nombre = EXCLUDED.nombre,
@@ -68,7 +68,7 @@ ON CONFLICT (codigo_modelo) DO UPDATE SET
 INSERT INTO almacen (id_modelo, talla, color_base, stock_disponible, stock_minimo)
 SELECT m.id_modelo, t.talla, c.color, 20, 5
 FROM (VALUES
-	('D3-001', 'Negro y plata'),
+	('D3-001', 'Blanco'),
 	('ADI-001', 'Rosa y negro'),
 	('ADI-002', 'Gris y blanco'),
 	('ADI-003', 'Negro y blanco'),
@@ -131,14 +131,14 @@ JOIN modelos m ON m.codigo_modelo = c.codigo_modelo
 CROSS JOIN generate_series(36, 46) AS t (talla)
 ON CONFLICT (id_modelo, talla, color_base) DO NOTHING;
 
-INSERT INTO clientes (codigo_odoo, nombre, tipo_cliente, email, telefono) VALUES
-	('CLI001', 'Club Halcones', 'CLUB', 'contacto@halcones.example.com', '600000001'),
-	('CLI002', 'CD Leones del Sur', 'CLUB', 'contacto@leonesdelsur.example.com', '600000002'),
-	('CLI003', 'CB Torres', 'CLUB', 'contacto@cbtorres.example.com', '600000003'),
-	('CLI004', 'Fénix Boxing Gym', 'EQUIPO', 'contacto@fenixboxing.example.com', '600000004'),
-	('CLI005', 'Running Crew Sur', 'EQUIPO', 'contacto@runningcrewsur.example.com', '600000005'),
-	('CLI006', 'Laura Martín Gil', 'PARTICULAR', 'laura.martin@example.com', '600000006'),
-	('CLI007', 'Marcos Ruiz Vega', 'PARTICULAR', 'marcos.ruiz@example.com', '600000007')
+INSERT INTO clientes (codigo_odoo, nombre, persona_contacto, tipo_cliente, email, telefono) VALUES
+	('CLI001', 'Club Halcones', 'Sergio Navarro', 'CLUB', 'contacto@halcones.example.com', '600000001'),
+	('CLI002', 'CD Leones del Sur', 'Ana Beltrán', 'CLUB', 'contacto@leonesdelsur.example.com', '600000002'),
+	('CLI003', 'CB Torres', 'Javier Ortiz', 'CLUB', 'contacto@cbtorres.example.com', '600000003'),
+	('CLI004', 'Fénix Boxing Gym', 'Rubén Castro', 'EQUIPO', 'contacto@fenixboxing.example.com', '600000004'),
+	('CLI005', 'Running Crew Sur', 'Elena Prieto', 'EQUIPO', 'contacto@runningcrewsur.example.com', '600000005'),
+	('CLI006', 'Laura Martín Gil', 'Laura Martín Gil', 'PARTICULAR', 'laura.martin@example.com', '600000006'),
+	('CLI007', 'Marcos Ruiz Vega', 'Marcos Ruiz Vega', 'PARTICULAR', 'marcos.ruiz@example.com', '600000007')
 ON CONFLICT (codigo_odoo) DO NOTHING;
 
 INSERT INTO usuarios (username, password_hash, id_rol, activo, id_cliente)
@@ -163,14 +163,14 @@ BEGIN
 	FROM modelos m
 	WHERE m.id_modelo = a.id_modelo AND m.marca = 'ADIDAS' AND m.nombre = 'Samba OG' AND a.talla = 38;
 
-	INSERT INTO personalizaciones (nombre_diseno, color_primario, color_secundario, texto_bordado, escudo_club, recargo_unitario) VALUES
-		('DIS-SO003 Halcones Training', 'Azul', 'Blanco', 'HALCONES', 'escudo_halcones.png', 15.00),
-		('DIS-SO005 Leones Matchday', 'Rojo', 'Negro', 'LEONES', 'escudo_leones.png', 12.00),
-		('DIS-SO006 Torres Basket', 'Negro', 'Naranja', 'TORRES', 'escudo_torres.png', 15.00),
-		('DIS-SO010 Marcos 10', 'Verde', 'Blanco', 'MARCOS 10', NULL, 10.00);
+	INSERT INTO personalizaciones (nombre_diseno, color_primario, color_secundario, texto_bordado, escudo_club, notas_diseno, recargo_unitario) VALUES
+		('DIS-SO003 Halcones Training', '#1E7A4C', '#F2C230', 'HALCONES', 'escudo_halcones.png', 'Cordones amarillos y escudo pequeño en la lengüeta', 15.00),
+		('DIS-SO005 Leones Matchday', '#C8102E', '#111111', 'LEONES', 'escudo_leones.png', NULL, 12.00),
+		('DIS-SO006 Torres Basket', '#111111', '#F47C20', 'TORRES', 'escudo_torres.png', 'Suela naranja', 15.00),
+		('DIS-SO010 Crew Sur', '#2E7D32', '#111111', 'CREW SUR', NULL, 'Sin escudo, solo el nombre en el lateral', 10.00);
 
 	CREATE TEMP TABLE carga_pedidos (
-		ref VARCHAR(20), fecha TIMESTAMP, cliente VARCHAR(10), tipo VARCHAR(10), estado VARCHAR(20)
+		ref VARCHAR(20), fecha TIMESTAMP, cliente VARCHAR(10), tipo VARCHAR(10), estado VARCHAR(20), entrega DATE
 	) ON COMMIT DROP;
 
 	CREATE TEMP TABLE carga_lineas (
@@ -179,46 +179,50 @@ BEGIN
 	) ON COMMIT DROP;
 
 	INSERT INTO carga_pedidos VALUES
-		('SO001', '2026-06-03 10:00', 'CLI002', 'ESTANDAR', 'ENTREGADO'),
-		('SO002', '2026-06-12 11:30', 'CLI006', 'ESTANDAR', 'ENTREGADO'),
-		('SO003', '2026-06-25 09:15', 'CLI001', 'CUSTOM', 'ENTREGADO'),
-		('SO004', '2026-07-08 16:00', 'CLI005', 'ESTANDAR', 'ENTREGADO'),
-		('SO005', '2026-07-21 12:00', 'CLI002', 'CUSTOM', 'CONFIRMADO'),
-		('SO006', '2026-08-05 10:45', 'CLI003', 'CUSTOM', 'CANCELADO'),
-		('SO007', '2026-08-19 18:20', 'CLI001', 'ESTANDAR', 'ENTREGADO'),
-		('SO008', '2026-09-02 09:00', 'CLI004', 'ESTANDAR', 'CONFIRMADO'),
-		('SO009', '2026-09-16 13:10', 'CLI006', 'ESTANDAR', 'CANCELADO'),
-		('SO010', '2026-09-30 17:00', 'CLI007', 'CUSTOM', 'CONFIRMADO'),
-		('SO011', '2026-10-14 10:00', 'CLI003', 'ESTANDAR', 'BORRADOR'),
-		('SO012', '2026-10-21 11:00', 'CLI005', 'ESTANDAR', 'BORRADOR');
+		('SO001', '2026-06-03 10:00', 'CLI002', 'ESTANDAR', 'ENTREGADO', NULL),
+		('SO002', '2026-06-12 11:30', 'CLI006', 'ESTANDAR', 'ENTREGADO', NULL),
+		('SO003', '2026-06-25 09:15', 'CLI001', 'CUSTOM', 'ENTREGADO', '2026-08-01'),
+		('SO004', '2026-07-08 16:00', 'CLI005', 'ESTANDAR', 'ENTREGADO', NULL),
+		('SO005', '2026-07-21 12:00', 'CLI002', 'CUSTOM', 'CONFIRMADO', '2026-09-05'),
+		('SO006', '2026-08-05 10:45', 'CLI003', 'CUSTOM', 'CANCELADO', '2026-09-15'),
+		('SO007', '2026-08-19 18:20', 'CLI001', 'ESTANDAR', 'ENTREGADO', NULL),
+		('SO008', '2026-09-02 09:00', 'CLI004', 'ESTANDAR', 'CONFIRMADO', NULL),
+		('SO009', '2026-09-16 13:10', 'CLI006', 'ESTANDAR', 'CANCELADO', NULL),
+		('SO010', '2026-09-30 17:00', 'CLI005', 'CUSTOM', 'CONFIRMADO', '2026-11-10'),
+		('SO011', '2026-10-14 10:00', 'CLI003', 'ESTANDAR', 'BORRADOR', NULL),
+		('SO012', '2026-10-21 11:00', 'CLI007', 'ESTANDAR', 'BORRADOR', NULL);
 
 	INSERT INTO carga_lineas VALUES
 		('SO001', 'ADIDAS', 'Copa Pure II League FG', 'Negro', 42, 10, NULL),
 		('SO001', 'ADIDAS', 'Copa Pure II League FG', 'Negro', 43, 8, NULL),
 		('SO002', 'NIKE', 'Air Force 1 Low', 'Blanco', 38, 1, NULL),
-		('SO003', 'D3', 'Runner X', 'Negro y plata', 39, 5, 'DIS-SO003 Halcones Training'),
-		('SO003', 'D3', 'Runner X', 'Negro y plata', 40, 6, 'DIS-SO003 Halcones Training'),
-		('SO003', 'D3', 'Runner X', 'Negro y plata', 41, 5, 'DIS-SO003 Halcones Training'),
-		('SO004', 'D3', 'Runner X', 'Negro y plata', 41, 4, NULL),
+		('SO003', 'D3', 'Runner X', 'Blanco', 39, 6, 'DIS-SO003 Halcones Training'),
+		('SO003', 'D3', 'Runner X', 'Blanco', 40, 8, 'DIS-SO003 Halcones Training'),
+		('SO003', 'D3', 'Runner X', 'Blanco', 41, 6, 'DIS-SO003 Halcones Training'),
+		('SO004', 'D3', 'Runner X', 'Blanco', 41, 4, NULL),
 		('SO004', 'NIKE', 'ZoomX Invincible 3', 'Negro y blanco', 42, 3, NULL),
-		('SO005', 'ADIDAS', 'Predator League FG', 'Rojo y blanco', 41, 5, 'DIS-SO005 Leones Matchday'),
-		('SO005', 'ADIDAS', 'Predator League FG', 'Rojo y blanco', 42, 7, 'DIS-SO005 Leones Matchday'),
+		('SO005', 'ADIDAS', 'Predator League FG', 'Rojo y blanco', 41, 6, 'DIS-SO005 Leones Matchday'),
+		('SO005', 'ADIDAS', 'Predator League FG', 'Rojo y blanco', 42, 8, 'DIS-SO005 Leones Matchday'),
 		('SO005', 'ADIDAS', 'Predator League FG', 'Rojo y blanco', 43, 6, 'DIS-SO005 Leones Matchday'),
-		('SO006', 'NIKE', 'Team Hustle D 11', 'Rojo y negro', 44, 6, 'DIS-SO006 Torres Basket'),
-		('SO006', 'NIKE', 'Team Hustle D 11', 'Rojo y negro', 45, 6, 'DIS-SO006 Torres Basket'),
+		('SO006', 'NIKE', 'Team Hustle D 11', 'Rojo y negro', 44, 10, 'DIS-SO006 Torres Basket'),
+		('SO006', 'NIKE', 'Team Hustle D 11', 'Rojo y negro', 45, 10, 'DIS-SO006 Torres Basket'),
 		('SO007', 'NIKE', 'Dunk Low', 'Blanco y negro', 40, 2, NULL),
 		('SO008', 'NIKE', 'HyperKO 2', 'Negro y blanco', 40, 3, NULL),
 		('SO008', 'NIKE', 'HyperKO 2', 'Negro y blanco', 42, 3, NULL),
 		('SO008', 'VENUM', 'Elite', 'Negro y dorado', 41, 2, NULL),
 		('SO009', 'NEW BALANCE', '550', 'Blanco y verde', 38, 1, NULL),
-		('SO010', 'D3', 'Runner X', 'Negro y plata', 43, 1, 'DIS-SO010 Marcos 10'),
+		('SO010', 'NIKE', 'ZoomX Invincible 3', 'Negro y blanco', 40, 4, 'DIS-SO010 Crew Sur'),
+		('SO010', 'NIKE', 'ZoomX Invincible 3', 'Negro y blanco', 41, 4, 'DIS-SO010 Crew Sur'),
+		('SO010', 'NIKE', 'ZoomX Invincible 3', 'Negro y blanco', 42, 4, 'DIS-SO010 Crew Sur'),
+		('SO010', 'NIKE', 'ZoomX Invincible 3', 'Negro y blanco', 43, 4, 'DIS-SO010 Crew Sur'),
+		('SO010', 'NIKE', 'ZoomX Invincible 3', 'Negro y blanco', 44, 4, 'DIS-SO010 Crew Sur'),
 		('SO011', 'NEW BALANCE', 'OMN1S', 'Blanco', 45, 5, NULL),
 		('SO012', 'SALOMON', 'XT-6', 'Negro', 41, 2, NULL);
 
 	PERFORM set_config('app.id_usuario', (SELECT id_usuario::TEXT FROM usuarios WHERE username = 'comercial1'), true);
 
-	INSERT INTO pedidos (ref_odoo, id_cliente, id_usuario, fecha_pedido, tipo)
-	SELECT cp.ref, c.id_cliente, u.id_usuario, cp.fecha, cp.tipo
+	INSERT INTO pedidos (ref_odoo, id_cliente, id_usuario, fecha_pedido, fecha_entrega_objetivo, tipo)
+	SELECT cp.ref, c.id_cliente, u.id_usuario, cp.fecha, cp.entrega, cp.tipo
 	FROM carga_pedidos cp
 	JOIN clientes c ON c.codigo_odoo = cp.cliente
 	JOIN usuarios u ON u.username = 'comercial1'
