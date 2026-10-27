@@ -156,7 +156,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="modelos" layers="0" collapse-mode="2" max-obj-count="8" z-value="0">
+<table name="modelos" layers="0" collapse-mode="2" max-obj-count="9" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="2509.77" y="78.8889"/>
@@ -166,6 +166,9 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="codigo_modelo" not-null="true">
 		<type name="varchar" length="40"/>
+	</column>
+	<column name="marca" not-null="true">
+		<type name="varchar" length="50"/>
 	</column>
 	<column name="nombre" not-null="true">
 		<type name="varchar" length="100"/>
