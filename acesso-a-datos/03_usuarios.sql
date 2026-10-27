@@ -1,10 +1,12 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 INSERT INTO roles (nombre_rol, descripcion) VALUES
-	('ADMIN', 'Administración: acceso completo, incluida la gestión de usuarios, roles y permisos'),
-	('COMERCIAL', 'Ventas: crea, edita, confirma y cancela pedidos de clientes'),
-	('ALMACEN', 'Almacén y producción: consulta pedidos y stock, marca pedidos entregados y prepara fichas de fabricación')
-ON CONFLICT (nombre_rol) DO UPDATE SET descripcion = EXCLUDED.descripcion;
+ 	('ADMIN', 'Administración: acceso completo, incluida la gestión de usuarios, roles y permisos'),
+ 	('COMERCIAL', 'Ventas: crea, edita, confirma y cancela pedidos de clientes'),
+ 	('ALMACEN', 'Almacén y producción: consulta pedidos y stock, marca pedidos entregados y prepara fichas de fabricación'),
++	('CLIENTE_WEB', 'Cliente registrado desde la web'),
++	('INVITADO_WEB', 'Usuario genérico para navegación web sin registro')
+ ON CONFLICT (nombre_rol) DO UPDATE SET descripcion = EXCLUDED.descripcion;
 
 INSERT INTO permisos_rol (id_rol, operacion, permitido)
 SELECT r.id_rol, m.operacion, m.permitido
@@ -45,6 +47,12 @@ FROM (VALUES
 	('ALMACEN', 'AUDITORIA_VER', FALSE),
 	('ALMACEN', 'USUARIOS_GESTIONAR', FALSE),
 	('ALMACEN', 'USUARIOS_EXPORTAR', FALSE)
+	('ALMACEN', 'AUDITORIA_VER', FALSE),
+ 	('ALMACEN', 'USUARIOS_GESTIONAR', FALSE),
+ 	('ALMACEN', 'USUARIOS_EXPORTAR', FALSE),
++	('CLIENTE_WEB', 'PEDIDO_CREAR', TRUE),
++	('CLIENTE_WEB', 'PEDIDO_CONSULTAR', TRUE),
++	('INVITADO_WEB', 'PEDIDO_CREAR', TRUE)
 ) AS m (rol, operacion, permitido)
 JOIN roles r ON r.nombre_rol = m.rol
 ON CONFLICT (id_rol, operacion) DO UPDATE SET permitido = EXCLUDED.permitido;
@@ -53,9 +61,10 @@ INSERT INTO usuarios (username, password_hash, id_rol, activo)
 SELECT u.username, u.password_hash, r.id_rol, TRUE
 FROM (VALUES
 	('admin', '$2a$10$CghyE6PQ6CTH5vB.07Mm7epWudFnuWy9pMW4rZurDK7Pvk7/wC0Ei', 'ADMIN'),
-	('comercial1', '$2a$10$Z.Cxcf9UxSBOIKyNpEHkguBkXZLjL30a94JFD/6YO25.IorD96sfa', 'COMERCIAL'),
-	('almacen1', '$2a$10$Mn9OTksnJl6UPMScnt2kfupAnGF32chK2nOU1ahyqOuibTjD0JY8.', 'ALMACEN')
-) AS u (username, password_hash, rol)
+ 	('comercial1', '$2a$10$Z.Cxcf9UxSBOIKyNpEHkguBkXZLjL30a94JFD/6YO25.IorD96sfa', 'COMERCIAL'),
+ 	('almacen1', '$2a$10$Mn9OTksnJl6UPMScnt2kfupAnGF32chK2nOU1ahyqOuibTjD0JY8.', 'ALMACEN'),
++	('invitado_web', '$2a$10$simulacionhashinvitado12345678901234567890123456789', 'INVITADO_WEB')
+ ) AS u (username, password_hash, rol)
 JOIN roles r ON r.nombre_rol = u.rol
 ON CONFLICT (username) DO NOTHING;
 
