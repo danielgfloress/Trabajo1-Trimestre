@@ -7,8 +7,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 89.9,
         "imagen": "img/productos/runner-x.jpg",
-        "descripcion": "Nuestro modelo propio, diseñado y fabricado en el taller de D3 Kicks. Zapatilla baja de piel blanca con puntera perforada, suela gruesa cosida y el logo D3 Kicks grabado en el lateral, la lengüeta y el talón. Es la base de los pedidos Custom: el Club Halcones la ha pedido con sus colores y su nombre en el lateral.",
-        "antiguo": "runner-x.html"
+        "descripcion": "Nuestro modelo propio, diseñado y fabricado en el taller de D3 Kicks. Zapatilla baja de piel blanca con puntera perforada, suela gruesa cosida y el logo D3 Kicks grabado en el lateral, la lengüeta y el talón. Es la base de los pedidos Custom: el Club Halcones la ha pedido con sus colores y su nombre en el lateral."
     },
     {
         "id": "ADI-001",
@@ -18,8 +17,7 @@ const PRODUCTOS = [
         "categoria": "Baloncesto",
         "precio": 129.99,
         "imagen": "img/productos/adidas-ae-1.jpg",
-        "descripcion": "Modelo firmado por Anthony Edwards: estructura lateral en relieve para sujetar el pie y amortiguación reactiva para saltos.",
-        "antiguo": "adidas-ae-1.html"
+        "descripcion": "Modelo firmado por Anthony Edwards: estructura lateral en relieve para sujetar el pie y amortiguación reactiva para saltos."
     },
     {
         "id": "ADI-002",
@@ -29,8 +27,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 120,
         "imagen": "img/productos/adidas-campus-00s-gris.jpg",
-        "descripcion": "La Campus 00s en gris: ante grueso, cordones anchos y suela de goma color miel.",
-        "antiguo": "adidas-campus-00s-gris.html"
+        "descripcion": "La Campus 00s en gris: ante grueso, cordones anchos y suela de goma color miel."
     },
     {
         "id": "ADI-003",
@@ -40,8 +37,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 120,
         "imagen": "img/productos/adidas-campus-00s.jpg",
-        "descripcion": "La Campus de siempre con proporciones de los 2000: ante grueso, cordones anchos y suela de goma color miel.",
-        "antiguo": "adidas-campus-00s.html"
+        "descripcion": "La Campus de siempre con proporciones de los 2000: ante grueso, cordones anchos y suela de goma color miel."
     },
     {
         "id": "ADI-004",
@@ -51,8 +47,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 160,
         "imagen": "img/productos/adidas-campus-light.jpg",
-        "descripcion": "La Campus con cuello acolchado extra y suela gruesa. Ante marrón, bandas en crema y un aire muy retro.",
-        "antiguo": "adidas-campus-light.html"
+        "descripcion": "La Campus con cuello acolchado extra y suela gruesa. Ante marrón, bandas en crema y un aire muy retro."
     },
     {
         "id": "ADI-005",
@@ -62,8 +57,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 89.99,
         "imagen": "img/productos/adidas-copa-pure.jpg",
-        "descripcion": "Bota de piel para césped natural con un toque suave y acolchado, en negro total.",
-        "antiguo": "adidas-copa-pure.html"
+        "descripcion": "Bota de piel para césped natural con un toque suave y acolchado, en negro total."
     },
     {
         "id": "ADI-006",
@@ -73,8 +67,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 150,
         "imagen": "img/productos/adidas-forum-low.jpg",
-        "descripcion": "Silueta de baloncesto de los 80 en negro total, con correa en el tobillo y detalles de cordón en el talón.",
-        "antiguo": "adidas-forum-low.html"
+        "descripcion": "Silueta de baloncesto de los 80 en negro total, con correa en el tobillo y detalles de cordón en el talón."
     },
     {
         "id": "ADI-007",
@@ -84,8 +77,7 @@ const PRODUCTOS = [
         "categoria": "Boxeo",
         "precio": 69.99,
         "imagen": "img/productos/adidas-hvc.jpg",
-        "descripcion": "Zapatilla de lucha de caña alta con cierre de velcro sobre los cordones y suela fina para pivotar sobre el tapiz.",
-        "antiguo": "adidas-hvc.html"
+        "descripcion": "Zapatilla de lucha de caña alta con cierre de velcro sobre los cordones y suela fina para pivotar sobre el tapiz."
     },
     {
         "id": "ADI-008",
@@ -95,8 +87,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 110,
         "imagen": "img/productos/adidas-handball-spezial.jpg",
-        "descripcion": "Creada para balonmano en los 70 y hoy imprescindible en la calle: ante, tres bandas en negro y suela de goma miel.",
-        "antiguo": "adidas-handball-spezial.html"
+        "descripcion": "Creada para balonmano en los 70 y hoy imprescindible en la calle: ante, tres bandas en negro y suela de goma miel."
     },
     {
         "id": "ADI-009",
@@ -106,8 +97,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 89.99,
         "imagen": "img/productos/adidas-predator-edge.jpg",
-        "descripcion": "Bota para césped natural con zonas de agarre en el empeine para controlar y golpear el balón.",
-        "antiguo": "adidas-predator-edge.html"
+        "descripcion": "Bota para césped natural con zonas de agarre en el empeine para controlar y golpear el balón."
     },
     {
         "id": "ADI-010",
@@ -117,8 +107,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 99.99,
         "imagen": "img/productos/adidas-predator-league.jpg",
-        "descripcion": "La Predator de gama media para césped natural, con agarre en el empeine y una horma cómoda desde el primer día.",
-        "antiguo": "adidas-predator-league.html"
+        "descripcion": "La Predator de gama media para césped natural, con agarre en el empeine y una horma cómoda desde el primer día."
     },
     {
         "id": "ADI-011",
@@ -128,8 +117,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 150,
         "imagen": "img/productos/adidas-response-cl.jpg",
-        "descripcion": "Runner de los 2000 en tonos crema, con capas onduladas de ante y las tres bandas en gris metalizado.",
-        "antiguo": "adidas-response-cl.html"
+        "descripcion": "Runner de los 2000 en tonos crema, con capas onduladas de ante y las tres bandas en gris metalizado."
     },
     {
         "id": "ADI-012",
@@ -139,8 +127,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 120,
         "imagen": "img/productos/adidas-samba-og.jpg",
-        "descripcion": "Piel blanca, puntera de ante gris y suela de goma natural. La Samba de siempre en su combinación más buscada.",
-        "antiguo": "adidas-samba-og.html"
+        "descripcion": "Piel blanca, puntera de ante gris y suela de goma natural. La Samba de siempre en su combinación más buscada."
     },
     {
         "id": "ADI-013",
@@ -150,8 +137,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 110,
         "imagen": "img/productos/adidas-superstar.jpg",
-        "descripcion": "La de la puntera de concha: piel negra, tres bandas blancas y suela de goma. Un icono desde los 70.",
-        "antiguo": "adidas-superstar.html"
+        "descripcion": "La de la puntera de concha: piel negra, tres bandas blancas y suela de goma. Un icono desde los 70."
     },
     {
         "id": "JOR-001",
@@ -161,8 +147,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 139.99,
         "imagen": "img/productos/jordan-1-low-se.jpg",
-        "descripcion": "La Jordan 1 baja en marrón y crema con paneles de estampado camuflaje y cordones rojos.",
-        "antiguo": "jordan-1-low-se.html"
+        "descripcion": "La Jordan 1 baja en marrón y crema con paneles de estampado camuflaje y cordones rojos."
     },
     {
         "id": "JOR-002",
@@ -172,8 +157,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 189.99,
         "imagen": "img/productos/jordan-1-high-black-toe.jpg",
-        "descripcion": "El modelo que lo empezó todo en 1985, en una de sus combinaciones originales: puntera negra, talón rojo y base blanca.",
-        "antiguo": "jordan-1-high-black-toe.html"
+        "descripcion": "El modelo que lo empezó todo en 1985, en una de sus combinaciones originales: puntera negra, talón rojo y base blanca."
     },
     {
         "id": "JOR-003",
@@ -183,8 +167,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 219.99,
         "imagen": "img/productos/jordan-3-black-cat.jpg",
-        "descripcion": "Nobuk negro, detalles de charol y textura de elefante en el mismo tono. Una de las versiones más oscuras del clásico de 1988.",
-        "antiguo": "jordan-3-black-cat.html"
+        "descripcion": "Nobuk negro, detalles de charol y textura de elefante en el mismo tono. Una de las versiones más oscuras del clásico de 1988."
     },
     {
         "id": "JOR-004",
@@ -194,8 +177,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 219.99,
         "imagen": "img/productos/jordan-4-blanco-negro.jpg",
-        "descripcion": "Base en blanco roto con detalles en negro y toques rojos en la lengüeta y el talón. Fácil de combinar y con toda la presencia del 4.",
-        "antiguo": "jordan-4-blanco-negro.html"
+        "descripcion": "Base en blanco roto con detalles en negro y toques rojos en la lengüeta y el talón. Fácil de combinar y con toda la presencia del 4."
     },
     {
         "id": "JOR-005",
@@ -205,8 +187,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 229.99,
         "imagen": "img/productos/jordan-4-black-cat.jpg",
-        "descripcion": "Todo negro, de la puntera a la suela. Nobuk, las alas laterales y la malla característica del modelo de 1989 en tono sobre tono.",
-        "antiguo": "jordan-4-black-cat.html"
+        "descripcion": "Todo negro, de la puntera a la suela. Nobuk, las alas laterales y la malla característica del modelo de 1989 en tono sobre tono."
     },
     {
         "id": "LIN-001",
@@ -216,8 +197,7 @@ const PRODUCTOS = [
         "categoria": "Baloncesto",
         "precio": 189.99,
         "imagen": "img/productos/li-ning-way-of-wade.jpg",
-        "descripcion": "La línea de Dwyane Wade: empeine moldeado en una pieza, detalles bordados en dorado y amortiguación para todo el partido.",
-        "antiguo": "li-ning-way-of-wade.html"
+        "descripcion": "La línea de Dwyane Wade: empeine moldeado en una pieza, detalles bordados en dorado y amortiguación para todo el partido."
     },
     {
         "id": "NB-001",
@@ -227,8 +207,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 159.99,
         "imagen": "img/productos/new-balance-1906r.jpg",
-        "descripcion": "Estética runner de los 2000 con capas sintéticas y malla. Amortiguación pensada para caminar todo el día, en negro total.",
-        "antiguo": "new-balance-1906r.html"
+        "descripcion": "Estética runner de los 2000 con capas sintéticas y malla. Amortiguación pensada para caminar todo el día, en negro total."
     },
     {
         "id": "NB-002",
@@ -238,8 +217,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 159.99,
         "imagen": "img/productos/new-balance-1906r-negro.jpg",
-        "descripcion": "Silueta runner de los 2000 con capas sintéticas brillantes sobre malla negra y amortiguación en el talón, en negro total.",
-        "antiguo": "new-balance-1906r-negro.html"
+        "descripcion": "Silueta runner de los 2000 con capas sintéticas brillantes sobre malla negra y amortiguación en el talón, en negro total."
     },
     {
         "id": "NB-003",
@@ -249,8 +227,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 169.99,
         "imagen": "img/productos/new-balance-2002r.jpg",
-        "descripcion": "Ante con los bordes deshilachados a propósito sobre la base runner de la 2002R. Uno de los packs más buscados de la marca.",
-        "antiguo": "new-balance-2002r.html"
+        "descripcion": "Ante con los bordes deshilachados a propósito sobre la base runner de la 2002R. Uno de los packs más buscados de la marca."
     },
     {
         "id": "NB-004",
@@ -260,8 +237,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 130,
         "imagen": "img/productos/new-balance-550-verde.jpg",
-        "descripcion": "El diseño de baloncesto de finales de los 80 recuperado para la calle, en blanco con detalles verde azulado.",
-        "antiguo": "new-balance-550-verde.html"
+        "descripcion": "El diseño de baloncesto de finales de los 80 recuperado para la calle, en blanco con detalles verde azulado."
     },
     {
         "id": "NB-005",
@@ -271,8 +247,7 @@ const PRODUCTOS = [
         "categoria": "Baloncesto",
         "precio": 149.99,
         "imagen": "img/productos/new-balance-omn1s.jpg",
-        "descripcion": "Caña alta, tejido de punto y suela de goma color miel. Pensada para jugadores que buscan sujeción y estabilidad.",
-        "antiguo": "new-balance-omn1s.html"
+        "descripcion": "Caña alta, tejido de punto y suela de goma color miel. Pensada para jugadores que buscan sujeción y estabilidad."
     },
     {
         "id": "NIK-001",
@@ -282,8 +257,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 129.99,
         "imagen": "img/productos/nike-air-force-1.jpg",
-        "descripcion": "El clásico de baloncesto de 1982 convertido en la zapatilla blanca de referencia. Piel granulada y suela de goma con un mensaje grabado en la mediasuela.",
-        "antiguo": "nike-air-force-1.html"
+        "descripcion": "El clásico de baloncesto de 1982 convertido en la zapatilla blanca de referencia. Piel granulada y suela de goma con un mensaje grabado en la mediasuela."
     },
     {
         "id": "NIK-002",
@@ -293,8 +267,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 119.99,
         "imagen": "img/productos/nike-air-force-1-negro.jpg",
-        "descripcion": "La Air Force 1 en negro total: piel, suela de goma y una silueta que lleva en la calle desde 1982.",
-        "antiguo": "nike-air-force-1-negro.html"
+        "descripcion": "La Air Force 1 en negro total: piel, suela de goma y una silueta que lleva en la calle desde 1982."
     },
     {
         "id": "NIK-003",
@@ -304,8 +277,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 149.99,
         "imagen": "img/productos/nike-air-max-90-blanco.jpg",
-        "descripcion": "Cámara de aire visible en el talón y líneas de los 90, en blanco total. Comodidad para todo el día.",
-        "antiguo": "nike-air-max-90-blanco.html"
+        "descripcion": "Cámara de aire visible en el talón y líneas de los 90, en blanco total. Comodidad para todo el día."
     },
     {
         "id": "NIK-004",
@@ -315,8 +287,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 189.99,
         "imagen": "img/productos/nike-air-max-95.jpg",
-        "descripcion": "Paneles laterales en capas inspirados en la anatomía humana y cámaras de aire visibles delante y detrás, en blanco total.",
-        "antiguo": "nike-air-max-95.html"
+        "descripcion": "Paneles laterales en capas inspirados en la anatomía humana y cámaras de aire visibles delante y detrás, en blanco total."
     },
     {
         "id": "NIK-005",
@@ -326,8 +297,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 189.99,
         "imagen": "img/productos/nike-air-max-97.jpg",
-        "descripcion": "Líneas onduladas inspiradas en los trenes bala y cámara de aire a lo largo de toda la suela, en negro con detalles blancos.",
-        "antiguo": "nike-air-max-97.html"
+        "descripcion": "Líneas onduladas inspiradas en los trenes bala y cámara de aire a lo largo de toda la suela, en negro con detalles blancos."
     },
     {
         "id": "NIK-006",
@@ -337,8 +307,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 179.99,
         "imagen": "img/productos/nike-air-max-dn.jpg",
-        "descripcion": "Cuatro cámaras de aire bajo el talón y un empeine de malla ajustado. La Air Max más reciente, en blanco total.",
-        "antiguo": "nike-air-max-dn.html"
+        "descripcion": "Cuatro cámaras de aire bajo el talón y un empeine de malla ajustado. La Air Max más reciente, en blanco total."
     },
     {
         "id": "NIK-007",
@@ -348,8 +317,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 179.99,
         "imagen": "img/productos/nike-air-max-dn-negro.jpg",
-        "descripcion": "La Air Max Dn en negro total, con las cámaras de aire en acabado metálico como único contraste.",
-        "antiguo": "nike-air-max-dn-negro.html"
+        "descripcion": "La Air Max Dn en negro total, con las cámaras de aire en acabado metálico como único contraste."
     },
     {
         "id": "NIK-008",
@@ -359,8 +327,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 189.99,
         "imagen": "img/productos/nike-air-max-plus.jpg",
-        "descripcion": "La TN: líneas onduladas en el lateral y unidades de aire visibles. Un clásico de la calle desde finales de los 90, aquí en negro total.",
-        "antiguo": "nike-air-max-plus.html"
+        "descripcion": "La TN: líneas onduladas en el lateral y unidades de aire visibles. Un clásico de la calle desde finales de los 90, aquí en negro total."
     },
     {
         "id": "NIK-009",
@@ -370,8 +337,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 119.99,
         "imagen": "img/productos/nike-dunk-low-grey-fog.jpg",
-        "descripcion": "La Dunk Low en una combinación más suave: base blanca y paneles gris niebla. Piel lisa y perfil bajo para el día a día.",
-        "antiguo": "nike-dunk-low-grey-fog.html"
+        "descripcion": "La Dunk Low en una combinación más suave: base blanca y paneles gris niebla. Piel lisa y perfil bajo para el día a día."
     },
     {
         "id": "NIK-010",
@@ -381,8 +347,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 119.99,
         "imagen": "img/productos/nike-dunk-low.jpg",
-        "descripcion": "Nació en las canchas universitarias de los 80 y el skate la convirtió en un icono. Piel, perfil bajo y la combinación de colores más buscada.",
-        "antiguo": "nike-dunk-low.html"
+        "descripcion": "Nació en las canchas universitarias de los 80 y el skate la convirtió en un icono. Piel, perfil bajo y la combinación de colores más buscada."
     },
     {
         "id": "NIK-011",
@@ -392,8 +357,7 @@ const PRODUCTOS = [
         "categoria": "Boxeo",
         "precio": 199.99,
         "imagen": "img/productos/nike-hyperko-blanco.jpg",
-        "descripcion": "Bota de boxeo de caña alta, ligera y con suela fina de agarre para moverse rápido por el cuadrilátero.",
-        "antiguo": "nike-hyperko-blanco.html"
+        "descripcion": "Bota de boxeo de caña alta, ligera y con suela fina de agarre para moverse rápido por el cuadrilátero."
     },
     {
         "id": "NIK-012",
@@ -403,8 +367,7 @@ const PRODUCTOS = [
         "categoria": "Boxeo",
         "precio": 199.99,
         "imagen": "img/productos/nike-hyperko-rosa.jpg",
-        "descripcion": "La HyperKO en negro con detalles en rosa: caña alta, poco peso y suela fina de agarre.",
-        "antiguo": "nike-hyperko-rosa.html"
+        "descripcion": "La HyperKO en negro con detalles en rosa: caña alta, poco peso y suela fina de agarre."
     },
     {
         "id": "NIK-013",
@@ -414,8 +377,7 @@ const PRODUCTOS = [
         "categoria": "Boxeo",
         "precio": 219.99,
         "imagen": "img/productos/nike-hyperko-2.jpg",
-        "descripcion": "La segunda generación de la HyperKO: ligera, con sujeción reforzada en el tobillo y suela de agarre multidireccional.",
-        "antiguo": "nike-hyperko-2.html"
+        "descripcion": "La segunda generación de la HyperKO: ligera, con sujeción reforzada en el tobillo y suela de agarre multidireccional."
     },
     {
         "id": "NIK-014",
@@ -425,8 +387,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 109.99,
         "imagen": "img/productos/nike-mercurial-superfly-10.jpg",
-        "descripcion": "Bota de caña alta pensada para la velocidad, con tacos para césped natural y artificial.",
-        "antiguo": "nike-mercurial-superfly-10.html"
+        "descripcion": "Bota de caña alta pensada para la velocidad, con tacos para césped natural y artificial."
     },
     {
         "id": "NIK-015",
@@ -436,8 +397,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 99.99,
         "imagen": "img/productos/nike-phantom-azul.jpg",
-        "descripcion": "La Phantom en azul, con empeine texturizado para el control del balón y tacos para césped natural y artificial.",
-        "antiguo": "nike-phantom-azul.html"
+        "descripcion": "La Phantom en azul, con empeine texturizado para el control del balón y tacos para césped natural y artificial."
     },
     {
         "id": "NIK-016",
@@ -447,8 +407,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 99.99,
         "imagen": "img/productos/nike-phantom-blanco.jpg",
-        "descripcion": "Bota para césped natural y artificial con empeine texturizado para un toque preciso.",
-        "antiguo": "nike-phantom-blanco.html"
+        "descripcion": "Bota para césped natural y artificial con empeine texturizado para un toque preciso."
     },
     {
         "id": "NIK-017",
@@ -458,8 +417,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 279.99,
         "imagen": "img/productos/nike-phantom-gx-elite.jpg",
-        "descripcion": "Gama alta de la familia Phantom: empeine fino y adherente para el control y suela ligera para césped natural.",
-        "antiguo": "nike-phantom-gx-elite.html"
+        "descripcion": "Gama alta de la familia Phantom: empeine fino y adherente para el control y suela ligera para césped natural."
     },
     {
         "id": "NIK-018",
@@ -469,8 +427,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 179.99,
         "imagen": "img/productos/nike-shox-tl.jpg",
-        "descripcion": "Columnas Shox a lo largo de toda la suela para una pisada con rebote y una estética futurista de principios de los 2000.",
-        "antiguo": "nike-shox-tl.html"
+        "descripcion": "Columnas Shox a lo largo de toda la suela para una pisada con rebote y una estética futurista de principios de los 2000."
     },
     {
         "id": "NIK-019",
@@ -480,8 +437,7 @@ const PRODUCTOS = [
         "categoria": "Baloncesto",
         "precio": 74.99,
         "imagen": "img/productos/nike-team-hustle-d11.jpg",
-        "descripcion": "Zapatilla de baloncesto con correa en el mediopié para sujetar el pie en los cambios de dirección y suela de goma de agarre.",
-        "antiguo": "nike-team-hustle-d11.html"
+        "descripcion": "Zapatilla de baloncesto con correa en el mediopié para sujetar el pie en los cambios de dirección y suela de goma de agarre."
     },
     {
         "id": "NIK-020",
@@ -491,8 +447,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 84.99,
         "imagen": "img/productos/nike-tiempo-legend-10.jpg",
-        "descripcion": "La Tiempo de siempre: empeine suave para el control del balón y tacos para césped natural y artificial.",
-        "antiguo": "nike-tiempo-legend-10.html"
+        "descripcion": "La Tiempo de siempre: empeine suave para el control del balón y tacos para césped natural y artificial."
     },
     {
         "id": "NIK-021",
@@ -502,8 +457,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 179.99,
         "imagen": "img/productos/nike-vomero-plus.jpg",
-        "descripcion": "Empeine blanco y una ventana lateral que deja ver la espuma ZoomX en naranja. Máxima amortiguación con mucho estilo.",
-        "antiguo": "nike-vomero-plus.html"
+        "descripcion": "Empeine blanco y una ventana lateral que deja ver la espuma ZoomX en naranja. Máxima amortiguación con mucho estilo."
     },
     {
         "id": "NIK-022",
@@ -513,8 +467,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 189.99,
         "imagen": "img/productos/nike-invincible-3.jpg",
-        "descripcion": "Mediasuela ZoomX muy alta y blanda que contrasta con el empeine negro. Pensada para correr, perfecta para el día a día.",
-        "antiguo": "nike-invincible-3.html"
+        "descripcion": "Mediasuela ZoomX muy alta y blanda que contrasta con el empeine negro. Pensada para correr, perfecta para el día a día."
     },
     {
         "id": "PUM-001",
@@ -524,8 +477,7 @@ const PRODUCTOS = [
         "categoria": "Fútbol",
         "precio": 229.99,
         "imagen": "img/productos/puma-future-7-ultimate.jpg",
-        "descripcion": "Bota de gama alta con cuello de punto elástico y suela ligera para césped natural. Pensada para jugadores creativos.",
-        "antiguo": "puma-future-7-ultimate.html"
+        "descripcion": "Bota de gama alta con cuello de punto elástico y suela ligera para césped natural. Pensada para jugadores creativos."
     },
     {
         "id": "PUM-002",
@@ -535,8 +487,7 @@ const PRODUCTOS = [
         "categoria": "Baloncesto",
         "precio": 139.99,
         "imagen": "img/productos/puma-mb-03-lo.jpg",
-        "descripcion": "La zapatilla de LaMelo Ball en versión baja, con textura peluda en el empeine y suela esculpida en verde ácido.",
-        "antiguo": "puma-mb-03-lo.html"
+        "descripcion": "La zapatilla de LaMelo Ball en versión baja, con textura peluda en el empeine y suela esculpida en verde ácido."
     },
     {
         "id": "PUM-003",
@@ -546,8 +497,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 110,
         "imagen": "img/productos/puma-speedcat.jpg",
-        "descripcion": "Nacida en el automovilismo: ante, perfil muy bajo y suela fina pensada para sentir el pedal. Hoy, un básico de calle.",
-        "antiguo": "puma-speedcat.html"
+        "descripcion": "Nacida en el automovilismo: ante, perfil muy bajo y suela fina pensada para sentir el pedal. Hoy, un básico de calle."
     },
     {
         "id": "PUM-004",
@@ -557,8 +507,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 110,
         "imagen": "img/productos/puma-speedcat-rojo.jpg",
-        "descripcion": "La Speedcat en rojo con la franja lateral en blanco roto, fiel a su origen en las carreras de motor.",
-        "antiguo": "puma-speedcat-rojo.html"
+        "descripcion": "La Speedcat en rojo con la franja lateral en blanco roto, fiel a su origen en las carreras de motor."
     },
     {
         "id": "PUM-005",
@@ -568,8 +517,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 85,
         "imagen": "img/productos/puma-suede-classic.jpg",
-        "descripcion": "Un clásico desde 1968: ante negro, franja lateral blanca y suela de goma. Básica, cómoda y fácil de combinar.",
-        "antiguo": "puma-suede-classic.html"
+        "descripcion": "Un clásico desde 1968: ante negro, franja lateral blanca y suela de goma. Básica, cómoda y fácil de combinar."
     },
     {
         "id": "SAL-001",
@@ -579,8 +527,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 190,
         "imagen": "img/productos/salomon-xt-4.jpg",
-        "descripcion": "Hermana de la XT-6 con un diseño más técnico: refuerzos laterales, cordones rápidos y suela de agarre, en negro.",
-        "antiguo": "salomon-xt-4.html"
+        "descripcion": "Hermana de la XT-6 con un diseño más técnico: refuerzos laterales, cordones rápidos y suela de agarre, en negro."
     },
     {
         "id": "SAL-002",
@@ -590,8 +537,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 180,
         "imagen": "img/productos/salomon-xt-6.jpg",
-        "descripcion": "Nacida para el ultra trail: agarre, estabilidad y cordones rápidos. Funciona igual de bien en la montaña que en la ciudad.",
-        "antiguo": "salomon-xt-6.html"
+        "descripcion": "Nacida para el ultra trail: agarre, estabilidad y cordones rápidos. Funciona igual de bien en la montaña que en la ciudad."
     },
     {
         "id": "SAL-003",
@@ -601,8 +547,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 180,
         "imagen": "img/productos/salomon-xt-6-negro.jpg",
-        "descripcion": "La XT-6 de ultra trail en negro con detalles en gris: agarre, estabilidad y cordones rápidos para la montaña o la ciudad.",
-        "antiguo": "salomon-xt-6-negro.html"
+        "descripcion": "La XT-6 de ultra trail en negro con detalles en gris: agarre, estabilidad y cordones rápidos para la montaña o la ciudad."
     },
     {
         "id": "UA-001",
@@ -612,8 +557,7 @@ const PRODUCTOS = [
         "categoria": "Baloncesto",
         "precio": 79.99,
         "imagen": "img/productos/under-armour-lockdown-6.jpg",
-        "descripcion": "Caña media, amortiguación en el talón y suela de espiga para agarrar en pista. Una opción resistente para entrenar a diario.",
-        "antiguo": "under-armour-lockdown-6.html"
+        "descripcion": "Caña media, amortiguación en el talón y suela de espiga para agarrar en pista. Una opción resistente para entrenar a diario."
     },
     {
         "id": "VAN-001",
@@ -623,8 +567,7 @@ const PRODUCTOS = [
         "categoria": "Sneakers",
         "precio": 99.99,
         "imagen": "img/productos/vans-knu-skool.jpg",
-        "descripcion": "La silueta skate de los 90 con volumen extra: lengüeta acolchada, cordones gruesos y la franja lateral de siempre.",
-        "antiguo": "vans-knu-skool.html"
+        "descripcion": "La silueta skate de los 90 con volumen extra: lengüeta acolchada, cordones gruesos y la franja lateral de siempre."
     },
     {
         "id": "VEN-001",
@@ -634,7 +577,6 @@ const PRODUCTOS = [
         "categoria": "Boxeo",
         "precio": 149.99,
         "imagen": "img/productos/venum-elite.jpg",
-        "descripcion": "Bota de boxeo de caña alta con refuerzos laterales y suela de goma de agarre para desplazamientos rápidos.",
-        "antiguo": "venum-elite.html"
+        "descripcion": "Bota de boxeo de caña alta con refuerzos laterales y suela de goma de agarre para desplazamientos rápidos."
     }
 ];
