@@ -1,8 +1,5 @@
-// Rellena paginas/producto.html con el producto que llega en la dirección.
-// Ejemplo: producto.html?id=NIK-001
-// Los datos salen de la lista PRODUCTOS (js/productos.js), que se carga antes que este archivo.
 
-// 1. Leer el id de la dirección
+
 const parametros = new URLSearchParams(window.location.search);
 const id = parametros.get("id");
 
@@ -14,7 +11,6 @@ if (typeof PRODUCTOS === "undefined") {
     producto = PRODUCTOS.find((p) => p.id === id);
 }
 
-// 3. Mostrar el producto o el mensaje de error
 if (producto) {
     mostrarProducto(producto);
 } else {
