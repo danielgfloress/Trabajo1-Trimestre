@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta · D3 Kicks</title>
+    <meta name="description" content="Crea tu cuenta de cliente en D3 Kicks.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=person&amp;display=block">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <main>
+        <section class="cabecera-pagina">
+            <div class="contenedor">
+                <h1 class="cabecera-pagina__titulo">Crear cuenta</h1>
+                <p class="cabecera-pagina__texto">Crea tu cuenta de cliente para hacer pedidos y seguir tus diseños D3 Custom.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor acceso">
+                <form class="formulario" action="#" method="post">
+                    <p class="formulario__aviso">Los campos marcados con * son obligatorios.</p>
+                    <div class="formulario__campos">
+                        <div class="campo campo--ancho">
+                            <label class="campo__etiqueta" for="registro_nombre">Nombre *</label>
+                            <input class="formulario__control" type="text" id="registro_nombre" name="nombre" required autocomplete="name">
+                        </div>
+                        <div class="campo campo--ancho">
+                            <label class="campo__etiqueta" for="registro_email">Correo electrónico *</label>
+                            <input class="formulario__control" type="email" id="registro_email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="campo campo--ancho">
+                            <label class="campo__etiqueta" for="registro_contrasena">Contraseña *</label>
+                            <input class="formulario__control" type="password" id="registro_contrasena" name="contrasena" required minlength="8" autocomplete="new-password">
+                            <p class="ayuda">Mínimo 8 caracteres.</p>
+                        </div>
+                        <div class="campo campo--ancho">
+                            <label class="campo__etiqueta" for="registro_repetir">Repetir contraseña *</label>
+                            <input class="formulario__control" type="password" id="registro_repetir" name="repetir_contrasena" required minlength="8" autocomplete="new-password">
+                        </div>
+                    </div>
+                    <button class="boton formulario__enviar boton--claro acceso__boton" type="submit">Crear cuenta</button>
+                </form>
+                <p class="acceso__alternativa">¿Ya tienes cuenta? <a href="login.html" class="enlace-destacado">Iniciar sesión</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__columna">
+                <a href="../index.html" class="logo logo--pie"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">La web</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item"><a href="tienda.html" class="pie__enlace">Tienda</a></li>
+                    <li class="pie__item"><a href="custom.html" class="pie__enlace">D3 Custom</a></li>
+                    <li class="pie__item"><a href="nosotros.html" class="pie__enlace">Nosotros</a></li>
+                    <li class="pie__item"><a href="contacto.html" class="pie__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">Contacto</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item">Calle del Cordón, 3 · 28001 Madrid</li>
+                    <li class="pie__item"><a href="tel:+34910000000" class="pie__enlace">910 000 000</a></li>
+                    <li class="pie__item"><a href="mailto:hola@d3kicks.es" class="pie__enlace">hola@d3kicks.es</a></li>
+                </ul>
+            </div>
+            <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

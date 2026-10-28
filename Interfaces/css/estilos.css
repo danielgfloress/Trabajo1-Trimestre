@@ -156,8 +156,24 @@ h3 {
 }
 
 .menu__enlace--custom {
-    border: 2px solid var(--text-primary);
+    border: 2px solid var(--color-border);
     color: var(--text-primary);
+}
+
+.menu__enlace--custom:hover {
+    border-color: var(--text-primary);
+}
+
+.menu__icono {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    padding-left: 12px;
+}
+
+.menu__icono .material-symbols-outlined {
+    font-size: 20px;
 }
 
 .hero {
@@ -720,6 +736,45 @@ h3 {
 
 .formulario__enviar {
     margin-top: 24px;
+}
+
+.acceso {
+    max-width: 520px;
+}
+
+.acceso__opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.acceso__opciones .casilla {
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+.acceso__opciones .casilla input {
+    margin-top: 0;
+}
+
+.acceso__enlace {
+    color: var(--text-secondary);
+}
+
+.acceso__boton {
+    width: 100%;
+}
+
+.acceso__alternativa {
+    margin-top: 24px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--text-secondary);
 }
 
 .pie {
