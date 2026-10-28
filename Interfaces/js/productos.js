@@ -352,17 +352,17 @@ const PRODUCTOS = [
     {
         "id": "NIK-011",
         "marca": "Nike",
-        "nombre": "HyperKO",
+        "nombre": "Machomai 3",
         "color": "Blanco y dorado",
         "categoria": "Boxeo",
-        "precio": 199.99,
+        "precio": 114.99,
         "imagen": "img/productos/nike-hyperko-blanco.jpg",
         "descripcion": "Bota de boxeo de caña alta, ligera y con suela fina de agarre para moverse rápido por el cuadrilátero."
     },
     {
         "id": "NIK-012",
         "marca": "Nike",
-        "nombre": "HyperKO",
+        "nombre": "HyperKO 3",
         "color": "Negro y rosa",
         "categoria": "Boxeo",
         "precio": 199.99,
