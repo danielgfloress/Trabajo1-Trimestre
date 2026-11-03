@@ -30,12 +30,10 @@
         <div class="contenedor">
             <nav class="migas" aria-label="Estás en"><a href="tienda.html" class="migas__enlace">Tienda</a> / <span id="migas-nombre"></span></nav>
 
-            <!-- La ficha se rellena con JavaScript: sin él, saldría vacía -->
             <noscript>
                 <p class="ficha__descripcion">Activa JavaScript para ver el producto.</p>
             </noscript>
 
-            <!-- Los huecos vacíos los rellena js/producto.js con los datos de la API -->
             <article class="ficha" id="producto-ficha">
                 <img class="ficha__foto" id="producto-foto" alt="">
                 <div class="ficha__info">
@@ -95,7 +93,6 @@
                 </div>
             </article>
 
-            <!-- Se muestra solo si el id de la dirección no existe -->
             <div id="producto-error" hidden>
                 <p class="ficha__descripcion" id="producto-error-texto">No hemos encontrado este producto.</p>
                 <div class="botones">

@@ -1,12 +1,12 @@
 const botones = document.querySelectorAll(".filtro");
 const selectDeporte = document.getElementById("filtro-deporte");
 const sinResultados = document.getElementById("sin-resultados");
-const productos = document.querySelectorAll(".producto");
 const parametros = new URLSearchParams(window.location.search);
 let marcasElegidas = [];
 
 function filtrar() {
     const deporte = selectDeporte.value;
+    const productos = document.querySelectorAll(".producto");
     let visibles = 0;
 
     productos.forEach((producto) => {
@@ -53,5 +53,3 @@ const marcaInicial = parametros.get("marca");
 if (marcaInicial && Array.from(botones).some((boton) => boton.dataset.marca === marcaInicial)) {
     marcasElegidas.push(marcaInicial);
 }
-
-filtrar();

@@ -73,44 +73,8 @@
                     </div>
                     <a href="paginas/tienda.html" class="enlace-destacado">Ver toda la tienda</a>
                 </div>
-                <ul class="galeria">
-                    <li class="producto">
-                        <a href="paginas/producto.html?id=D3-001" class="producto__enlace">
-                            <img class="producto__foto" src="img/productos/runner-x.jpg" alt="D3 Runner X en blanco">
-                            <p class="producto__marca">D3</p>
-                            <h3 class="producto__nombre">Runner X</h3>
-                            <p class="producto__color">Blanco</p>
-                            <p class="producto__precio">89,90 €</p>
-                        </a>
-                    </li>
-                    <li class="producto">
-                        <a href="paginas/producto.html?id=JOR-005" class="producto__enlace">
-                            <img class="producto__foto" src="img/productos/jordan-4-black-cat.jpg" alt="Jordan Air Jordan 4 Retro en negro">
-                            <p class="producto__marca">Jordan</p>
-                            <h3 class="producto__nombre">Air Jordan 4 Retro</h3>
-                            <p class="producto__color">Negro</p>
-                            <p class="producto__precio">229,99 €</p>
-                        </a>
-                    </li>
-                    <li class="producto">
-                        <a href="paginas/producto.html?id=NIK-010" class="producto__enlace">
-                            <img class="producto__foto" src="img/productos/nike-dunk-low.jpg" alt="Nike Dunk Low en blanco y negro">
-                            <p class="producto__marca">Nike</p>
-                            <h3 class="producto__nombre">Dunk Low</h3>
-                            <p class="producto__color">Blanco y negro</p>
-                            <p class="producto__precio">119,99 €</p>
-                        </a>
-                    </li>
-                    <li class="producto">
-                        <a href="paginas/producto.html?id=NIK-008" class="producto__enlace">
-                            <img class="producto__foto" src="img/productos/nike-air-max-plus.jpg" alt="Nike Air Max Plus en negro">
-                            <p class="producto__marca">Nike</p>
-                            <h3 class="producto__nombre">Air Max Plus</h3>
-                            <p class="producto__color">Negro</p>
-                            <p class="producto__precio">189,99 €</p>
-                        </a>
-                    </li>
-                </ul>
+                <p class="sin-resultados" id="destacados-estado">Cargando productos...</p>
+                <ul class="galeria" id="destacados"></ul>
             </div>
         </section>
 
@@ -173,4 +137,32 @@
     <footer class="pie">
         <div class="contenedor">
             <div class="pie__columna">
-                <a
+                <a href="index.html" class="logo logo--pie"><img class="logo__imagen" src="img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">La web</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item"><a href="paginas/tienda.html" class="pie__enlace">Tienda</a></li>
+                    <li class="pie__item"><a href="paginas/custom.html" class="pie__enlace">D3 Custom</a></li>
+                    <li class="pie__item"><a href="paginas/nosotros.html" class="pie__enlace">Nosotros</a></li>
+                    <li class="pie__item"><a href="paginas/contacto.html" class="pie__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">Contacto</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item">Calle del Cordón, 3 · 28001 Madrid</li>
+                    <li class="pie__item"><a href="tel:+34910000000" class="pie__enlace">910 000 000</a></li>
+                    <li class="pie__item"><a href="mailto:hola@d3kicks.es" class="pie__enlace">hola@d3kicks.es</a></li>
+                </ul>
+            </div>
+            <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
+        </div>
+    </footer>
+
+    <script src="js/tarjeta.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+
+</html>
