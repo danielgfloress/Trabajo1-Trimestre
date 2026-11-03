@@ -16,7 +16,8 @@ app.get("/api/productos", async (req, res) => {
   try {
     const resultado = await pool.query(`
       SELECT m.codigo_modelo, m.marca, m.nombre, m.categoria, m.precio_base,
-             m.altura_perfil, a.color_base, SUM(a.stock_disponible) AS stock_total
+             m.altura_perfil, m.imagen, m.descripcion, a.color_base,
+             SUM(a.stock_disponible) AS stock_total
       FROM modelos m
       JOIN almacen a ON a.id_modelo = m.id_modelo
       WHERE m.activo
@@ -35,7 +36,7 @@ app.get("/api/productos/:codigo", async (req, res) => {
     const { codigo } = req.params;
     const resultado = await pool.query(`
       SELECT m.codigo_modelo, m.marca, m.nombre, m.categoria, m.precio_base,
-             m.altura_perfil, m.admite_custom, a.color_base,
+             m.altura_perfil, m.admite_custom, m.imagen, m.descripcion, a.color_base,
              json_agg(json_build_object('talla', a.talla, 'stock', a.stock_disponible)
                       ORDER BY a.talla) AS tallas
       FROM modelos m

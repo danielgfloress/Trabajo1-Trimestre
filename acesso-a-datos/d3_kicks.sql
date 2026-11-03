@@ -64,6 +64,8 @@ CREATE TABLE modelos (
 	admite_custom BOOLEAN NOT NULL DEFAULT TRUE,
 	activo BOOLEAN NOT NULL DEFAULT TRUE,
 	altura_perfil VARCHAR(20) NOT NULL DEFAULT 'BAJO',
+	imagen VARCHAR(200),
+	descripcion VARCHAR(500),
 	CONSTRAINT chk_precio_base_positivo CHECK (precio_base > 0),
 	CONSTRAINT modelos_pkey PRIMARY KEY (id_modelo),
 	CONSTRAINT modelos_codigo_modelo_key UNIQUE (codigo_modelo),
