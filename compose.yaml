@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: d3kicks-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5433:5432"
+    volumes:
+      - datos_db:/var/lib/postgresql/data
+      - ./acesso-a-datos/d3_kicks.sql:/docker-entrypoint-initdb.d/01_d3_kicks.sql:ro
+      - ./acesso-a-datos/02_triggers.sql:/docker-entrypoint-initdb.d/02_triggers.sql:ro
+      - ./acesso-a-datos/03_usuarios.sql:/docker-entrypoint-initdb.d/03_usuarios.sql:ro
+      - ./acesso-a-datos/05_datos.sql:/docker-entrypoint-initdb.d/04_datos.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./backend
+    container_name: d3kicks-api
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_NAME: ${POSTGRES_DB}
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  datos_db:
