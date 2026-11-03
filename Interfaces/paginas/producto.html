@@ -35,7 +35,7 @@
                 <p class="ficha__descripcion">Activa JavaScript para ver el producto.</p>
             </noscript>
 
-            <!-- Los huecos vacíos los rellena js/producto.js con los datos de js/productos.js -->
+            <!-- Los huecos vacíos los rellena js/producto.js con los datos de la API -->
             <article class="ficha" id="producto-ficha">
                 <img class="ficha__foto" id="producto-foto" alt="">
                 <div class="ficha__info">
@@ -97,7 +97,7 @@
 
             <!-- Se muestra solo si el id de la dirección no existe -->
             <div id="producto-error" hidden>
-                <p class="ficha__descripcion">No hemos encontrado este producto.</p>
+                <p class="ficha__descripcion" id="producto-error-texto">No hemos encontrado este producto.</p>
                 <div class="botones">
                     <a href="tienda.html" class="boton boton--claro">Volver a la tienda</a>
                 </div>
@@ -132,7 +132,6 @@
         </div>
     </footer>
 
-    <script src="../js/productos.js"></script>
     <script src="../js/producto.js"></script>
 </body>
 
