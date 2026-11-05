@@ -1,8 +1,10 @@
 import express from "express";
 import cors from "cors";
 import { pool } from "./db.js";
+import { crearToken, autenticar } from "./auth.js";
 
 const app = express();
+app.use(cors());
 const PUERTO = 3000;
 
 app.use(cors());
@@ -52,6 +54,99 @@ app.get("/api/productos/:codigo", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error al consultar el producto" });
+  }
+});
+
+app.post("/api/login", async (req, res) => {
+  try {
+    const { usuario, contrasena } = req.body;
+    if (!usuario || !contrasena) {
+      return res.status(400).json({ error: "Escribe tu usuario y tu contraseña" });
+    }
+
+    const resultado = await pool.query(
+      "SELECT * FROM fn_login($1, $2)",
+      [usuario.trim().toLowerCase(), contrasena]
+    );
+    if (resultado.rows.length === 0) {
+      return res.status(401).json({ error: "Usuario o contraseña incorrectos" });
+    }
+
+    const encontrado = resultado.rows[0];
+    res.json({
+      token: crearToken(encontrado),
+      usuario: { username: encontrado.username, rol: encontrado.rol }
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error al iniciar sesión" });
+  }
+});
+
+app.post("/api/registro", async (req, res) => {
+  const { nombre, email, contrasena } = req.body;
+
+  if (!nombre || !email || !contrasena) {
+    return res.status(400).json({ error: "Rellena todos los campos" });
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: "El correo electrónico no es válido" });
+  }
+  if (contrasena.length < 8) {
+    return res.status(400).json({ error: "La contraseña tiene que tener al menos 8 caracteres" });
+  }
+
+  const correo = email.trim().toLowerCase();
+  const cliente = await pool.connect();
+  try {
+    await cliente.query("BEGIN");
+
+    const nuevoCliente = await cliente.query(
+      `INSERT INTO clientes (nombre, persona_contacto, tipo_cliente, email)
+       VALUES ($1, $1, 'PARTICULAR', $2)
+       RETURNING id_cliente`,
+      [nombre.trim(), correo]
+    );
+
+    await cliente.query(
+      `INSERT INTO usuarios (username, password_hash, id_rol, id_cliente)
+       VALUES ($1, crypt($2, gen_salt('bf', 10)),
+               (SELECT id_rol FROM roles WHERE nombre_rol = 'USUARIO'), $3)`,
+      [correo, contrasena, nuevoCliente.rows[0].id_cliente]
+    );
+
+    await cliente.query("COMMIT");
+    res.status(201).json({ mensaje: "Cuenta creada" });
+  } catch (error) {
+    await cliente.query("ROLLBACK");
+    if (error.code === "23505") {
+      return res.status(409).json({ error: "Ya hay una cuenta con ese correo" });
+    }
+    console.error(error);
+    res.status(500).json({ error: "Error al crear la cuenta" });
+  } finally {
+    cliente.release();
+  }
+});
+
+app.get("/api/yo", autenticar, async (req, res) => {
+  try {
+    const resultado = await pool.query(
+      `SELECT pr.operacion
+       FROM usuarios u
+       JOIN permisos_rol pr ON pr.id_rol = u.id_rol
+       WHERE u.id_usuario = $1 AND u.activo AND pr.permitido
+       ORDER BY pr.operacion`,
+      [req.usuario.id_usuario]
+    );
+    res.json({
+      username: req.usuario.username,
+      rol: req.usuario.rol,
+      permisos: resultado.rows.map((fila) => fila.operacion)
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error al consultar el usuario" });
   }
 });
 
