@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto · D3 Kicks</title>
     <meta name="description" content="Contacta con D3 Kicks.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=person&amp;display=block">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=person&amp;display=block">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
 <body>
 
     <header class="cabecera">
         <div class="contenedor">
-            <a href="../index.html" class="logo"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks, sneaker culture" width="480" height="289"></a>
+            <a href="../index.html" class="logo"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png"
+                    alt="D3 Kicks, sneaker culture" width="480" height="289"></a>
             <nav class="menu" aria-label="Menú principal">
                 <a href="../index.html" class="menu__enlace">Inicio</a>
                 <a href="tienda.html" class="menu__enlace">Tienda</a>
                 <a href="nosotros.html" class="menu__enlace">Nosotros</a>
                 <a href="contacto.html" class="menu__enlace menu__enlace--activo">Contacto</a>
                 <a href="custom.html" class="menu__enlace menu__enlace--custom">D3 Custom</a>
-                <a href="login.html" class="menu__enlace menu__enlace--custom menu__icono" aria-label="Iniciar sesión" title="Iniciar sesión"><span class="material-symbols-outlined" aria-hidden="true">person</span>log in</a>
+                <a href="login.html" class="menu__enlace menu__enlace--custom menu__icono" aria-label="Iniciar sesión"
+                    title="Iniciar sesión"><span class="material-symbols-outlined" aria-hidden="true">person</span>log
+                    in</a>
             </nav>
         </div>
     </header>
@@ -30,7 +36,8 @@
         <section class="cabecera-pagina cabecera-pagina--foto cabecera-pagina--contacto">
             <div class="contenedor">
                 <h1 class="cabecera-pagina__titulo">Contacto</h1>
-                <p class="cabecera-pagina__texto">Escríbenos para reservar una talla, preguntar por un modelo o lo que necesites.</p>
+                <p class="cabecera-pagina__texto">Escríbenos para reservar una talla, preguntar por un modelo o lo que
+                    necesites.</p>
             </div>
         </section>
 
@@ -55,18 +62,21 @@
                             <dd class="datos__valor">Lunes a sábado, de 10:00 a 20:30</dd>
                         </div>
                     </dl>
-                    <p class="nota">¿Es para un club o un equipo? Usa mejor el <a href="custom.html#solicitud">formulario de D3 Custom</a>.</p>
+                    <p class="nota">¿Es para un club o un equipo? Usa mejor el <a
+                            href="custom.html#solicitud">formulario de D3 Custom</a>.</p>
                 </div>
                 <form class="formulario" action="#" method="post">
                     <p class="formulario__aviso">Los campos marcados con * son obligatorios.</p>
                     <div class="formulario__campos">
                         <div class="campo campo--ancho">
                             <label class="campo__etiqueta" for="contacto_nombre">Nombre *</label>
-                            <input class="formulario__control" type="text" id="contacto_nombre" name="nombre" required autocomplete="name">
+                            <input class="formulario__control" type="text" id="contacto_nombre" name="nombre" required
+                                autocomplete="name">
                         </div>
                         <div class="campo campo--ancho">
                             <label class="campo__etiqueta" for="contacto_email">Correo electrónico *</label>
-                            <input class="formulario__control" type="email" id="contacto_email" name="email" required autocomplete="email">
+                            <input class="formulario__control" type="email" id="contacto_email" name="email" required
+                                autocomplete="email">
                         </div>
                         <div class="campo campo--ancho">
                             <label class="campo__etiqueta" for="contacto_asunto">Asunto</label>
@@ -79,7 +89,8 @@
                         </div>
                         <div class="campo campo--ancho">
                             <label class="campo__etiqueta" for="contacto_mensaje">Mensaje *</label>
-                            <textarea class="formulario__control" id="contacto_mensaje" name="mensaje" required></textarea>
+                            <textarea class="formulario__control" id="contacto_mensaje" name="mensaje"
+                                required></textarea>
                         </div>
                     </div>
                     <button class="boton formulario__enviar boton--claro" type="submit">Enviar mensaje</button>
@@ -91,7 +102,8 @@
     <footer class="pie">
         <div class="contenedor">
             <div class="pie__columna">
-                <a href="../index.html" class="logo logo--pie"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <a href="../index.html" class="logo logo--pie"><img class="logo__imagen"
+                        src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
                 <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
             </div>
             <div class="pie__columna">
@@ -114,7 +126,7 @@
             <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
         </div>
     </footer>
-
+    <script src="../js/sesion.js"></script>
 </body>
 
 </html>
