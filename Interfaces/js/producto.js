@@ -1,5 +1,3 @@
-const API = "http://localhost:3000/api";
-
 const parametros = new URLSearchParams(window.location.search);
 const id = parametros.get("id");
 
