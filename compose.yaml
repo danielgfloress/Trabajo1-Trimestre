@@ -15,7 +15,7 @@ services:
       - ./acesso-a-datos/03_usuarios.sql:/docker-entrypoint-initdb.d/03_usuarios.sql:ro
       - ./acesso-a-datos/05_datos.sql:/docker-entrypoint-initdb.d/04_datos.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}" ]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -24,6 +24,7 @@ services:
     build: ./backend
     container_name: d3kicks-api
     environment:
+      JWT_SECRET: ${JWT_SECRET}
       DB_HOST: db
       DB_PORT: 5432
       DB_USER: ${POSTGRES_USER}
