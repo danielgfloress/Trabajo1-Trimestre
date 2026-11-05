@@ -1,5 +1,3 @@
-const API = "http://localhost:3000/api";
-
 function formatearMarca(marca) {
     return marca.toLowerCase().replace(/\b\w/g, (letra) => letra.toUpperCase());
 }
