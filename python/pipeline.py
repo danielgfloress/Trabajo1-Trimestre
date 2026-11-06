@@ -179,6 +179,7 @@ def validar(tablas):
 
     limpias = {nombre: tablas[nombre].drop(index=list(rechazos[nombre])) for nombre in tablas}
     pedidos_rechazados = tablas["pedidos"].loc[list(rechazos["pedidos"]), "id_pedido"]
+    pedidos_rechazados = pedidos_rechazados[~pedidos_rechazados.isin(limpias["pedidos"]["id_pedido"])]
     arrastradas = limpias["lineas"]["id_pedido"].isin(pedidos_rechazados)
     for _, fila in limpias["lineas"][arrastradas].iterrows():
         nueva_incidencia(incidencias, "lineas", fila["id_linea"], "línea de un pedido rechazado", "advertencia", "línea rechazada")

@@ -335,6 +335,9 @@ def calcular_todo(resultado_pipeline, filtros=None):
     df_abc = modelos_abc(df_lineas)
     unidades, proporcion = matriz_modelo_talla(df_lineas)
     calidad, calidad_reglas = calidad_incidencias(resultado_pipeline)
+    base = resultado_pipeline["tablas"]
+    base_lineas = lineas_enriquecidas(base) if filtros else df_lineas
+    base_pedidos = pedidos_unicos(base, base_lineas) if filtros else df_pedidos
     resultados = {
         "lineas_enriquecidas": df_lineas,
         "pedidos_unicos": df_pedidos,
@@ -350,9 +353,9 @@ def calcular_todo(resultado_pipeline, filtros=None):
         "calidad_por_regla": calidad_reglas,
         "anomalias": anomalias(df_lineas),
         "precio_y_margen": precio_y_margen(df_lineas),
-        "reconciliacion_sql": reconciliacion_sql(df_pedidos, df_lineas),
+        "reconciliacion_sql": reconciliacion_sql(base_pedidos, base_lineas),
         "kpis": kpis(df_pedidos, df_lineas, df_ventas_mes, df_abc),
     }
-    for df in resultados.values():
-        df.attrs["filtros"] = filtros or {}
+    for nombre, df in resultados.items():
+        df.attrs["filtros"] = {} if nombre == "reconciliacion_sql" else (filtros or {})
     return resultados
