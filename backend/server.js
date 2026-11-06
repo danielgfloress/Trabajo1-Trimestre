@@ -150,6 +150,26 @@ app.get("/api/yo", autenticar, async (req, res) => {
   }
 });
 
+app.get("/api/usuarios", autenticar, async (req, res) => {
+  // Comprobamos el rol, se llame 'rol' o 'id_rol' en tu token de auth.js
+  const rolUsuario = req.usuario.rol || req.usuario.id_rol;
+
+  if (rolUsuario !== 'ADMIN') {
+    return res.status(403).json({ error: `Acceso denegado. Tu rol detectado es: ${rolUsuario}` });
+  }
+
+  try {
+    // Quitamos la columna id_usuario por si en tu tabla la clave primaria se llama solo 'id'
+    const resultado = await pool.query(
+      "SELECT username, id_rol, activo FROM usuarios"
+    );
+    res.json(resultado.rows);
+  } catch (error) {
+    console.error("Error SQL:", error);
+    res.status(500).json({ error: "Error en la consulta SQL. Revisa la terminal de Docker." });
+  }
+});
+
 app.listen(PUERTO, () => {
   console.log(`API escuchando en el puerto ${PUERTO}`);
 });

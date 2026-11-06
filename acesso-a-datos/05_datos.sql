@@ -144,10 +144,10 @@ INSERT INTO clientes (codigo_odoo, nombre, persona_contacto, tipo_cliente, email
 ON CONFLICT (codigo_odoo) DO NOTHING;
 
 INSERT INTO usuarios (username, password_hash, id_rol, activo, id_cliente)
-SELECT 'cliente_web1', '$2a$10$oIw//MDDtdA3lpPrwSemS.cUHLMyuSWOyXIs9u2u4.aIKH5UNlnY2', r.id_rol, TRUE, c.id_cliente
+SELECT 'laura.martin@example.com', '$2a$10$oIw//MDDtdA3lpPrwSemS.cUHLMyuSWOyXIs9u2u4.aIKH5UNlnY2', r.id_rol, TRUE, c.id_cliente
 FROM roles r
 JOIN clientes c ON c.codigo_odoo = 'CLI006'
-WHERE r.nombre_rol = 'CLIENTE_WEB'
+WHERE r.nombre_rol = 'USUARIO'
 ON CONFLICT (username) DO NOTHING;
 
 DO $$
@@ -249,8 +249,7 @@ BEGIN
 	UPDATE pedidos SET estado = 'CANCELADO'
 	WHERE ref_odoo IN (SELECT ref FROM carga_pedidos WHERE estado = 'CANCELADO');
 
-	PERFORM set_config('app.id_usuario', (SELECT id_usuario::TEXT FROM usuarios WHERE username = 'almacen1'), true);
-
+PERFORM set_config('app.id_usuario', (SELECT id_usuario::TEXT FROM usuarios WHERE username = 'comercial1'), true);
 	UPDATE pedidos SET estado = 'ENTREGADO'
 	WHERE ref_odoo IN (SELECT ref FROM carga_pedidos WHERE estado = 'ENTREGADO');
 
