@@ -1,11 +1,9 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 INSERT INTO roles (nombre_rol, descripcion) VALUES
-	('ADMIN', 'Administración: acceso completo, incluida la gestión de usuarios, roles y permisos'),
-	('COMERCIAL', 'Ventas: crea, edita, confirma y cancela pedidos de clientes'),
-	('ALMACEN', 'Almacén y producción: consulta pedidos y stock, marca pedidos entregados y prepara fichas de fabricación'),
-	('CLIENTE_WEB', 'Cliente registrado en la web: crea y consulta solo sus propios pedidos'),
-	('INVITADO_WEB', 'Usuario técnico de la web para compras sin registro: no puede iniciar sesión')
+	('ADMIN', 'Administración: acceso completo, incluida la gestión de usuarios, productos y permisos'),
+	('COMERCIAL', 'Ventas: crea, edita, confirma, cancela y entrega pedidos de clientes'),
+	('USUARIO', 'Cliente registrado en la web: crea y consulta solo sus propios pedidos')
 ON CONFLICT (nombre_rol) DO UPDATE SET descripcion = EXCLUDED.descripcion;
 
 INSERT INTO permisos_rol (id_rol, operacion, permitido)
@@ -23,54 +21,36 @@ FROM (VALUES
 	('ADMIN', 'AUDITORIA_VER', TRUE),
 	('ADMIN', 'USUARIOS_GESTIONAR', TRUE),
 	('ADMIN', 'USUARIOS_EXPORTAR', TRUE),
+	('ADMIN', 'PRODUCTO_EDITAR', TRUE),
+	('ADMIN', 'STOCK_EDITAR', TRUE),
 	('COMERCIAL', 'PEDIDO_CONSULTAR', TRUE),
 	('COMERCIAL', 'PEDIDO_CREAR', TRUE),
 	('COMERCIAL', 'PEDIDO_EDITAR', TRUE),
 	('COMERCIAL', 'PEDIDO_CONFIRMAR', TRUE),
 	('COMERCIAL', 'PEDIDO_CANCELAR', TRUE),
-	('COMERCIAL', 'PEDIDO_ENTREGAR', FALSE),
+	('COMERCIAL', 'PEDIDO_ENTREGAR', TRUE),
 	('COMERCIAL', 'STOCK_CONSULTAR', TRUE),
 	('COMERCIAL', 'INDICADORES_VER', TRUE),
 	('COMERCIAL', 'DATOS_EXPORTAR', TRUE),
 	('COMERCIAL', 'AUDITORIA_VER', FALSE),
 	('COMERCIAL', 'USUARIOS_GESTIONAR', FALSE),
 	('COMERCIAL', 'USUARIOS_EXPORTAR', FALSE),
-	('ALMACEN', 'PEDIDO_CONSULTAR', TRUE),
-	('ALMACEN', 'PEDIDO_CREAR', FALSE),
-	('ALMACEN', 'PEDIDO_EDITAR', FALSE),
-	('ALMACEN', 'PEDIDO_CONFIRMAR', FALSE),
-	('ALMACEN', 'PEDIDO_CANCELAR', FALSE),
-	('ALMACEN', 'PEDIDO_ENTREGAR', TRUE),
-	('ALMACEN', 'STOCK_CONSULTAR', TRUE),
-	('ALMACEN', 'INDICADORES_VER', TRUE),
-	('ALMACEN', 'DATOS_EXPORTAR', TRUE),
-	('ALMACEN', 'AUDITORIA_VER', FALSE),
-	('ALMACEN', 'USUARIOS_GESTIONAR', FALSE),
-	('ALMACEN', 'USUARIOS_EXPORTAR', FALSE),
-	('CLIENTE_WEB', 'PEDIDO_CONSULTAR', TRUE),
-	('CLIENTE_WEB', 'PEDIDO_CREAR', TRUE),
-	('CLIENTE_WEB', 'PEDIDO_EDITAR', TRUE),
-	('CLIENTE_WEB', 'PEDIDO_CONFIRMAR', FALSE),
-	('CLIENTE_WEB', 'PEDIDO_CANCELAR', FALSE),
-	('CLIENTE_WEB', 'PEDIDO_ENTREGAR', FALSE),
-	('CLIENTE_WEB', 'STOCK_CONSULTAR', TRUE),
-	('CLIENTE_WEB', 'INDICADORES_VER', FALSE),
-	('CLIENTE_WEB', 'DATOS_EXPORTAR', FALSE),
-	('CLIENTE_WEB', 'AUDITORIA_VER', FALSE),
-	('CLIENTE_WEB', 'USUARIOS_GESTIONAR', FALSE),
-	('CLIENTE_WEB', 'USUARIOS_EXPORTAR', FALSE),
-	('INVITADO_WEB', 'PEDIDO_CONSULTAR', FALSE),
-	('INVITADO_WEB', 'PEDIDO_CREAR', TRUE),
-	('INVITADO_WEB', 'PEDIDO_EDITAR', TRUE),
-	('INVITADO_WEB', 'PEDIDO_CONFIRMAR', FALSE),
-	('INVITADO_WEB', 'PEDIDO_CANCELAR', FALSE),
-	('INVITADO_WEB', 'PEDIDO_ENTREGAR', FALSE),
-	('INVITADO_WEB', 'STOCK_CONSULTAR', TRUE),
-	('INVITADO_WEB', 'INDICADORES_VER', FALSE),
-	('INVITADO_WEB', 'DATOS_EXPORTAR', FALSE),
-	('INVITADO_WEB', 'AUDITORIA_VER', FALSE),
-	('INVITADO_WEB', 'USUARIOS_GESTIONAR', FALSE),
-	('INVITADO_WEB', 'USUARIOS_EXPORTAR', FALSE)
+	('COMERCIAL', 'PRODUCTO_EDITAR', FALSE),
+	('COMERCIAL', 'STOCK_EDITAR', FALSE),
+	('USUARIO', 'PEDIDO_CONSULTAR', TRUE),
+	('USUARIO', 'PEDIDO_CREAR', TRUE),
+	('USUARIO', 'PEDIDO_EDITAR', TRUE),
+	('USUARIO', 'PEDIDO_CONFIRMAR', FALSE),
+	('USUARIO', 'PEDIDO_CANCELAR', FALSE),
+	('USUARIO', 'PEDIDO_ENTREGAR', FALSE),
+	('USUARIO', 'STOCK_CONSULTAR', TRUE),
+	('USUARIO', 'INDICADORES_VER', FALSE),
+	('USUARIO', 'DATOS_EXPORTAR', FALSE),
+	('USUARIO', 'AUDITORIA_VER', FALSE),
+	('USUARIO', 'USUARIOS_GESTIONAR', FALSE),
+	('USUARIO', 'USUARIOS_EXPORTAR', FALSE),
+	('USUARIO', 'PRODUCTO_EDITAR', FALSE),
+	('USUARIO', 'STOCK_EDITAR', FALSE)
 ) AS m (rol, operacion, permitido)
 JOIN roles r ON r.nombre_rol = m.rol
 ON CONFLICT (id_rol, operacion) DO UPDATE SET permitido = EXCLUDED.permitido;
@@ -79,9 +59,7 @@ INSERT INTO usuarios (username, password_hash, id_rol, activo)
 SELECT u.username, u.password_hash, r.id_rol, TRUE
 FROM (VALUES
 	('admin', '$2a$10$CghyE6PQ6CTH5vB.07Mm7epWudFnuWy9pMW4rZurDK7Pvk7/wC0Ei', 'ADMIN'),
-	('comercial1', '$2a$10$Z.Cxcf9UxSBOIKyNpEHkguBkXZLjL30a94JFD/6YO25.IorD96sfa', 'COMERCIAL'),
-	('almacen1', '$2a$10$Mn9OTksnJl6UPMScnt2kfupAnGF32chK2nOU1ahyqOuibTjD0JY8.', 'ALMACEN'),
-	('invitado_web', '$2a$10$2QNex5AOF5PbpR7d.Cuhwe9NAVFQjV0cD1GGxr11OKfhmCu6XnXyy', 'INVITADO_WEB')
+	('comercial1', '$2a$10$Z.Cxcf9UxSBOIKyNpEHkguBkXZLjL30a94JFD/6YO25.IorD96sfa', 'COMERCIAL')
 ) AS u (username, password_hash, rol)
 JOIN roles r ON r.nombre_rol = u.rol
 ON CONFLICT (username) DO NOTHING;
@@ -175,6 +153,45 @@ DROP TRIGGER IF EXISTS trg_permisos_lineas ON lineas_pedido;
 CREATE TRIGGER trg_permisos_lineas
 BEFORE INSERT OR UPDATE OR DELETE ON lineas_pedido
 FOR EACH ROW EXECUTE FUNCTION fn_comprobar_permiso();
+
+CREATE OR REPLACE FUNCTION fn_comprobar_permiso_catalogo()
+RETURNS TRIGGER AS $$
+DECLARE
+	v_id_usuario INTEGER;
+	v_operacion VARCHAR(60);
+BEGIN
+	IF pg_trigger_depth() > 1 THEN
+		RETURN COALESCE(NEW, OLD);
+	END IF;
+
+	v_id_usuario := NULLIF(current_setting('app.id_usuario', true), '')::INTEGER;
+	IF v_id_usuario IS NULL THEN
+		RETURN COALESCE(NEW, OLD);
+	END IF;
+
+	IF TG_TABLE_NAME = 'modelos' THEN
+		v_operacion := 'PRODUCTO_EDITAR';
+	ELSE
+		v_operacion := 'STOCK_EDITAR';
+	END IF;
+
+	IF NOT fn_tiene_permiso(v_id_usuario, v_operacion) THEN
+		RAISE EXCEPTION 'Permiso denegado: el usuario % no puede realizar la operación %', v_id_usuario, v_operacion;
+	END IF;
+
+	RETURN COALESCE(NEW, OLD);
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_permisos_modelos ON modelos;
+CREATE TRIGGER trg_permisos_modelos
+BEFORE INSERT OR UPDATE OR DELETE ON modelos
+FOR EACH ROW EXECUTE FUNCTION fn_comprobar_permiso_catalogo();
+
+DROP TRIGGER IF EXISTS trg_permisos_almacen ON almacen;
+CREATE TRIGGER trg_permisos_almacen
+BEFORE INSERT OR UPDATE OR DELETE ON almacen
+FOR EACH ROW EXECUTE FUNCTION fn_comprobar_permiso_catalogo();
 
 CREATE OR REPLACE FUNCTION fn_usuarios_json()
 RETURNS JSON AS $$
