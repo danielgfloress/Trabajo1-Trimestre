@@ -151,7 +151,6 @@ app.get("/api/yo", autenticar, async (req, res) => {
 });
 
 app.get("/api/usuarios", autenticar, async (req, res) => {
-  // Comprobamos el rol, se llame 'rol' o 'id_rol' en tu token de auth.js
   const rolUsuario = req.usuario.rol || req.usuario.id_rol;
 
   if (rolUsuario !== 'ADMIN') {
@@ -159,10 +158,12 @@ app.get("/api/usuarios", autenticar, async (req, res) => {
   }
 
   try {
-    // Quitamos la columna id_usuario por si en tu tabla la clave primaria se llama solo 'id'
-    const resultado = await pool.query(
-      "SELECT username, id_rol, activo FROM usuarios"
-    );
+    const resultado = await pool.query(`
+            SELECT u.id_usuario, u.username, r.nombre_rol, u.activo 
+            FROM usuarios u
+            JOIN roles r ON u.id_rol = r.id_rol
+            ORDER BY u.id_usuario
+        `);
     res.json(resultado.rows);
   } catch (error) {
     console.error("Error SQL:", error);
