@@ -1,0 +1,26 @@
+id_linea,id_pedido,id_modelo,color,talla,cantidad,precio_unitario,subtotal_linea,personalizada
+1,1,6,Negro,42,10,89.99,899.90,false
+2,1,6,Negro,43,8,89.99,719.92,false
+3,2,26,Blanco,38,1,129.99,129.99,false
+4,3,1,Blanco,39,6,104.90,629.40,true
+5,3,1,Blanco,40,8,104.90,839.20,true
+6,3,1,Blanco,41,6,104.90,629.40,true
+7,4,1,Blanco,41,4,89.90,359.60,false
+8,4,47,Negro y blanco,42,3,189.99,569.97,false
+9,5,11,Rojo y blanco,41,6,111.99,671.94,true
+10,5,11,Rojo y blanco,42,8,111.99,895.92,true
+11,5,11,Rojo y blanco,43,6,111.99,671.94,true
+12,6,44,Rojo y negro,44,10,89.99,899.90,true
+13,6,44,Rojo y negro,45,10,89.99,899.90,true
+14,7,35,Blanco y negro,40,2,119.99,239.98,false
+15,8,38,Negro y blanco,40,3,219.99,659.97,false
+16,8,58,Negro y dorado,41,2,149.99,299.98,false
+17,8,38,Negro y blanco,42,3,219.99,659.97,false
+18,9,24,Blanco y verde,38,1,130.00,130.00,false
+19,10,47,Negro y blanco,40,4,199.99,799.96,true
+20,10,47,Negro y blanco,41,4,199.99,799.96,true
+21,10,47,Negro y blanco,42,4,199.99,799.96,true
+22,10,47,Negro y blanco,43,4,199.99,799.96,true
+23,10,47,Negro y blanco,44,4,199.99,799.96,true
+24,11,25,Blanco,45,5,149.99,749.95,false
+25,12,55,Negro,41,2,180.00,360.00,false
