@@ -113,3 +113,36 @@ Calculadas en `analiticas.py` a partir de los CSV; no vienen de ACC. **Disponibl
 | cobertura_semanas | Operaciones | stock ÷ (pares de los últimos 28 días ÷ 4); N/D sin demanda | semanas | modelo-color-talla | foto del corte |
 
 Todas se calculan solo con ventas válidas (CONFIRMADO y ENTREGADO), salvo las de calendario, que existen para todos los pedidos.
+
+## Datos sintéticos (`datos_sinteticos/`)
+
+> **No son datos de Sneaker Factory.** Los genera `generador_datos.py` para poder estudiar segmentación y predicción con un histórico largo. Nunca se mezclan con `entrada_acc/` y todo lo que sale de ellos se rotula **SINTÉTICO · generador_datos.py**. No describen la demanda real.
+
+Mismo contrato que los CSV de ACC (mismas columnas y formatos), con códigos propios para que no se confundan: modelos `SIM-01`…`SIM-14` (marca `SIMULADA`), clientes `SCLI001`…`SCLI045`, pedidos `SSO0001`…`SSO0900`.
+
+| Parámetro | Valor | Dónde se cambia |
+|---|---|---|
+| Semilla | 42 (misma semilla → mismos CSV) | `config.SEMILLA` o `--semilla` |
+| Pedidos | 900 | `config.SINTETICO_PEDIDOS` |
+| Clientes | 45 | `config.SINTETICO_CLIENTES` |
+| Modelos | 14 | lista `MODELOS` del generador |
+| Periodo | 18 meses, de 01/2025 a 06/2026; fecha de corte 30/06/2026 23:59:59 | `config.SINTETICO_INICIO`, `config.SINTETICO_MESES` |
+
+### Hipótesis de simulación
+
+| # | Hipótesis | Cómo se aplica |
+|---|---|---|
+| S1 | Unos clientes compran mucho más que otros | cada cliente tiene un peso de actividad lognormal; pocos clientes concentran muchos pedidos |
+| S2 | Hay meses fuertes y flojos | factor mensual general (máximo en septiembre y diciembre, mínimo en febrero) y +1,5 % de crecimiento al mes |
+| S3 | Cada categoría tiene su temporada | Fútbol ×1,6 en agosto-septiembre, Baloncesto ×1,4 en septiembre-octubre, Sneakers ×1,3 en noviembre-diciembre, Boxeo ×1,4 en enero |
+| S4 | Unos modelos son más populares | cada modelo tiene una popularidad fija (de 1,00 a 0,12) |
+| S5 | Las tallas centrales se piden más | curva centrada en 41,5 con desviación 2 (tallas 36 a 46) |
+| S6 | Solo clubes y equipos piden Custom | 30 % de los pedidos de clubes y 25 % de equipos; nunca particulares |
+| S7 | Un Custom es un solo modelo en varias tallas | 20 a 60 pares repartidos en 2 a 5 tallas, solo modelos que admiten Custom, recargo de 10 a 20 €/par |
+| S8 | Un pedido estándar tiene 1 a 3 líneas | particulares 1-2 pares por línea; clubes y equipos 2-12 |
+| S9 | El estado depende de la antigüedad | más de 45 días: entregado o cancelado; 21-45 días: confirmado o entregado; últimos 20 días: también borradores. Cancelación 8 % estándar y 14 % Custom |
+| S10 | El stock depende de la popularidad | stock por modelo, color y talla con media proporcional a popularidad × peso de la talla; mínimo 5 |
+
+### Copia con incidencias (`datos_sinteticos/con_incidencias/`)
+
+Los mismos datos con 11 errores introducidos a propósito para demostrar las reglas de calidad. `incidencias_introducidas.csv` dice qué registro se estropeó y qué regla debe saltar: ID huérfano (03), fecha imposible (04), cantidad negativa (05), precio no numérico (06), estado fuera de catálogo (07), talla 50 (08), pedido sin cliente (09), importe descuadrado (12), stock negativo (11), pedido duplicado (02) y stock duplicado (11).

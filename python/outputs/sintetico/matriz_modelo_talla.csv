@@ -1,0 +1,15 @@
+codigo_modelo,modelo,36,37,38,39,40,41,42,43,44,45,46,origen,generado,filtros
+SIM-01,Sneakers sintético 01,3,12,100,122,276,266,362,236,238,110,25,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-02,Sneakers sintético 02,2,39,54,114,193,205,270,236,86,94,17,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-03,Sneakers sintético 03,0,9,42,27,79,62,143,30,10,16,8,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-04,Sneakers sintético 04,0,31,23,62,50,160,170,83,33,67,12,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-05,Sneakers sintético 05,0,8,10,17,38,65,54,27,17,19,2,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-06,Sneakers sintético 06,0,14,2,12,5,14,27,17,17,12,2,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-07,Fútbol sintético 07,14,26,43,87,152,188,235,142,82,70,5,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-08,Fútbol sintético 08,4,15,34,105,114,142,141,103,61,47,10,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-09,Fútbol sintético 09,0,0,0,14,11,5,32,41,12,4,0,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-10,Baloncesto sintético 10,13,11,31,52,121,177,144,117,56,52,0,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-11,Baloncesto sintético 11,0,14,9,71,95,105,70,68,26,5,20,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-12,Baloncesto sintético 12,0,2,13,15,14,41,25,15,3,25,21,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-13,Boxeo sintético 13,0,16,14,25,43,44,116,68,61,2,0,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros
+SIM-14,Boxeo sintético 14,0,0,2,2,2,4,7,2,1,3,0,SINTÉTICO · generador_datos.py,2026-11-09 10:44:49,sin filtros

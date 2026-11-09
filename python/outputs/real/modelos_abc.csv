@@ -1,0 +1,9 @@
+codigo_modelo,marca,modelo,ingresos,pares,peso_pct,acumulado_pct,clase,ranking_pares,origen,generado,filtros
+NIK-022,NIKE,ZoomX Invincible 3,4569.77,23,35.49,35.49,A,2,ACC · REAL,2026-11-09 10:40:03,sin filtros
+D3-001,D3,Runner X,2457.6,24,19.09,54.57,A,1,ACC · REAL,2026-11-09 10:40:03,sin filtros
+ADI-010,ADIDAS,Predator League FG,2239.8,20,17.39,71.97,A,3,ACC · REAL,2026-11-09 10:40:03,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,1619.82,18,12.58,84.55,A,4,ACC · REAL,2026-11-09 10:40:03,sin filtros
+NIK-013,NIKE,HyperKO 2,1319.94,6,10.25,94.8,B,5,ACC · REAL,2026-11-09 10:40:03,sin filtros
+VEN-001,VENUM,Elite,299.98,2,2.33,97.13,B,6,ACC · REAL,2026-11-09 10:40:03,sin filtros
+NIK-010,NIKE,Dunk Low,239.98,2,1.86,98.99,C,6,ACC · REAL,2026-11-09 10:40:03,sin filtros
+NIK-001,NIKE,Air Force 1 Low,129.99,1,1.01,100.0,C,8,ACC · REAL,2026-11-09 10:40:03,sin filtros

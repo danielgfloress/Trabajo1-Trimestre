@@ -1,0 +1,6 @@
+metrica,valor_pandas,valor_sql,diferencia,estado,origen,generado,filtros
+pedidos_validos,8.0,8.0,0.0,CUADRA,ACC · REAL,2026-11-09 10:40:03,sin filtros
+pares_vendidos,96.0,96.0,0.0,CUADRA,ACC · REAL,2026-11-09 10:40:03,sin filtros
+ingresos_validos,12876.88,12876.88,0.0,CUADRA,ACC · REAL,2026-11-09 10:40:03,sin filtros
+clientes_con_compra,5.0,5.0,0.0,CUADRA,ACC · REAL,2026-11-09 10:40:03,sin filtros
+lineas_totales,25.0,25.0,0.0,CUADRA,ACC · REAL,2026-11-09 10:40:03,sin filtros

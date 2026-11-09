@@ -1,0 +1,12 @@
+tabla,registro,regla_esperada
+lineas,1,03 · id_pedido inexistente
+pedidos,SSO0002,04 · fecha nula o imposible
+lineas,3,"05 · cantidad nula, cero o negativa"
+lineas,4,06 · precio no numérico o negativo
+pedidos,SSO0005,07 · estado fuera de catálogo
+lineas,6,08 · talla no válida
+pedidos,SSO0007,09 · pedido sin cliente
+pedidos,SSO0008,12 · importe_total
+stock,1/Blanco/36,11 · stock nulo o negativo
+pedidos,11,02 · id_pedido duplicado
+stock,1/Negro/45,"11 · modelo, color y talla duplicados"

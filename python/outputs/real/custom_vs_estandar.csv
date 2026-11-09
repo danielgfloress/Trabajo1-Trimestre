@@ -1,0 +1,3 @@
+tipo,pedidos_totales,pedidos_venta,pedidos_cancelados,tasa_cancelacion_pct,pares_vendidos,ingresos,ticket_medio,cuota_ingresos_pct,origen,generado,filtros
+CUSTOM,4,3,1,25.0,60,8337.6,2779.2,64.75,ACC · REAL,2026-11-09 10:40:03,sin filtros
+ESTANDAR,8,5,1,12.5,36,4539.28,907.86,35.25,ACC · REAL,2026-11-09 10:40:03,sin filtros

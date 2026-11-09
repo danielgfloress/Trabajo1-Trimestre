@@ -89,6 +89,9 @@ def evolucion_mensual(resultados, origen):
     ultimo = datos.iloc[-1]
     eje.annotate(f"{ultimo['ingresos']:,.0f} €".replace(",", "."), (len(datos) - 1, ultimo["ingresos"]),
                  textcoords="offset points", xytext=(0, 10), ha="center", color=TEXTO)
+    if len(datos) > 8:
+        eje.tick_params(axis="x", labelrotation=45)
+        fig.subplots_adjust(bottom=0.24)
     eje.set_xlabel("Mes")
     eje.set_ylabel("Ingresos (€)")
     eje.set_ylim(bottom=0)
@@ -165,13 +168,17 @@ def boxplot_por_tipo(resultados, origen):
         sin_datos(eje)
         return fig
     grupos = [ventas.loc[ventas["tipo"] == t, "importe"] for t in tipos]
-    cajas = eje.boxplot(grupos, patch_artist=True, widths=0.5, medianprops={"color": TEXTO, "linewidth": 2})
+    cajas = eje.boxplot(grupos, patch_artist=True, widths=0.5, showfliers=False, medianprops={"color": TEXTO, "linewidth": 2})
     for caja, tipo in zip(cajas["boxes"], tipos):
         caja.set_facecolor(COLOR_TIPO[tipo])
         caja.set_alpha(0.35)
         caja.set_edgecolor(COLOR_TIPO[tipo])
+    generador = np.random.default_rng(config.SEMILLA)
     for posicion, (grupo, tipo) in enumerate(zip(grupos, tipos), start=1):
-        eje.scatter(np.full(len(grupo), posicion), grupo, color=COLOR_TIPO[tipo], s=50, zorder=3, edgecolor=SUPERFICIE, linewidth=1.5)
+        muchos = len(grupo) > 50
+        x = posicion + generador.uniform(-0.18, 0.18, len(grupo)) if muchos else np.full(len(grupo), posicion)
+        eje.scatter(x, grupo, color=COLOR_TIPO[tipo], s=12 if muchos else 50, alpha=0.5 if muchos else 1, zorder=3,
+                    edgecolor=SUPERFICIE, linewidth=0.5 if muchos else 1.5)
     eje.set_xticks(range(1, len(tipos) + 1), [f"{NOMBRE_TIPO[t]} (n = {len(g)})" for t, g in zip(tipos, grupos)])
     eje.set_ylabel("Importe del pedido (€)")
     formato_euros(eje)
@@ -207,14 +214,16 @@ def mapa_calor_modelo_talla(resultados, origen):
 def dispersion_clientes(resultados, origen):
     datos = resultados["clientes_rfm"]
     datos = datos[datos["frecuencia"] > 0]
+    rotulados = len(datos) if len(datos) <= 8 else 3
     fig, eje = nueva_figura(resultados, origen, "Clientes: días sin comprar frente a gasto",
-                            "Cada punto es un cliente con compras válidas. Derecha = lleva más tiempo sin comprar; arriba = ha gastado más.")
+                            "Cada punto es un cliente con compras válidas. Derecha = lleva más tiempo sin comprar; arriba = ha gastado más. "
+                            f"Se rotulan los {rotulados} de mayor gasto.", izquierda=0.13)
     if datos.empty:
         sin_datos(eje)
         return fig
-    eje.scatter(datos["recencia_dias"], datos["monetario"], s=40 + datos["frecuencia"] * 40, color=SERIE_1,
-                edgecolor=SUPERFICIE, linewidth=2, zorder=3)
-    for _, fila in datos.iterrows():
+    eje.scatter(datos["recencia_dias"], datos["monetario"], s=60, color=SERIE_1, alpha=0.8,
+                edgecolor=SUPERFICIE, linewidth=1.5, zorder=3)
+    for _, fila in datos.nlargest(rotulados, "monetario").iterrows():
         eje.annotate(f"{fila['codigo_odoo']} ({fila['frecuencia']} ped.)", (fila["recencia_dias"], fila["monetario"]),
                      textcoords="offset points", xytext=(8, 6), color=TEXTO, fontsize=9)
     eje.set_xlabel("Días desde la última compra (recencia)")
