@@ -42,6 +42,13 @@ plt.rcParams.update({
 })
 
 
+def euros(valor, decimales=2):
+    if valor is None or (isinstance(valor, float) and np.isnan(valor)):
+        return "—"
+    texto = f"{valor:,.{decimales}f}"
+    return texto.replace(",", "_").replace(".", ",").replace("_", ".") + " €"
+
+
 def texto_filtros(filtros):
     activos = {clave: valor for clave, valor in (filtros or {}).items() if valor not in (None, [], "")}
     if not activos:

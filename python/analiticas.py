@@ -68,7 +68,8 @@ def ventas_por_periodo(df_pedidos):
         df = df.reindex(meses, fill_value=0)
     df.index.name = "mes"
     df["ticket_medio"] = np.where(df["pedidos"] > 0, df["ingresos"] / df["pedidos"].replace(0, np.nan), np.nan)
-    df["variacion_ingresos_pct"] = df["ingresos"].pct_change().replace([np.inf, -np.inf], np.nan) * 100
+    for columna in ["ingresos", "pares", "pedidos", "ticket_medio"]:
+        df[f"variacion_{columna}_pct"] = df[columna].pct_change().replace([np.inf, -np.inf], np.nan) * 100
     df["media_3_meses_previos"] = df["ingresos"].shift(1).rolling(3).mean()
     if len(df) > 12:
         df["variacion_interanual_pct"] = df["ingresos"].pct_change(12) * 100
@@ -501,6 +502,10 @@ def aplicar_filtros(tablas, filtros):
         pedidos = pedidos[pedidos["fecha_pedido"] < pd.Timestamp(filtros["hasta"]) + pd.Timedelta(days=1)]
     if filtros.get("tipos"):
         pedidos = pedidos[pedidos["tipo"].isin(filtros["tipos"])]
+    if filtros.get("clientes"):
+        clientes = tablas["clientes"]
+        ids = clientes.loc[clientes["codigo_odoo"].isin(filtros["clientes"]), "id_cliente"]
+        pedidos = pedidos[pedidos["id_cliente"].isin(ids)]
     if filtros.get("estados"):
         pedidos = pedidos[pedidos["estado"].isin(filtros["estados"])]
     if filtros.get("modelos"):
