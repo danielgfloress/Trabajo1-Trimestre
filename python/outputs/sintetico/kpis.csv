@@ -1,16 +1,16 @@
 indicador,valor,unidad,formula,denominador,origen,generado,filtros
-Pedidos únicos (actividad),900,pedidos,"nº de id_pedido distintos, todos los estados",—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Pedidos por estado,"BORRADOR 8, CONFIRMADO 52, ENTREGADO 760, CANCELADO 80",pedidos,conteo por estado,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Pedidos válidos (venta),812,pedidos,estado CONFIRMADO o ENTREGADO,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Pares vendidos,8338,pares,Σ cantidad de las líneas de pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Ingresos válidos,987191.08,€,Σ cantidad × precio_unitario de pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Ticket medio,1215.75,€/pedido,ingresos ÷ pedidos válidos,812 pedidos,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Pares por pedido,10.27,pares/pedido,pares ÷ pedidos válidos,812 pedidos,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Peso Custom en pedidos,11.5,%,pedidos CUSTOM ÷ pedidos válidos,812 pedidos,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Peso Custom en pares,45.5,%,pares CUSTOM ÷ pares vendidos,8338 pares,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Peso Custom en ingresos,44.6,%,ingresos CUSTOM ÷ ingresos válidos,987191.08 €,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Modelo más vendido,Sneakers sintético 01 (1750),pares,modelo con más pares en pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Talla más vendida,42 (1796),pares,talla con más pares en pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Mejor cliente,SCLI015 (137535),€,cliente con más ingresos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Variación último mes,2.8,%,(ingresos mes − mes anterior) ÷ mes anterior,—,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-Concentración Pareto,45.4,%,peso del 20 % de modelos con más ingresos (3 modelos),14 modelos vendidos,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
+Pedidos únicos (actividad),900,pedidos,"nº de id_pedido distintos, todos los estados",—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Pedidos por estado,"BORRADOR 8, CONFIRMADO 52, ENTREGADO 760, CANCELADO 80",pedidos,conteo por estado,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Pedidos válidos (venta),812,pedidos,estado CONFIRMADO o ENTREGADO,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Pares vendidos,8338,pares,Σ cantidad de las líneas de pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Ingresos válidos,987191.08,€,Σ cantidad × precio_unitario de pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Ticket medio,1215.75,€/pedido,ingresos ÷ pedidos válidos,812 pedidos,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Pares por pedido,10.27,pares/pedido,pares ÷ pedidos válidos,812 pedidos,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Peso Custom en pedidos,11.5,%,pedidos CUSTOM ÷ pedidos válidos,812 pedidos,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Peso Custom en pares,45.5,%,pares CUSTOM ÷ pares vendidos,8338 pares,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Peso Custom en ingresos,44.6,%,ingresos CUSTOM ÷ ingresos válidos,987191.08 €,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Modelo más vendido,Sneakers sintético 01 (1750),pares,modelo con más pares en pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Talla más vendida,42 (1796),pares,talla con más pares en pedidos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Mejor cliente,SCLI015 (137535),€,cliente con más ingresos válidos,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Variación último mes,2.8,%,(ingresos mes − mes anterior) ÷ mes anterior,—,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+Concentración Pareto,45.4,%,peso del 20 % de modelos con más ingresos (3 modelos),14 modelos vendidos,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros

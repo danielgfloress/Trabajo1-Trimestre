@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 import config
+import prediccion
 import segmentacion
 
 
@@ -530,6 +531,8 @@ def calcular_todo(resultado_pipeline, filtros=None):
     base_pedidos = pedidos_unicos(base, base_lineas) if filtros else df_pedidos
     df_rfm = clientes_rfm(tablas, df_pedidos)
     clusters = segmentacion.clustering_clientes(df_rfm)
+    df_demanda = demanda_modelo_mes(df_lineas)
+    predicciones = prediccion.predecir_demanda(df_demanda)
     resultados = {
         "lineas_enriquecidas": df_lineas,
         "pedidos_unicos": df_pedidos,
@@ -544,7 +547,8 @@ def calcular_todo(resultado_pipeline, filtros=None):
         "clustering_perfil": clusters["clustering_perfil"],
         "clustering_vs_rfm": clusters["clustering_vs_rfm"],
         "caracteristicas_clientes": caracteristicas_clientes(tablas, df_pedidos),
-        "demanda_modelo_mes": demanda_modelo_mes(df_lineas),
+        "demanda_modelo_mes": df_demanda,
+        **{nombre: predicciones[nombre] for nombre in prediccion.TABLAS},
         "talla_mas_solicitada": talla_mas_solicitada(df_lineas),
         "cohortes": cohortes(df_pedidos),
         "stock_cobertura": stock_cobertura(tablas, df_lineas),

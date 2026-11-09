@@ -1,5 +1,5 @@
 variable,unidad,nivel,n,media,mediana,moda,desviacion,minimo,p25,p75,p90,maximo,iqr,representativo,aviso,origen,generado,filtros
-importe por pedido,€,pedido,812,1215.75,517.36,,1564.58,69.99,249.98,1546.07,3260.85,9172.24,1296.09,mediana (asimétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-pares por pedido,pares,pedido,812,10.27,4.0,1.0,13.0,1.0,2.0,13.0,28.9,60.0,11.0,mediana (asimétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-precio por par,€/par,línea,1573,119.37,112.17,,38.03,69.99,89.9,139.99,179.99,229.99,50.09,media (simétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-pares por línea,pares,línea,1573,5.3,2.0,2.0,5.2,1.0,1.0,9.0,12.0,28.0,8.0,mediana (asimétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
+importe por pedido,€,pedido,812,1215.75,517.36,,1564.58,69.99,249.98,1546.07,3260.85,9172.24,1296.09,mediana (asimétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+pares por pedido,pares,pedido,812,10.27,4.0,1.0,13.0,1.0,2.0,13.0,28.9,60.0,11.0,mediana (asimétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+precio por par,€/par,línea,1573,119.37,112.17,,38.03,69.99,89.9,139.99,179.99,229.99,50.09,media (simétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+pares por línea,pares,línea,1573,5.3,2.0,2.0,5.2,1.0,1.0,9.0,12.0,28.0,8.0,mediana (asimétrica),,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros

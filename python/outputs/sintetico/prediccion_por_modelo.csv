@@ -1,0 +1,15 @@
+codigo_modelo,pares_reales,mae_baseline,mae_modelo,mejor,origen,generado,filtros
+SIM-01,360,78.67,51.17,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-02,340,48.0,47.7,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-03,78,14.67,10.83,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-04,155,40.33,27.5,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-05,25,7.67,3.47,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-06,16,5.0,7.77,baseline,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-07,225,68.33,44.23,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-08,180,28.67,19.43,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-09,35,6.67,6.0,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-10,89,31.67,25.37,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-11,85,38.33,24.83,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-12,47,18.0,19.7,baseline,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-13,158,59.0,38.47,modelo,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+SIM-14,2,0.67,2.5,baseline,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros

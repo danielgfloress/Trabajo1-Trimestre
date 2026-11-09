@@ -9,6 +9,7 @@ import pandas as pd
 import analiticas
 import config
 import pipeline
+import prediccion
 import visualizaciones
 
 SALIDAS = {
@@ -42,6 +43,7 @@ SALIDAS = {
         "clustering_perfil": "clustering_perfil",
         "clustering_vs_rfm": "clustering_vs_rfm",
     },
+    "prediccion": {nombre: nombre for nombre in prediccion.TABLAS},
 }
 TAREAS = list(SALIDAS) + ["graficos", "todo"]
 COLUMNAS_PERSONALES = ["nombre", "cliente"]

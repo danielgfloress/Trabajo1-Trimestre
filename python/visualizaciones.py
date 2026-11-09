@@ -288,6 +288,38 @@ def grupos_clientes(resultados, origen):
     return fig
 
 
+def prediccion_frente_real(resultados, origen):
+    evaluacion = resultados["prediccion_evaluacion"]
+    fig, eje = nueva_figura(resultados, origen, "Demanda real frente a predicción (pares al mes, todos los modelos)",
+                            "Línea oscura: pares vendidos de verdad. En los meses de prueba, lo que habrían estimado "
+                            "el modelo (azul) y la referencia de repetir el mes anterior (naranja, discontinua).")
+    if "mae" not in evaluacion.columns:
+        eje.set_axis_off()
+        eje.text(0.5, 0.5, "NO CALCULABLE\n" + evaluacion["motivo"].iloc[0], ha="center", va="center",
+                 fontsize=10, color=TEXTO_SECUNDARIO, wrap=True)
+        return fig
+    real = resultados["demanda_modelo_mes"].groupby("mes")["unidades_modelo_mes"].sum()
+    prueba = resultados["prediccion_detalle"].groupby("mes")[["baseline", "prediccion"]].sum()
+    posiciones = {mes: i for i, mes in enumerate(real.index)}
+    x_prueba = [posiciones[m] for m in prueba.index]
+    eje.axvspan(min(x_prueba) - 0.5, max(x_prueba) + 0.5, color=REJILLA, alpha=0.5, zorder=0)
+    eje.text(min(x_prueba) - 0.4, real.max() * 1.02, "meses de prueba", color=TEXTO_SECUNDARIO, fontsize=9)
+    eje.plot(range(len(real)), real.values, color=TEXTO, linewidth=2, marker="o", markersize=6, label="Real")
+    eje.plot(x_prueba, prueba["prediccion"], color=SERIE_1, linewidth=2, marker="o", markersize=8,
+             markeredgecolor=SUPERFICIE, markeredgewidth=2, label="Modelo (RandomForest)")
+    eje.plot(x_prueba, prueba["baseline"], color=SERIE_2, linewidth=2, linestyle="--", marker="s", markersize=7,
+             markeredgecolor=SUPERFICIE, markeredgewidth=1.5, label="Referencia (mes anterior)")
+    eje.set_xticks(range(len(real)), real.index, rotation=45 if len(real) > 8 else 0)
+    if len(real) > 8:
+        fig.subplots_adjust(bottom=0.24)
+    eje.set_ylabel("Pares vendidos en el mes")
+    eje.set_ylim(bottom=0)
+    eje.grid(axis="x", visible=False)
+    filas = evaluacion.set_index("metodo")
+    eje.legend(loc="lower left", title=f"MAE modelo {filas['mae'].iloc[1]:.1f} · referencia {filas['mae'].iloc[0]:.1f} pares", title_fontsize=9)
+    return fig
+
+
 FIGURAS = {
     "01_evolucion_mensual": evolucion_mensual,
     "02_ranking_modelos": ranking_modelos,
@@ -298,6 +330,7 @@ FIGURAS = {
     "07_dispersion_clientes": dispersion_clientes,
     "08_comparativa_tipo": comparativa_tipo,
     "09_grupos_clientes": grupos_clientes,
+    "10_prediccion_demanda": prediccion_frente_real,
 }
 
 

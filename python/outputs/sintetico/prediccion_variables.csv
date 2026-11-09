@@ -1,0 +1,18 @@
+variable,importancia,origen,generado,filtros
+media_3_meses_previos,0.569,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+demanda_mes_anterior,0.178,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+mes_del_anio,0.112,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-01,0.1,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-07,0.009,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-08,0.007,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-02,0.006,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-13,0.004,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-04,0.003,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-10,0.003,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-14,0.002,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-05,0.002,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-03,0.001,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-11,0.001,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-06,0.0,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-09,0.0,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+modelo_SIM-12,0.0,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros

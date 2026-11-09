@@ -1,46 +1,46 @@
 id_cliente,codigo_odoo,tipo_cliente,segmento,recencia_dias,frecuencia,monetario,cluster,nombre_grupo,origen,generado,filtros
-15,SCLI015,EQUIPO,Campeón,6,57,137534.61,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-26,SCLI026,CLUB,Campeón,7,31,82692.4,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-33,SCLI033,EQUIPO,Campeón,13,29,59459.64,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-5,SCLI005,CLUB,Campeón,19,21,56876.65,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-35,SCLI035,EQUIPO,Campeón,20,26,55252.4,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-38,SCLI038,EQUIPO,Campeón,32,24,52299.1,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-9,SCLI009,CLUB,Campeón,19,28,50565.13,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-41,SCLI041,EQUIPO,Campeón,41,17,48004.53,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-22,SCLI022,EQUIPO,Leal,69,23,40754.44,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-37,SCLI037,CLUB,Campeón,52,17,38404.63,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-36,SCLI036,CLUB,Campeón,17,16,36582.07,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-34,SCLI034,EQUIPO,Campeón,9,15,32447.72,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-11,SCLI011,EQUIPO,Campeón,1,12,30686.61,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-2,SCLI002,EQUIPO,Campeón,15,16,30156.69,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-29,SCLI029,CLUB,Campeón,0,7,28830.29,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-10,SCLI010,EQUIPO,Leal,83,6,19731.86,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-4,SCLI004,PARTICULAR,Campeón,2,41,14542.01,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-17,SCLI017,PARTICULAR,Campeón,22,42,14432.08,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-6,SCLI006,PARTICULAR,Campeón,4,35,11172.42,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-27,SCLI027,EQUIPO,Leal,110,6,10912.03,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-21,SCLI021,PARTICULAR,Campeón,41,28,10037.66,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-23,SCLI023,PARTICULAR,Campeón,0,33,10027.84,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-18,SCLI018,CLUB,Campeón,15,3,9715.7,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-28,SCLI028,CLUB,Leal,106,3,8790.25,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-7,SCLI007,PARTICULAR,Campeón,25,26,7867.88,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-43,SCLI043,PARTICULAR,Campeón,1,25,7768.17,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-16,SCLI016,CLUB,Campeón,58,3,7362.19,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-32,SCLI032,PARTICULAR,Campeón,10,21,7318.58,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-45,SCLI045,PARTICULAR,Campeón,20,19,6658.94,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-20,SCLI020,PARTICULAR,Campeón,56,18,6379.31,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-31,SCLI031,PARTICULAR,Campeón,7,17,5824.2,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-1,SCLI001,PARTICULAR,Campeón,35,19,5403.54,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-39,SCLI039,CLUB,En riesgo,155,5,5158.79,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-14,SCLI014,PARTICULAR,En riesgo,125,16,5139.05,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-44,SCLI044,EQUIPO,En riesgo,130,4,4813.91,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-3,SCLI003,PARTICULAR,Leal,101,16,3964.1,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-8,SCLI008,PARTICULAR,Campeón,24,15,3903.93,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-24,SCLI024,PARTICULAR,Campeón,36,12,3578.99,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-12,SCLI012,PARTICULAR,Campeón,9,10,3228.78,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-40,SCLI040,PARTICULAR,Campeón,54,9,3044.47,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-13,SCLI013,PARTICULAR,Campeón,1,8,2494.27,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-19,SCLI019,PARTICULAR,Campeón,25,13,2359.15,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-30,SCLI030,PARTICULAR,Campeón,26,4,2109.86,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-25,SCLI025,PARTICULAR,En riesgo,147,9,1564.7,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
-42,SCLI042,PARTICULAR,En riesgo,177,7,1339.51,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
+15,SCLI015,EQUIPO,Campeón,6,57,137534.61,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+26,SCLI026,CLUB,Campeón,7,31,82692.4,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+33,SCLI033,EQUIPO,Campeón,13,29,59459.64,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+5,SCLI005,CLUB,Campeón,19,21,56876.65,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+35,SCLI035,EQUIPO,Campeón,20,26,55252.4,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+38,SCLI038,EQUIPO,Campeón,32,24,52299.1,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+9,SCLI009,CLUB,Campeón,19,28,50565.13,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+41,SCLI041,EQUIPO,Campeón,41,17,48004.53,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+22,SCLI022,EQUIPO,Leal,69,23,40754.44,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+37,SCLI037,CLUB,Campeón,52,17,38404.63,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+36,SCLI036,CLUB,Campeón,17,16,36582.07,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+34,SCLI034,EQUIPO,Campeón,9,15,32447.72,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+11,SCLI011,EQUIPO,Campeón,1,12,30686.61,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+2,SCLI002,EQUIPO,Campeón,15,16,30156.69,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+29,SCLI029,CLUB,Campeón,0,7,28830.29,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+10,SCLI010,EQUIPO,Leal,83,6,19731.86,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+4,SCLI004,PARTICULAR,Campeón,2,41,14542.01,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+17,SCLI017,PARTICULAR,Campeón,22,42,14432.08,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+6,SCLI006,PARTICULAR,Campeón,4,35,11172.42,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+27,SCLI027,EQUIPO,Leal,110,6,10912.03,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+21,SCLI021,PARTICULAR,Campeón,41,28,10037.66,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+23,SCLI023,PARTICULAR,Campeón,0,33,10027.84,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+18,SCLI018,CLUB,Campeón,15,3,9715.7,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+28,SCLI028,CLUB,Leal,106,3,8790.25,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+7,SCLI007,PARTICULAR,Campeón,25,26,7867.88,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+43,SCLI043,PARTICULAR,Campeón,1,25,7768.17,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+16,SCLI016,CLUB,Campeón,58,3,7362.19,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+32,SCLI032,PARTICULAR,Campeón,10,21,7318.58,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+45,SCLI045,PARTICULAR,Campeón,20,19,6658.94,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+20,SCLI020,PARTICULAR,Campeón,56,18,6379.31,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+31,SCLI031,PARTICULAR,Campeón,7,17,5824.2,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+1,SCLI001,PARTICULAR,Campeón,35,19,5403.54,0,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+39,SCLI039,CLUB,En riesgo,155,5,5158.79,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+14,SCLI014,PARTICULAR,En riesgo,125,16,5139.05,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+44,SCLI044,EQUIPO,En riesgo,130,4,4813.91,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+3,SCLI003,PARTICULAR,Leal,101,16,3964.1,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+8,SCLI008,PARTICULAR,Campeón,24,15,3903.93,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+24,SCLI024,PARTICULAR,Campeón,36,12,3578.99,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+12,SCLI012,PARTICULAR,Campeón,9,10,3228.78,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+40,SCLI040,PARTICULAR,Campeón,54,9,3044.47,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+13,SCLI013,PARTICULAR,Campeón,1,8,2494.27,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+19,SCLI019,PARTICULAR,Campeón,25,13,2359.15,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+30,SCLI030,PARTICULAR,Campeón,26,4,2109.86,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+25,SCLI025,PARTICULAR,En riesgo,147,9,1564.7,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+42,SCLI042,PARTICULAR,En riesgo,177,7,1339.51,1,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros

@@ -1,2 +1,2 @@
 estado,motivo,precio_medio_ponderado_par,origen,generado,filtros
-NO CALCULABLE,"ACC no exporta un coste unitario fiable (modelo de datos común, apartado 3). No se inventan costes.",118.4,SINTÉTICO · generador_datos.py,2026-11-09 11:10:39,sin filtros
+NO CALCULABLE,"ACC no exporta un coste unitario fiable (modelo de datos común, apartado 3). No se inventan costes.",118.4,SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
