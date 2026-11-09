@@ -1,6 +1,6 @@
 metrica,valor_pandas,valor_sql,diferencia,estado,origen,generado,filtros
-pedidos_validos,812.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
-pares_vendidos,8338.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
-ingresos_validos,987191.08,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
-clientes_con_compra,45.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
-lineas_totales,1775.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
+pedidos_validos,812.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros
+pares_vendidos,8338.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros
+ingresos_validos,987191.08,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros
+clientes_con_compra,45.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros
+lineas_totales,1775.0,,,SIN DATO SQL,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros

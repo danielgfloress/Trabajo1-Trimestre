@@ -9,14 +9,11 @@ import pandas as pd
 import analiticas
 import config
 import pipeline
-import prediccion
 import visualizaciones
 
 SALIDAS = {
     "calidad": {
-        "calidad_por_regla": "calidad_por_regla",
         "auditoria_reconciliacion_sql": "reconciliacion_sql",
-        "anomalias": "anomalias",
     },
     "descriptivo": {
         "kpis": "kpis",
@@ -24,26 +21,17 @@ SALIDAS = {
         "evolucion_mensual": "ventas_por_periodo",
         "modelos_abc": "modelos_abc",
         "matriz_modelo_talla": "matriz_modelo_talla",
-        "matriz_modelo_talla_pct": "matriz_modelo_talla_pct",
-        "custom_vs_estandar": "custom_vs_estandar",
         "stock_cobertura": "stock_cobertura",
-        "estadistica_descriptiva": "estadistica_descriptiva",
-        "estadistica_por_grupo": "estadistica_por_grupo",
-        "hipotesis": "hipotesis",
-        "demanda_modelo_mes": "demanda_modelo_mes",
-        "talla_mas_solicitada": "talla_mas_solicitada",
-        "precio_y_margen": "precio_y_margen",
     },
     "segmentacion": {
         "clientes_rfm": "clientes_rfm",
-        "caracteristicas_clientes": "caracteristicas_clientes",
         "cohortes": "cohortes",
-        "clustering_evaluacion": "clustering_evaluacion",
         "clustering_clientes": "clustering_clientes",
-        "clustering_perfil": "clustering_perfil",
-        "clustering_vs_rfm": "clustering_vs_rfm",
     },
-    "prediccion": {nombre: nombre for nombre in prediccion.TABLAS},
+    "prediccion": {
+        "prediccion_evaluacion": "prediccion_evaluacion",
+        "prediccion_detalle": "prediccion_detalle",
+    },
 }
 TAREAS = list(SALIDAS) + ["graficos", "todo"]
 COLUMNAS_PERSONALES = ["nombre", "cliente"]

@@ -1,3 +1,3 @@
 metodo,mae,rmse,sesgo,filas_entrenamiento,filas_prueba,periodo,mejora_mae_pct,conclusion,origen,generado,filtros
-baseline (repetir el mes anterior),31.83,46.07,2.36,168,42,entrena 2025-04 a 2026-03 · evalúa 2026-04 a 2026-06,26.2,el modelo MEJORA a la referencia,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
-RandomForestRegressor,23.5,33.39,-9.73,168,42,entrena 2025-04 a 2026-03 · evalúa 2026-04 a 2026-06,26.2,el modelo MEJORA a la referencia,SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
+baseline (repetir el mes anterior),31.83,46.07,2.36,168,42,entrena 2025-04 a 2026-03 · evalúa 2026-04 a 2026-06,26.2,el modelo MEJORA a la referencia,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros
+RandomForestRegressor,23.5,33.39,-9.73,168,42,entrena 2025-04 a 2026-03 · evalúa 2026-04 a 2026-06,26.2,el modelo MEJORA a la referencia,SINTÉTICO · generador_datos.py,2026-11-09 13:00:12,sin filtros

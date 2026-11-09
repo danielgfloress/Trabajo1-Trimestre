@@ -1,6 +1,6 @@
 metrica,valor_pandas,valor_sql,diferencia,estado,origen,generado,filtros
-pedidos_validos,8.0,8.0,0.0,CUADRA,ACC · REAL,2026-11-09 12:25:59,sin filtros
-pares_vendidos,96.0,96.0,0.0,CUADRA,ACC · REAL,2026-11-09 12:25:59,sin filtros
-ingresos_validos,12876.88,12876.88,0.0,CUADRA,ACC · REAL,2026-11-09 12:25:59,sin filtros
-clientes_con_compra,5.0,5.0,0.0,CUADRA,ACC · REAL,2026-11-09 12:25:59,sin filtros
-lineas_totales,25.0,25.0,0.0,CUADRA,ACC · REAL,2026-11-09 12:25:59,sin filtros
+pedidos_validos,8.0,8.0,0.0,CUADRA,ACC · REAL,2026-11-09 13:00:08,sin filtros
+pares_vendidos,96.0,96.0,0.0,CUADRA,ACC · REAL,2026-11-09 13:00:08,sin filtros
+ingresos_validos,12876.88,12876.88,0.0,CUADRA,ACC · REAL,2026-11-09 13:00:08,sin filtros
+clientes_con_compra,5.0,5.0,0.0,CUADRA,ACC · REAL,2026-11-09 13:00:08,sin filtros
+lineas_totales,25.0,25.0,0.0,CUADRA,ACC · REAL,2026-11-09 13:00:08,sin filtros

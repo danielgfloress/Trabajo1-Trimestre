@@ -1,2 +1,2 @@
 estado,motivo,origen,generado,filtros
-NO CALCULABLE,Solo hay 1 meses con historial completo (3 meses previos); se necesitan 9 (6 para entrenar y 3 para evaluar). La predicción se demuestra con los datos SINTÉTICOS.,ACC · REAL,2026-11-09 12:25:59,sin filtros
+NO CALCULABLE,Solo hay 1 meses con historial completo (3 meses previos); se necesitan 9 (6 para entrenar y 3 para evaluar). La predicción se demuestra con los datos SINTÉTICOS.,ACC · REAL,2026-11-09 13:00:08,sin filtros

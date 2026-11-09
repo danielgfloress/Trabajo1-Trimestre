@@ -1,5 +1,0 @@
-variable,unidad,nivel,n,media,mediana,moda,desviacion,minimo,p25,p75,p90,maximo,iqr,representativo,aviso,origen,generado,filtros
-importe por pedido,€,pedido,8,1609.61,1619.87,,1246.51,129.99,757.17,2133.45,2767.8,3999.8,1376.28,media (simétrica),muestra pequeña (n < 30),ACC · REAL,2026-11-09 12:25:59,sin filtros
-pares por pedido,pares,pedido,8,12.0,13.0,20.0,8.37,1.0,5.75,20.0,20.0,20.0,14.25,media (simétrica),muestra pequeña (n < 30),ACC · REAL,2026-11-09 12:25:59,sin filtros
-precio por par,€/par,línea,20,147.52,124.99,,49.38,89.9,104.9,199.99,201.99,219.99,95.09,mediana (asimétrica),muestra pequeña (n < 30),ACC · REAL,2026-11-09 12:25:59,sin filtros
-pares por línea,pares,línea,20,4.8,4.0,4.0,2.38,1.0,3.0,6.0,8.0,10.0,3.0,mediana (asimétrica),muestra pequeña (n < 30),ACC · REAL,2026-11-09 12:25:59,sin filtros
