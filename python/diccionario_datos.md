@@ -88,3 +88,28 @@ El stock es una **foto en la fecha de corte**, no un histórico.
 |---|---|
 | metrica | pedidos_validos, pares_vendidos, ingresos_validos, clientes_con_compra, lineas_totales |
 | valor_sql | La misma cifra calculada en PostgreSQL |
+
+## Variables derivadas
+
+Calculadas en `analiticas.py` a partir de los CSV; no vienen de ACC. **Disponible antes del mes** indica si se conoce antes de empezar el mes que se quiere predecir (si no, no puede usarse como predictor).
+
+| Variable | Familia | Fórmula | Unidad | Nivel | Disponible antes del mes |
+|---|---|---|---|---|---|
+| anio | Calendario | año de `fecha_pedido` | año | pedido | sí |
+| trimestre | Calendario | trimestre de `fecha_pedido` (1-4) | trimestre | pedido | sí |
+| dia_semana | Calendario | día de la semana de `fecha_pedido` | lunes…domingo | pedido | sí |
+| antiguedad_dias | Calendario | fecha de corte − `fecha_pedido` | días | pedido | no (depende del corte) |
+| importe_linea | Economía | cantidad × precio_unitario | € | línea | no |
+| precio_medio_par | Economía | importe del pedido ÷ pares del pedido | €/par | pedido | no |
+| frecuencia_cliente | Comportamiento | nº de pedidos válidos distintos | pedidos | cliente | solo con pedidos anteriores |
+| porcentaje_custom | Comportamiento | pedidos CUSTOM ÷ pedidos válidos × 100 | % | cliente | solo con pedidos anteriores |
+| intervalo_medio_dias | Comportamiento | media de días entre compras válidas seguidas; vacío si solo hay una compra | días | cliente | solo con pedidos anteriores |
+| unidades_modelo_mes | Demanda | Σ pares vendidos del modelo en el mes; 0 si ese mes no se vendió | pares | modelo-mes | no (es el objetivo) |
+| demanda_mes_anterior | Demanda | `unidades_modelo_mes` del mes anterior | pares | modelo-mes | sí |
+| media_3_meses_previos | Demanda | media de los 3 meses anteriores, sin incluir el mes actual; vacío si no hay 3 | pares | modelo-mes | sí |
+| mes_del_anio | Demanda | número de mes (1-12) | mes | modelo-mes | sí |
+| talla_mas_solicitada | Operaciones | talla con más pares vendidos del modelo; si empatan, la menor | talla | modelo | no |
+| alerta_stock_bajo | Operaciones | stock_disponible ≤ stock_minimo | sí/no | modelo-color-talla | foto del corte |
+| cobertura_semanas | Operaciones | stock ÷ (pares de los últimos 28 días ÷ 4); N/D sin demanda | semanas | modelo-color-talla | foto del corte |
+
+Todas se calculan solo con ventas válidas (CONFIRMADO y ENTREGADO), salvo las de calendario, que existen para todos los pedidos.

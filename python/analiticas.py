@@ -44,6 +44,11 @@ def pedidos_unicos(tablas, df_lineas):
     df[["pares", "importe", "num_lineas", "num_modelos"]] = df[["pares", "importe", "num_lineas", "num_modelos"]].fillna(0)
     df["es_venta"] = df["estado"].isin(config.ESTADOS_VENTA)
     df["mes"] = df["fecha_pedido"].dt.to_period("M")
+    df["anio"] = df["fecha_pedido"].dt.year
+    df["trimestre"] = df["fecha_pedido"].dt.quarter
+    df["dia_semana"] = df["fecha_pedido"].dt.day_of_week.map(dict(enumerate(config.DIAS_SEMANA)))
+    df["antiguedad_dias"] = (fecha_corte(tablas) - df["fecha_pedido"]).dt.days
+    df["precio_medio_par"] = np.where(df["pares"] > 0, df["importe"] / df["pares"].replace(0, np.nan), np.nan).round(2)
     return poner_metadatos(df, "pedidos_unicos", len(tablas["pedidos"]), fecha_corte(tablas))
 
 
@@ -146,6 +151,53 @@ def clientes_rfm(tablas, df_pedidos):
     df["segmento"] = df.apply(segmento, axis=1)
     df = df.sort_values("monetario", ascending=False).reset_index(drop=True)
     return poner_metadatos(df, "clientes_rfm", len(ventas), corte)
+
+
+def caracteristicas_clientes(tablas, df_pedidos):
+    ventas = df_pedidos[df_pedidos["es_venta"]].sort_values("fecha_pedido").copy()
+    ventas["es_custom"] = ventas["tipo"] == "CUSTOM"
+    ventas["dias_desde_anterior"] = ventas.groupby("id_cliente")["fecha_pedido"].diff().dt.days
+    por_cliente = ventas.groupby("id_cliente").agg(
+        frecuencia_cliente=("id_pedido", "nunique"),
+        porcentaje_custom=("es_custom", "mean"),
+        intervalo_medio_dias=("dias_desde_anterior", "mean"),
+    ).reset_index()
+    por_cliente["porcentaje_custom"] = (por_cliente["porcentaje_custom"] * 100).round(1)
+    por_cliente["intervalo_medio_dias"] = por_cliente["intervalo_medio_dias"].round(1)
+
+    clientes = tablas["clientes"][["id_cliente", "codigo_odoo", "tipo_cliente"]]
+    df = clientes.merge(por_cliente, on="id_cliente", how="left", validate="one_to_one")
+    df["frecuencia_cliente"] = df["frecuencia_cliente"].fillna(0).astype(int)
+    return poner_metadatos(df, "caracteristicas_clientes", len(ventas), fecha_corte(tablas))
+
+
+def demanda_modelo_mes(df_lineas):
+    columnas = ["codigo_modelo", "mes", "unidades_modelo_mes", "demanda_mes_anterior", "media_3_meses_previos", "mes_del_anio"]
+    ventas = df_lineas[df_lineas["es_venta"]]
+    if ventas.empty:
+        return poner_metadatos(pd.DataFrame(columns=columnas), "demanda_modelo_mes", 0, df_lineas["fecha_pedido"].max())
+
+    df = ventas.groupby(["codigo_modelo", "mes"])["cantidad"].sum().rename("unidades_modelo_mes")
+    meses = pd.period_range(ventas["mes"].min(), ventas["mes"].max(), freq="M")
+    rejilla = pd.MultiIndex.from_product([df.index.levels[0], meses], names=["codigo_modelo", "mes"])
+    df = df.reindex(rejilla, fill_value=0).reset_index()
+
+    por_modelo = df.groupby("codigo_modelo")["unidades_modelo_mes"]
+    df["demanda_mes_anterior"] = por_modelo.shift(1)
+    df["media_3_meses_previos"] = por_modelo.transform(lambda serie: serie.shift(1).rolling(3).mean()).round(2)
+    df["mes_del_anio"] = df["mes"].dt.month
+    df["mes"] = df["mes"].astype(str)
+    return poner_metadatos(df[columnas], "demanda_modelo_mes", len(ventas), df_lineas["fecha_pedido"].max())
+
+
+def talla_mas_solicitada(df_lineas):
+    ventas = df_lineas[df_lineas["es_venta"]]
+    pares = ventas.groupby(["codigo_modelo", "modelo", "talla"])["cantidad"].sum().reset_index()
+    pares["pares_modelo"] = pares.groupby("codigo_modelo")["cantidad"].transform("sum")
+    pares = pares.sort_values(["codigo_modelo", "cantidad", "talla"], ascending=[True, False, True])
+    df = pares.drop_duplicates("codigo_modelo").rename(columns={"talla": "talla_mas_solicitada", "cantidad": "pares_talla"})
+    df["peso_talla_pct"] = (df["pares_talla"] / df["pares_modelo"] * 100).round(1)
+    return poner_metadatos(df.reset_index(drop=True), "talla_mas_solicitada", len(ventas), df_lineas["fecha_pedido"].max())
 
 
 def cohortes(df_pedidos):
@@ -347,6 +399,9 @@ def calcular_todo(resultado_pipeline, filtros=None):
         "matriz_modelo_talla_pct": proporcion,
         "custom_vs_estandar": custom_vs_estandar(df_pedidos),
         "clientes_rfm": clientes_rfm(tablas, df_pedidos),
+        "caracteristicas_clientes": caracteristicas_clientes(tablas, df_pedidos),
+        "demanda_modelo_mes": demanda_modelo_mes(df_lineas),
+        "talla_mas_solicitada": talla_mas_solicitada(df_lineas),
         "cohortes": cohortes(df_pedidos),
         "stock_cobertura": stock_cobertura(tablas, df_lineas),
         "calidad": calidad,

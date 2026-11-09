@@ -29,6 +29,7 @@ ESTADOS_VENTA = ["CONFIRMADO", "ENTREGADO"]
 TIPOS_PEDIDO = ["ESTANDAR", "CUSTOM"]
 TIPOS_CLIENTE = ["CLUB", "EQUIPO", "PARTICULAR"]
 TALLAS_VALIDAS = list(range(36, 47))
+DIAS_SEMANA = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 
 TOLERANCIA_IMPORTE = 0.01
 DIAS_DEMANDA_RECIENTE = 28
