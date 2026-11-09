@@ -1,3 +1,3 @@
 cluster,clientes,recencia_mediana,frecuencia_mediana,monetario_mediana,monetario_total,porcentaje_clientes,porcentaje_ingresos,nombre_grupo,origen,generado,filtros
-0,26,16.0,23.5,30421.65,881600.23,57.8,89.3,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
-1,19,58.0,8.0,3964.1,105590.85,42.2,10.7,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 11:46:23,sin filtros
+0,26,16.0,23.5,30421.65,881600.23,57.8,89.3,"Frecuentes, alto gasto, activos",SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros
+1,19,58.0,8.0,3964.1,105590.85,42.2,10.7,"Ocasionales, bajo gasto, alejados",SINTÉTICO · generador_datos.py,2026-11-09 12:26:06,sin filtros

@@ -327,6 +327,30 @@ def prediccion_frente_real(resultados, origen):
     return fig
 
 
+def alertas_stock(resultados, origen, cuantas=15):
+    stock = resultados["stock_cobertura"]
+    alertas = stock[stock["alerta_stock_bajo"]].sort_values("stock_disponible").head(cuantas)
+    corte = stock["fecha_corte"].max()
+    fig, eje = nueva_figura(resultados, origen, f"Variantes con stock bajo (foto del {corte:%d/%m/%Y})" if len(stock) else "Variantes con stock bajo",
+                            f"Pares disponibles de las {cuantas} variantes más bajas que están en alerta (stock ≤ umbral). "
+                            "Es una foto en la fecha de corte, no un histórico.", izquierda=0.34)
+    if alertas.empty:
+        eje.set_axis_off()
+        eje.text(0.5, 0.5, "Ninguna variante está por debajo del umbral", ha="center", va="center", fontsize=12, color=TEXTO_SECUNDARIO)
+        return fig
+    alertas = alertas.iloc[::-1]
+    nombres = alertas["codigo_modelo"] + " · " + alertas["color"] + " · T" + alertas["talla"].astype(int).astype(str)
+    barras = eje.barh(nombres, alertas["stock_disponible"], color=SERIE_2, height=0.6, edgecolor=SUPERFICIE, linewidth=2)
+    for barra, disponible, umbral in zip(barras, alertas["stock_disponible"], alertas["umbral_alerta"]):
+        eje.text(barra.get_width(), barra.get_y() + barra.get_height() / 2, f"  {disponible:.0f} (umbral {umbral:.0f})",
+                 va="center", color=TEXTO)
+    eje.set_xlabel("Pares disponibles")
+    eje.xaxis.set_major_locator(matplotlib.ticker.MaxNLocator(integer=True))
+    eje.grid(axis="y", visible=False)
+    eje.margins(x=0.4)
+    return fig
+
+
 FIGURAS = {
     "01_evolucion_mensual": evolucion_mensual,
     "02_ranking_modelos": ranking_modelos,
@@ -338,6 +362,7 @@ FIGURAS = {
     "08_comparativa_tipo": comparativa_tipo,
     "09_grupos_clientes": grupos_clientes,
     "10_prediccion_demanda": prediccion_frente_real,
+    "11_alertas_stock": alertas_stock,
 }
 
 

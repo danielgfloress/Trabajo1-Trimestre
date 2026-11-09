@@ -17,7 +17,7 @@ def poner_metadatos(df, funcion, filas_origen, fecha_corte, filtros=None):
 
 
 def fecha_corte(tablas):
-    return tablas["stock"]["fecha_corte"].max()
+    return tablas.get("stock_completo", tablas["stock"])["fecha_corte"].max()
 
 
 def lineas_enriquecidas(tablas):
@@ -222,7 +222,7 @@ def cohortes(df_pedidos):
     return retencion
 
 
-def stock_cobertura(tablas, df_lineas):
+def stock_cobertura(tablas, df_lineas, umbral=None):
     corte = fecha_corte(tablas)
     desde = corte - pd.Timedelta(days=config.DIAS_DEMANDA_RECIENTE)
     recientes = df_lineas[df_lineas["es_venta"] & (df_lineas["fecha_pedido"] > desde) & (df_lineas["fecha_pedido"] <= corte)]
@@ -235,8 +235,9 @@ def stock_cobertura(tablas, df_lineas):
     semanal = df["demanda_28_dias"] / 4
     df["cobertura_semanas"] = np.where(semanal > 0, (df["stock_disponible"] / semanal.replace(0, np.nan)).round(1), np.nan)
     df["cobertura_texto"] = df["cobertura_semanas"].map(lambda v: "N/D" if pd.isna(v) else f"{v} semanas")
-    df["alerta_stock_bajo"] = df["stock_disponible"] <= df["stock_minimo"]
-    columnas = ["codigo_modelo", "marca", "modelo", "color", "talla", "stock_disponible", "stock_minimo",
+    df["umbral_alerta"] = df["stock_minimo"] if umbral is None else umbral
+    df["alerta_stock_bajo"] = df["stock_disponible"] <= df["umbral_alerta"]
+    columnas = ["codigo_modelo", "marca", "modelo", "color", "talla", "stock_disponible", "stock_minimo", "umbral_alerta",
                 "demanda_28_dias", "cobertura_semanas", "cobertura_texto", "alerta_stock_bajo", "fecha_corte"]
     df = df[columnas].sort_values(["alerta_stock_bajo", "stock_disponible"], ascending=[False, True]).reset_index(drop=True)
     df = poner_metadatos(df, "stock_cobertura", len(tablas["stock"]), corte)
@@ -517,9 +518,16 @@ def aplicar_filtros(tablas, filtros):
     lineas = lineas[lineas["id_pedido"].isin(pedidos["id_pedido"])]
     if filtros.get("modelos") or filtros.get("tallas"):
         pedidos = pedidos[pedidos["id_pedido"].isin(lineas["id_pedido"])]
+    stock = tablas["stock"]
+    if filtros.get("modelos"):
+        stock = stock[stock["id_modelo"].isin(ids)]
+    if filtros.get("tallas"):
+        stock = stock[stock["talla"].isin(filtros["tallas"])]
     filtradas = dict(tablas)
     filtradas["pedidos"] = pedidos
     filtradas["lineas"] = lineas
+    filtradas["stock"] = stock
+    filtradas["stock_completo"] = tablas["stock"]
     return filtradas
 
 
@@ -556,7 +564,7 @@ def calcular_todo(resultado_pipeline, filtros=None):
         **{nombre: predicciones[nombre] for nombre in prediccion.TABLAS},
         "talla_mas_solicitada": talla_mas_solicitada(df_lineas),
         "cohortes": cohortes(df_pedidos),
-        "stock_cobertura": stock_cobertura(tablas, df_lineas),
+        "stock_cobertura": stock_cobertura(tablas, df_lineas, (filtros or {}).get("umbral_stock")),
         "calidad": calidad,
         "calidad_por_regla": calidad_reglas,
         "estadistica_descriptiva": estadistica_descriptiva(df_pedidos, df_lineas),

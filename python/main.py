@@ -63,6 +63,7 @@ def leer_argumentos(argumentos=None):
     parser.add_argument("--tipos", nargs="+", choices=config.TIPOS_PEDIDO, help="ESTANDAR y/o CUSTOM")
     parser.add_argument("--estados", nargs="+", choices=config.ESTADOS_VALIDOS, help="estados de pedido")
     parser.add_argument("--clientes", nargs="+", help="códigos de cliente, p. ej. CLI001")
+    parser.add_argument("--umbral-stock", type=int, help="alerta si el stock es menor o igual (por defecto, stock mínimo de ACC)")
     return parser.parse_args(argumentos)
 
 
@@ -75,6 +76,7 @@ def construir_filtros(args):
         "tipos": args.tipos,
         "estados": args.estados,
         "clientes": args.clientes,
+        "umbral_stock": args.umbral_stock,
     }
     return {clave: valor for clave, valor in filtros.items() if valor}
 

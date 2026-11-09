@@ -1,6 +1,6 @@
 fichero,fecha_analisis,filas,columnas,bytes,modificado,origen,generado,filtros
-clientes.csv,2026-11-09 11:46:34,7,5,311,2026-11-06 13:00:16,ACC · REAL,2026-11-09 11:46:34,sin filtros
-modelos.csv,2026-11-09 11:46:34,58,8,3330,2026-11-06 13:00:16,ACC · REAL,2026-11-09 11:46:34,sin filtros
-pedidos.csv,2026-11-09 11:46:34,12,7,743,2026-11-06 13:00:17,ACC · REAL,2026-11-09 11:46:34,sin filtros
-lineas_pedido.csv,2026-11-09 11:46:34,25,9,1190,2026-11-06 13:00:17,ACC · REAL,2026-11-09 11:46:34,sin filtros
-stock.csv,2026-11-09 11:46:34,638,6,27287,2026-11-06 13:00:18,ACC · REAL,2026-11-09 11:46:34,sin filtros
+clientes.csv,2026-11-09 12:25:59,7,5,311,2026-11-06 13:00:16,ACC · REAL,2026-11-09 12:25:59,sin filtros
+modelos.csv,2026-11-09 12:25:59,58,8,3330,2026-11-06 13:00:16,ACC · REAL,2026-11-09 12:25:59,sin filtros
+pedidos.csv,2026-11-09 12:25:59,12,7,743,2026-11-06 13:00:17,ACC · REAL,2026-11-09 12:25:59,sin filtros
+lineas_pedido.csv,2026-11-09 12:25:59,25,9,1190,2026-11-06 13:00:17,ACC · REAL,2026-11-09 12:25:59,sin filtros
+stock.csv,2026-11-09 12:25:59,638,6,27287,2026-11-06 13:00:18,ACC · REAL,2026-11-09 12:25:59,sin filtros
