@@ -1,0 +1,102 @@
+[10:24:32] INICIO Coordinador PID=32864 ficha=entrada/ficha_SO024.csv
+[10:24:32] ERROR No existe la ficha entrada/ficha_SO024.csv
+[10:40:43] INICIO Coordinador PID=33010 ficha=entrada/ficha_SO024.csv
+[10:40:43] LANZADO Validador PID=33011
+[10:40:43]    Validador -> ERROR;La ficha está vacía
+[10:40:43] TERMINA Validador código=1
+[10:40:43] FIN Ficha rechazada: no se lanzan más procesos
+[10:40:44] INICIO Coordinador PID=33013 ficha=entrada/ficha_SO024.csv
+[10:40:44] LANZADO Validador PID=33014
+[10:40:44]    Validador -> ERROR;La ficha está vacía
+[10:40:44] TERMINA Validador código=1
+[10:40:44] FIN Ficha rechazada: no se lanzan más procesos
+[10:44:19] INICIO Coordinador PID=33049 ficha=entrada/ficha_SO024.csv
+[10:44:19] LANZADO Validador PID=33050
+[10:44:19] TERMINA Validador código=0
+[10:44:19]    Validador -> OK;9
+[10:44:19] LANZADO AgrupadorTallas PID=33053
+[10:44:19] TERMINA AgrupadorTallas código=0
+[10:44:19]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
+[10:44:19] Total de pares: 40
+[10:44:19] GUARDADO salida/resumen_tallas.csv
+[10:44:19] LANZADO FichaTaller PID=33056
+[10:44:19] TERMINA FichaTaller código=0
+[10:44:19]    FichaTaller -> OK;salida/ficha_taller_SO024.txt
+[10:44:19] GUARDADO salida/ficha_taller_SO024.txt
+[10:44:19] FIN Pedido procesado correctamente
+[12:11:25] INICIO Coordinador PID=33484 ficha=entrada/ficha_SO024.csv
+[12:11:25] LANZADO Validador PID=33485
+[12:11:25] TERMINA Validador código=0
+[12:11:25]    Validador -> OK;9
+[12:11:25] LANZADO AgrupadorTallas PID=33486
+[12:11:25] TERMINA AgrupadorTallas código=0
+[12:11:25]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
+[12:11:25] Total de pares: 40
+[12:11:25] GUARDADO salida/resumen_tallas.csv
+[12:11:25] LANZADO FichaTaller PID=33487
+[12:11:25] TERMINA FichaTaller código=0
+[12:11:25]    FichaTaller -> OK;salida/ficha_taller_SO024.txt
+[12:11:25] GUARDADO salida/ficha_taller_SO024.txt
+[12:11:25] FIN Pedido procesado correctamente
+[12:42:58] INICIO Coordinador PID=33722 ficha=entrada/ficha_mala.csv
+[12:42:58] LANZADO Validador PID=33723
+[12:42:58]    Validador -> ERROR;Fila 4: talla 52 fuera de 36-46
+[12:42:58]    Validador -> ERROR;Fila 8: cantidad 0 no es mayor que 0
+[12:42:58] TERMINA Validador código=1
+[12:42:58] FIN Ficha rechazada: no se lanzan más procesos
+[12:54:29] INICIO Coordinador PID=33810 ficha=entrada/ficha_SO024.csv
+[12:54:29] LANZADO Validador PID=33811
+[12:54:29] TERMINA Validador código=0
+[12:54:29]    Validador -> OK;9
+[12:54:29] LANZADO AgrupadorTallas PID=33812
+[12:54:29] TERMINA AgrupadorTallas código=0
+[12:54:29]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
+[12:54:29] Total de pares: 40
+[12:54:29] GUARDADO salida/resumen_tallas.csv
+[12:54:29] LANZADO FichaTaller PID=33813
+[12:54:29] TERMINA FichaTaller código=0
+[12:54:29]    FichaTaller -> OK;salida/ficha_taller_SO024.txt
+[12:54:29] GUARDADO salida/ficha_taller_SO024.txt
+[12:54:29] FIN Pedido procesado correctamente
+[12:57:32] INICIO Coordinador PID=33851 ficha=entrada/ficha_SO024.csv
+[12:57:32] LANZADO Validador PID=33852
+[12:57:32] TERMINA Validador código=0
+[12:57:32]    Validador -> OK;9
+[12:57:32] LANZADO AgrupadorTallas PID=33853
+[12:57:33] TERMINA AgrupadorTallas código=0
+[12:57:33]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
+[12:57:33] Total de pares: 40
+[12:57:33] GUARDADO salida/resumen_tallas.csv
+[12:57:33] LANZADO FichaTaller PID=33854
+[12:57:33] TERMINA FichaTaller código=0
+[12:57:33]    FichaTaller -> OK;salida/ficha_taller_SO024.txt
+[12:57:33] GUARDADO salida/ficha_taller_SO024.txt
+[12:57:33] FIN Pedido procesado correctamente
+[12:57:33] INICIO Coordinador PID=33860 ficha=entrada/ficha_SO024.csv
+[12:57:33] LANZADO Validador PID=33861
+[12:57:33] TERMINA Validador código=0
+[12:57:33]    Validador -> OK;9
+[12:57:33] LANZADO AgrupadorTallas PID=33862
+[12:57:33] TERMINA AgrupadorTallas código=0
+[12:57:33]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
+[12:57:33] Total de pares: 40
+[12:57:33] GUARDADO salida/resumen_tallas.csv
+[12:57:33] LANZADO FichaTaller PID=33863
+[12:57:34] TERMINA FichaTaller código=0
+[12:57:34]    FichaTaller -> OK;salida/ficha_taller_SO024.txt
+[12:57:34] GUARDADO salida/ficha_taller_SO024.txt
+[12:57:34] FIN Pedido procesado correctamente
+[14:00:24] INICIO Coordinador PID=35955 ficha=entrada/ficha_SO024.csv
+[14:00:24] LANZADO Validador PID=35956
+[14:00:24] TERMINA Validador código=0
+[14:00:24]    Validador -> OK;9
+[14:00:24] LANZADO AgrupadorTallas PID=35957
+[14:00:24] TERMINA AgrupadorTallas código=0
+[14:00:24]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
+[14:00:24] Total de pares: 40
+[14:00:24] GUARDADO salida/resumen_tallas.csv
+[14:00:24] LANZADO FichaTaller PID=35958
+[14:00:24] TERMINA FichaTaller código=0
+[14:00:24]    FichaTaller -> OK;salida/ficha_taller_SO024.txt
+[14:00:24] GUARDADO salida/ficha_taller_SO024.txt
+[14:00:24] FIN Pedido procesado correctamente
