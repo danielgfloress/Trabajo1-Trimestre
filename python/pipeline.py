@@ -243,6 +243,13 @@ def guardar_calidad(resultado, carpeta_salida=config.CARPETA_SALIDA):
     resultado["manifiesto"].to_csv(carpeta_salida / "manifiesto_origen.csv", index=False, encoding="utf-8")
 
 
+def registrar_log(texto, archivo="ejecuciones.log", carpeta=config.CARPETA_LOGS):
+    carpeta = Path(carpeta)
+    carpeta.mkdir(parents=True, exist_ok=True)
+    with open(carpeta / archivo, "a", encoding="utf-8") as fichero:
+        fichero.write(f"{datetime.now().strftime(config.FORMATO_FECHA)} | {texto}\n")
+
+
 if __name__ == "__main__":
     resultado = ejecutar_pipeline()
     guardar_calidad(resultado)

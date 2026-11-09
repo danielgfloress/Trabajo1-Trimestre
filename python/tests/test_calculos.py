@@ -140,7 +140,7 @@ def test_bootstrap_misma_semilla_mismo_resultado(resultados):
 
 def test_filtro_por_modelo(copia):
     resultado = pipeline.ejecutar_pipeline(copia)
-    filtrados = analiticas.calcular_todo(resultado, {"modelos": ["47"]})
+    filtrados = analiticas.calcular_todo(resultado, {"modelos": ["NIK-022"]})
 
     assert kpi(filtrados, "Pedidos válidos (venta)") == "2"
     assert float(kpi(filtrados, "Pares vendidos")) == 23

@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
@@ -477,7 +479,7 @@ def kpis(df_pedidos, df_lineas, df_ventas_mes, df_abc):
         ("Peso Custom en ingresos", round(custom["importe"].sum() / ingresos * 100, 1) if ingresos else np.nan, "%", "ingresos CUSTOM ÷ ingresos válidos", f"{ingresos:.2f} €"),
         ("Modelo más vendido", top("modelo", "cantidad"), "pares", "modelo con más pares en pedidos válidos", "—"),
         ("Talla más vendida", top("talla", "cantidad"), "pares", "talla con más pares en pedidos válidos", "—"),
-        ("Mejor cliente", top("cliente", "importe_linea"), "€", "cliente con más ingresos válidos", "—"),
+        ("Mejor cliente", top("codigo_odoo", "importe_linea"), "€", "cliente con más ingresos válidos", "—"),
         ("Variación último mes", round(variacion, 1) if pd.notna(variacion) else "sin periodo anterior", "%", "(ingresos mes − mes anterior) ÷ mes anterior", "—"),
         ("Concentración Pareto", round(pareto, 1) if pd.notna(pareto) else np.nan, "%", f"peso del 20 % de modelos con más ingresos ({n_top} modelos)", f"{len(df_abc)} modelos vendidos"),
     ]
@@ -500,7 +502,9 @@ def aplicar_filtros(tablas, filtros):
     if filtros.get("estados"):
         pedidos = pedidos[pedidos["estado"].isin(filtros["estados"])]
     if filtros.get("modelos"):
-        lineas = lineas[lineas["id_modelo"].isin(filtros["modelos"])]
+        modelos = tablas["modelos"]
+        ids = modelos.loc[modelos["codigo_modelo"].isin(filtros["modelos"]), "id_modelo"]
+        lineas = lineas[lineas["id_modelo"].isin(ids)]
     if filtros.get("tallas"):
         lineas = lineas[lineas["talla"].isin(filtros["tallas"])]
     lineas = lineas[lineas["id_pedido"].isin(pedidos["id_pedido"])]
@@ -544,7 +548,7 @@ def calcular_todo(resultado_pipeline, filtros=None):
         "hipotesis": hipotesis(df_pedidos, df_lineas),
         "anomalias": anomalias(df_lineas),
         "precio_y_margen": precio_y_margen(df_lineas),
-        "reconciliacion_sql": reconciliacion_sql(base_pedidos, base_lineas),
+        "reconciliacion_sql": reconciliacion_sql(base_pedidos, base_lineas, Path(resultado_pipeline["carpeta"])),
         "kpis": kpis(df_pedidos, df_lineas, df_ventas_mes, df_abc),
     }
     for nombre, df in resultados.items():

@@ -22,6 +22,9 @@ COLUMNAS_OBLIGATORIAS = {
     "stock": ["id_modelo", "color", "talla", "stock_disponible", "stock_minimo", "fecha_corte"],
 }
 
+ORIGENES = {"real": "ACC · REAL", "sintetico": "SINTÉTICO · generador_datos.py"}
+CARPETAS_ENTRADA = {"real": CARPETA_ENTRADA, "sintetico": CARPETA_SINTETICOS}
+
 FORMATO_FECHA = "%Y-%m-%d %H:%M:%S"
 
 ESTADOS_VALIDOS = ["BORRADOR", "CONFIRMADO", "ENTREGADO", "CANCELADO"]
