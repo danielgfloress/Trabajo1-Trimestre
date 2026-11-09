@@ -1,18 +1,17 @@
-from datetime import datetime
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 
-import analiticas
 import config
 import pipeline
+import refresco
 import visualizaciones as vis
 
 ORIGEN = config.ORIGENES["real"]
 VISTAS = ["Dirección", "Producto y ventas", "Clientes", "Almacén", "Calidad y auditoría", "Laboratorio (sintético)"]
 CLAVES_FILTRO = ["f_fechas", "f_modelos", "f_tallas", "f_tipos", "f_estados", "f_clientes", "f_umbral", "f_segmento", "f_gravedad"]
 NOMBRE_ESTADO = {"BORRADOR": "Borrador", "CONFIRMADO": "Confirmado", "ENTREGADO": "Entregado", "CANCELADO": "Cancelado"}
+ICONO_ESTADO = {"correcto": "🟢", "sin cambios": "🟢", "datos inválidos": "🔴", "error de carga": "🔴"}
 PLURAL_ESTADO = {"BORRADOR": "Borradores", "CONFIRMADO": "Confirmados", "ENTREGADO": "Entregados", "CANCELADO": "Cancelados"}
 
 st.set_page_config(page_title="Sneaker Factory · Dashboard", layout="wide")
@@ -75,18 +74,35 @@ def variacion(valor):
     return None if pd.isna(valor) else f"{valor:+.1f} % frente al mes anterior"
 
 
-def cabecera(resultado, resultados, segundos):
-    corte = resultado["tablas"]["stock"]["fecha_corte"].max()
-    filas = int(resultado["resumen_calidad"]["filas_validas"].sum())
+def cabecera(ciclo, numero):
+    publicacion = ciclo["publicacion"]
     st.title("Sneaker Factory · Dashboard")
-    columnas = st.columns(5)
+    columnas = st.columns([1.1, 1, 1.2, 0.8, 0.9, 1.2])
     columnas[0].metric("Procedencia", ORIGEN)
-    columnas[1].metric("Fecha de corte (ACC)", f"{corte:%d/%m/%Y %H:%M}")
-    columnas[2].metric("Última comprobación", f"{resultado['hora_comprobacion']:%H:%M:%S}")
-    columnas[3].metric("Filas válidas", f"{filas:,}".replace(",", "."))
-    columnas[4].metric("Estado", resultado["estado"])
-    st.caption(f"Recalculado en {resultado['segundos'] + segundos:.1f} s · Filtros: "
-               f"{vis.texto_filtros(resultados['pedidos_unicos'].attrs.get('filtros'))}")
+    columnas[1].metric("Última comprobación", f"{ciclo['hora_comprobacion']:%H:%M:%S}")
+    columnas[2].metric("Última actualización válida", f"{publicacion['hora']:%H:%M:%S}" if publicacion else "—")
+    columnas[3].metric("Filas válidas", f"{publicacion['filas_validas']:,}".replace(",", ".") if publicacion else "—")
+    columnas[4].metric("Tiempo de proceso", f"{ciclo['segundos']:.1f} s")
+    columnas[5].metric("Estado", f"{ICONO_ESTADO[ciclo['estado']]} {ciclo['estado']}")
+
+    izquierda, derecha = st.columns([5, 1])
+    texto = f"Ciclo nº {numero} · se recalcula solo cada {config.SEGUNDOS_REFRESCO} s"
+    if publicacion:
+        corte = publicacion["resultado"]["tablas"]["stock"]["fecha_corte"].max()
+        texto += (f" · fecha de corte de la exportación de ACC: {corte:%d/%m/%Y %H:%M}"
+                  f" · filtros: {vis.texto_filtros(publicacion['filtros'])}")
+    if ciclo["estado"] == "sin cambios":
+        texto += " · los CSV no han cambiado desde el ciclo anterior"
+    izquierda.caption(texto)
+    derecha.button("Actualizar ahora", width="stretch", key="actualizar")
+
+    if ciclo["desactualizado"]:
+        st.error(f"**DATOS DESACTUALIZADOS.** La comprobación de las {ciclo['hora_comprobacion']:%H:%M:%S} ha fallado "
+                 f"({ciclo['estado']}): {ciclo['motivo']}. Se muestran los últimos resultados válidos, calculados el "
+                 f"{publicacion['hora']:%d/%m/%Y a las %H:%M:%S}. Nada de lo que ves incluye la exportación defectuosa.")
+    elif publicacion is None:
+        st.error(f"**No hay resultados que mostrar.** {ciclo['estado'].capitalize()}: {ciclo['motivo']}. "
+                 f"Se volverá a comprobar en {config.SEGUNDOS_REFRESCO} s o al pulsar «Actualizar ahora».")
 
 
 def vista_direccion(resultados):
@@ -256,22 +272,35 @@ def vista_pendiente(nombre):
     st.info(f"La vista «{nombre}» se añade en el siguiente paso.")
 
 
-resultado_inicial = pipeline.ejecutar_pipeline(config.CARPETA_ENTRADA, ORIGEN)
-if not resultado_inicial["publicable"]:
-    st.error("Los CSV de entrada_acc/ no son válidos ahora mismo. Revisa la vista de calidad o vuelve a exportar desde ACC.")
-    st.dataframe(resultado_inicial["incidencias"], width="stretch", hide_index=True)
-    st.stop()
+def tablas_para_filtros():
+    anterior = st.session_state.get("ciclo")
+    if anterior and anterior["publicacion"]:
+        return anterior["publicacion"]["resultado"]["tablas"]
+    inicial = pipeline.ejecutar_pipeline(config.CARPETA_ENTRADA, ORIGEN)
+    return inicial["tablas"] if inicial["publicable"] else None
 
-filtros = barra_lateral(resultado_inicial["tablas"])
+
+tablas_filtros = tablas_para_filtros()
+filtros = barra_lateral(tablas_filtros) if tablas_filtros else {}
 vista = st.radio("Vista", VISTAS, horizontal=True, key="vista", label_visibility="collapsed")
 
 
 @st.fragment(run_every=f"{config.SEGUNDOS_REFRESCO}s")
-def panel(filtros, vista):
-    resultado = pipeline.ejecutar_pipeline(config.CARPETA_ENTRADA, ORIGEN)
-    inicio = datetime.now()
-    resultados = analiticas.calcular_todo(resultado, filtros)
-    cabecera(resultado, resultados, (datetime.now() - inicio).total_seconds())
+def panel(filtros, vista, hay_barra_lateral):
+    ciclo = refresco.ciclo(config.CARPETA_ENTRADA, ORIGEN, filtros, st.session_state.get("ciclo"))
+    st.session_state["ciclos"] = st.session_state.get("ciclos", 0) + 1
+    st.session_state["ciclo"] = ciclo
+    cabecera(ciclo, st.session_state["ciclos"])
+
+    if ciclo["publicacion"] is None:
+        st.subheader("Incidencias que impiden publicar")
+        st.dataframe(ciclo["resultado"]["incidencias"], width="stretch", hide_index=True)
+        return
+    if not hay_barra_lateral:
+        st.rerun()
+
+    resultados = ciclo["publicacion"]["resultados"]
+    resultado = ciclo["resultado"]
     if vista == "Dirección":
         vista_direccion(resultados)
     elif vista == "Producto y ventas":
@@ -286,4 +315,4 @@ def panel(filtros, vista):
         vista_pendiente(vista)
 
 
-panel(filtros, vista)
+panel(filtros, vista, tablas_filtros is not None)

@@ -1,10 +1,11 @@
+import os
 from pathlib import Path
 
 CARPETA_BASE = Path(__file__).parent
-CARPETA_ENTRADA = CARPETA_BASE / "entrada_acc"
+CARPETA_ENTRADA = Path(os.environ.get("SNEAKER_ENTRADA", CARPETA_BASE / "entrada_acc"))
 CARPETA_SINTETICOS = CARPETA_BASE / "datos_sinteticos"
 CARPETA_SALIDA = CARPETA_BASE / "outputs"
-CARPETA_LOGS = CARPETA_BASE / "logs"
+CARPETA_LOGS = Path(os.environ.get("SNEAKER_LOGS", CARPETA_BASE / "logs"))
 
 ARCHIVOS = {
     "clientes": "clientes.csv",
