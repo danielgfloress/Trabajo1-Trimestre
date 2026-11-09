@@ -1,7 +1,7 @@
 # Diccionario de datos
 
 Contrato de entrada de Python: los 5 CSV que exporta Acceso a Datos (`modelo_datos_comun.md`, apartado 9.2) más el fichero de reconciliación.
-Todos se generan con `./exportar_acc.sh` desde PostgreSQL.
+Todos se generan con `bash scripts/exportar_acc.sh` desde PostgreSQL.
 
 ## Formato común
 
