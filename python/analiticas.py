@@ -249,6 +249,139 @@ def calidad_incidencias(resultado_pipeline):
     return poner_metadatos(resumen, "calidad_incidencias", int(total), pd.Timestamp(resultado_pipeline["hora_comprobacion"])), por_regla
 
 
+def describir(serie, discreta):
+    serie = serie.dropna()
+    if serie.empty:
+        return {"n": 0}
+    mediana = serie.median()
+    media = serie.mean()
+    modas = serie.mode()
+    hay_moda = discreta and serie.value_counts().iloc[0] > 1
+    asimetrica = mediana != 0 and abs(media - mediana) / abs(mediana) > config.UMBRAL_ASIMETRIA
+    return {
+        "n": len(serie),
+        "media": media,
+        "mediana": mediana,
+        "moda": modas.min() if hay_moda else np.nan,
+        "desviacion": serie.std(),
+        "minimo": serie.min(),
+        "p25": serie.quantile(0.25),
+        "p75": serie.quantile(0.75),
+        "p90": serie.quantile(0.90),
+        "maximo": serie.max(),
+        "iqr": serie.quantile(0.75) - serie.quantile(0.25),
+        "representativo": "mediana (asimétrica)" if asimetrica else "media (simétrica)",
+        "aviso": f"muestra pequeña (n < {config.MINIMO_MUESTRA_ESTADISTICA})" if len(serie) < config.MINIMO_MUESTRA_ESTADISTICA else "",
+    }
+
+
+def estadistica_descriptiva(df_pedidos, df_lineas):
+    pedidos = df_pedidos[df_pedidos["es_venta"]]
+    lineas = df_lineas[df_lineas["es_venta"]]
+    variables = [
+        ("importe por pedido", "€", "pedido", pedidos["importe"], False),
+        ("pares por pedido", "pares", "pedido", pedidos["pares"], True),
+        ("precio por par", "€/par", "línea", lineas["precio_unitario"], False),
+        ("pares por línea", "pares", "línea", lineas["cantidad"], True),
+    ]
+    filas = [{"variable": nombre, "unidad": unidad, "nivel": nivel, **describir(serie, discreta)}
+             for nombre, unidad, nivel, serie, discreta in variables]
+    df = pd.DataFrame(filas).round(2)
+    return poner_metadatos(df, "estadistica_descriptiva", len(pedidos), df_pedidos["fecha_pedido"].max())
+
+
+def estadistica_por_grupo(df_pedidos, df_lineas):
+    pedidos = df_pedidos[df_pedidos["es_venta"]]
+    lineas = df_lineas[df_lineas["es_venta"]]
+    comparaciones = [
+        ("importe por pedido", "€", pedidos, "tipo", "importe"),
+        ("pares por pedido", "pares", pedidos, "tipo", "pares"),
+        ("precio por par", "€/par", lineas, "categoria", "precio_unitario"),
+    ]
+    medidas = ["n", "media", "mediana", "desviacion", "p25", "p75", "iqr", "aviso"]
+    filas = []
+    for nombre, unidad, datos, grupo, columna in comparaciones:
+        for valor, trozo in datos.groupby(grupo):
+            resumen = describir(trozo[columna], False)
+            filas.append({"variable": nombre, "unidad": unidad, "agrupado_por": grupo, "grupo": valor,
+                          **{k: resumen.get(k) for k in medidas}})
+    df = pd.DataFrame(filas, columns=["variable", "unidad", "agrupado_por", "grupo"] + medidas).round(2)
+    return poner_metadatos(df, "estadistica_por_grupo", len(pedidos), df_pedidos["fecha_pedido"].max())
+
+
+def intervalo_bootstrap(calcular, grupos, semilla=config.SEMILLA):
+    generador = np.random.default_rng(semilla)
+    valores = []
+    for _ in range(config.REPETICIONES_BOOTSTRAP):
+        muestras = [grupo.iloc[generador.integers(0, len(grupo), len(grupo))] for grupo in grupos]
+        valores.append(calcular(*muestras))
+    inferior, superior = np.percentile(valores, [2.5, 97.5])
+    return inferior, superior
+
+
+def conclusion(inferior, superior, referencia):
+    if inferior > referencia:
+        return "se apoya"
+    if superior < referencia:
+        return "se rechaza"
+    return "evidencia insuficiente"
+
+
+def contrastar(hipotesis, metrica, grupos, calcular, referencia, no_se_puede_afirmar):
+    tamanos = " / ".join(str(len(g)) for g in grupos)
+    fila = {"hipotesis": hipotesis, "metrica": metrica, "n": tamanos, "referencia": referencia,
+            "no_se_puede_afirmar": no_se_puede_afirmar}
+    if any(len(g) < 2 for g in grupos):
+        return {**fila, "valor_observado": np.nan, "ic95_inferior": np.nan, "ic95_superior": np.nan,
+                "conclusion": "no calculable (menos de 2 datos en algún grupo)"}
+    inferior, superior = intervalo_bootstrap(calcular, grupos)
+    return {**fila, "valor_observado": calcular(*grupos), "ic95_inferior": inferior, "ic95_superior": superior,
+            "conclusion": conclusion(inferior, superior, referencia)}
+
+
+def hipotesis(df_pedidos, df_lineas):
+    ventas = df_pedidos[df_pedidos["es_venta"]]
+    lineas = df_lineas[df_lineas["es_venta"]]
+    cancelado = df_pedidos.assign(cancelado=df_pedidos["estado"] == "CANCELADO")
+
+    def diferencia_medias(a, b):
+        return a.mean() - b.mean()
+
+    def peso_tallas_centrales(muestra):
+        total = muestra["cantidad"].sum()
+        return muestra.loc[muestra["talla"].isin(config.TALLAS_CENTRALES), "cantidad"].sum() / total * 100 if total else np.nan
+
+    filas = [
+        contrastar(
+            "H1 · Un pedido Custom factura de media más que uno estándar",
+            "media € Custom − media € estándar (por pedido válido)",
+            [ventas.loc[ventas["tipo"] == "CUSTOM", "importe"], ventas.loc[ventas["tipo"] == "ESTANDAR", "importe"]],
+            diferencia_medias, 0,
+            "Que ser Custom cause el importe mayor: los Custom exigen 20 pares o más, así que la diferencia viene sobre todo del volumen.",
+        ),
+        contrastar(
+            "H2 · Las tallas 40 a 42 concentran más de la mitad de los pares vendidos",
+            "% de pares vendidos en tallas 40-42",
+            [lineas[["talla", "cantidad"]]],
+            peso_tallas_centrales, 50,
+            "Que esta mezcla de tallas se mantenga con otros clientes: casi todos los pares vienen de unos pocos clubes.",
+        ),
+        contrastar(
+            "H3 · Los pedidos Custom se cancelan más que los estándar",
+            "tasa de cancelación Custom − estándar (puntos %, sobre todos los pedidos)",
+            [cancelado.loc[cancelado["tipo"] == "CUSTOM", "cancelado"].astype(float) * 100,
+             cancelado.loc[cancelado["tipo"] == "ESTANDAR", "cancelado"].astype(float) * 100],
+            diferencia_medias, 0,
+            "Que un tipo de pedido se cancele más que otro: con tan pocos pedidos una sola cancelación cambia la tasa por completo.",
+        ),
+    ]
+    columnas = ["hipotesis", "metrica", "n", "valor_observado", "ic95_inferior", "ic95_superior", "referencia",
+                "conclusion", "no_se_puede_afirmar"]
+    df = pd.DataFrame(filas, columns=columnas).round(2)
+    df.attrs["metodo"] = f"bootstrap de {config.REPETICIONES_BOOTSTRAP} remuestras con semilla {config.SEMILLA}; IC 95 % por percentiles 2,5 y 97,5"
+    return poner_metadatos(df, "hipotesis", len(df_pedidos), df_pedidos["fecha_pedido"].max())
+
+
 def anomalias(df_lineas):
     filas = []
     for columna in ["precio_unitario", "cantidad"]:
@@ -406,6 +539,9 @@ def calcular_todo(resultado_pipeline, filtros=None):
         "stock_cobertura": stock_cobertura(tablas, df_lineas),
         "calidad": calidad,
         "calidad_por_regla": calidad_reglas,
+        "estadistica_descriptiva": estadistica_descriptiva(df_pedidos, df_lineas),
+        "estadistica_por_grupo": estadistica_por_grupo(df_pedidos, df_lineas),
+        "hipotesis": hipotesis(df_pedidos, df_lineas),
         "anomalias": anomalias(df_lineas),
         "precio_y_margen": precio_y_margen(df_lineas),
         "reconciliacion_sql": reconciliacion_sql(base_pedidos, base_lineas),

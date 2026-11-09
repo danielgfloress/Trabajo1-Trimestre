@@ -90,6 +90,54 @@ def test_talla_mas_solicitada(resultados):
     assert runner["pares_talla"] == 10
 
 
+def test_estadistica_descriptiva_del_importe(resultados):
+    tabla = resultados["estadistica_descriptiva"].set_index("variable")
+    importe = tabla.loc["importe por pedido"]
+    pares = tabla.loc["pares por pedido"]
+
+    assert importe["n"] == 8
+    assert importe["media"] == pytest.approx(12876.88 / 8, abs=0.01)
+    assert importe["mediana"] == pytest.approx((1619.82 + 1619.92) / 2, abs=0.01)
+    assert pd.isna(importe["moda"])
+    assert pares["moda"] == 20
+    assert importe["aviso"].startswith("muestra pequeña")
+
+
+def test_estadistica_custom_frente_a_estandar(resultados):
+    tabla = resultados["estadistica_por_grupo"]
+    importe = tabla[tabla["variable"] == "importe por pedido"].set_index("grupo")
+
+    assert importe.loc["CUSTOM", "n"] == 3
+    assert importe.loc["ESTANDAR", "n"] == 5
+    assert importe.loc["CUSTOM", "media"] == pytest.approx((2098.00 + 2239.80 + 3999.80) / 3, abs=0.01)
+
+
+def test_hipotesis_custom_factura_mas(resultados):
+    h1 = resultados["hipotesis"].iloc[0]
+
+    assert h1["n"] == "3 / 5"
+    assert h1["valor_observado"] == pytest.approx(2779.20 - 907.86, abs=0.01)
+    assert h1["ic95_inferior"] > 0
+    assert h1["conclusion"] == "se apoya"
+
+
+def test_hipotesis_cancelacion_sin_evidencia(resultados):
+    h3 = resultados["hipotesis"].iloc[2]
+
+    assert h3["valor_observado"] == pytest.approx(1 / 4 * 100 - 1 / 8 * 100)
+    assert h3["ic95_inferior"] < 0 < h3["ic95_superior"]
+    assert h3["conclusion"] == "evidencia insuficiente"
+
+
+def test_bootstrap_misma_semilla_mismo_resultado(resultados):
+    pedidos = resultados["pedidos_unicos"]
+    lineas = resultados["lineas_enriquecidas"]
+
+    primera = analiticas.hipotesis(pedidos, lineas)
+    segunda = analiticas.hipotesis(pedidos, lineas)
+    pd.testing.assert_frame_equal(primera, segunda)
+
+
 def test_filtro_por_modelo(copia):
     resultado = pipeline.ejecutar_pipeline(copia)
     filtrados = analiticas.calcular_todo(resultado, {"modelos": ["47"]})
