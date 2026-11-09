@@ -1,6 +1,7 @@
 import pandas as pd
 
 import main
+import visualizaciones
 
 
 def ejecutar(copia, tmp_path, *extra):
@@ -16,7 +17,7 @@ def test_ejecucion_completa_genera_csv_y_png(copia, tmp_path):
     csvs = list(carpeta.glob("*.csv"))
     assert codigo == 0
     assert len(csvs) >= 10
-    assert len(list((carpeta / "graficos").glob("*.png"))) == 8
+    assert len(list((carpeta / "graficos").glob("*.png"))) == len(visualizaciones.FIGURAS)
     for ruta in csvs:
         df = pd.read_csv(ruta)
         assert set(df["origen"]) <= {"ACC · REAL"}

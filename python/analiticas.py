@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 import config
+import segmentacion
 
 
 def poner_metadatos(df, funcion, filas_origen, fecha_corte, filtros=None):
@@ -527,6 +528,8 @@ def calcular_todo(resultado_pipeline, filtros=None):
     base = resultado_pipeline["tablas"]
     base_lineas = lineas_enriquecidas(base) if filtros else df_lineas
     base_pedidos = pedidos_unicos(base, base_lineas) if filtros else df_pedidos
+    df_rfm = clientes_rfm(tablas, df_pedidos)
+    clusters = segmentacion.clustering_clientes(df_rfm)
     resultados = {
         "lineas_enriquecidas": df_lineas,
         "pedidos_unicos": df_pedidos,
@@ -535,7 +538,11 @@ def calcular_todo(resultado_pipeline, filtros=None):
         "matriz_modelo_talla": unidades,
         "matriz_modelo_talla_pct": proporcion,
         "custom_vs_estandar": custom_vs_estandar(df_pedidos),
-        "clientes_rfm": clientes_rfm(tablas, df_pedidos),
+        "clientes_rfm": df_rfm,
+        "clustering_evaluacion": clusters["clustering_evaluacion"],
+        "clustering_clientes": clusters["clustering_clientes"],
+        "clustering_perfil": clusters["clustering_perfil"],
+        "clustering_vs_rfm": clusters["clustering_vs_rfm"],
         "caracteristicas_clientes": caracteristicas_clientes(tablas, df_pedidos),
         "demanda_modelo_mes": demanda_modelo_mes(df_lineas),
         "talla_mas_solicitada": talla_mas_solicitada(df_lineas),

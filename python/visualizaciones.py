@@ -260,6 +260,34 @@ def comparativa_tipo(resultados, origen):
     return fig
 
 
+def grupos_clientes(resultados, origen):
+    perfil = resultados["clustering_perfil"]
+    calculable = "cluster" in perfil.columns
+    columnas = len(perfil) if calculable else 1
+    fig, ejes = nueva_figura(resultados, origen, "Grupos de clientes (KMeans)",
+                             "Cada panel resalta en azul un grupo; en gris, el resto de clientes. "
+                             "Grupos hechos con recencia, frecuencia y gasto escalados.",
+                             ancho=max(9, 4.2 * columnas), columnas=columnas, izquierda=0.11)
+    ejes = np.atleast_1d(ejes)
+    if not calculable:
+        ejes[0].set_axis_off()
+        ejes[0].text(0.5, 0.5, "NO CALCULABLE\n" + perfil["motivo"].iloc[0], ha="center", va="center",
+                     fontsize=10, color=TEXTO_SECUNDARIO, wrap=True)
+        return fig
+    clientes = resultados["clustering_clientes"]
+    for eje, (_, grupo) in zip(ejes, perfil.iterrows()):
+        dentro = clientes["cluster"] == grupo["cluster"]
+        eje.scatter(clientes.loc[~dentro, "recencia_dias"], clientes.loc[~dentro, "monetario"], s=30, color=REJILLA, zorder=2)
+        eje.scatter(clientes.loc[dentro, "recencia_dias"], clientes.loc[dentro, "monetario"], s=45, color=SERIE_1,
+                    edgecolor=SUPERFICIE, linewidth=1.5, zorder=3)
+        eje.set_title(f"{grupo['nombre_grupo']}\n{grupo['clientes']} clientes · {grupo['porcentaje_ingresos']:.0f} % de ingresos", fontsize=10)
+        eje.set_xlabel("Días sin comprar")
+        eje.set_ylim(0, clientes["monetario"].max() * 1.05)
+        formato_euros(eje)
+    ejes[0].set_ylabel("Gasto en ventas válidas (€)")
+    return fig
+
+
 FIGURAS = {
     "01_evolucion_mensual": evolucion_mensual,
     "02_ranking_modelos": ranking_modelos,
@@ -269,6 +297,7 @@ FIGURAS = {
     "06_mapa_calor_modelo_talla": mapa_calor_modelo_talla,
     "07_dispersion_clientes": dispersion_clientes,
     "08_comparativa_tipo": comparativa_tipo,
+    "09_grupos_clientes": grupos_clientes,
 }
 
 

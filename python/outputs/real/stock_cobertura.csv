@@ -1,639 +1,639 @@
 codigo_modelo,marca,modelo,color,talla,stock_disponible,stock_minimo,demanda_28_dias,cobertura_semanas,cobertura_texto,alerta_stock_bajo,fecha_corte,origen,generado,filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,38,2,5,0,,N/D,True,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,45,3,5,0,,N/D,True,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,41,10,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,42,10,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,40,12,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,43,12,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,42,12,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,42,13,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,39,14,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,41,14,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,43,14,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,40,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,41,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,43,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,44,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,40,17,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,42,17,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,40,18,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,41,18,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,38,19,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-D3-001,D3,Runner X,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-001,ADIDAS,AE 1,Rosa y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-002,ADIDAS,Campus 00s,Gris y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-003,ADIDAS,Campus 00s,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-004,ADIDAS,Campus Light,Marrón y crema,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-005,ADIDAS,Copa Pure II League FG,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-006,ADIDAS,Forum Low,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-007,ADIDAS,HVC,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-008,ADIDAS,Handball Spezial,Verde y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-010,ADIDAS,Predator League FG,Rojo y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-011,ADIDAS,Response CL,Crema,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-012,ADIDAS,Samba OG,Blanco y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-ADI-013,ADIDAS,Superstar,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-003,JORDAN,Air Jordan 3 Retro,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-JOR-005,JORDAN,Air Jordan 4 Retro,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-LIN-001,LI-NING,Way of Wade,Blanco y dorado,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-001,NEW BALANCE,1906R,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-002,NEW BALANCE,1906R,Negro mate,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-004,NEW BALANCE,550,Blanco y verde,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NB-005,NEW BALANCE,OMN1S,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-001,NIKE,Air Force 1 Low,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-002,NIKE,Air Force 1 Low,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-003,NIKE,Air Max 90,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-004,NIKE,Air Max 95,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-005,NIKE,Air Max 97,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-006,NIKE,Air Max Dn,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-007,NIKE,Air Max Dn,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-008,NIKE,Air Max Plus,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-009,NIKE,Dunk Low,Blanco y gris,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-010,NIKE,Dunk Low,Blanco y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-011,NIKE,Machomai 3,Blanco y dorado,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-012,NIKE,HyperKO 3,Negro y rosa,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-013,NIKE,HyperKO 2,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-015,NIKE,Phantom GX 2 Academy,Azul,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-018,NIKE,Shox TL,Gris y verde oliva,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-019,NIKE,Team Hustle D 11,Rojo y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-021,NIKE,Vomero Plus,Blanco y naranja,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-002,PUMA,MB.03 Lo,Verde,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-003,PUMA,Speedcat OG,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-004,PUMA,Speedcat OG,Rojo y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-PUM-005,PUMA,Suede Classic,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-001,SALOMON,XT-4 OG,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-002,SALOMON,XT-6,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-SAL-003,SALOMON,XT-6,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VAN-001,VANS,Knu Skool,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
-VEN-001,VENUM,Elite,Negro y dorado,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 10:40:03,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,38,2,5,0,,N/D,True,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,45,3,5,0,,N/D,True,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,41,10,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,42,10,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,40,12,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,43,12,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,42,12,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,42,13,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,39,14,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,41,14,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,43,14,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,40,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,41,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,43,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,44,16,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,40,17,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,42,17,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,40,18,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,41,18,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,38,19,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+D3-001,D3,Runner X,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-001,ADIDAS,AE 1,Rosa y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-002,ADIDAS,Campus 00s,Gris y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-003,ADIDAS,Campus 00s,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-004,ADIDAS,Campus Light,Marrón y crema,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-005,ADIDAS,Copa Pure II League FG,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-006,ADIDAS,Forum Low,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-007,ADIDAS,HVC,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-008,ADIDAS,Handball Spezial,Verde y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-009,ADIDAS,Predator Edge.3 FG,Rojo y verde,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-010,ADIDAS,Predator League FG,Rojo y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-011,ADIDAS,Response CL,Crema,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-012,ADIDAS,Samba OG,Blanco y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+ADI-013,ADIDAS,Superstar,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-001,JORDAN,Air Jordan 1 Low SE,Marrón y crema,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-002,JORDAN,Air Jordan 1 Retro High OG,"Blanco, negro y rojo",46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-003,JORDAN,Air Jordan 3 Retro,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-004,JORDAN,Air Jordan 4 Retro,Blanco roto y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+JOR-005,JORDAN,Air Jordan 4 Retro,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+LIN-001,LI-NING,Way of Wade,Blanco y dorado,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-001,NEW BALANCE,1906R,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-002,NEW BALANCE,1906R,Negro mate,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-003,NEW BALANCE,2002R Protection Pack,Gris oscuro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-004,NEW BALANCE,550,Blanco y verde,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NB-005,NEW BALANCE,OMN1S,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-001,NIKE,Air Force 1 Low,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-002,NIKE,Air Force 1 Low,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-003,NIKE,Air Max 90,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-004,NIKE,Air Max 95,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-005,NIKE,Air Max 97,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-006,NIKE,Air Max Dn,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-007,NIKE,Air Max Dn,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-008,NIKE,Air Max Plus,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-009,NIKE,Dunk Low,Blanco y gris,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-010,NIKE,Dunk Low,Blanco y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-011,NIKE,Machomai 3,Blanco y dorado,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-012,NIKE,HyperKO 3,Negro y rosa,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-013,NIKE,HyperKO 2,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-014,NIKE,Mercurial Superfly 10 Academy,Azul claro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-015,NIKE,Phantom GX 2 Academy,Azul,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-016,NIKE,Phantom GX 2 Academy,Blanco y azul,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-017,NIKE,Phantom GX Elite,Amarillo y azul,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-018,NIKE,Shox TL,Gris y verde oliva,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-019,NIKE,Team Hustle D 11,Rojo y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-020,NIKE,Tiempo Legend 10 Academy,Amarillo flúor,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-021,NIKE,Vomero Plus,Blanco y naranja,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+NIK-022,NIKE,ZoomX Invincible 3,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-001,PUMA,Future 7 Ultimate FG,Blanco y rosa,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-002,PUMA,MB.03 Lo,Verde,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-003,PUMA,Speedcat OG,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-004,PUMA,Speedcat OG,Rojo y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+PUM-005,PUMA,Suede Classic,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-001,SALOMON,XT-4 OG,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-002,SALOMON,XT-6,Blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+SAL-003,SALOMON,XT-6,Negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+UA-001,UNDER ARMOUR,Lockdown 6,Blanco y negro,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,41,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VAN-001,VANS,Knu Skool,Negro y blanco,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,36,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,37,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,38,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,39,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,40,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,42,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,43,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,44,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,45,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros
+VEN-001,VENUM,Elite,Negro y dorado,46,20,5,0,,N/D,False,2026-11-06 12:00:18,ACC · REAL,2026-11-09 11:10:47,sin filtros

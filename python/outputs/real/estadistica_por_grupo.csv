@@ -1,8 +1,8 @@
 variable,unidad,agrupado_por,grupo,n,media,mediana,desviacion,p25,p75,iqr,aviso,origen,generado,filtros
-importe por pedido,€,tipo,CUSTOM,3,2779.2,2239.8,1059.45,2168.9,3119.8,950.9,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
-importe por pedido,€,tipo,ESTANDAR,5,907.86,929.57,718.6,239.98,1619.82,1379.84,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
-pares por pedido,pares,tipo,CUSTOM,3,20.0,20.0,0.0,20.0,20.0,0.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
-pares por pedido,pares,tipo,ESTANDAR,5,7.2,7.0,6.76,2.0,8.0,6.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
-precio por par,€/par,categoria,Boxeo,3,196.66,219.99,40.41,184.99,219.99,35.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
-precio por par,€/par,categoria,Fútbol,5,103.19,111.99,12.05,89.99,111.99,22.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
-precio por par,€/par,categoria,Sneakers,12,153.71,159.99,47.62,104.9,199.99,95.09,muestra pequeña (n < 30),ACC · REAL,2026-11-09 10:40:03,sin filtros
+importe por pedido,€,tipo,CUSTOM,3,2779.2,2239.8,1059.45,2168.9,3119.8,950.9,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros
+importe por pedido,€,tipo,ESTANDAR,5,907.86,929.57,718.6,239.98,1619.82,1379.84,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros
+pares por pedido,pares,tipo,CUSTOM,3,20.0,20.0,0.0,20.0,20.0,0.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros
+pares por pedido,pares,tipo,ESTANDAR,5,7.2,7.0,6.76,2.0,8.0,6.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros
+precio por par,€/par,categoria,Boxeo,3,196.66,219.99,40.41,184.99,219.99,35.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros
+precio por par,€/par,categoria,Fútbol,5,103.19,111.99,12.05,89.99,111.99,22.0,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros
+precio por par,€/par,categoria,Sneakers,12,153.71,159.99,47.62,104.9,199.99,95.09,muestra pequeña (n < 30),ACC · REAL,2026-11-09 11:10:47,sin filtros

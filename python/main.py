@@ -37,6 +37,10 @@ SALIDAS = {
         "clientes_rfm": "clientes_rfm",
         "caracteristicas_clientes": "caracteristicas_clientes",
         "cohortes": "cohortes",
+        "clustering_evaluacion": "clustering_evaluacion",
+        "clustering_clientes": "clustering_clientes",
+        "clustering_perfil": "clustering_perfil",
+        "clustering_vs_rfm": "clustering_vs_rfm",
     },
 }
 TAREAS = list(SALIDAS) + ["graficos", "todo"]
