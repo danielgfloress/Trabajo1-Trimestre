@@ -2,12 +2,24 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 
+import analiticas
 import config
+import main
 import pipeline
 import refresco
 import visualizaciones as vis
 
 ORIGEN = config.ORIGENES["real"]
+ORIGEN_SINTETICO = config.ORIGENES["sintetico"]
+DESCARGAS = {
+    "kpis": "KPIs",
+    "pedidos_unicos": "Pedidos únicos",
+    "ventas_por_periodo": "Evolución mensual",
+    "modelos_abc": "Modelos ABC",
+    "matriz_modelo_talla": "Matriz modelo × talla",
+    "clientes_rfm": "Clientes RFM",
+    "stock_cobertura": "Stock y cobertura",
+}
 VISTAS = ["Dirección", "Producto y ventas", "Clientes", "Almacén", "Calidad y auditoría", "Laboratorio (sintético)"]
 CLAVES_FILTRO = ["f_fechas", "f_modelos", "f_tallas", "f_tipos", "f_estados", "f_clientes", "f_umbral", "f_segmento", "f_gravedad"]
 NOMBRE_ESTADO = {"BORRADOR": "Borrador", "CONFIRMADO": "Confirmado", "ENTREGADO": "Entregado", "CANCELADO": "Cancelado"}
@@ -268,8 +280,76 @@ def vista_calidad(resultado, resultados):
         st.dataframe(resultados["anomalias"], width="stretch", hide_index=True)
 
 
-def vista_pendiente(nombre):
-    st.info(f"La vista «{nombre}» se añade en el siguiente paso.")
+def descargas(publicacion):
+    generado = f"{publicacion['hora']:%Y-%m-%d %H:%M:%S}"
+    with st.expander("⬇ Descargar resultados (CSV UTF-8 con los filtros aplicados)"):
+        columnas = st.columns(4)
+        for posicion, (clave, nombre) in enumerate(DESCARGAS.items()):
+            tabla = main.preparar_para_csv(publicacion["resultados"][clave], ORIGEN, generado, publicacion["filtros"])
+            columnas[posicion % 4].download_button(nombre, tabla.to_csv(index=False).encode("utf-8"), file_name=f"{clave}.csv",
+                                                   mime="text/csv", key=f"descarga_{clave}", on_click="ignore", width="stretch")
+        st.caption(f"Son los mismos datos que ves en pantalla (calculados a las {publicacion['hora']:%H:%M:%S}). Cada CSV "
+                   "lleva las columnas origen, generado y filtros, y no incluye nombres de clientes.")
+
+
+@st.cache_data(show_spinner="Calculando el laboratorio sintético…")
+def calcular_laboratorio(huella):
+    resultado = pipeline.ejecutar_pipeline(config.CARPETA_SINTETICOS, ORIGEN_SINTETICO)
+    return resultado, analiticas.calcular_todo(resultado) if resultado["publicable"] else None
+
+
+def vista_laboratorio():
+    st.warning("🧪 **LABORATORIO CON DATOS SINTÉTICOS.** Esta vista usa el histórico INVENTADO por generador_datos.py "
+               "(18 meses, 45 clientes, 14 modelos SIM-xx). **No son ventas de Sneaker Factory**, no se mezclan con los "
+               "datos de ACC y nada de aquí es una conclusión de negocio. Sirve para demostrar la segmentación y la "
+               "predicción, que con los datos reales no son calculables. Los filtros de la izquierda no se aplican aquí.")
+    if not (config.CARPETA_SINTETICOS / config.ARCHIVOS["pedidos"]).exists():
+        st.info("Todavía no hay datos sintéticos. Genéralos con: python generador_datos.py")
+        return
+    resultado, resultados = calcular_laboratorio(refresco.huella(config.CARPETA_SINTETICOS))
+    if resultados is None:
+        st.error("Los datos sintéticos no pasan la validación.")
+        st.dataframe(resultado["incidencias"], width="stretch", hide_index=True)
+        return
+    pedidos = resultados["pedidos_unicos"]
+    st.caption(f"Origen: {ORIGEN_SINTETICO} · {len(pedidos)} pedidos · {len(resultados['clientes_rfm'])} clientes · "
+               f"{pedidos['fecha_pedido'].min():%m/%Y} a {pedidos['fecha_pedido'].max():%m/%Y}")
+
+    st.subheader("Segmentación de clientes (KMeans)")
+    evaluacion = resultados["clustering_evaluacion"]
+    izquierda, derecha = st.columns([1, 2])
+    with izquierda:
+        st.dataframe(evaluacion, width="stretch", hide_index=True)
+        st.caption("Se prueba k = 2 a 5 con recencia, frecuencia y gasto escalados y se elige el k con mayor silhouette "
+                   "(de −1 a 1: más alto = grupos más separados).")
+    with derecha:
+        st.dataframe(resultados["clustering_perfil"], width="stretch", hide_index=True)
+    mostrar_figura(vis.grupos_clientes(resultados, ORIGEN_SINTETICO), resultados["clustering_clientes"])
+    st.markdown("**Grupos KMeans frente a segmentos RFM**")
+    st.dataframe(resultados["clustering_vs_rfm"], width="stretch", hide_index=True)
+    st.caption("Un grupo matemático no es una categoría comercial: KMeans junta clientes parecidos en números, mientras "
+               "que RFM aplica reglas de negocio fijas. Por eso no coinciden del todo.")
+
+    st.subheader("Predicción de demanda (pares por modelo y mes)")
+    evaluacion = resultados["prediccion_evaluacion"]
+    mejora = evaluacion["mejora_mae_pct"].iloc[0]
+    st.info(f"Validación temporal: {evaluacion['periodo'].iloc[0]}. Conclusión: {evaluacion['conclusion'].iloc[0]} "
+            f"(el error medio es un {abs(mejora):.1f} % {'menor' if mejora > 0 else 'mayor'} que repetir el mes anterior).")
+    st.dataframe(evaluacion[["metodo", "mae", "rmse", "sesgo", "filas_entrenamiento", "filas_prueba"]],
+                 width="stretch", hide_index=True)
+    st.caption("MAE = error medio en pares; RMSE = igual pero castiga más los errores grandes; sesgo = si de media se pasa "
+               "(+) o se queda corto (−). Solo se usan datos anteriores a cada mes: demanda del mes previo, media de los "
+               "3 anteriores, mes del año y modelo.")
+    mostrar_figura(vis.prediccion_frente_real(resultados, ORIGEN_SINTETICO), resultados["prediccion_detalle"])
+    izquierda, derecha = st.columns(2)
+    with izquierda:
+        st.markdown("**Error por modelo**")
+        st.dataframe(resultados["prediccion_por_modelo"], width="stretch", hide_index=True)
+    with derecha:
+        st.markdown("**Peso de cada variable en el modelo**")
+        st.dataframe(resultados["prediccion_variables"], width="stretch", hide_index=True)
+    with st.expander("Estimación simulada para el mes siguiente (no es una previsión real)"):
+        st.dataframe(resultados["prediccion_proximo_mes"], width="stretch", hide_index=True)
 
 
 def tablas_para_filtros():
@@ -287,7 +367,7 @@ vista = st.radio("Vista", VISTAS, horizontal=True, key="vista", label_visibility
 
 @st.fragment(run_every=f"{config.SEGUNDOS_REFRESCO}s")
 def panel(filtros, vista, hay_barra_lateral):
-    ciclo = refresco.ciclo(config.CARPETA_ENTRADA, ORIGEN, filtros, st.session_state.get("ciclo"))
+    ciclo = refresco.ciclo(config.CARPETA_ENTRADA, ORIGEN, filtros, st.session_state.get("ciclo"), config.CARPETA_LOGS)
     st.session_state["ciclos"] = st.session_state.get("ciclos", 0) + 1
     st.session_state["ciclo"] = ciclo
     cabecera(ciclo, st.session_state["ciclos"])
@@ -301,6 +381,7 @@ def panel(filtros, vista, hay_barra_lateral):
 
     resultados = ciclo["publicacion"]["resultados"]
     resultado = ciclo["resultado"]
+    descargas(ciclo["publicacion"])
     if vista == "Dirección":
         vista_direccion(resultados)
     elif vista == "Producto y ventas":
@@ -312,7 +393,7 @@ def panel(filtros, vista, hay_barra_lateral):
     elif vista == "Calidad y auditoría":
         vista_calidad(resultado, resultados)
     else:
-        vista_pendiente(vista)
+        vista_laboratorio()
 
 
 panel(filtros, vista, tablas_filtros is not None)
