@@ -162,7 +162,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<role name="postgres"/>
 </sequence>
 
-<table name="modelos" layers="0" collapse-mode="2" max-obj-count="11" z-value="0">
+<table name="modelos" layers="0" collapse-mode="2" max-obj-count="13" z-value="0">
 	<schema name="public"/>
 	<role name="postgres"/>
 	<position x="2509.77" y="78.8889"/>
@@ -193,6 +193,12 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	</column>
 	<column name="altura_perfil" not-null="true" default-value="'BAJO'">
 		<type name="varchar" length="20"/>
+	</column>
+	<column name="imagen">
+		<type name="varchar" length="200"/>
+	</column>
+	<column name="descripcion">
+		<type name="varchar" length="500"/>
 	</column>
 	<constraint name="chk_precio_base_positivo" type="ck-constr" table="public.modelos">
 			<expression><![CDATA[precio_base > 0]]></expression>
@@ -503,6 +509,18 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<columns names="id_usuario" ref-type="src-columns"/>
 	<columns names="id_usuario" ref-type="dst-columns"/>
 </constraint>
+
+<index name="idx_pedidos_fecha" table="public.pedidos"
+	 concurrent="false"
+	 unique="false"
+	 fast-update="false"
+	 buffering="false"
+	 index-type="btree"
+	 factor="90">
+		<idxelement use-sorting="false">
+			<column name="fecha_pedido"/>
+		</idxelement>
+</index>
 
 <relationship name="rel_permisos_rol_roles" type="relfk" layers="0"
 	 src-table="public.permisos_rol"
