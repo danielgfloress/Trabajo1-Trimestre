@@ -1,0 +1,6 @@
+tabla,filas_entrada,filas_validas,filas_rechazadas,porcentaje_calidad,incidencias,bloqueantes,origen,generado,filtros
+clientes,45,45,0,100.0,0,0,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+modelos,14,14,0,100.0,0,0,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+pedidos,900,900,0,100.0,0,0,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+lineas,1775,1775,0,100.0,0,0,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+stock,308,308,0,100.0,0,0,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros

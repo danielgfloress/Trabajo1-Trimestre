@@ -1,0 +1,15 @@
+id_modelo,codigo_modelo,marca,nombre,categoria,precio_base,admite_custom,activo
+1,SIM-01,SIMULADA,Sneakers sintético 01,Sneakers,89.90,true,true
+2,SIM-02,SIMULADA,Sneakers sintético 02,Sneakers,119.99,true,true
+3,SIM-03,SIMULADA,Sneakers sintético 03,Sneakers,129.99,false,true
+4,SIM-04,SIMULADA,Sneakers sintético 04,Sneakers,149.99,true,true
+5,SIM-05,SIMULADA,Sneakers sintético 05,Sneakers,179.99,false,true
+6,SIM-06,SIMULADA,Sneakers sintético 06,Sneakers,219.99,false,true
+7,SIM-07,SIMULADA,Fútbol sintético 07,Fútbol,84.99,true,true
+8,SIM-08,SIMULADA,Fútbol sintético 08,Fútbol,99.99,true,true
+9,SIM-09,SIMULADA,Fútbol sintético 09,Fútbol,229.99,false,true
+10,SIM-10,SIMULADA,Baloncesto sintético 10,Baloncesto,74.99,true,true
+11,SIM-11,SIMULADA,Baloncesto sintético 11,Baloncesto,139.99,true,true
+12,SIM-12,SIMULADA,Baloncesto sintético 12,Baloncesto,189.99,false,true
+13,SIM-13,SIMULADA,Boxeo sintético 13,Boxeo,69.99,true,true
+14,SIM-14,SIMULADA,Boxeo sintético 14,Boxeo,199.99,false,true

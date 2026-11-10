@@ -1,0 +1,59 @@
+id_modelo,codigo_modelo,marca,nombre,categoria,precio_base,admite_custom,activo
+1,D3-001,D3,Runner X,Sneakers,89.90,true,true
+2,ADI-001,ADIDAS,AE 1,Baloncesto,129.99,true,true
+3,ADI-002,ADIDAS,Campus 00s,Sneakers,120.00,true,true
+4,ADI-003,ADIDAS,Campus 00s,Sneakers,120.00,true,true
+5,ADI-004,ADIDAS,Campus Light,Sneakers,160.00,true,true
+6,ADI-005,ADIDAS,Copa Pure II League FG,Fútbol,89.99,true,true
+7,ADI-006,ADIDAS,Forum Low,Sneakers,150.00,true,true
+8,ADI-007,ADIDAS,HVC,Boxeo,69.99,true,true
+9,ADI-008,ADIDAS,Handball Spezial,Sneakers,110.00,true,true
+10,ADI-009,ADIDAS,Predator Edge.3 FG,Fútbol,89.99,true,true
+11,ADI-010,ADIDAS,Predator League FG,Fútbol,99.99,true,true
+12,ADI-011,ADIDAS,Response CL,Sneakers,150.00,true,true
+13,ADI-012,ADIDAS,Samba OG,Sneakers,120.00,true,true
+14,ADI-013,ADIDAS,Superstar,Sneakers,110.00,true,true
+15,JOR-001,JORDAN,Air Jordan 1 Low SE,Sneakers,139.99,true,true
+16,JOR-002,JORDAN,Air Jordan 1 Retro High OG,Sneakers,189.99,true,true
+17,JOR-003,JORDAN,Air Jordan 3 Retro,Sneakers,219.99,true,true
+18,JOR-004,JORDAN,Air Jordan 4 Retro,Sneakers,219.99,true,true
+19,JOR-005,JORDAN,Air Jordan 4 Retro,Sneakers,229.99,true,true
+20,LIN-001,LI-NING,Way of Wade,Baloncesto,189.99,true,true
+21,NB-001,NEW BALANCE,1906R,Sneakers,159.99,true,true
+22,NB-002,NEW BALANCE,1906R,Sneakers,159.99,true,true
+23,NB-003,NEW BALANCE,2002R Protection Pack,Sneakers,169.99,true,true
+24,NB-004,NEW BALANCE,550,Sneakers,130.00,true,true
+25,NB-005,NEW BALANCE,OMN1S,Baloncesto,149.99,true,true
+26,NIK-001,NIKE,Air Force 1 Low,Sneakers,129.99,true,true
+27,NIK-002,NIKE,Air Force 1 Low,Sneakers,119.99,true,true
+28,NIK-003,NIKE,Air Max 90,Sneakers,149.99,true,true
+29,NIK-004,NIKE,Air Max 95,Sneakers,189.99,true,true
+30,NIK-005,NIKE,Air Max 97,Sneakers,189.99,true,true
+31,NIK-006,NIKE,Air Max Dn,Sneakers,179.99,true,true
+32,NIK-007,NIKE,Air Max Dn,Sneakers,179.99,true,true
+33,NIK-008,NIKE,Air Max Plus,Sneakers,189.99,true,true
+34,NIK-009,NIKE,Dunk Low,Sneakers,119.99,true,true
+35,NIK-010,NIKE,Dunk Low,Sneakers,119.99,true,true
+36,NIK-011,NIKE,Machomai 3,Boxeo,114.99,true,true
+37,NIK-012,NIKE,HyperKO 3,Boxeo,199.99,true,true
+38,NIK-013,NIKE,HyperKO 2,Boxeo,219.99,true,true
+39,NIK-014,NIKE,Mercurial Superfly 10 Academy,Fútbol,109.99,true,true
+40,NIK-015,NIKE,Phantom GX 2 Academy,Fútbol,99.99,true,true
+41,NIK-016,NIKE,Phantom GX 2 Academy,Fútbol,99.99,true,true
+42,NIK-017,NIKE,Phantom GX Elite,Fútbol,279.99,true,true
+43,NIK-018,NIKE,Shox TL,Sneakers,179.99,true,true
+44,NIK-019,NIKE,Team Hustle D 11,Baloncesto,74.99,true,true
+45,NIK-020,NIKE,Tiempo Legend 10 Academy,Fútbol,84.99,true,true
+46,NIK-021,NIKE,Vomero Plus,Sneakers,179.99,true,true
+47,NIK-022,NIKE,ZoomX Invincible 3,Sneakers,189.99,true,true
+48,PUM-001,PUMA,Future 7 Ultimate FG,Fútbol,229.99,true,true
+49,PUM-002,PUMA,MB.03 Lo,Baloncesto,139.99,true,true
+50,PUM-003,PUMA,Speedcat OG,Sneakers,110.00,true,true
+51,PUM-004,PUMA,Speedcat OG,Sneakers,110.00,true,true
+52,PUM-005,PUMA,Suede Classic,Sneakers,85.00,true,true
+53,SAL-001,SALOMON,XT-4 OG,Sneakers,190.00,true,true
+54,SAL-002,SALOMON,XT-6,Sneakers,180.00,true,true
+55,SAL-003,SALOMON,XT-6,Sneakers,180.00,true,true
+56,UA-001,UNDER ARMOUR,Lockdown 6,Baloncesto,79.99,true,true
+57,VAN-001,VANS,Knu Skool,Sneakers,99.99,true,true
+58,VEN-001,VENUM,Elite,Boxeo,149.99,true,true
