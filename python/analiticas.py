@@ -439,15 +439,22 @@ def reconciliacion_sql(df_pedidos, df_lineas, carpeta=config.CARPETA_ENTRADA):
         "clientes_con_compra": int(ventas["id_cliente"].nunique()),
         "lineas_totales": len(df_lineas),
     }
+    lineas_venta = df_lineas[df_lineas["es_venta"]]
+    for mes, valor in lineas_venta.groupby("mes")["importe_linea"].sum().items():
+        pandas_valores[f"ingresos_mes_{mes}"] = round(float(valor), 2)
+    for (modelo, talla), valor in lineas_venta.groupby(["codigo_modelo", "talla"])["cantidad"].sum().items():
+        pandas_valores[f"pares_{modelo}_talla_{int(talla)}"] = float(valor)
     if not ruta.exists():
         df = pd.DataFrame([{"metrica": k, "valor_pandas": v, "valor_sql": np.nan, "diferencia": np.nan, "estado": "SIN DATO SQL"} for k, v in pandas_valores.items()])
         return poner_metadatos(df, "reconciliacion_sql", len(df_pedidos), df_pedidos["fecha_pedido"].max())
     sql = pd.read_csv(ruta, dtype={"metrica": str})
     sql["valor_sql"] = pd.to_numeric(sql["valor_sql"], errors="coerce")
     df = pd.DataFrame({"metrica": list(pandas_valores), "valor_pandas": list(pandas_valores.values())})
-    df = df.merge(sql, on="metrica", how="left", validate="one_to_one")
+    df = df.merge(sql, on="metrica", how="outer", validate="one_to_one")
     df["diferencia"] = (df["valor_pandas"] - df["valor_sql"]).round(2)
-    df["estado"] = np.where(df["valor_sql"].isna(), "SIN DATO SQL", np.where(df["diferencia"].abs() <= config.TOLERANCIA_IMPORTE, "CUADRA", "DESCUADRE"))
+    df["estado"] = np.select(
+        [df["valor_sql"].isna(), df["valor_pandas"].isna(), df["diferencia"].abs() <= config.TOLERANCIA_IMPORTE],
+        ["SIN DATO SQL", "DESCUADRE (solo en SQL)", "CUADRA"], "DESCUADRE")
     return poner_metadatos(df, "reconciliacion_sql", len(df_pedidos), df_pedidos["fecha_pedido"].max())
 
 

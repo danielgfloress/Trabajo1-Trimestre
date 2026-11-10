@@ -1,0 +1,8 @@
+id_cliente,codigo_odoo,tipo_cliente,ultima_compra,frecuencia,monetario,recencia_dias,segmento,origen,generado,filtros
+5,CLI005,EQUIPO,2026-09-30 17:00:00,2,4929.37,39.0,Campeón,ACC · REAL,2026-11-09 18:20:38,sin filtros
+2,CLI002,CLUB,2026-07-21 12:00:00,2,3859.62,111.0,Leal,ACC · REAL,2026-11-09 18:20:38,sin filtros
+1,CLI001,CLUB,2026-08-19 18:20:00,2,2337.98,81.0,Leal,ACC · REAL,2026-11-09 18:20:38,sin filtros
+4,CLI004,EQUIPO,2026-09-02 09:00:00,1,1619.92,68.0,Ocasional,ACC · REAL,2026-11-09 18:20:38,sin filtros
+6,CLI006,PARTICULAR,2026-06-12 11:30:00,1,129.99,150.0,En riesgo,ACC · REAL,2026-11-09 18:20:38,sin filtros
+3,CLI003,CLUB,,0,0.0,,Sin compras válidas,ACC · REAL,2026-11-09 18:20:38,sin filtros
+7,CLI007,PARTICULAR,,0,0.0,,Sin compras válidas,ACC · REAL,2026-11-09 18:20:38,sin filtros

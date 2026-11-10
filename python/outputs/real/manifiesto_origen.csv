@@ -1,0 +1,6 @@
+fichero,fecha_analisis,filas,columnas,bytes,modificado,origen,generado,filtros
+clientes.csv,2026-11-09 18:20:38,7,5,311,2026-11-09 14:15:51,ACC · REAL,2026-11-09 18:20:38,sin filtros
+modelos.csv,2026-11-09 18:20:38,58,8,3330,2026-11-09 14:15:51,ACC · REAL,2026-11-09 18:20:38,sin filtros
+pedidos.csv,2026-11-09 18:20:38,12,7,743,2026-11-09 14:15:51,ACC · REAL,2026-11-09 18:20:38,sin filtros
+lineas_pedido.csv,2026-11-09 18:20:38,25,9,1190,2026-11-09 14:15:52,ACC · REAL,2026-11-09 18:20:38,sin filtros
+stock.csv,2026-11-09 18:20:38,638,6,27287,2026-11-09 14:15:52,ACC · REAL,2026-11-09 18:20:38,sin filtros

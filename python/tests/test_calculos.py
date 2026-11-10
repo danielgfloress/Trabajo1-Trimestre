@@ -145,3 +145,17 @@ def test_filtro_por_modelo(copia):
     assert kpi(filtrados, "Pedidos válidos (venta)") == "2"
     assert float(kpi(filtrados, "Pares vendidos")) == 23
     assert float(kpi(filtrados, "Ingresos válidos")) == pytest.approx(569.97 + 3999.80)
+
+
+def test_caso_n_reconciliacion_detecta_descuadres(copia):
+    pd.DataFrame({
+        "metrica": ["pedidos_validos", "ingresos_mes_2026-06", "pares_D3-001_talla_41", "ingresos_validos"],
+        "valor_sql": [8, 3847.81, 10, 99.99],
+    }).to_csv(copia / "reconciliacion_sql.csv", index=False)
+
+    tabla = analiticas.calcular_todo(pipeline.ejecutar_pipeline(copia))["reconciliacion_sql"].set_index("metrica")
+
+    assert tabla.loc["pedidos_validos", "estado"] == "CUADRA"
+    assert tabla.loc["ingresos_mes_2026-06", "estado"] == "CUADRA"
+    assert tabla.loc["pares_D3-001_talla_41", "estado"] == "CUADRA"
+    assert tabla.loc["ingresos_validos", "estado"] == "DESCUADRE"

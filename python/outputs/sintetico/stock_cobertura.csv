@@ -1,0 +1,309 @@
+codigo_modelo,marca,modelo,color,talla,stock_disponible,stock_minimo,umbral_alerta,demanda_28_dias,cobertura_semanas,cobertura_texto,alerta_stock_bajo,fecha_corte,origen,generado,filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,36,1,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,37,1,5,5,2,2.0,2.0 semanas,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,38,1,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,36,1,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,37,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,45,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,37,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,37,2,5,5,2,4.0,4.0 semanas,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,45,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,46,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,36,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,37,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,46,2,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,36,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,46,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,38,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,36,3,5,5,2,6.0,6.0 semanas,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,36,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,37,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,37,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,36,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,46,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,46,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,38,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,46,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,45,3,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,37,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,37,4,5,5,7,2.3,2.3 semanas,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,38,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,46,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,37,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,46,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,39,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,46,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,46,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,45,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,40,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,36,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,37,4,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,36,5,5,5,1,20.0,20.0 semanas,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,37,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,36,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,37,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,37,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,36,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,36,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,37,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,38,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,40,5,5,5,8,2.5,2.5 semanas,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,37,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,36,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,45,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,37,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,45,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,46,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,38,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,44,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,39,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,38,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,40,5,5,5,0,,N/D,True,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,37,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,37,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,38,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,36,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,37,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,38,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,45,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,45,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,38,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,37,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,45,6,5,5,10,2.4,2.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,41,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,46,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,37,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,38,6,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,46,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,45,7,5,5,7,4.0,4.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,37,7,5,5,25,1.1,1.1 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,46,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,39,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,43,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,37,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,40,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,38,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,38,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,39,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,44,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,45,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,46,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,41,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,44,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,45,7,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,38,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,46,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,39,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,37,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,39,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,40,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,43,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,44,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,39,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,44,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,45,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,46,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,38,8,5,5,1,32.0,32.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,45,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,44,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,37,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,38,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,45,8,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,46,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,45,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,38,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,38,9,5,5,12,3.0,3.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,46,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,38,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,43,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,45,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,39,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,43,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,41,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,42,9,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,46,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,38,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,45,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,38,10,5,5,4,10.0,10.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,43,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,42,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,45,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,41,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,41,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,44,10,5,5,12,3.3,3.3 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,38,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,43,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,40,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,40,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,39,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,39,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,43,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Blanco,44,10,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,46,11,5,5,2,22.0,22.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,45,11,5,5,13,3.4,3.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,44,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,45,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,44,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,45,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,41,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,37,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Negro,42,11,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,46,12,5,5,1,48.0,48.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,38,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,44,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,37,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,45,12,5,5,10,4.8,4.8 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,39,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,39,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,40,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,41,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,44,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,42,12,5,5,1,48.0,48.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Negro,43,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,44,12,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,45,13,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,44,13,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,45,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,39,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,38,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,40,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,44,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Negro,40,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,45,14,5,5,1,56.0,56.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,39,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,43,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,43,14,5,5,11,5.1,5.1 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,39,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-14,SIMULADA,Boxeo sintético 14,Negro y rosa,42,14,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,43,15,5,5,1,60.0,60.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,41,15,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,39,15,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,43,15,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,40,15,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,41,15,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,45,16,5,5,10,6.4,6.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,45,16,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,38,16,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,39,16,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,44,16,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,41,16,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Negro,42,16,5,5,11,5.8,5.8 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,44,17,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,42,17,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-12,SIMULADA,Baloncesto sintético 12,Blanco y azul,42,17,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,43,17,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,38,18,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,44,18,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,41,18,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,42,18,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-13,SIMULADA,Boxeo sintético 13,Rojo,42,18,5,5,1,72.0,72.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,44,19,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,40,19,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,38,19,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,39,19,5,5,6,12.7,12.7 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,44,19,5,5,7,10.9,10.9 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-09,SIMULADA,Fútbol sintético 09,Naranja,42,19,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,40,19,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Negro,41,19,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,40,20,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,42,20,5,5,8,10.0,10.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,39,20,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,39,20,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,41,20,5,5,1,80.0,80.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,39,21,5,5,10,8.4,8.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Verde,41,21,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,44,21,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,44,21,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,40,21,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,44,22,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-06,SIMULADA,Sneakers sintético 06,Blanco y rojo,42,22,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,43,22,5,5,2,44.0,44.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,44,22,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,43,22,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,44,23,5,5,28,3.3,3.3 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,38,23,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,39,23,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,43,23,5,5,11,8.4,8.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,44,23,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,39,23,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,42,23,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,44,24,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,40,24,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,43,24,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,41,24,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-11,SIMULADA,Baloncesto sintético 11,Verde,40,24,5,5,4,24.0,24.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,39,25,5,5,14,7.1,7.1 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,39,25,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,43,25,5,5,11,9.1,9.1 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,39,26,5,5,2,52.0,52.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,40,27,5,5,3,36.0,36.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,43,27,5,5,10,10.8,10.8 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,40,28,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,39,29,5,5,18,6.4,6.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,41,29,5,5,18,6.4,6.4 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,43,30,5,5,1,120.0,120.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,40,30,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-05,SIMULADA,Sneakers sintético 05,Negro,41,30,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,41,30,5,5,2,60.0,60.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Blanco,42,30,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,40,31,5,5,1,124.0,124.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,43,31,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,40,32,5,5,13,9.8,9.8 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,43,32,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-10,SIMULADA,Baloncesto sintético 10,Negro,42,32,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,43,33,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,40,33,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Rojo y negro,42,33,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,39,34,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,41,34,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,43,34,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,41,35,5,5,1,140.0,140.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,41,36,5,5,1,144.0,144.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,42,36,5,5,2,72.0,72.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,44,37,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Crema,42,38,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,40,38,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,43,39,5,5,3,52.0,52.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Negro,42,39,5,5,2,78.0,78.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-04,SIMULADA,Sneakers sintético 04,Blanco,41,39,5,5,1,156.0,156.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,40,39,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,40,40,5,5,2,80.0,80.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,41,40,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,43,41,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-08,SIMULADA,Fútbol sintético 08,Blanco,42,41,5,5,9,18.2,18.2 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,43,42,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,42,42,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-03,SIMULADA,Sneakers sintético 03,Blanco y negro,42,47,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Negro,41,47,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,41,48,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,40,50,5,5,12,16.7,16.7 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,43,50,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Gris,42,52,5,5,18,11.6,11.6 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,41,54,5,5,5,43.2,43.2 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-02,SIMULADA,Sneakers sintético 02,Blanco,42,56,5,5,2,112.0,112.0 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-07,SIMULADA,Fútbol sintético 07,Azul,42,58,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,41,62,5,5,9,27.6,27.6 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Blanco,42,64,5,5,11,23.3,23.3 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,42,70,5,5,12,23.3,23.3 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,40,73,5,5,6,48.7,48.7 semanas,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+SIM-01,SIMULADA,Sneakers sintético 01,Negro,41,79,5,5,0,,N/D,False,2026-06-30 23:59:59,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros

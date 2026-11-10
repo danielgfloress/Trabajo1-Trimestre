@@ -86,8 +86,38 @@ El stock es una **foto en la fecha de corte**, no un histórico.
 
 | Columna | Significado |
 |---|---|
-| metrica | pedidos_validos, pares_vendidos, ingresos_validos, clientes_con_compra, lineas_totales |
-| valor_sql | La misma cifra calculada en PostgreSQL |
+| metrica | pedidos_validos, pares_vendidos, ingresos_validos, clientes_con_compra, lineas_totales, `ingresos_mes_AAAA-MM` (uno por mes con ventas) y `pares_<codigo_modelo>_talla_<talla>` (uno por modelo y talla vendidos) |
+| valor_sql | La misma cifra calculada en PostgreSQL con ventas válidas (CONFIRMADO y ENTREGADO) |
+
+Python calcula las mismas métricas con pandas, sin filtros, y marca cada una como CUADRA (diferencia ≤ 0,01), DESCUADRE o SIN DATO SQL.
+
+## Salidas (`outputs/real/` y `outputs/sintetico/`)
+
+Las genera `python main.py` (y `--modo sintetico`). Mismo formato que la entrada (UTF-8, coma, punto decimal). Cada CSV añade tres columnas de linaje y ninguno incluye nombres de clientes.
+
+| Columna añadida | Significado |
+|---|---|
+| origen | `ACC · REAL` o `SINTÉTICO · generador_datos.py` |
+| generado | fecha y hora de la ejecución (`YYYY-MM-DD HH:MM:SS`) |
+| filtros | filtros aplicados en texto, o «sin filtros» |
+
+| CSV | Una fila por | Contenido |
+|---|---|---|
+| resumen_calidad | tabla | filas de entrada, válidas y rechazadas, % de calidad, incidencias y bloqueantes |
+| incidencias | incidencia | tabla, registro, regla, gravedad y tratamiento |
+| manifiesto_origen | fichero leído | fecha de análisis, filas, columnas, bytes y fecha de modificación |
+| auditoria_reconciliacion_sql | métrica | valor pandas, valor SQL, diferencia y estado |
+| kpis | indicador | valor, unidad, fórmula y denominador |
+| pedidos_unicos | pedido | pares, importe, nº de líneas, es_venta y variables de calendario |
+| evolucion_mensual | mes | ingresos, pares, pedidos, ticket y variaciones respecto al mes anterior |
+| modelos_abc | modelo vendido | ingresos, pares, % del total, % acumulado y clase A/B/C |
+| matriz_modelo_talla | modelo | pares vendidos en cada talla |
+| stock_cobertura | modelo-color-talla | stock, umbral, demanda de 28 días, cobertura en semanas y alerta |
+| clientes_rfm | cliente | última compra, frecuencia, gasto, recencia y segmento |
+| cohortes | mes de primera compra | clientes y % que vuelve a comprar 1, 2… meses después |
+| clustering_clientes | cliente comprador | grupo KMeans y su nombre (o NO CALCULABLE y motivo) |
+| prediccion_evaluacion | método | MAE, RMSE, sesgo, periodo y conclusión (o NO CALCULABLE y motivo) |
+| prediccion_detalle | modelo y mes de prueba | real, baseline, predicción y errores |
 
 ## Variables derivadas
 

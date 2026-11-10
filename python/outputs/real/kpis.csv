@@ -1,0 +1,16 @@
+indicador,valor,unidad,formula,denominador,origen,generado,filtros
+Pedidos únicos (actividad),12,pedidos,"nº de id_pedido distintos, todos los estados",—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Pedidos por estado,"BORRADOR 2, CONFIRMADO 3, ENTREGADO 5, CANCELADO 2",pedidos,conteo por estado,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Pedidos válidos (venta),8,pedidos,estado CONFIRMADO o ENTREGADO,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Pares vendidos,96,pares,Σ cantidad de las líneas de pedidos válidos,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Ingresos válidos,12876.88,€,Σ cantidad × precio_unitario de pedidos válidos,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Ticket medio,1609.61,€/pedido,ingresos ÷ pedidos válidos,8 pedidos,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Pares por pedido,12.0,pares/pedido,pares ÷ pedidos válidos,8 pedidos,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Peso Custom en pedidos,37.5,%,pedidos CUSTOM ÷ pedidos válidos,8 pedidos,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Peso Custom en pares,62.5,%,pares CUSTOM ÷ pares vendidos,96 pares,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Peso Custom en ingresos,64.7,%,ingresos CUSTOM ÷ ingresos válidos,12876.88 €,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Modelo más vendido,Runner X (24),pares,modelo con más pares en pedidos válidos,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Talla más vendida,42 (28),pares,talla con más pares en pedidos válidos,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Mejor cliente,CLI005 (4929),€,cliente con más ingresos válidos,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Variación último mes,2241.8,%,(ingresos mes − mes anterior) ÷ mes anterior,—,ACC · REAL,2026-11-09 18:20:38,sin filtros
+Concentración Pareto,54.6,%,peso del 20 % de modelos con más ingresos (2 modelos),8 modelos vendidos,ACC · REAL,2026-11-09 18:20:38,sin filtros

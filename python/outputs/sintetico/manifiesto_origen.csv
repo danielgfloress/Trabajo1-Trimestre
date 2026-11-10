@@ -1,0 +1,6 @@
+fichero,fecha_analisis,filas,columnas,bytes,modificado,origen,generado,filtros
+clientes.csv,2026-11-09 18:20:45,45,5,2229,2026-11-09 10:44:47,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+modelos.csv,2026-11-09 18:20:45,14,8,1033,2026-11-09 10:44:47,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+pedidos.csv,2026-11-09 18:20:45,900,7,55584,2026-11-09 10:44:47,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+lineas_pedido.csv,2026-11-09 18:20:45,1775,9,76853,2026-11-09 10:44:47,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
+stock.csv,2026-11-09 18:20:45,308,6,11913,2026-11-09 10:44:47,SINTÉTICO · generador_datos.py,2026-11-09 18:20:45,sin filtros
