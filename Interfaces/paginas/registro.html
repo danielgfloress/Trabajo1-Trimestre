@@ -26,7 +26,7 @@
 
         <section class="seccion">
             <div class="contenedor acceso">
-                <form class="formulario" action="#" method="post">
+                <form class="formulario" id="form-registro">
                     <p class="formulario__aviso">Los campos marcados con * son obligatorios.</p>
                     <div class="formulario__campos">
                         <div class="campo campo--ancho">
@@ -51,11 +51,12 @@
                                 name="repetir_contrasena" required minlength="8" autocomplete="new-password">
                         </div>
                     </div>
+                    <p class="formulario__error" id="registro-error" role="alert" hidden></p>
                     <button class="boton formulario__enviar boton--claro acceso__boton" type="submit">Crear
                         cuenta</button>
                 </form>
-                <p class="acceso__alternativa">¿Ya tienes cuenta? <a href="login.html" class="enlace-destacado">Iniciar
-                        sesión</a></p>
+                <p class="acceso__alternativa">¿Ya tienes cuenta? <a href="login.html" class="enlace-destacado"
+                        id="enlace-login">Iniciar sesión</a></p>
             </div>
         </section>
     </main>
@@ -88,6 +89,7 @@
         </div>
     </footer>
     <script src="../js/sesion.js"></script>
+    <script src="../js/registro.js"></script>
 
 </body>
 
