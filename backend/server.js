@@ -2,13 +2,14 @@ import express from "express";
 import cors from "cors";
 import { pool } from "./db.js";
 import { crearToken, autenticar } from "./auth.js";
+import rutaUsuarios from "./usuarios.js";
 
 const app = express();
-app.use(cors());
 const PUERTO = 3000;
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/usuarios', rutaUsuarios);
 
 app.get("/api/salud", (req, res) => {
   res.json({ estado: "ok", mensaje: "La API de D3 Kicks funciona" });
@@ -147,27 +148,6 @@ app.get("/api/yo", autenticar, async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error al consultar el usuario" });
-  }
-});
-
-app.get("/api/usuarios", autenticar, async (req, res) => {
-  const rolUsuario = req.usuario.rol || req.usuario.id_rol;
-
-  if (rolUsuario !== 'ADMIN') {
-    return res.status(403).json({ error: `Acceso denegado. Tu rol detectado es: ${rolUsuario}` });
-  }
-
-  try {
-    const resultado = await pool.query(`
-            SELECT u.id_usuario, u.username, r.nombre_rol, u.activo 
-            FROM usuarios u
-            JOIN roles r ON u.id_rol = r.id_rol
-            ORDER BY u.id_usuario
-        `);
-    res.json(resultado.rows);
-  } catch (error) {
-    console.error("Error SQL:", error);
-    res.status(500).json({ error: "Error en la consulta SQL. Revisa la terminal de Docker." });
   }
 });
 
