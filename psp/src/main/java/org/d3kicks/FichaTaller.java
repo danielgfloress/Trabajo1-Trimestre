@@ -1,7 +1,10 @@
 package org.d3kicks;
 
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,37 +12,38 @@ public class FichaTaller {
 
     public static void main(String[] args) throws Exception {
 
-        if (args.length == 0) {
-            System.err.println("ERROR;Debes indicar la ruta de la ficha");
-            System.exit(2);
+        Csv.usarUtf8();
+        List<String> lineas = Csv.leerEntrada();
+
+        if (lineas.size() < 3 || !lineas.get(0).startsWith("OK;") || !lineas.get(1).equals(Csv.CABECERA)) {
+            System.err.println("ERROR;Se esperaba el resumen de tallas seguido de la ficha validada");
+            System.exit(1);
         }
 
-        List<String> lineas = Files.readAllLines(Path.of(args[0]));
-
-        String[] datos = lineas.get(1).split(",");
+        String[] resumen = lineas.get(0).split(";");
+        List<String> datos = Csv.separar(lineas.get(2));
+        String ref = datos.get(0);
 
         List<String> hoja = new ArrayList<>();
         hoja.add("FICHA DE TALLER - D3 KICKS");
-        hoja.add("Pedido: " + datos[0]);
-        hoja.add("Cliente: " + datos[1]);
-        hoja.add("Modelo: " + datos[2] + " " + datos[3]);
-        hoja.add("Diseño: " + datos[4]);
-        hoja.add("Texto bordado: " + datos[5]);
+        hoja.add("Generada: " + LocalDateTime.now().withNano(0).format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+        hoja.add("");
+        hoja.add("Pedido: " + ref);
+        hoja.add("Cliente: " + datos.get(1));
+        hoja.add("Modelo: " + datos.get(2) + " (" + datos.get(3) + ")");
+        hoja.add("Diseño: " + datos.get(4));
+        hoja.add("Texto bordado: " + (datos.get(5).isEmpty() ? "sin texto" : datos.get(5)));
         hoja.add("");
         hoja.add("Tallas:");
-
-        int total = 0;
-        for (int i = 1; i < lineas.size(); i++) {
-            String[] campos = lineas.get(i).split(",");
-            hoja.add("Talla " + campos[6] + ": " + campos[7] + " pares");
-            total += Integer.parseInt(campos[7]);
+        for (int i = 2; i < resumen.length; i++) {
+            String[] talla = resumen[i].split("=");
+            hoja.add("  Talla " + talla[0] + ": " + talla[1] + " pares");
         }
-
         hoja.add("");
-        hoja.add("Total: " + total + " pares");
+        hoja.add("Total: " + resumen[1] + " pares");
 
-        Path ruta = Path.of("salida", "ficha_taller_" + datos[0] + ".txt");
-        Files.write(ruta, hoja);
+        Path ruta = Path.of("salida", "ficha_taller_" + ref + ".txt");
+        Files.write(ruta, hoja, StandardCharsets.UTF_8);
 
         System.out.println("OK;" + ruta);
     }

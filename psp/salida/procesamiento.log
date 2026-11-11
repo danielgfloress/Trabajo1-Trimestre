@@ -1,14 +1,138 @@
-[17:37:59] INICIO Coordinador PID=12172 ficha=entrada/ficha_SO024.csv
-[17:37:59] LANZADO Validador PID=25216
-[17:37:59] TERMINA Validador código=0
-[17:37:59]    Validador -> OK;9
-[17:38] LANZADO AgrupadorTallas PID=21044
-[17:38] TERMINA AgrupadorTallas código=0
-[17:38]    AgrupadorTallas -> OK;40;38=2;39=4;40=6;41=7;42=7;43=6;44=4;45=2;46=2
-[17:38] Total de pares: 40
-[17:38] GUARDADO salida/resumen_tallas.csv
-[17:38] LANZADO FichaTaller PID=5268
-[17:38] TERMINA FichaTaller código=0
-[17:38]    FichaTaller -> OK;salida\ficha_taller_SO024.txt
-[17:38] GUARDADO salida\ficha_taller_SO024.txt
-[17:38] FIN Pedido procesado correctamente
+[17:44:42] [ficha_coma.csv] INICIO Coordinador PID=14380 ficha=entrada\pruebas\ficha_coma.csv
+[17:44:42] [ficha_coma.csv] LANZADO Validador PID=6268
+[17:44:42] [ficha_coma.csv] TERMINA Validador código=0
+[17:44:42] [ficha_coma.csv]    Validador -> OK;2;SO003 (+3 líneas de datos)
+[17:44:42] [SO003] Ficha válida: 2 tallas
+[17:44:42] [SO003] LANZADO AgrupadorTallas PID=29664
+[17:44:42] [SO003] TERMINA AgrupadorTallas código=0
+[17:44:42] [SO003]    AgrupadorTallas -> OK;20;39=10;40=10
+[17:44:42] [SO003] Total de pares: 20
+[17:44:42] [SO003] GUARDADO salida\resumen_tallas_SO003.csv
+[17:44:42] [SO003] LANZADO FichaTaller PID=18648
+[17:44:42] [SO003] TERMINA FichaTaller código=0
+[17:44:42] [SO003]    FichaTaller -> OK;salida\ficha_taller_SO003.txt
+[17:44:42] [SO003] GUARDADO salida\ficha_taller_SO003.txt
+[17:44:42] [SO003] FIN Pedido procesado correctamente
+[17:44:42] [ficha_excel_bom.csv] INICIO Coordinador PID=21376 ficha=entrada\pruebas\ficha_excel_bom.csv
+[17:44:42] [ficha_excel_bom.csv] LANZADO Validador PID=18704
+[17:44:42] [ficha_excel_bom.csv] TERMINA Validador código=0
+[17:44:42] [ficha_excel_bom.csv]    Validador -> OK;2;SO003 (+3 líneas de datos)
+[17:44:42] [SO003] Ficha válida: 2 tallas
+[17:44:42] [SO003] LANZADO AgrupadorTallas PID=22624
+[17:44:42] [SO003] TERMINA AgrupadorTallas código=0
+[17:44:42] [SO003]    AgrupadorTallas -> OK;20;39=10;40=10
+[17:44:42] [SO003] Total de pares: 20
+[17:44:42] [SO003] GUARDADO salida\resumen_tallas_SO003.csv
+[17:44:42] [SO003] LANZADO FichaTaller PID=15412
+[17:44:42] [SO003] TERMINA FichaTaller código=0
+[17:44:42] [SO003]    FichaTaller -> OK;salida\ficha_taller_SO003.txt
+[17:44:42] [SO003] GUARDADO salida\ficha_taller_SO003.txt
+[17:44:42] [SO003] FIN Pedido procesado correctamente
+[17:44:42] [ficha_grande.csv] INICIO Coordinador PID=2100 ficha=entrada\pruebas\ficha_grande.csv
+[17:44:42] [ficha_grande.csv] LANZADO Validador PID=11340
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 2: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 3: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 4: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 5: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 6: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 7: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 8: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 9: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 10: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 11: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 12: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 13: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 14: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 15: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 16: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 17: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 18: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 19: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 20: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> ERROR;Fila 21: talla 99 fuera de 36-46
+[17:44:43] [ficha_grande.csv]    Validador -> … y 2980 errores más (3000 en total)
+[17:44:43] [ficha_grande.csv] TERMINA Validador código=1
+[17:44:43] [ficha_grande.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:43] [ficha_mala.csv] INICIO Coordinador PID=18560 ficha=entrada\pruebas\ficha_mala.csv
+[17:44:43] [ficha_mala.csv] LANZADO Validador PID=17492
+[17:44:43] [ficha_mala.csv]    Validador -> ERROR;Fila 4: talla 52 fuera de 36-46
+[17:44:43] [ficha_mala.csv]    Validador -> ERROR;Fila 5: cantidad 0 no es mayor que 0
+[17:44:43] [ficha_mala.csv] TERMINA Validador código=1
+[17:44:43] [ficha_mala.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:43] [ficha_pedidos_mezclados.csv] INICIO Coordinador PID=24320 ficha=entrada\pruebas\ficha_pedidos_mezclados.csv
+[17:44:43] [ficha_pedidos_mezclados.csv] LANZADO Validador PID=5756
+[17:44:43] [ficha_pedidos_mezclados.csv]    Validador -> ERROR;Fila 3: ref_odoo 'SO005' no coincide con la primera fila ('SO003'): una ficha es un solo pedido
+[17:44:43] [ficha_pedidos_mezclados.csv]    Validador -> ERROR;Fila 3: cliente 'CD Leones del Sur' no coincide con la primera fila ('Club Halcones'): una ficha es un solo pedido
+[17:44:43] [ficha_pedidos_mezclados.csv]    Validador -> ERROR;Fila 3: modelo 'Predator League FG' no coincide con la primera fila ('Runner X'): una ficha es un solo pedido
+[17:44:43] [ficha_pedidos_mezclados.csv]    Validador -> ERROR;Fila 3: color 'Rojo y blanco' no coincide con la primera fila ('Blanco'): una ficha es un solo pedido
+[17:44:43] [ficha_pedidos_mezclados.csv]    Validador -> ERROR;Fila 3: diseno 'DIS-SO005 Leones Matchday' no coincide con la primera fila ('DIS-SO003 Halcones Training'): una ficha es un solo pedido
+[17:44:43] [ficha_pedidos_mezclados.csv]    Validador -> ERROR;Fila 3: texto_bordado 'LEONES' no coincide con la primera fila ('HALCONES'): una ficha es un solo pedido
+[17:44:43] [ficha_pedidos_mezclados.csv] TERMINA Validador código=1
+[17:44:43] [ficha_pedidos_mezclados.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:43] [ficha_pocos_pares.csv] INICIO Coordinador PID=12172 ficha=entrada\pruebas\ficha_pocos_pares.csv
+[17:44:43] [ficha_pocos_pares.csv] LANZADO Validador PID=25412
+[17:44:43] [ficha_pocos_pares.csv]    Validador -> ERROR;Un pedido Custom necesita al menos 20 pares y la ficha tiene 5
+[17:44:43] [ficha_pocos_pares.csv] TERMINA Validador código=1
+[17:44:43] [ficha_pocos_pares.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:43] [ficha_talla_repetida.csv] INICIO Coordinador PID=10260 ficha=entrada\pruebas\ficha_talla_repetida.csv
+[17:44:43] [ficha_talla_repetida.csv] LANZADO Validador PID=19256
+[17:44:43] [ficha_talla_repetida.csv]    Validador -> ERROR;Fila 3: la talla 40 está repetida
+[17:44:43] [ficha_talla_repetida.csv] TERMINA Validador código=1
+[17:44:43] [ficha_talla_repetida.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:44] [ficha_texto_largo.csv] INICIO Coordinador PID=5656 ficha=entrada\pruebas\ficha_texto_largo.csv
+[17:44:44] [ficha_texto_largo.csv] LANZADO Validador PID=11472
+[17:44:44] [ficha_texto_largo.csv]    Validador -> ERROR;Fila 2: el texto bordado tiene más de 12 caracteres
+[17:44:44] [ficha_texto_largo.csv] TERMINA Validador código=1
+[17:44:44] [ficha_texto_largo.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:44] [ficha_vacia.csv] INICIO Coordinador PID=24500 ficha=entrada\pruebas\ficha_vacia.csv
+[17:44:44] [ficha_vacia.csv] LANZADO Validador PID=16552
+[17:44:44] [ficha_vacia.csv]    Validador -> ERROR;La ficha está vacía
+[17:44:44] [ficha_vacia.csv] TERMINA Validador código=1
+[17:44:44] [ficha_vacia.csv] FIN Ficha rechazada: no se lanzan más procesos
+[17:44:44] [no_existe.csv] INICIO Coordinador PID=1504 ficha=entrada\no_existe.csv
+[17:44:44] [no_existe.csv] ERROR No existe la ficha entrada\no_existe.csv
+[17:44:44] [ficha_SO003.csv] INICIO Coordinador PID=14276 ficha=entrada\ficha_SO003.csv
+[17:44:44] [ficha_SO003.csv] LANZADO Validador PID=28136
+[17:44:44] [ficha_SO003.csv] TERMINA Validador código=0
+[17:44:44] [ficha_SO003.csv]    Validador -> OK;3;SO003 (+4 líneas de datos)
+[17:44:44] [SO003] Ficha válida: 3 tallas
+[17:44:44] [SO003] LANZADO AgrupadorTallas PID=2652
+[17:44:44] [SO003] TERMINA AgrupadorTallas código=0
+[17:44:44] [SO003]    AgrupadorTallas -> OK;20;39=6;40=8;41=6
+[17:44:44] [SO003] Total de pares: 20
+[17:44:44] [SO003] GUARDADO salida\resumen_tallas_SO003.csv
+[17:44:44] [SO003] LANZADO FichaTaller PID=860
+[17:44:44] [SO003] TERMINA FichaTaller código=0
+[17:44:44] [SO003]    FichaTaller -> OK;salida\ficha_taller_SO003.txt
+[17:44:44] [SO003] GUARDADO salida\ficha_taller_SO003.txt
+[17:44:44] [SO003] FIN Pedido procesado correctamente
+[17:44:45] [ficha_SO005.csv] INICIO Coordinador PID=22676 ficha=entrada\ficha_SO005.csv
+[17:44:45] [ficha_SO005.csv] LANZADO Validador PID=10140
+[17:44:45] [ficha_SO005.csv] TERMINA Validador código=0
+[17:44:45] [ficha_SO005.csv]    Validador -> OK;3;SO005 (+4 líneas de datos)
+[17:44:45] [SO005] Ficha válida: 3 tallas
+[17:44:45] [SO005] LANZADO AgrupadorTallas PID=25688
+[17:44:45] [SO005] TERMINA AgrupadorTallas código=0
+[17:44:45] [SO005]    AgrupadorTallas -> OK;20;41=6;42=8;43=6
+[17:44:45] [SO005] Total de pares: 20
+[17:44:45] [SO005] GUARDADO salida\resumen_tallas_SO005.csv
+[17:44:45] [SO005] LANZADO FichaTaller PID=5708
+[17:44:45] [SO005] TERMINA FichaTaller código=0
+[17:44:45] [SO005]    FichaTaller -> OK;salida\ficha_taller_SO005.txt
+[17:44:45] [SO005] GUARDADO salida\ficha_taller_SO005.txt
+[17:44:45] [SO005] FIN Pedido procesado correctamente
+[17:44:45] [ficha_SO010.csv] INICIO Coordinador PID=10660 ficha=entrada\ficha_SO010.csv
+[17:44:45] [ficha_SO010.csv] LANZADO Validador PID=24228
+[17:44:45] [ficha_SO010.csv] TERMINA Validador código=0
+[17:44:45] [ficha_SO010.csv]    Validador -> OK;5;SO010 (+6 líneas de datos)
+[17:44:45] [SO010] Ficha válida: 5 tallas
+[17:44:45] [SO010] LANZADO AgrupadorTallas PID=15596
+[17:44:45] [SO010] TERMINA AgrupadorTallas código=0
+[17:44:45] [SO010]    AgrupadorTallas -> OK;20;40=4;41=4;42=4;43=4;44=4
+[17:44:45] [SO010] Total de pares: 20
+[17:44:45] [SO010] GUARDADO salida\resumen_tallas_SO010.csv
+[17:44:45] [SO010] LANZADO FichaTaller PID=10260
+[17:44:45] [SO010] TERMINA FichaTaller código=0
+[17:44:45] [SO010]    FichaTaller -> OK;salida\ficha_taller_SO010.txt
+[17:44:45] [SO010] GUARDADO salida\ficha_taller_SO010.txt
+[17:44:45] [SO010] FIN Pedido procesado correctamente
