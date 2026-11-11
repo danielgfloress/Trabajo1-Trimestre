@@ -1,4 +1,4 @@
-package com.javier;
+package org.d3kicks;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -69,7 +69,7 @@ public class Coordinador {
                 JAVA,
                 "-cp",
                 System.getProperty("java.class.path"),
-                "com.javier." + clase,
+                Coordinador.class.getPackageName() + "." + clase,
                 ficha
         );
 
@@ -90,9 +90,7 @@ public class Coordinador {
         String salida = salidaHijo.readLine();
         String linea;
         while ((linea = errorHijo.readLine()) != null) {
-            if (linea.startsWith("ERROR;")) {
-                log("   " + clase + " -> " + linea);
-            }
+            log("   " + clase + " -> " + linea);
         }
 
         salidaHijo.close();
