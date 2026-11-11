@@ -3,6 +3,8 @@ import cors from "cors";
 import { pool } from "./db.js";
 import { crearToken, autenticar } from "./auth.js";
 import rutaUsuarios from "./usuarios.js";
+import rutaPanel from "./panel.js";
+import rutaPedidos from "./pedidos.js";
 
 const app = express();
 const PUERTO = 3000;
@@ -10,6 +12,8 @@ const PUERTO = 3000;
 app.use(cors());
 app.use(express.json());
 app.use('/api/usuarios', rutaUsuarios);
+app.use('/api/panel', rutaPanel);
+app.use('/api/pedidos', rutaPedidos);
 
 app.get("/api/salud", (req, res) => {
   res.json({ estado: "ok", mensaje: "La API de D3 Kicks funciona" });
@@ -140,10 +144,20 @@ app.get("/api/yo", autenticar, async (req, res) => {
        ORDER BY pr.operacion`,
       [req.usuario.id_usuario]
     );
+    const datos = await pool.query(
+      `SELECT u.fecha_creacion, c.nombre, c.email, c.tipo_cliente
+       FROM usuarios u
+       LEFT JOIN clientes c ON c.id_cliente = u.id_cliente
+       WHERE u.id_usuario = $1`,
+      [req.usuario.id_usuario]
+    );
+    const cuenta = datos.rows[0] || {};
     res.json({
       username: req.usuario.username,
       rol: req.usuario.rol,
-      permisos: resultado.rows.map((fila) => fila.operacion)
+      permisos: resultado.rows.map((fila) => fila.operacion),
+      alta: cuenta.fecha_creacion || null,
+      cliente: cuenta.nombre ? { nombre: cuenta.nombre, email: cuenta.email, tipo: cuenta.tipo_cliente } : null
     });
   } catch (error) {
     console.error(error);

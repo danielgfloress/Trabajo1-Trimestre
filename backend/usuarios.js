@@ -1,66 +1,109 @@
 import express from "express";
 import { pool } from "./db.js";
-import { autenticar } from "./auth.js";
+import { autenticar, requierePermiso } from "./auth.js";
 
 const router = express.Router();
 
-router.get("/", autenticar, async (req, res) => {
-    const rolUsuario = req.usuario.rol || req.usuario.id_rol;
+const CONSULTA_USUARIO = `
+    SELECT u.id_usuario, u.username, r.nombre_rol, u.activo, u.fecha_creacion
+    FROM usuarios u
+    JOIN roles r ON u.id_rol = r.id_rol
+`;
 
-    if (rolUsuario !== 'ADMIN') {
-        return res.status(403).json({ error: `Acceso denegado. Tu rol detectado es: ${rolUsuario}` });
+router.use(autenticar, requierePermiso("USUARIOS_GESTIONAR"));
+
+async function buscarUsuario(id) {
+    const resultado = await pool.query(`${CONSULTA_USUARIO} WHERE u.id_usuario = $1`, [id]);
+    return resultado.rows[0];
+}
+
+async function quedanOtrosAdmins(id) {
+    const resultado = await pool.query(`
+        SELECT COUNT(*) AS otros
+        FROM usuarios u
+        JOIN roles r ON u.id_rol = r.id_rol
+        WHERE r.nombre_rol = 'ADMIN' AND u.activo AND u.id_usuario <> $1
+    `, [id]);
+    return Number(resultado.rows[0].otros) > 0;
+}
+
+function comprobarObjetivo(req, res) {
+    const id = Number(req.params.id);
+    if (!Number.isInteger(id)) {
+        res.status(400).json({ error: "Usuario no válido" });
+        return null;
     }
+    if (id === req.usuario.id_usuario) {
+        res.status(400).json({ error: "No puedes cambiar tu propia cuenta desde el panel" });
+        return null;
+    }
+    return id;
+}
 
+router.get("/", async (req, res) => {
     try {
-        const resultado = await pool.query(`
-            SELECT u.id_usuario, u.username, r.nombre_rol, u.activo 
-            FROM usuarios u
-            JOIN roles r ON u.id_rol = r.id_rol
-            ORDER BY u.id_usuario
-        `);
+        const resultado = await pool.query(`${CONSULTA_USUARIO} ORDER BY u.id_usuario`);
         res.json(resultado.rows);
     } catch (error) {
-        console.error("Error SQL:", error);
-        res.status(500).json({ error: "Error en la consulta SQL. Revisa la terminal de Docker." });
+        console.error(error);
+        res.status(500).json({ error: "Error al consultar los usuarios" });
     }
 });
 
-router.put("/:id/rol", autenticar, async (req, res) => {
-    const rolUsuario = req.usuario.rol || req.usuario.id_rol;
-    if (rolUsuario !== 'ADMIN') return res.status(403).json({ error: "Acceso denegado" });
-
-    const { id } = req.params;
-    const { nuevoRol } = req.body;
-
+router.get("/roles", async (req, res) => {
     try {
-        await pool.query(`
-            UPDATE usuarios 
-            SET id_rol = (SELECT id_rol FROM roles WHERE nombre_rol = $1)
-            WHERE id_usuario = $2
-        `, [nuevoRol.toUpperCase(), id]);
-        res.json({ mensaje: "Rol actualizado correctamente" });
+        const resultado = await pool.query("SELECT nombre_rol, descripcion FROM roles ORDER BY id_rol");
+        res.json(resultado.rows);
     } catch (error) {
-        console.error("Error al cambiar rol:", error);
-        res.status(500).json({ error: "Error en la base de datos al cambiar el rol" });
+        console.error(error);
+        res.status(500).json({ error: "Error al consultar los roles" });
     }
 });
 
-router.put("/:id/bloquear", autenticar, async (req, res) => {
-    const rolUsuario = req.usuario.rol || req.usuario.id_rol;
-    if (rolUsuario !== 'ADMIN') return res.status(403).json({ error: "Acceso denegado" });
+router.put("/:id/rol", async (req, res) => {
+    const id = comprobarObjetivo(req, res);
+    if (id === null) return;
 
-    const { id } = req.params;
+    const nuevoRol = String(req.body.nuevoRol || "").trim().toUpperCase();
+    try {
+        const rol = await pool.query("SELECT id_rol FROM roles WHERE nombre_rol = $1", [nuevoRol]);
+        if (rol.rows.length === 0) {
+            return res.status(400).json({ error: "Ese rol no existe" });
+        }
+        const usuario = await buscarUsuario(id);
+        if (!usuario) {
+            return res.status(404).json({ error: "El usuario no existe" });
+        }
+        if (usuario.nombre_rol === "ADMIN" && nuevoRol !== "ADMIN" && usuario.activo && !(await quedanOtrosAdmins(id))) {
+            return res.status(400).json({ error: "Tiene que quedar al menos un administrador activo" });
+        }
+
+        await pool.query("UPDATE usuarios SET id_rol = $1 WHERE id_usuario = $2", [rol.rows[0].id_rol, id]);
+        res.json(await buscarUsuario(id));
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Error al cambiar el rol" });
+    }
+});
+
+router.put("/:id/bloquear", async (req, res) => {
+    const id = comprobarObjetivo(req, res);
+    if (id === null) return;
 
     try {
-        await pool.query(`
-            UPDATE usuarios 
-            SET activo = NOT activo 
-            WHERE id_usuario = $1
-        `, [id]);
-        res.json({ mensaje: "Estado del usuario actualizado" });
+        const usuario = await buscarUsuario(id);
+        if (!usuario) {
+            return res.status(404).json({ error: "El usuario no existe" });
+        }
+        if (usuario.nombre_rol === "ADMIN" && usuario.activo && !(await quedanOtrosAdmins(id))) {
+            return res.status(400).json({ error: "Tiene que quedar al menos un administrador activo" });
+        }
+
+        await pool.query("UPDATE usuarios SET activo = NOT activo WHERE id_usuario = $1", [id]);
+        res.json(await buscarUsuario(id));
     } catch (error) {
-        console.error("Error al bloquear usuario:", error);
-        res.status(500).json({ error: "Error en la base de datos al cambiar el estado" });
+        console.error(error);
+        res.status(500).json({ error: "Error al cambiar el estado" });
     }
 });
 

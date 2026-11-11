@@ -1,3 +1,10 @@
+const volverLogin = new URLSearchParams(location.search).get("volver");
+const destinoLogin = volverLogin && /^[a-z-]+\.html$/.test(volverLogin) ? volverLogin : null;
+
+if (destinoLogin) {
+    document.getElementById("enlace-registro").href = "registro.html?volver=" + destinoLogin;
+}
+
 document.getElementById("form-login").addEventListener("submit", async (evento) => {
     evento.preventDefault();
 
@@ -23,7 +30,11 @@ document.getElementById("form-login").addEventListener("submit", async (evento) 
 
         guardarSesion({ token: datos.token, ...datos.usuario }, recordar);
 
-        location.href = "../index.html";
+        if (esPersonalInterno()) {
+            location.href = "panel.html";
+        } else {
+            location.href = destinoLogin || "../index.html";
+        }
 
     } catch (error) {
         errorParrafo.textContent = error.message;

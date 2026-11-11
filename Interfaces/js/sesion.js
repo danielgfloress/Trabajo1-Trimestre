@@ -20,6 +20,10 @@ function cerrarSesion() {
     sessionStorage.removeItem(CLAVE_SESION);
 }
 
+function esPersonalInterno(sesion = obtenerSesion()) {
+    return Boolean(sesion) && ["ADMIN", "COMERCIAL"].includes(sesion.rol);
+}
+
 function paginaDeInicio(rol) {
     return rol === "USUARIO" ? "cuenta.html" : "panel.html";
 }
@@ -47,9 +51,25 @@ function actualizarMenu() {
 
     const carpeta = location.pathname.includes("/paginas/") ? "" : "paginas/";
     enlace.href = carpeta + paginaDeInicio(sesion.rol);
-    enlace.lastChild.textContent = sesion.username;
-    enlace.setAttribute("aria-label", "Mi cuenta");
-    enlace.title = "Mi cuenta";
+    for (const nodo of [...enlace.childNodes]) {
+        if (nodo.nodeType === Node.TEXT_NODE) {
+            nodo.remove();
+        }
+    }
+    enlace.classList.add("menu__icono--solo");
+    enlace.setAttribute("aria-label", `Mi cuenta (${sesion.username})`);
+    enlace.title = `Mi cuenta (${sesion.username})`;
+
+    if (esPersonalInterno(sesion)) {
+        const gestion = document.createElement("a");
+        gestion.href = carpeta + "panel.html";
+        gestion.className = "menu__enlace";
+        if (location.pathname.endsWith("/panel.html")) {
+            gestion.classList.add("menu__enlace--activo");
+        }
+        gestion.textContent = "Gestión";
+        (document.querySelector(".menu__cesta") || enlace).before(gestion);
+    }
 
     const salir = document.createElement("a");
     salir.href = "#";
