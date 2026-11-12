@@ -113,4 +113,4 @@ Cada proceso trabaja con lo que devuelve el anterior: el agrupador recibe la fic
 
 Las fichas de `entrada/` son los pedidos Custom reales del proyecto (mismas referencias, clientes, modelos y diseños que `acesso-a-datos/05_datos.sql` y Odoo): **SO003** (Club Halcones, Runner X, 20 pares), **SO005** (CD Leones del Sur, Predator League FG, 20 pares) y **SO010** (Running Crew Sur, ZoomX Invincible 3, 20 pares). SO006 no se incluye porque está cancelado.
 
-El formato es el de la ficha de fabricación acordada en `docs/modelo_datos_comun.md` (apartado 9.3). Las fichas se han escrito con los datos de la base de datos; que Acceso a Datos las exporte directamente desde PostgreSQL queda pendiente en esa parte.
+El formato es el de la ficha de fabricación acordada con Acceso a Datos (cabecera `ref_odoo,cliente,modelo,color,diseno,texto_bordado,talla,cantidad`). Las fichas se han escrito con los datos de la base de datos; que Acceso a Datos las exporte directamente desde PostgreSQL queda pendiente en esa parte.
