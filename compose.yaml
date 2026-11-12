@@ -14,6 +14,7 @@ services:
       - ./acesso-a-datos/02_triggers.sql:/docker-entrypoint-initdb.d/02_triggers.sql:ro
       - ./acesso-a-datos/03_usuarios.sql:/docker-entrypoint-initdb.d/03_usuarios.sql:ro
       - ./acesso-a-datos/05_datos.sql:/docker-entrypoint-initdb.d/04_datos.sql:ro
+      - ./acesso-a-datos/06_odoo.sql:/docker-entrypoint-initdb.d/05_odoo.sql:ro
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}" ]
       interval: 5s
@@ -35,6 +36,25 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
+  sincronizador:
+    build: ./SGE/odoo_d3kicks
+    container_name: d3kicks-sincronizador
+    environment:
+      ODOO_URL: ${ODOO_URL}
+      ODOO_DB: ${ODOO_DB}
+      ODOO_USER: ${ODOO_USER}
+      ODOO_KEY: ${ODOO_KEY}
+      PG_HOST: db
+      PG_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      TZ: Europe/Madrid
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: on-failure
 
 volumes:
   datos_db:

@@ -13,6 +13,7 @@ La usan la API (`backend/`), y a través de ella la web, Python (mediante CSV ex
 | `03_usuarios.sql` | roles, permisos, usuarios del personal y triggers de permisos |
 | `04_consultas.sql` | consultas de ejemplo para el informe (no se carga al arrancar) |
 | `05_datos.sql` | datos de prueba: catálogo, stock, clientes, diseños y pedidos |
+| `06_odoo.sql` | avisa a Odoo de cada cambio en clientes, modelos, stock y pedidos (`pg_notify`) |
 | `d3_kicks.dbm` | modelo de la base de datos para abrir con pgModeler |
 
 ## Cómo se carga
@@ -23,7 +24,7 @@ No hace falta ejecutar nada a mano. Desde la raíz del repositorio:
 docker compose up -d --build
 ```
 
-La primera vez, el contenedor `d3kicks-db` ejecuta los scripts en este orden: `d3_kicks.sql` → `02_triggers.sql` → `03_usuarios.sql` → `05_datos.sql`. Los datos se quedan guardados en un volumen de Docker.
+La primera vez, el contenedor `d3kicks-db` ejecuta los scripts en este orden: `d3_kicks.sql` → `02_triggers.sql` → `03_usuarios.sql` → `05_datos.sql` → `06_odoo.sql`. Los datos se quedan guardados en un volumen de Docker.
 
 Para empezar de cero con los datos iniciales:
 
@@ -152,4 +153,4 @@ Los pedidos se cargan siguiendo el camino real (borrador → confirmado → entr
 | API y web | lee y escribe a través de la API (`backend/`), que se conecta como el usuario del `.env` |
 | Python | `python/scripts/exportar_acc.sh` exporta las tablas a CSV en `python/entrada_acc/` |
 | PSP | las fichas de `psp/entrada/` son los pedidos Custom SO003, SO005 y SO010 |
-| Odoo | mismas referencias de pedido (`SO0xx`) y de cliente (`CLI0xx`) |
+| Odoo | `SGE/odoo_d3kicks/sincronizador.py` recibe los avisos de `06_odoo.sql` y copia los cambios a Odoo con las mismas referencias (`SO0xx`, `CLI0xx`) |

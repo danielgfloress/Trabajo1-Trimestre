@@ -8,7 +8,7 @@ Proyecto intermodular de 2.º DAM. D3 Kicks es una tienda de zapatillas que, ade
                     └──────────────────────────────┘          │
                                                               ├─ CSV ─▶ Python (análisis y dashboard)
                                                               └─ ficha CSV ─▶ PSP (procesos del taller)
-  SGE: Odoo (ventas, fabricación y stock), sincronizado con PostgreSQL mediante la API de Odoo
+  PostgreSQL ── pg_notify ─▶ sincronizador.py ── API XML-RPC ─▶ Odoo (ventas, inventario y fabricación)
 ```
 
 ## Estructura del repositorio
@@ -20,7 +20,7 @@ Proyecto intermodular de 2.º DAM. D3 Kicks es una tienda de zapatillas que, ade
 | [`Interfaces/`](Interfaces/README.md) | Desarrollo de Interfaces | web de la tienda y panel de gestión (HTML, CSS y JavaScript) |
 | [`python/`](python/README.md) | Ampliación de Python | limpieza de datos, indicadores, segmentación, predicción y dashboard Streamlit |
 | [`psp/`](psp/README.md) | Programación de Servicios y Procesos | aplicación Java multiproceso que prepara las fichas de taller de los pedidos Custom |
-| `SGE/` | Sistemas de Gestión Empresarial | Odoo en Docker |
+| [`SGE/`](SGE/README.md) | Sistemas de Gestión Empresarial | sincronizador que copia a Odoo cada cambio de PostgreSQL, y Odoo en Docker |
 | `compose.yaml` | — | levanta la base de datos y la API con Docker |
 | `.env.example` | — | plantilla de las variables de entorno |
 | `.gitignore` | — | lo que no se sube al repositorio |
@@ -56,12 +56,13 @@ copy .env.example .env
 docker compose up -d --build
 ```
 
-Arranca dos contenedores:
+Arranca tres contenedores:
 
 | Contenedor | Puerto | Qué es |
 |---|---|---|
 | `d3kicks-db` | 5433 | PostgreSQL 17. La primera vez ejecuta solo los scripts de `acesso-a-datos/` |
 | `d3kicks-api` | 3000 | API REST. Se comprueba en http://localhost:3000/api/salud |
+| `d3kicks-sincronizador` | — | copia a Odoo cada cambio de PostgreSQL (si las variables `ODOO_…` del `.env` están rellenas) |
 
 Para volver a los datos iniciales (borra todo lo que se haya hecho desde la web):
 
@@ -93,12 +94,13 @@ Abre la carpeta `psp/` en IntelliJ IDEA y ejecuta `org.d3kicks.Coordinador` con 
 
 ### 6. Odoo
 
+Rellena las variables `ODOO_…` del `.env` y vuelve a ejecutar `docker compose up -d --build`. El contenedor `d3kicks-sincronizador` copia a Odoo todo lo que cambia en PostgreSQL mientras Docker esté en marcha. Para ver lo que hace:
+
 ```powershell
-cd SGE/odoo_d3kicks
-docker compose up -d
+docker logs -f d3kicks-sincronizador
 ```
 
-Odoo queda en http://localhost:8069.
+Más detalles en [`SGE/README.md`](SGE/README.md).
 
 ## API
 
