@@ -1,0 +1,15 @@
+FICHA DE TALLER - D3 KICKS
+Generada: 11/11/2026 17:44:44
+
+Pedido: SO003
+Cliente: Club Halcones
+Modelo: Runner X (Blanco)
+Diseño: DIS-SO003 Halcones Training
+Texto bordado: HALCONES
+
+Tallas:
+  Talla 39: 6 pares
+  Talla 40: 8 pares
+  Talla 41: 6 pares
+
+Total: 20 pares

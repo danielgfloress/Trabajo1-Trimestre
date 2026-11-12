@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesta · D3 Kicks</title>
+    <meta name="description" content="Tu cesta de D3 Kicks.">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=person,shopping_bag&amp;display=block">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a href="../index.html" class="logo"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png"
+                    alt="D3 Kicks, sneaker culture" width="480" height="289"></a>
+            <nav class="menu" aria-label="Menú principal">
+                <a href="../index.html" class="menu__enlace">Inicio</a>
+                <a href="tienda.html" class="menu__enlace">Tienda</a>
+                <a href="nosotros.html" class="menu__enlace">Nosotros</a>
+                <a href="contacto.html" class="menu__enlace">Contacto</a>
+                <a href="custom.html" class="menu__enlace menu__enlace--custom">D3 Custom</a>
+                <a href="cesta.html" class="menu__enlace menu__enlace--activo menu__cesta" aria-label="Cesta"
+                    title="Cesta"><span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span><span
+                        class="menu__contador" id="cesta-contador" hidden>0</span></a>
+                <a href="login.html" class="menu__enlace menu__enlace--custom menu__icono" aria-label="Iniciar sesión"
+                    title="Iniciar sesión"><span class="material-symbols-outlined" aria-hidden="true">person</span>log
+                    in</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cabecera-pagina">
+            <div class="contenedor">
+                <h1 class="cabecera-pagina__titulo">Tu cesta</h1>
+                <p class="cabecera-pagina__texto">Compra simulada: no se cobra nada. Al confirmar el pedido, las
+                    zapatillas se descuentan del stock de la tienda.</p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="contenedor">
+                <div id="cesta-vacia" hidden>
+                    <p class="sin-resultados">Tu cesta está vacía.</p>
+                    <div class="botones">
+                        <a href="tienda.html" class="boton boton--claro">Ir a la tienda</a>
+                    </div>
+                </div>
+
+                <div id="cesta-llena" hidden>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Zapatilla</th>
+                                    <th scope="col" class="tabla__numero">Talla</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col" class="tabla__numero">Precio</th>
+                                    <th scope="col" class="tabla__numero">Subtotal</th>
+                                    <th scope="col"><span class="visualmente-oculto">Quitar</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cesta-lineas"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="tarjeta cesta__resumen">
+                        <dl class="datos">
+                            <div class="datos__fila">
+                                <dt class="datos__nombre">Pares</dt>
+                                <dd class="datos__valor" id="cesta-pares"></dd>
+                            </div>
+                            <div class="datos__fila">
+                                <dt class="datos__nombre">Total</dt>
+                                <dd class="datos__valor" id="cesta-total"></dd>
+                            </div>
+                        </dl>
+                        <p class="nota">El importe final lo calcula la tienda al confirmar. No se cobra nada.</p>
+                        <div class="botones cesta__botones">
+                            <button type="button" class="boton boton--claro" id="cesta-pedir">Hacer pedido</button>
+                            <a href="tienda.html" class="boton boton--borde">Seguir comprando</a>
+                        </div>
+                        <p class="nota" id="cesta-mensaje" role="status"></p>
+                    </div>
+                </div>
+
+                <div id="cesta-hecho" hidden>
+                    <h2 id="hecho-titulo"></h2>
+                    <p class="seccion__descripcion" id="hecho-texto"></p>
+                    <div class="botones cesta__botones">
+                        <a href="cuenta.html" class="boton boton--claro">Ver mis pedidos</a>
+                        <a href="tienda.html" class="boton boton--borde">Seguir comprando</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <div class="pie__columna">
+                <a href="../index.html" class="logo logo--pie"><img class="logo__imagen"
+                        src="../img/marca/logo-d3-kicks.png" alt="D3 Kicks" width="480" height="289"></a>
+                <p>Sneakers, fabricación propia y zapatillas personalizadas para clubes y equipos.</p>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">La web</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item"><a href="tienda.html" class="pie__enlace">Tienda</a></li>
+                    <li class="pie__item"><a href="custom.html" class="pie__enlace">D3 Custom</a></li>
+                    <li class="pie__item"><a href="nosotros.html" class="pie__enlace">Nosotros</a></li>
+                    <li class="pie__item"><a href="contacto.html" class="pie__enlace">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="pie__columna">
+                <h2 class="pie__titulo">Contacto</h2>
+                <ul class="pie__lista">
+                    <li class="pie__item">Calle del Cordón, 3 · 28001 Madrid</li>
+                    <li class="pie__item"><a href="tel:+34910000000" class="pie__enlace">910 000 000</a></li>
+                    <li class="pie__item"><a href="mailto:hola@d3kicks.es" class="pie__enlace">hola@d3kicks.es</a></li>
+                </ul>
+            </div>
+            <p class="pie__legal">Proyecto intermodular de 2.º DAM. Empresa y datos ficticios.</p>
+        </div>
+    </footer>
+
+    <script src="../js/sesion.js"></script>
+    <script src="../js/cesta.js"></script>
+    <script src="../js/pedido.js"></script>
+</body>
+
+</html>
