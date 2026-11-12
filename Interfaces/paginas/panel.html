@@ -4,46 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración · D3 Kicks</title>
+    <title>Panel de gestión · D3 Kicks</title>
+    <meta name="description" content="Panel interno de D3 Kicks: ventas, pedidos, stock y usuarios.">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Unbounded:wght@600;700&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Unbounded:wght@600;700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;icon_names=bar_chart,dashboard,group,inventory_2,logout,receipt_long,storefront&amp;display=block">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
 
-    <main>
-        <section class="cabecera-pagina">
-            <div class="contenedor">
-                <h1 class="cabecera-pagina__titulo">Panel de Administración</h1>
-                <p class="cabecera-pagina__texto">Gestión interna de usuarios, roles y permisos de D3 Kicks.</p>
-            </div>
-        </section>
+    <div class="panel">
+        <aside class="panel__lateral">
+            <a href="../index.html" class="logo"><img class="logo__imagen" src="../img/marca/logo-d3-kicks.png"
+                    alt="D3 Kicks, ir a la web" width="480" height="289"></a>
+            <p class="panel__etiqueta">Panel de gestión</p>
 
-        <section class="seccion seccion-dashboard">
-            <div class="contenedor">
-                <div class="seccion__cabecera">
+            <nav class="panel__menu" aria-label="Secciones del panel">
+                <a href="#resumen" class="panel__enlace" data-seccion="resumen"><span class="material-symbols-outlined"
+                        aria-hidden="true">dashboard</span>Resumen</a>
+                <a href="#ventas" class="panel__enlace" data-seccion="ventas"><span class="material-symbols-outlined"
+                        aria-hidden="true">bar_chart</span>Ventas</a>
+                <a href="#pedidos" class="panel__enlace" data-seccion="pedidos"><span class="material-symbols-outlined"
+                        aria-hidden="true">receipt_long</span>Pedidos</a>
+                <a href="#stock" class="panel__enlace" data-seccion="stock"><span class="material-symbols-outlined"
+                        aria-hidden="true">inventory_2</span>Stock</a>
+                <a href="#usuarios" class="panel__enlace" data-seccion="usuarios" id="enlace-usuarios" hidden><span
+                        class="material-symbols-outlined" aria-hidden="true">group</span>Usuarios</a>
+            </nav>
+
+            <div class="panel__pie">
+                <p class="panel__usuario" id="panel-usuario"></p>
+                <a href="../index.html" class="panel__enlace"><span class="material-symbols-outlined"
+                        aria-hidden="true">storefront</span>Ver la web</a>
+                <button type="button" class="panel__enlace" id="panel-salir"><span class="material-symbols-outlined"
+                        aria-hidden="true">logout</span>Cerrar sesión</button>
+            </div>
+        </aside>
+
+        <main class="panel__contenido">
+            <div class="seccion__cabecera">
+                <div>
+                    <h1 id="panel-titulo">Resumen</h1>
+                    <p class="nota" id="panel-estado">Cargando datos…</p>
+                </div>
+                <button type="button" class="boton boton--borde" id="panel-actualizar">Actualizar</button>
+            </div>
+
+            <section class="panel__seccion" id="resumen" data-titulo="Resumen">
+                <p class="seccion__descripcion">Ventas válidas = pedidos confirmados y entregados. Los borradores y
+                    los cancelados solo cuentan en la actividad.</p>
+                <div class="tarjetas" id="panel-kpis"></div>
+                <h2 class="panel__subtitulo">Actividad por estado</h2>
+                <p class="seccion__descripcion">Todos los pedidos, sean o no venta, y el peso de los pedidos D3 Custom
+                    dentro de las ventas válidas.</p>
+                <div class="tarjetas" id="panel-estados"></div>
+            </section>
+
+            <section class="panel__seccion" id="ventas" data-titulo="Ventas" hidden>
+                <div class="dos-columnas">
                     <div>
-                        <h2>Análisis de Ventas (Dashboard)</h2>
-                        <p class="seccion__descripcion">Visualización de datos en tiempo real procesados por Python.</p>
+                        <h2 class="panel__subtitulo">Ventas por mes</h2>
+                        <p class="seccion__descripcion">Ingresos de los pedidos válidos, últimos 12 meses con
+                            ventas.</p>
+                        <ul class="barras" id="panel-meses"></ul>
+                    </div>
+                    <div>
+                        <h2 class="panel__subtitulo">Modelos más vendidos</h2>
+                        <p class="seccion__descripcion">Pares vendidos en pedidos válidos.</p>
+                        <ul class="barras" id="panel-modelos"></ul>
                     </div>
                 </div>
+            </section>
 
-                <div class="contenedor-iframe">
-                    <iframe src="http://localhost:8501" id="iframe-python" title="Dashboard D3 Kicks"></iframe>
+            <section class="panel__seccion" id="pedidos" data-titulo="Pedidos" hidden>
+                <p class="seccion__descripcion">Los 8 pedidos más recientes, en cualquier estado.</p>
+                <div class="tabla-contenedor">
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pedido</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col" class="tabla__numero">Pares</th>
+                                <th scope="col" class="tabla__numero">Importe</th>
+                            </tr>
+                        </thead>
+                        <tbody id="panel-ultimos"></tbody>
+                    </table>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="seccion">
-            <div class="contenedor">
-                <h2>Gestión de Usuarios</h2>
-                <div id="contenedor-usuarios" style="margin-top: 20px;">
-                    <p>Cargando datos del sistema...</p>
+            <section class="panel__seccion" id="stock" data-titulo="Stock" hidden>
+                <div class="seccion__cabecera">
+                    <p class="seccion__descripcion">Todo el almacén por modelo, color y talla. Arriba, en rojo, las
+                        variantes con el stock igual o por debajo de su mínimo: hay que reponerlas.</p>
+                    <div class="botones">
+                        <select class="filtro-select" id="stock-filtro-modelo" aria-label="Filtrar por modelo">
+                            <option value="">Todos los modelos</option>
+                        </select>
+                        <button type="button" class="filtro" id="stock-solo-reponer" aria-pressed="false">Solo para
+                            reponer</button>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+                <div class="tarjetas" id="stock-resumen"></div>
+                <p class="nota" id="stock-mensaje" role="status"></p>
+                <div class="tabla-contenedor">
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Color</th>
+                                <th scope="col" class="tabla__numero">Talla</th>
+                                <th scope="col" class="tabla__numero">Disponible</th>
+                                <th scope="col" class="tabla__numero">Mínimo</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="panel-stock"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel__seccion" id="usuarios" data-titulo="Usuarios" hidden>
+                <div class="seccion__cabecera">
+                    <p class="seccion__descripcion">Cambia el rol o bloquea el acceso. Tu propia cuenta no se puede
+                        modificar desde aquí y siempre queda al menos un administrador activo.</p>
+                    <div class="botones">
+                        <select class="filtro-select" id="usuarios-filtro-rol" aria-label="Filtrar por rol">
+                            <option value="">Todos los roles</option>
+                        </select>
+                        <select class="filtro-select" id="usuarios-filtro-estado" aria-label="Filtrar por estado">
+                            <option value="">Todos los estados</option>
+                            <option value="activo">Activos</option>
+                            <option value="bloqueado">Bloqueados</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tarjetas" id="usuarios-resumen"></div>
+                <p class="nota" id="usuarios-mensaje" role="status"></p>
+                <div class="tabla-contenedor">
+                    <table class="tabla">
+                        <thead>
+                            <tr>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Alta</th>
+                                <th scope="col">Acceso</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usuarios-tabla"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <script src="../js/sesion.js"></script>
     <script src="../js/panel.js"></script>

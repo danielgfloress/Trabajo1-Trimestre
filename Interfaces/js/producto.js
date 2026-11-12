@@ -1,5 +1,10 @@
 const parametros = new URLSearchParams(window.location.search);
 const id = parametros.get("id");
+let productoActual = null;
+let stockPorTalla = {};
+
+document.getElementById("form-cesta").addEventListener("submit", anadirProducto);
+document.getElementById("talla").addEventListener("change", actualizarCantidades);
 
 cargarProducto();
 
@@ -30,6 +35,7 @@ function formatearMarca(marca) {
 }
 
 function mostrarProducto(p) {
+    productoActual = p;
     const precio = Number(p.precio_base).toLocaleString("es-ES", { style: "currency", currency: "EUR" });
     const marca = formatearMarca(p.marca);
     const nombreCompleto = marca + " " + p.nombre;
@@ -61,7 +67,9 @@ function mostrarTallas(tallas) {
     const select = document.getElementById("talla");
     select.innerHTML = "";
 
+    stockPorTalla = {};
     for (const t of tallas) {
+        stockPorTalla[t.talla] = t.stock;
         const opcion = document.createElement("option");
         opcion.value = t.talla;
         opcion.textContent = t.stock > 0 ? t.talla : t.talla + " (agotada)";
@@ -71,6 +79,58 @@ function mostrarTallas(tallas) {
         }
         select.appendChild(opcion);
     }
+    actualizarCantidades();
+}
+
+function disponibleParaAnadir(talla) {
+    const stock = stockPorTalla[talla] || 0;
+    const enCesta = cantidadEnCesta(productoActual.codigo_modelo, talla);
+    return Math.max(0, Math.min(stock, MAXIMO_POR_TALLA) - enCesta);
+}
+
+function actualizarCantidades() {
+    if (!productoActual) {
+        return;
+    }
+    const talla = Number(document.getElementById("talla").value);
+    const maximo = disponibleParaAnadir(talla);
+    const cantidad = document.getElementById("cantidad");
+    cantidad.innerHTML = "";
+    for (let n = 1; n <= Math.max(maximo, 1); n++) {
+        const opcion = document.createElement("option");
+        opcion.value = n;
+        opcion.textContent = n;
+        cantidad.appendChild(opcion);
+    }
+    const personal = esPersonalInterno();
+    cantidad.disabled = maximo === 0 || personal;
+    document.getElementById("boton-cesta").disabled = maximo === 0 || personal;
+    if (personal) {
+        document.getElementById("cesta-aviso").textContent =
+            "Las cuentas de gestión no hacen pedidos. Para comprar, entra con una cuenta de cliente.";
+    } else {
+        document.getElementById("cesta-aviso").textContent = maximo === 0 && talla
+            ? "Ya tienes en la cesta todos los pares disponibles de esta talla."
+            : "";
+    }
+}
+
+function anadirProducto(evento) {
+    evento.preventDefault();
+    const talla = Number(document.getElementById("talla").value);
+    const cantidad = Number(document.getElementById("cantidad").value);
+    if (!productoActual || !talla || cantidad > disponibleParaAnadir(talla)) {
+        return;
+    }
+    anadirACesta(productoActual, talla, cantidad);
+    actualizarCantidades();
+
+    const aviso = document.getElementById("cesta-aviso");
+    const enlace = document.createElement("a");
+    enlace.href = "cesta.html";
+    enlace.className = "enlace-destacado";
+    enlace.textContent = "Ver la cesta";
+    aviso.replaceChildren(`Añadido a la cesta: ${cantidad} ${cantidad === 1 ? "par" : "pares"} de la talla ${talla}. `, enlace);
 }
 
 function mostrarError(mensaje) {
