@@ -1,1 +1,10 @@
 .env
+
+node_modules/
+
+.vscode/
+.idea/workspace.xml
+
+.DS_Store
+Thumbs.db
+Desktop.ini
