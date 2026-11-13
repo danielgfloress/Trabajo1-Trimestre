@@ -60,12 +60,12 @@ modelos ──< almacen ──< lineas_pedido >── pedidos >── clientes
 
 **Precios y totales**
 
-- El precio de cada línea lo pone la base de datos: precio base del modelo más el recargo del diseño si es Custom. Aunque se envíe otro precio, se sustituye.
+- El precio de cada línea lo pone la base de datos: precio base del modelo más el recargo del diseño si es Custom. Aunque se envíe otro precio, se sustituye. Los diseños que llegan desde la web tienen un recargo de 10 € por par, o 15 € con escudo.
 - El total del pedido se recalcula solo cada vez que cambian sus líneas y no se puede modificar a mano.
 
 **Pedidos**
 
-- Un pedido nace en `BORRADOR`. Los cambios de estado permitidos son:
+- Un pedido nace siempre en `BORRADOR` (es el valor por defecto de la columna y un trigger lo exige), porque las líneas solo se pueden añadir en borrador y el stock se descuenta al pasar a `CONFIRMADO`. Los cambios de estado permitidos son:
 
   ```
   BORRADOR ──▶ CONFIRMADO ──▶ ENTREGADO
@@ -150,7 +150,7 @@ Los pedidos se cargan siguiendo el camino real (borrador → confirmado → entr
 
 | Módulo | Cómo usa la base de datos |
 |---|---|
-| API y web | lee y escribe a través de la API (`backend/`), que se conecta como el usuario del `.env` |
+| API y web | lee y escribe a través de la API (`backend/`), que se conecta como el usuario del `.env`. Los pedidos de la cesta y los D3 Custom se crean en borrador, se les añaden las líneas y se confirman en la misma transacción |
 | Python | `python/scripts/exportar_acc.sh` exporta las tablas a CSV en `python/entrada_acc/` |
 | PSP | las fichas de `psp/entrada/` son los pedidos Custom SO003, SO005 y SO010 |
 | Odoo | `SGE/odoo_d3kicks/sincronizador.py` recibe los avisos de `06_odoo.sql` y copia los cambios a Odoo con las mismas referencias (`SO0xx`, `CLI0xx`) |

@@ -94,6 +94,8 @@ Abre la carpeta `psp/` en IntelliJ IDEA y ejecuta `org.d3kicks.Coordinador` con 
 
 ### 6. Odoo
 
+Cada persona arranca **su propio Odoo** en su ordenador (`SGE/odoo_d3kicks`), porque cada una tiene su propia base de datos PostgreSQL. Dos bases de datos copiándose en el mismo Odoo se pisan los pedidos y los clientes.
+
 Rellena las variables `ODOO_…` del `.env` y vuelve a ejecutar `docker compose up -d --build`. El contenedor `d3kicks-sincronizador` copia a Odoo todo lo que cambia en PostgreSQL mientras Docker esté en marcha. Para ver lo que hace:
 
 ```powershell
@@ -115,6 +117,7 @@ Todas las rutas empiezan por `http://localhost:3000/api`. Las marcadas con 🔒 
 | `POST /registro` | — | crea una cuenta de cliente con `nombre`, `email` y `contrasena` |
 | `GET /yo` | 🔒 | datos del usuario conectado |
 | `POST /pedidos` | 🔒 cliente | crea y confirma un pedido desde la cesta (descuenta stock) |
+| `POST /pedidos/custom` | 🔒 cliente | crea el diseño y confirma un pedido D3 Custom de al menos 20 pares (descuenta stock) |
 | `GET /pedidos/mios` | 🔒 cliente | pedidos del cliente conectado |
 | `GET /panel/resumen` | 🔒 `INDICADORES_VER` | indicadores del panel de gestión |
 | `GET /panel/stock` | 🔒 `STOCK_CONSULTAR` | stock de todo el almacén, primero lo que hay que reponer |

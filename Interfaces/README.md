@@ -44,7 +44,7 @@ Interfaces/
 | `paginas/login.html` | inicio de sesión | `sesion.js`, `login.js` |
 | `paginas/registro.html` | alta de clientes | `sesion.js`, `registro.js` |
 | `paginas/panel.html` | panel de gestión | `sesion.js`, `panel.js` |
-| `paginas/custom.html` | información de la línea D3 Custom para clubes | `sesion.js`, `cesta.js` |
+| `paginas/custom.html` | línea D3 Custom para clubes y formulario para hacer un pedido Custom | `sesion.js`, `cesta.js`, `custom.js` |
 | `paginas/nosotros.html` | historia de la marca | `sesion.js`, `cesta.js` |
 | `paginas/contacto.html` | contacto | `sesion.js`, `cesta.js` |
 
@@ -63,8 +63,8 @@ Interfaces/
 
 | Usuario | Menú | Puede comprar | Panel de gestión |
 |---|---|---|---|
-| Sin sesión | icono de persona que lleva al login | puede llenar la cesta; al confirmar se le pide iniciar sesión y vuelve a la cesta | no |
-| Cliente (`USUARIO`) | icono de persona que lleva a su cuenta | sí: al confirmar se crea el pedido y se descuenta el stock | no |
+| Sin sesión | icono de persona que lleva al login | puede llenar la cesta; al confirmar se le pide iniciar sesión y vuelve a la cesta. En D3 Custom se le avisa de que tiene que iniciar sesión | no |
+| Cliente (`USUARIO`) | icono de persona que lleva a su cuenta | sí, desde la cesta y desde D3 Custom: al confirmar se crea el pedido y se descuenta el stock | no |
 | `COMERCIAL` | enlace **Gestión** | no (la cesta se oculta) | Resumen, Ventas, Pedidos y Stock |
 | `ADMIN` | enlace **Gestión** | no (la cesta se oculta) | todo lo anterior y Usuarios |
 
@@ -84,8 +84,20 @@ Si la sesión caduca o el usuario no tiene permiso, el panel lo lleva al login.
 
 ## Pedidos desde la web
 
+### Pedido estándar (cesta)
+
 1. El cliente añade tallas a la cesta desde la ficha del producto.
-2. En la cesta pulsa **Confirmar pedido**.
-3. La API crea el pedido con la siguiente referencia libre (`SO0xx`) y lo confirma.
+2. En la cesta pulsa **Hacer pedido**.
+3. La API (`POST /api/pedidos`) crea el pedido con la siguiente referencia libre (`SO0xx`) y lo confirma.
 4. Los triggers de la base de datos calculan los precios y el total y descuentan el stock. Si no hay stock suficiente, el pedido no se crea y la web muestra el motivo.
 5. El pedido aparece en **Mi cuenta** y en el panel de gestión.
+
+### Pedido D3 Custom
+
+1. En `custom.html` el cliente rellena el formulario: datos del club, modelo base (la lista se carga desde la API), colores, nombre del lateral (máximo 12 caracteres), escudo, indicaciones, pares de cada talla y fecha en que los necesita.
+2. Mientras escribe, la web le dice cuántos pares lleva y cuántos le faltan para el mínimo de **20**.
+3. Al pulsar **Enviar pedido**, la API (`POST /api/pedidos/custom`) guarda el diseño en `personalizaciones` y crea el pedido `CUSTOM` con una línea por talla, y lo confirma.
+4. El precio de cada par es el precio del modelo más el recargo del diseño: **10 €**, o **15 €** si lleva escudo. Los triggers comprueban el mínimo de 20 pares y el stock de cada talla y lo descuentan. Si algo falla, el pedido no se crea y la web muestra el motivo.
+5. El pedido aparece en **Mi cuenta**, en el panel de gestión y, si el sincronizador está en marcha, en Odoo.
+
+Solo los clientes pueden hacer pedidos Custom. Si entra el personal (`ADMIN` o `COMERCIAL`), la página se lo avisa.
