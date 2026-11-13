@@ -173,12 +173,14 @@
             <div class="contenedor">
                 <div class="seccion__cabecera">
                     <div>
-                        <h2>Solicitud de presupuesto</h2>
-                        <p class="seccion__descripcion">Sin compromiso. Te respondemos en 48 horas laborables.</p>
+                        <h2>Haz tu pedido D3 Custom</h2>
+                        <p class="seccion__descripcion">El pedido se confirma al enviarlo y te enviamos el boceto para
+                            aprobarlo antes de fabricar.</p>
                     </div>
                 </div>
-                <form class="formulario" action="#" method="post">
+                <form class="formulario" id="custom-formulario" action="#" method="post">
                     <p class="formulario__aviso">Los campos marcados con * son obligatorios.</p>
+                    <p class="formulario__aviso" id="custom-sesion" hidden></p>
                     <fieldset>
                         <legend>Datos del club</legend>
                         <div class="formulario__campos">
@@ -210,66 +212,8 @@
                         <div class="formulario__campos">
                             <div class="campo campo--ancho">
                                 <label class="campo__etiqueta" for="id_modelo">Modelo base *</label>
-                                <select class="formulario__control" id="id_modelo" name="id_modelo" required>
-                                    <option value="runner-x" selected>D3 Runner X</option>
-                                    <option value="jordan-4-black-cat">Jordan Air Jordan 4 Retro</option>
-                                    <option value="nike-dunk-low">Nike Dunk Low</option>
-                                    <option value="nike-air-max-plus">Nike Air Max Plus</option>
-                                    <option value="new-balance-2002r">New Balance 2002R Protection Pack</option>
-                                    <option value="jordan-4-blanco-negro">Jordan Air Jordan 4 Retro</option>
-                                    <option value="jordan-3-black-cat">Jordan Air Jordan 3 Retro</option>
-                                    <option value="nike-air-force-1">Nike Air Force 1 Low</option>
-                                    <option value="nike-air-max-95">Nike Air Max 95</option>
-                                    <option value="nike-dunk-low-grey-fog">Nike Dunk Low</option>
-                                    <option value="new-balance-1906r">New Balance 1906R</option>
-                                    <option value="nike-shox-tl">Nike Shox TL</option>
-                                    <option value="salomon-xt-6">Salomon XT-6</option>
-                                    <option value="salomon-xt-6-negro">Salomon XT-6</option>
-                                    <option value="nike-air-max-dn">Nike Air Max Dn</option>
-                                    <option value="nike-air-max-dn-negro">Nike Air Max Dn</option>
-                                    <option value="vans-knu-skool">Vans Knu Skool</option>
-                                    <option value="nike-air-force-1-negro">Nike Air Force 1 Low</option>
-                                    <option value="puma-speedcat">Puma Speedcat OG</option>
-                                    <option value="puma-speedcat-rojo">Puma Speedcat OG</option>
-                                    <option value="adidas-campus-00s">Adidas Campus 00s</option>
-                                    <option value="adidas-campus-00s-gris">Adidas Campus 00s</option>
-                                    <option value="adidas-predator-edge">Adidas Predator Edge.3 FG</option>
-                                    <option value="adidas-predator-league">Adidas Predator League FG</option>
-                                    <option value="nike-mercurial-superfly-10">Nike Mercurial Superfly 10 Academy
-                                    </option>
-                                    <option value="nike-phantom-blanco">Nike Phantom GX 2 Academy</option>
-                                    <option value="nike-phantom-azul">Nike Phantom GX 2 Academy</option>
-                                    <option value="nike-phantom-gx-elite">Nike Phantom GX Elite</option>
-                                    <option value="nike-hyperko-2">Nike HyperKO 2</option>
-                                    <option value="nike-hyperko-blanco">Nike HyperKO</option>
-                                    <option value="nike-hyperko-rosa">Nike HyperKO</option>
-                                    <option value="venum-elite">Venum Elite</option>
-                                    <option value="adidas-hvc">Adidas HVC</option>
-                                    <option value="nike-team-hustle-d11">Nike Team Hustle D 11</option>
-                                    <option value="under-armour-lockdown-6">Under Armour Lockdown 6</option>
-                                    <option value="adidas-ae-1">Adidas AE 1</option>
-                                    <option value="new-balance-omn1s">New Balance OMN1S</option>
-                                    <option value="li-ning-way-of-wade">Li-Ning Way of Wade</option>
-                                    <option value="puma-mb-03-lo">Puma MB.03 Lo</option>
-                                    <option value="adidas-copa-pure">Adidas Copa Pure II League FG</option>
-                                    <option value="puma-future-7-ultimate">Puma Future 7 Ultimate FG</option>
-                                    <option value="nike-tiempo-legend-10">Nike Tiempo Legend 10 Academy</option>
-                                    <option value="jordan-1-high-black-toe">Jordan Air Jordan 1 Retro High OG</option>
-                                    <option value="jordan-1-low-se">Jordan Air Jordan 1 Low SE</option>
-                                    <option value="adidas-handball-spezial">Adidas Handball Spezial</option>
-                                    <option value="adidas-samba-og">Adidas Samba OG</option>
-                                    <option value="new-balance-1906r-negro">New Balance 1906R</option>
-                                    <option value="nike-invincible-3">Nike ZoomX Invincible 3</option>
-                                    <option value="nike-vomero-plus">Nike Vomero Plus</option>
-                                    <option value="puma-suede-classic">Puma Suede Classic</option>
-                                    <option value="salomon-xt-4">Salomon XT-4 OG</option>
-                                    <option value="adidas-superstar">Adidas Superstar</option>
-                                    <option value="adidas-response-cl">Adidas Response CL</option>
-                                    <option value="adidas-campus-light">Adidas Campus Light</option>
-                                    <option value="adidas-forum-low">Adidas Forum Low</option>
-                                    <option value="nike-air-max-90-blanco">Nike Air Max 90</option>
-                                    <option value="nike-air-max-97">Nike Air Max 97</option>
-                                    <option value="new-balance-550-verde">New Balance 550</option>
+                                <select class="formulario__control" id="id_modelo" name="id_modelo" required disabled>
+                                    <option value="">Cargando modelos…</option>
                                 </select>
                             </div>
                             <div class="campo">
@@ -297,7 +241,7 @@
                                         No</label>
                                 </div>
                                 <span class="ayuda">Si es que sí, te pediremos el archivo del escudo al enviarte el
-                                    boceto.</span>
+                                    boceto. El diseño cuesta 10 € por par, o 15 € por par con escudo.</span>
                             </div>
                             <div class="campo campo--ancho">
                                 <label class="campo__etiqueta" for="notas_diseno">Indicaciones para el diseño</label>
@@ -367,6 +311,7 @@
                                     name="talla_46" min="0" max="500" value="0" inputmode="numeric">
                             </div>
                         </div>
+                        <p class="nota" id="custom-pares" role="status"></p>
                         <div class="formulario__campos formulario__campos--fecha">
                             <div class="campo">
                                 <label class="campo__etiqueta" for="fecha_objetivo">Fecha en que las necesitáis
@@ -379,11 +324,20 @@
                     </fieldset>
                     <div class="casilla">
                         <input type="checkbox" id="privacidad" name="privacidad" required>
-                        <label for="privacidad">Acepto que D3 Kicks use estos datos para preparar el presupuesto.
+                        <label for="privacidad">Acepto que D3 Kicks use estos datos para tramitar el pedido.
                             *</label>
                     </div>
-                    <button class="boton boton--claro" type="submit">Enviar solicitud</button>
+                    <button class="boton boton--claro" type="submit" id="custom-enviar">Enviar pedido</button>
+                    <p class="nota" id="custom-mensaje" role="status"></p>
                 </form>
+                <div id="custom-hecho" hidden>
+                    <h2 id="custom-hecho-titulo"></h2>
+                    <p class="seccion__descripcion" id="custom-hecho-texto"></p>
+                    <div class="botones cesta__botones">
+                        <a href="cuenta.html" class="boton boton--claro">Ver mis pedidos</a>
+                        <a href="tienda.html" class="boton boton--borde">Ir a la tienda</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -417,6 +371,7 @@
     </footer>
     <script src="../js/sesion.js"></script>
     <script src="../js/cesta.js"></script>
+    <script src="../js/custom.js"></script>
 
 </body>
 
