@@ -106,11 +106,16 @@ WHERE p.estado IN ('CONFIRMADO', 'ENTREGADO')
 GROUP BY m.marca, m.nombre, a.talla
 ORDER BY m.marca, m.nombre, a.talla;
 
+WITH parametros AS (
+    SELECT CAST(5 AS INTEGER) AS umbral
+)
 SELECT m.marca, m.nombre AS modelo, a.color_base AS color, a.talla,
-       a.stock_disponible, a.stock_minimo
+       a.stock_disponible, a.stock_minimo, pa.umbral,
+       pa.umbral - a.stock_disponible AS faltan
 FROM almacen a
 JOIN modelos m ON m.id_modelo = a.id_modelo
-WHERE a.stock_disponible <= 5
+CROSS JOIN parametros pa
+WHERE a.stock_disponible <= pa.umbral
 ORDER BY a.stock_disponible, m.marca, m.nombre, a.color_base, a.talla;
 
 SELECT p.ref_odoo, c.nombre AS cliente, m.marca, m.nombre AS modelo, a.color_base AS color,
@@ -122,7 +127,7 @@ JOIN lineas_pedido l ON l.id_pedido = p.id_pedido
 JOIN almacen a ON a.id_almacen = l.id_almacen
 JOIN modelos m ON m.id_modelo = a.id_modelo
 LEFT JOIN personalizaciones pe ON pe.id_personalizacion = l.id_personalizacion
-WHERE p.ref_odoo = 'SO024'
+WHERE p.ref_odoo = 'SO003'
 ORDER BY a.talla;
 
 WITH filtros AS (
