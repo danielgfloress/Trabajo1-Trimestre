@@ -1,6 +1,7 @@
 import express from "express";
 import { pool } from "./db.js";
 import { autenticar, requierePermiso } from "./auth.js";
+import { registrarActividad, clasificarError } from "./actividad.js";
 
 const router = express.Router();
 
@@ -90,6 +91,43 @@ router.get("/stock", autenticar, requierePermiso("STOCK_CONSULTAR"), async (req,
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Error al consultar el stock" });
+    }
+});
+
+// Indicadores calculados por PostgreSQL (fn_indicadores comprueba INDICADORES_VER).
+// Ventas = pedidos confirmados y entregados; los cancelados y borradores no cuentan.
+router.get("/indicadores", autenticar, async (req, res) => {
+    try {
+        const resultado = await pool.query("SELECT * FROM fn_indicadores($1)", [req.usuario.id_usuario]);
+        registrarActividad(req.usuario, "VER_INDICADORES", "CORRECTO");
+        res.json(resultado.rows[0]);
+    } catch (error) {
+        const { estado, resultado, mensaje } = clasificarError(error);
+        registrarActividad(req.usuario, "VER_INDICADORES", resultado, { motivo: mensaje || "error interno" });
+        if (estado === 500) console.error(error);
+        res.status(estado).json({ error: mensaje || "Error al calcular los indicadores" });
+    }
+});
+
+// Stock bajo respecto a un umbral configurable (?umbral=10). Sin umbral se usa
+// el stock mínimo de cada talla. fn_stock_bajo comprueba STOCK_CONSULTAR.
+router.get("/stock-bajo", autenticar, async (req, res) => {
+    const texto = typeof req.query.umbral === "string" ? req.query.umbral.trim() : "";
+    const umbral = texto === "" ? null : Number(texto);
+    if (umbral !== null && (!Number.isInteger(umbral) || umbral < 0 || umbral > 1000)) {
+        registrarActividad(req.usuario, "CONSULTAR_STOCK_BAJO", "RECHAZADO", { motivo: "umbral no válido" });
+        return res.status(400).json({ error: "El umbral tiene que ser un número entero entre 0 y 1000" });
+    }
+    try {
+        const resultado = await pool.query("SELECT * FROM fn_stock_bajo($1, $2)", [req.usuario.id_usuario, umbral]);
+        registrarActividad(req.usuario, "CONSULTAR_STOCK_BAJO", "CORRECTO",
+            { umbral: umbral ?? "stock mínimo", filas: resultado.rows.length });
+        res.json({ umbral, total: resultado.rows.length, filas: resultado.rows });
+    } catch (error) {
+        const { estado, resultado, mensaje } = clasificarError(error);
+        registrarActividad(req.usuario, "CONSULTAR_STOCK_BAJO", resultado, { motivo: mensaje || "error interno" });
+        if (estado === 500) console.error(error);
+        res.status(estado).json({ error: mensaje || "Error al consultar el stock" });
     }
 });
 

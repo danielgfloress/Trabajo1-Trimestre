@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import { pool } from "./db.js";
 import { crearToken, autenticar } from "./auth.js";
+import { registrarActividad } from "./actividad.js";
+import { sincronizarUsuariosJson } from "./exportaciones.js";
 import rutaUsuarios from "./usuarios.js";
 import rutaPanel from "./panel.js";
 import rutaPedidos from "./pedidos.js";
@@ -74,16 +76,19 @@ app.post("/api/login", async (req, res) => {
       [usuario.trim().toLowerCase(), contrasena]
     );
     if (resultado.rows.length === 0) {
+      registrarActividad(null, "INICIAR_SESION", "RECHAZADO", { intento: usuario.trim().toLowerCase(), motivo: "credenciales no válidas o usuario inactivo" });
       return res.status(401).json({ error: "Usuario o contraseña incorrectos" });
     }
 
     const encontrado = resultado.rows[0];
+    registrarActividad(encontrado, "INICIAR_SESION", "CORRECTO");
     res.json({
       token: crearToken(encontrado),
       usuario: { username: encontrado.username, rol: encontrado.rol }
     });
   } catch (error) {
     console.error(error);
+    registrarActividad(null, "INICIAR_SESION", "ERROR");
     res.status(500).json({ error: "Error al iniciar sesión" });
   }
 });
@@ -121,6 +126,8 @@ app.post("/api/registro", async (req, res) => {
     );
 
     await cliente.query("COMMIT");
+    registrarActividad(null, "REGISTRAR_CLIENTE", "CORRECTO", { cuenta: correo });
+    sincronizarUsuariosJson().catch((e) => console.error("No se pudo actualizar usuarios_sneaker.json:", e.message));
     res.status(201).json({ mensaje: "Cuenta creada" });
   } catch (error) {
     await cliente.query("ROLLBACK");

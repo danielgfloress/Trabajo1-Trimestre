@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { pool } from "./db.js";
+import { registrarActividad } from "./actividad.js";
 
 const SECRETO = process.env.JWT_SECRET;
 
@@ -35,6 +36,7 @@ export function requierePermiso(operacion) {
                 [req.usuario.id_usuario, operacion]
             );
             if (!resultado.rows[0].permitido) {
+                registrarActividad(req.usuario, "ACCESO_DENEGADO", "RECHAZADO", { operacion, ruta: `${req.method} ${req.baseUrl || ""}${req.path || ""}` });
                 return res.status(403).json({ error: "No tienes permiso para esta operación" });
             }
             next();

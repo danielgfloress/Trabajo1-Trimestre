@@ -1,6 +1,8 @@
 import express from "express";
 import { pool } from "./db.js";
 import { autenticar, conUsuario } from "./auth.js";
+import { registrarActividad, clasificarError } from "./actividad.js";
+import { aCsv, guardarCsv } from "./exportaciones.js";
 
 const router = express.Router();
 
@@ -62,12 +64,16 @@ async function resumenPedido(cliente, idPedido) {
     return resumen.rows[0];
 }
 
-function responderError(res, error, mensaje) {
-    if (error.esDelCliente || error.code === "P0001" || error.code === "23514") {
-        return res.status(409).json({ error: error.message });
+// Responde a la web y deja constancia en el TXT de actividad.
+// Las reglas de la base de datos (P0001, CHECK) son un 409 y los permisos un 403.
+function responderError(req, res, error, mensaje, accion, extra = {}) {
+    const { estado, resultado, mensaje: mensajeBd } = clasificarError(error);
+    registrarActividad(req.usuario, accion, resultado, { ...extra, motivo: mensajeBd || "error interno" });
+    if (estado === 500) {
+        console.error(error);
+        return res.status(500).json({ error: mensaje });
     }
-    console.error(error);
-    res.status(500).json({ error: mensaje });
+    res.status(estado).json({ error: mensajeBd });
 }
 
 function texto(valor) {
@@ -162,6 +168,7 @@ router.post("/", async (req, res) => {
     try {
         const idCliente = await clienteDelUsuario(req.usuario.id_usuario);
         if (!idCliente) {
+            registrarActividad(req.usuario, "CREAR_PEDIDO", "RECHAZADO", { motivo: "la cuenta no es de cliente" });
             return res.status(403).json({ error: "Solo las cuentas de cliente pueden hacer pedidos" });
         }
 
@@ -187,9 +194,11 @@ router.post("/", async (req, res) => {
             return resumenPedido(cliente, idPedido);
         });
 
+        // Solo se marca como CORRECTO cuando conUsuario ha hecho el COMMIT.
+        registrarActividad(req.usuario, "CREAR_PEDIDO", "CORRECTO", { pedido: pedido.ref_odoo, estado: pedido.estado, pares: pedido.pares });
         res.status(201).json(pedido);
     } catch (error) {
-        responderError(res, error, "Error al registrar el pedido");
+        responderError(req, res, error, "Error al registrar el pedido", "CREAR_PEDIDO");
     }
 });
 
@@ -202,6 +211,7 @@ router.post("/custom", async (req, res) => {
     try {
         const idCliente = await clienteDelUsuario(req.usuario.id_usuario);
         if (!idCliente) {
+            registrarActividad(req.usuario, "CREAR_PEDIDO", "RECHAZADO", { motivo: "la cuenta no es de cliente" });
             return res.status(403).json({ error: "Solo las cuentas de cliente pueden hacer pedidos" });
         }
 
@@ -244,12 +254,120 @@ router.post("/custom", async (req, res) => {
             return resumenPedido(cliente, idPedido);
         });
 
+        registrarActividad(req.usuario, "CREAR_PEDIDO_CUSTOM", "CORRECTO", { pedido: pedido.ref_odoo, estado: pedido.estado, pares: pedido.pares });
         res.status(201).json(pedido);
     } catch (error) {
         if (error.code === "23514") {
             error.message = "La fecha no puede ser anterior a hoy";
         }
-        responderError(res, error, "Error al registrar el pedido Custom");
+        responderError(req, res, error, "Error al registrar el pedido Custom", "CREAR_PEDIDO_CUSTOM");
+    }
+});
+
+// ---------------------------------------------------------------------
+// Búsqueda de pedidos con filtros opcionales (cliente, modelo, estado, desde, hasta).
+// Los filtros vacíos no restringen. Los permisos y la restricción de un cliente a
+// sus propios pedidos los aplica PostgreSQL en fn_buscar_pedidos.
+// Con ?formato=csv devuelve el mismo resultado en CSV y guarda una copia.
+// ---------------------------------------------------------------------
+const FILTROS = ["cliente", "modelo", "estado", "desde", "hasta"];
+const COLUMNAS_BUSQUEDA = ["ref_odoo", "cliente", "fecha_pedido", "tipo", "estado", "pares", "importe_total"];
+
+function leerFiltros(query) {
+    const filtros = {};
+    for (const nombre of FILTROS) {
+        const valor = typeof query[nombre] === "string" ? query[nombre].trim() : "";
+        filtros[nombre] = valor === "" ? null : valor;
+    }
+    if (filtros.estado) filtros.estado = filtros.estado.toUpperCase();
+    for (const fecha of ["desde", "hasta"]) {
+        if (filtros[fecha] && !FECHA.test(filtros[fecha])) {
+            return { error: `La fecha "${fecha}" tiene que tener el formato AAAA-MM-DD` };
+        }
+    }
+    return { filtros };
+}
+
+// Descripción no sensible de los filtros para el TXT: nombre del filtro y,
+// solo para estado y fechas, también su valor.
+function describirFiltros(filtros) {
+    const usados = FILTROS.filter((f) => filtros[f] !== null)
+        .map((f) => (["estado", "desde", "hasta"].includes(f) ? `${f}:${filtros[f]}` : f));
+    return usados.length ? usados.join(",") : "ninguno";
+}
+
+router.get("/buscar", async (req, res) => {
+    const csv = req.query.formato === "csv";
+    const accion = csv ? "EXPORTAR_CSV_PEDIDOS" : "BUSCAR_PEDIDOS";
+    const { filtros, error: errorFiltros } = leerFiltros(req.query);
+    if (errorFiltros) {
+        registrarActividad(req.usuario, accion, "RECHAZADO", { motivo: errorFiltros });
+        return res.status(400).json({ error: errorFiltros });
+    }
+    const descripcion = describirFiltros(filtros);
+
+    try {
+        const resultado = await pool.query(
+            `SELECT ref_odoo, cliente, to_char(fecha_pedido, 'YYYY-MM-DD HH24:MI:SS') AS fecha_pedido,
+                    tipo, estado, pares, importe_total
+             FROM fn_buscar_pedidos($1, $2, $3, $4, $5, $6)`,
+            [req.usuario.id_usuario, filtros.cliente, filtros.modelo, filtros.estado, filtros.desde, filtros.hasta]
+        );
+        const filas = resultado.rows;
+
+        if (csv) {
+            const contenido = aCsv(COLUMNAS_BUSQUEDA, filas);
+            const fichero = guardarCsv("pedidos", contenido);
+            registrarActividad(req.usuario, accion, "CORRECTO", { filtros: descripcion, filas: filas.length, fichero: fichero.split(/[\\/]/).pop() });
+            res.setHeader("Content-Type", "text/csv; charset=utf-8");
+            res.setHeader("Content-Disposition", 'attachment; filename="pedidos.csv"');
+            return res.send(contenido);
+        }
+
+        registrarActividad(req.usuario, descripcion === "ninguno" ? "BUSCAR_PEDIDOS_SIN_FILTROS" : accion, "CORRECTO",
+            { filtros: descripcion, filas: filas.length });
+        res.json({
+            filtros,
+            total: filas.length,
+            mensaje: filas.length === 0 ? "No hay pedidos que cumplan los filtros" : null,
+            pedidos: filas
+        });
+    } catch (error) {
+        responderError(req, res, error, "Error al buscar los pedidos", accion, { filtros: descripcion });
+    }
+});
+
+// ---------------------------------------------------------------------
+// Cambiar el estado de un pedido: CONFIRMADO, CANCELADO o ENTREGADO.
+// El stock, la auditoría, los permisos y las transiciones válidas los controlan
+// los triggers; aquí solo se abre la transacción con el usuario de la sesión.
+// ---------------------------------------------------------------------
+const ACCION_ESTADO = { CONFIRMADO: "CONFIRMAR_PEDIDO", CANCELADO: "CANCELAR_PEDIDO", ENTREGADO: "ENTREGAR_PEDIDO" };
+
+router.put("/:ref/estado", async (req, res) => {
+    const ref = String(req.params.ref || "").toUpperCase();
+    const estado = String(req.body?.estado || "").trim().toUpperCase();
+    const accion = ACCION_ESTADO[estado] || "CAMBIAR_ESTADO_PEDIDO";
+    if (!/^SO[0-9]+$/.test(ref) || !ACCION_ESTADO[estado]) {
+        registrarActividad(req.usuario, accion, "RECHAZADO", { pedido: ref, motivo: "datos no válidos" });
+        return res.status(400).json({ error: "Indica un pedido válido y un estado: CONFIRMADO, CANCELADO o ENTREGADO" });
+    }
+
+    try {
+        const pedido = await conUsuario(req.usuario.id_usuario, async (cliente) => {
+            const cambio = await cliente.query(
+                "UPDATE pedidos SET estado = $1 WHERE ref_odoo = $2 RETURNING id_pedido",
+                [estado, ref]
+            );
+            if (cambio.rows.length === 0) {
+                throw errorDelCliente(`El pedido ${ref} no existe`);
+            }
+            return resumenPedido(cliente, cambio.rows[0].id_pedido);
+        });
+        registrarActividad(req.usuario, accion, "CORRECTO", { pedido: ref, estado: pedido.estado });
+        res.json(pedido);
+    } catch (error) {
+        responderError(req, res, error, "Error al cambiar el estado del pedido", accion, { pedido: ref });
     }
 });
 
