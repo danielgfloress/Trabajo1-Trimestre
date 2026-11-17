@@ -4,48 +4,48 @@
     "username": "admin",
     "rol": "ADMIN",
     "activo": true,
-    "fecha_creacion": "2026-11-17 21:15:06"
+    "fecha_creacion": "2026-11-17 21:20:19"
   },
   {
     "id_usuario": 2,
     "username": "comercial1",
     "rol": "COMERCIAL",
     "activo": true,
-    "fecha_creacion": "2026-11-17 21:15:06"
+    "fecha_creacion": "2026-11-17 21:20:19"
   },
   {
     "id_usuario": 3,
     "username": "laura.martin@example.com",
     "rol": "USUARIO",
     "activo": true,
-    "fecha_creacion": "2026-11-17 21:15:06"
+    "fecha_creacion": "2026-11-17 21:20:19"
   },
   {
-    "id_usuario": 4,
+    "id_usuario": 9,
     "username": "prueba_admin",
     "rol": "ADMIN",
     "activo": true,
-    "fecha_creacion": "2026-11-17 21:15:17"
+    "fecha_creacion": "2026-11-17 21:20:57"
   },
   {
-    "id_usuario": 5,
+    "id_usuario": 10,
     "username": "prueba_comercial",
     "rol": "COMERCIAL",
     "activo": true,
-    "fecha_creacion": "2026-11-17 21:15:17"
+    "fecha_creacion": "2026-11-17 21:20:57"
   },
   {
-    "id_usuario": 6,
+    "id_usuario": 11,
     "username": "prueba_cliente",
     "rol": "USUARIO",
     "activo": true,
-    "fecha_creacion": "2026-11-17 21:15:17"
+    "fecha_creacion": "2026-11-17 21:20:57"
   },
   {
-    "id_usuario": 7,
+    "id_usuario": 12,
     "username": "almacen1",
     "rol": "COMERCIAL",
     "activo": false,
-    "fecha_creacion": "2026-11-17 21:15:18"
+    "fecha_creacion": "2026-11-17 21:20:58"
   }
 ]

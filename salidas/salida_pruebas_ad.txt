@@ -41,17 +41,17 @@ NOTICE:  A. Línea talla 40: 10 pares x 99.90 = 999.00
 NOTICE:  A. Línea talla 42: 10 pares x 99.90 = 999.00
 NOTICE:  A. Stock Runner X antes:   38:20 39:14 40:12 42:20
 NOTICE:  A. Stock Runner X después: 38:10 39:4 40:2 42:10
-NOTICE:  A. Auditoría: 2026-11-17 21:15:16 | comercial1 | CREAR_PEDIDO | Pedido SO100 creado (CUSTOM) para el cliente 3
-NOTICE:  A. Auditoría: 2026-11-17 21:15:16 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 117)
-NOTICE:  A. Auditoría: 2026-11-17 21:15:16 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 349)
-NOTICE:  A. Auditoría: 2026-11-17 21:15:16 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 175)
-NOTICE:  A. Auditoría: 2026-11-17 21:15:16 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 233)
-NOTICE:  A. Auditoría: 2026-11-17 21:15:16 | comercial1 | CONFIRMAR_PEDIDO | Pedido SO100: BORRADOR -> CONFIRMADO
+NOTICE:  A. Auditoría: 2026-11-17 21:20:39 | comercial1 | CREAR_PEDIDO | Pedido SO100 creado (CUSTOM) para el cliente 3
+NOTICE:  A. Auditoría: 2026-11-17 21:20:39 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 117)
+NOTICE:  A. Auditoría: 2026-11-17 21:20:39 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 349)
+NOTICE:  A. Auditoría: 2026-11-17 21:20:39 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 175)
+NOTICE:  A. Auditoría: 2026-11-17 21:20:39 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 233)
+NOTICE:  A. Auditoría: 2026-11-17 21:20:39 | comercial1 | CONFIRMAR_PEDIDO | Pedido SO100: BORRADOR -> CONFIRMADO
 NOTICE:  B. Rechazado: Stock insuficiente para Runner X Blanco talla 40: se piden 15 y hay 2
 NOTICE:  B. Sin cambios parciales: talla 36 = 20 (sigue igual), talla 40 = 2, ¿existe SO101? 0
 NOTICE:  B. Ningún stock negativo: 0
 NOTICE:  C. Estado: CANCELADO. Stock Runner X tras cancelar: 38:20 39:14 40:12 42:20
-NOTICE:  C. Auditoría: 2026-11-17 21:15:16 | CANCELAR_PEDIDO | Pedido SO100: CONFIRMADO -> CANCELADO
+NOTICE:  C. Auditoría: 2026-11-17 21:20:39 | CANCELAR_PEDIDO | Pedido SO100: CONFIRMADO -> CANCELADO
 NOTICE:  Cambios deshechos. ¿Existe SO100? 0
 DO
 BEGIN
@@ -77,240 +77,41 @@ ROLLBACK
  Después del ROLLBACK | BORRADOR     |                53 |           20
 (1 row)
 
-ERROR:  syntax error at or near "RECORD"
-LINE 2:  v_fila RECORD;
-                ^
-ERROR:  syntax error at or near "RAISE"
-LINE 2:  RAISE NOTICE '--- PRUEBA 10: inicio de sesión por rol ---';
-         ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 2:   PERFORM fn_crear_usuario('prueba_admin', 'Clave.Prueba1', ...
-          ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 1: PERFORM fn_crear_usuario('prueba_comercial', 'Clave.Prueba2'...
-        ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 1: PERFORM fn_crear_usuario('prueba_usuario', 'Clave.Prueba3', ...
-        ^
-ERROR:  syntax error at or near "FOR"
-LINE 1: FOR v_fila IN
-        ^
-ERROR:  syntax error at or near "LOOP"
-LINE 1: END LOOP;
-            ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Login prueba_admin con contraseña errónea -> %...
-        ^
-UPDATE 0
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Login prueba_comercial desactivado -> % filas'...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Hash guardado (inicio): %...', (SELECT LEFT(pa...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE EXCEPTION 'deshacer';
-        ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-ERROR:  syntax error at or near "IF"
-LINE 1: END IF;
-            ^
-COMMIT
-WARNING:  there is no transaction in progress
-ERROR:  syntax error at or near "$$;
-
--- PRUEBA 11. Gestión de usuarios y permisos
--- admin crea, cambia de rol y desactiva un usuario, cada paso queda en log_eventos
--- con su usuario y su hora. comercial1 intenta lo mismo y se rechaza sin cambios.
-DO $$"
-LINE 1: END $$;
-            ^
-ERROR:  syntax error at or near "v_comercial"
-LINE 1: v_comercial INTEGER;
-        ^
-ERROR:  syntax error at or near "v_nuevo"
-LINE 1: v_nuevo INTEGER;
-        ^
-ERROR:  syntax error at or near "v_primer_evento"
-LINE 1: v_primer_evento INTEGER;
-        ^
-ERROR:  syntax error at or near "v_fila"
-LINE 1: v_fila RECORD;
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 2:  RAISE NOTICE '--- PRUEBA 11: gestión de usuarios ---';
-         ^
-SELECT 1
-SELECT 1
-ERROR:  syntax error at or near "SELECT"
-LINE 2:   SELECT COALESCE(MAX(id_evento), 0) INTO v_primer_evento FR...
-          ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 1: PERFORM set_config('app.id_usuario', v_admin::TEXT, true);
-        ^
-ERROR:  syntax error at or near "v_nuevo"
-LINE 1: v_nuevo := fn_crear_usuario('almacen1', 'Almacen.2026', 'COM...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'JSON tras crear: %', (SELECT json_agg(e ->> 'u...
-        ^
-ERROR:  column "v_nuevo" does not exist
-LINE 1: ...oles WHERE nombre_rol = 'ADMIN') WHERE id_usuario = v_nuevo;
-                                                               ^
-ERROR:  column "v_nuevo" does not exist
-LINE 1: ... WHERE nombre_rol = 'COMERCIAL') WHERE id_usuario = v_nuevo;
-                                                               ^
-ERROR:  column "v_nuevo" does not exist
-LINE 1: ...DATE usuarios SET activo = FALSE WHERE id_usuario = v_nuevo;
-                                                               ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'JSON tras desactivar: %', (SELECT json_agg(e -...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE '¿El JSON contiene algún hash? %', (fn_exportar...
-        ^
-ERROR:  syntax error at or near "FOR"
-LINE 1: FOR v_fila IN
-        ^
-ERROR:  syntax error at or near "LOOP"
-LINE 1: END LOOP;
-            ^
-ERROR:  syntax error at or near "UPDATE"
-LINE 2:    UPDATE permisos_rol SET permitido = FALSE
-           ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'ERROR EN LA PRUEBA: el ADMIN ha perdido un per...
-        ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-COMMIT
-WARNING:  there is no transaction in progress
-ERROR:  syntax error at or near "PERFORM"
-LINE 1: PERFORM set_config('app.id_usuario', v_comercial::TEXT, true...
-        ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 2:    PERFORM fn_crear_usuario('intruso', 'Intruso.2026', 'ADMI...
-           ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'ERROR EN LA PRUEBA: comercial1 ha creado un us...
-        ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-WARNING:  there is no transaction in progress
-COMMIT
-ERROR:  syntax error at or near "PERFORM"
-LINE 2:    PERFORM fn_exportar_usuarios(v_comercial);
-           ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'ERROR EN LA PRUEBA: comercial1 ha exportado lo...
-        ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-WARNING:  there is no transaction in progress
-COMMIT
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE '¿Existe intruso? %', (SELECT COUNT(*) FROM usu...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE EXCEPTION 'deshacer';
-        ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-ERROR:  syntax error at or near "IF"
-LINE 1: END IF;
-            ^
-WARNING:  there is no transaction in progress
-ERROR:  syntax error at or near "$$;
-
--- PRUEBA 12. Búsqueda con filtros y permisos en PostgreSQL
-DO $$"
-LINE 1: END $$;
-            ^
-COMMIT
-ERROR:  syntax error at or near "v_laura"
-LINE 1: v_laura INTEGER;
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 2:  RAISE NOTICE '--- PRUEBA 12: búsqueda con filtros ---';
-         ^
-ERROR:  relation "v_comercial" already exists
-SELECT 1
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Sin filtros: % pedidos (SQL directo: %)', (SEL...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Cliente Halcones + ENTREGADO: %', (SELECT stri...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Modelo Runner X + entre junio y julio: %', (SE...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Sin coincidencias: % filas', (SELECT COUNT(*) ...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Laura sin filtros (solo los suyos): %', (SELEC...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Laura pidiendo los de Club Halcones: % filas',...
-        ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 2:   PERFORM * FROM fn_buscar_pedidos(v_comercial, NULL, NULL, ...
-          ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-WARNING:  there is no transaction in progress
-COMMIT
-ERROR:  syntax error at or near "PERFORM"
-LINE 2:   PERFORM * FROM fn_buscar_pedidos(NULL);
-          ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-WARNING:  there is no transaction in progress
-COMMIT
-ERROR:  syntax error at or near "$$;
-
--- PRUEBA 13. Indicadores y stock bajo comparados con SQL directo
-DO $$"
-LINE 1: END $$;
-            ^
-ERROR:  syntax error at or near "v_i"
-LINE 1: v_i RECORD;
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 2:  RAISE NOTICE '--- PRUEBA 13: indicadores y stock bajo ---';
-         ^
-ERROR:  relation "v_comercial" already exists
-ERROR:  column "v_comercial" does not exist
-LINE 1: SELECT * INTO v_i FROM fn_indicadores(v_comercial);
-                                              ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'fn_indicadores: % pedidos, % válidos, % pares,...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'SQL directo:    % pedidos, % válidos, % pares,...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Stock bajo con umbral 10: %', (SELECT string_a...
-        ^
-ERROR:  syntax error at or near "RAISE"
-LINE 1: RAISE NOTICE 'Stock bajo con el mínimo de cada talla: %', (S...
-        ^
-ERROR:  syntax error at or near "PERFORM"
-LINE 2:   PERFORM * FROM fn_indicadores((SELECT id_usuario FROM usua...
-          ^
-ERROR:  syntax error at or near "EXCEPTION"
-LINE 1: EXCEPTION WHEN raise_exception THEN
-        ^
-COMMIT
-WARNING:  there is no transaction in progress
-ERROR:  unterminated dollar-quoted string at or near "$$;"
-LINE 1: END $$;
-            ^
+NOTICE:  --- PRUEBA 10: inicio de sesión por rol ---
+NOTICE:  Login prueba_admin -> rol ADMIN
+NOTICE:  Login prueba_comercial -> rol COMERCIAL
+NOTICE:  Login prueba_usuario -> rol USUARIO
+NOTICE:  Login prueba_admin con contraseña errónea -> 0 filas
+NOTICE:  Login prueba_comercial desactivado -> 0 filas
+NOTICE:  Hash guardado (inicio): $2a$10$...
+DO
+NOTICE:  --- PRUEBA 11: gestión de usuarios ---
+NOTICE:  JSON tras crear: ["admin", "comercial1", "laura.martin@example.com", "almacen1"]
+NOTICE:  JSON tras desactivar: ["admin", "comercial1", "laura.martin@example.com", "almacen1 (inactivo)"]
+NOTICE:  ¿El JSON contiene algún hash? f
+NOTICE:  Auditoría: 2026-11-17 21:20:39 | admin | CREAR_USUARIO | Usuario almacen1 creado con el rol COMERCIAL
+NOTICE:  Auditoría: 2026-11-17 21:20:39 | admin | CAMBIAR_ROL | Usuario almacen1: rol COMERCIAL -> ADMIN
+NOTICE:  Auditoría: 2026-11-17 21:20:39 | admin | CAMBIAR_ROL | Usuario almacen1: rol ADMIN -> COMERCIAL
+NOTICE:  Auditoría: 2026-11-17 21:20:39 | admin | DESACTIVAR_USUARIO | Usuario almacen1 desactivado
+NOTICE:  Rechazado quitar permisos al ADMIN: El rol ADMIN tiene que conservar todos sus permisos
+NOTICE:  Rechazado crear usuario: Permiso denegado: el usuario 2 no puede realizar la operación USUARIOS_GESTIONAR
+NOTICE:  Rechazado exportar usuarios: Permiso denegado: el usuario 2 no puede realizar la operación USUARIOS_EXPORTAR
+NOTICE:  ¿Existe intruso? 0
+DO
+NOTICE:  --- PRUEBA 12: búsqueda con filtros ---
+NOTICE:  Sin filtros: 12 pedidos (SQL directo: 12)
+NOTICE:  Cliente Halcones + ENTREGADO: SO007, SO003
+NOTICE:  Modelo Runner X + entre junio y julio: SO004, SO003
+NOTICE:  Sin coincidencias: 0 filas
+NOTICE:  Laura sin filtros (solo los suyos): SO009, SO002
+NOTICE:  Laura pidiendo los de Club Halcones: 0 filas
+NOTICE:  Consulta incorrecta: El estado PERDIDO no existe
+NOTICE:  Sin sesión: Permiso denegado: el usuario (sin sesión) no puede realizar la operación PEDIDO_CONSULTAR
+DO
+NOTICE:  --- PRUEBA 13: indicadores y stock bajo ---
+NOTICE:  fn_indicadores: 12 pedidos, 8 válidos, 96 pares, 12876.88 €, estados B/C/E/X = 2/3/5/2
+NOTICE:  SQL directo:    12 pedidos, 8 válidos, 96 pares, 12876.88 €
+NOTICE:  Stock bajo con umbral 10: Samba OG 38 (2); OMN1S 45 (3); Copa Pure II League FG 42 (10); Runner X 41 (10)
+NOTICE:  Stock bajo con el mínimo de cada talla: Samba OG 38 (2); OMN1S 45 (3)
+NOTICE:  Laura pide los indicadores: Permiso denegado: el usuario 3 no puede realizar la operación INDICADORES_VER
+DO

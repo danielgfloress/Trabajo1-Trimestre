@@ -1,34 +1,34 @@
-2026-11-17 21:15:17 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=INICIAR_SESION | resultado=CORRECTO
-2026-11-17 21:15:17 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=INICIAR_SESION | resultado=CORRECTO
-2026-11-17 21:15:17 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=INICIAR_SESION | resultado=CORRECTO
-2026-11-17 21:15:18 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=prueba_comercial | motivo=credenciales no válidas o usuario inactivo
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,estado:ENTREGADO | filas=2
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,modelo | filas=0
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO,desde:2026-09-01,hasta:2026-10-31 | filas=2
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | filtros=estado:PERDIDO | motivo=El estado PERDIDO no existe
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | motivo=La fecha "desde" tiene que tener el formato AAAA-MM-DD
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=2
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente | filas=0
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=VER_INDICADORES | resultado=RECHAZADO | motivo=Permiso denegado: el usuario 6 no puede realizar la operación INDICADORES_VER
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_EXPORTAR | ruta=GET /api/usuarios/exportar
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CONFIRMADO | pares=3
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO | filas=1
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=RECHAZADO | motivo=Stock insuficiente para Campus 00s Gris y blanco talla 45: se piden 50 y hay 20
-2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=CANCELAR_PEDIDO | resultado=RECHAZADO | pedido=SO013 | motivo=Permiso denegado: el usuario 6 no puede realizar la operación PEDIDO_CANCELAR
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=CANCELAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CANCELADO
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=EXPORTAR_USUARIOS_JSON | resultado=CORRECTO | usuarios=6 | fichero=usuarios_sneaker.json
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CREAR_USUARIO | resultado=CORRECTO | usuario_creado=almacen1 | rol_asignado=COMERCIAL
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=DESACTIVAR_USUARIO | resultado=CORRECTO | usuario_afectado=7
-2026-11-17 21:15:18 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=almacen1 | motivo=credenciales no válidas o usuario inactivo
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CREAR_USUARIO | resultado=RECHAZADO | usuario_creado=almacen1 | motivo=Ya existe un usuario con ese nombre
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_GESTIONAR | ruta=POST /api/usuarios/
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=true
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=false
-2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=RECHAZADO | rol=ADMIN | operacion=USUARIOS_GESTIONAR | motivo=El rol ADMIN tiene que conservar todos sus permisos
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=VER_INDICADORES | resultado=CORRECTO
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=10 | filas=4
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=stock mínimo | filas=2
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5
-2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=EXPORTAR_CSV_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5 | fichero=pedidos_20261117_211518.csv
+2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=INICIAR_SESION | resultado=CORRECTO
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=INICIAR_SESION | resultado=CORRECTO
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=INICIAR_SESION | resultado=CORRECTO
+2026-11-17 21:20:58 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=prueba_comercial | motivo=credenciales no válidas o usuario inactivo
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,estado:ENTREGADO | filas=2
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,modelo | filas=0
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO,desde:2026-09-01,hasta:2026-10-31 | filas=2
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | filtros=estado:PERDIDO | motivo=El estado PERDIDO no existe
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | motivo=La fecha "desde" tiene que tener el formato AAAA-MM-DD
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=2
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente | filas=0
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=VER_INDICADORES | resultado=RECHAZADO | motivo=Permiso denegado: el usuario 11 no puede realizar la operación INDICADORES_VER
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_EXPORTAR | ruta=GET /api/usuarios/exportar
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CONFIRMADO | pares=3
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO | filas=1
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=RECHAZADO | motivo=Stock insuficiente para Campus 00s Gris y blanco talla 45: se piden 50 y hay 20
+2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=CANCELAR_PEDIDO | resultado=RECHAZADO | pedido=SO013 | motivo=Permiso denegado: el usuario 11 no puede realizar la operación PEDIDO_CANCELAR
+2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=CANCELAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CANCELADO
+2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=EXPORTAR_USUARIOS_JSON | resultado=CORRECTO | usuarios=6 | fichero=usuarios_sneaker.json
+2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CREAR_USUARIO | resultado=CORRECTO | usuario_creado=almacen1 | rol_asignado=COMERCIAL
+2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=DESACTIVAR_USUARIO | resultado=CORRECTO | usuario_afectado=12
+2026-11-17 21:20:58 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=almacen1 | motivo=credenciales no válidas o usuario inactivo
+2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CREAR_USUARIO | resultado=RECHAZADO | usuario_creado=almacen1 | motivo=Ya existe un usuario con ese nombre
+2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_GESTIONAR | ruta=POST /api/usuarios/
+2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=true
+2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=false
+2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=RECHAZADO | rol=ADMIN | operacion=USUARIOS_GESTIONAR | motivo=El rol ADMIN tiene que conservar todos sus permisos
+2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=VER_INDICADORES | resultado=CORRECTO
+2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=10 | filas=4
+2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=stock mínimo | filas=2
+2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5
+2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=EXPORTAR_CSV_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5 | fichero=pedidos_20261117_212059.csv

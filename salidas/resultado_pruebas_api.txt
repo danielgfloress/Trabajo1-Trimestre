@@ -1,98 +1,98 @@
 == Inicio de sesión por rol (3.8) ==
  prueba_admin: HTTP 200 rol=ADMIN
-   TXT +1 (login): 2026-11-17 21:15:17 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=INICIAR_SESION | resultado=CORRECTO
+   TXT +1 (login): 2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=INICIAR_SESION | resultado=CORRECTO
  prueba_comercial: HTTP 200 rol=COMERCIAL
-   TXT +1 (login): 2026-11-17 21:15:17 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=INICIAR_SESION | resultado=CORRECTO
+   TXT +1 (login): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=INICIAR_SESION | resultado=CORRECTO
  prueba_cliente: HTTP 200 rol=USUARIO
-   TXT +1 (login): 2026-11-17 21:15:17 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=INICIAR_SESION | resultado=CORRECTO
+   TXT +1 (login): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=INICIAR_SESION | resultado=CORRECTO
  prueba_comercial con contraseña errónea: HTTP 401 Usuario o contraseña incorrectos
-   TXT +1 (login fallido): 2026-11-17 21:15:18 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=prueba_comercial | motivo=credenciales no válidas o usuario inactivo
+   TXT +1 (login fallido): 2026-11-17 21:20:58 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=prueba_comercial | motivo=credenciales no válidas o usuario inactivo
 
 == Prueba G / E: tres consultas sucesivas (prueba_comercial) ==
  sin filtros: HTTP 200, 12 pedidos; SQL directo: 12
-   TXT +1 (consulta 1): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
+   TXT +1 (consulta 1): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
  cliente=Halcones + estado=ENTREGADO: 2 -> SO007, SO003; SQL: SO003, SO007
-   TXT +1 (consulta 2): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,estado:ENTREGADO | filas=2
+   TXT +1 (consulta 2): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,estado:ENTREGADO | filas=2
  sin coincidencias: total=0, mensaje="No hay pedidos que cumplan los filtros"
-   TXT +1 (consulta 3): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,modelo | filas=0
+   TXT +1 (consulta 3): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente,modelo | filas=0
  periodo sep-oct + CONFIRMADO: SO010, SO008
-   TXT +1 (consulta 4): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO,desde:2026-09-01,hasta:2026-10-31 | filas=2
+   TXT +1 (consulta 4): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO,desde:2026-09-01,hasta:2026-10-31 | filas=2
  limpiar filtros (sin filtros otra vez): 12 pedidos
-   TXT +1 (limpiar): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
+   TXT +1 (limpiar): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=12
  consulta incorrecta (estado inexistente): HTTP 409 El estado PERDIDO no existe
-   TXT +1 (incorrecta): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | filtros=estado:PERDIDO | motivo=El estado PERDIDO no existe
+   TXT +1 (incorrecta): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | filtros=estado:PERDIDO | motivo=El estado PERDIDO no existe
  fecha mal escrita: HTTP 400 La fecha "desde" tiene que tener el formato AAAA-MM-DD
-   TXT +1 (fecha mal): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | motivo=La fecha "desde" tiene que tener el formato AAAA-MM-DD
+   TXT +1 (fecha mal): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=RECHAZADO | motivo=La fecha "desde" tiene que tener el formato AAAA-MM-DD
 
 == Prueba F: perfil restringido ==
  prueba_cliente sin filtros: 2 pedidos (SO009 Laura Martín Gil; SO002 Laura Martín Gil)
-   TXT +1 (laura busca): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=2
+   TXT +1 (laura busca): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=BUSCAR_PEDIDOS_SIN_FILTROS | resultado=CORRECTO | filtros=ninguno | filas=2
  prueba_cliente pide pedidos de Club Halcones: 0 (No hay pedidos que cumplan los filtros)
-   TXT +1 (laura otro cliente): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente | filas=0
- prueba_cliente pide indicadores: HTTP 403 Permiso denegado: el usuario 6 no puede realizar la operación INDICADORES_VER
-   TXT +1 (laura indicadores): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=VER_INDICADORES | resultado=RECHAZADO | motivo=Permiso denegado: el usuario 6 no puede realizar la operación INDICADORES_VER
+   TXT +1 (laura otro cliente): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=cliente | filas=0
+ prueba_cliente pide indicadores: HTTP 403 Permiso denegado: el usuario 11 no puede realizar la operación INDICADORES_VER
+   TXT +1 (laura indicadores): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=VER_INDICADORES | resultado=RECHAZADO | motivo=Permiso denegado: el usuario 11 no puede realizar la operación INDICADORES_VER
  prueba_comercial exporta usuarios: HTTP 403 No tienes permiso para esta operación
-   TXT +1 (comercial exportar): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_EXPORTAR | ruta=GET /api/usuarios/exportar
+   TXT +1 (comercial exportar): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_EXPORTAR | ruta=GET /api/usuarios/exportar
 
 == Prueba H: pedido desde la aplicación y error forzado ==
  prueba_cliente crea pedido: HTTP 201 {"ref_odoo":"SO013","estado":"CONFIRMADO","importe_total":"269.70","pares":"3"}
-   TXT +1 (crear pedido): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CONFIRMADO | pares=3
+   TXT +1 (crear pedido): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CONFIRMADO | pares=3
  tablas: SO013 CONFIRMADO 269.70; líneas: 40x2=179.80, 41x1=89.90
  stock Runner X 40: 12 -> 10
  log_eventos nuevos: 4
-   2026-11-17 21:15:18 | prueba_cliente | CREAR_PEDIDO | Pedido SO013 creado (ESTANDAR) para el cliente 6
-   2026-11-17 21:15:18 | prueba_cliente | ANADIR_LINEA | Línea añadida al pedido 16: 2 pares (almacén 233)
-   2026-11-17 21:15:18 | prueba_cliente | ANADIR_LINEA | Línea añadida al pedido 16: 1 pares (almacén 291)
-   2026-11-17 21:15:18 | prueba_cliente | CONFIRMAR_PEDIDO | Pedido SO013: BORRADOR -> CONFIRMADO
+   2026-11-17 21:20:58 | prueba_cliente | CREAR_PEDIDO | Pedido SO013 creado (ESTANDAR) para el cliente 6
+   2026-11-17 21:20:58 | prueba_cliente | ANADIR_LINEA | Línea añadida al pedido 16: 2 pares (almacén 233)
+   2026-11-17 21:20:58 | prueba_cliente | ANADIR_LINEA | Línea añadida al pedido 16: 1 pares (almacén 291)
+   2026-11-17 21:20:58 | prueba_cliente | CONFIRMAR_PEDIDO | Pedido SO013: BORRADOR -> CONFIRMADO
  consulta visual de prueba_cliente (CONFIRMADO): SO013
-   TXT +1 (buscar tras crear): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO | filas=1
+   TXT +1 (buscar tras crear): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:CONFIRMADO | filas=1
  error forzado (50 pares sin stock): HTTP 409 Stock insuficiente para Campus 00s Gris y blanco talla 45: se piden 50 y hay 20
-   TXT +1 (error forzado): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=RECHAZADO | motivo=Stock insuficiente para Campus 00s Gris y blanco talla 45: se piden 50 y hay 20
+   TXT +1 (error forzado): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=CREAR_PEDIDO | resultado=RECHAZADO | motivo=Stock insuficiente para Campus 00s Gris y blanco talla 45: se piden 50 y hay 20
  pedidos 13 -> 13, log_eventos +0
- prueba_cliente intenta cancelar SO013: HTTP 403 Permiso denegado: el usuario 6 no puede realizar la operación PEDIDO_CANCELAR
-   TXT +1 (cancelar denegado): 2026-11-17 21:15:18 | usuario=prueba_cliente (id 6) | rol=USUARIO | accion=CANCELAR_PEDIDO | resultado=RECHAZADO | pedido=SO013 | motivo=Permiso denegado: el usuario 6 no puede realizar la operación PEDIDO_CANCELAR
+ prueba_cliente intenta cancelar SO013: HTTP 403 Permiso denegado: el usuario 11 no puede realizar la operación PEDIDO_CANCELAR
+   TXT +1 (cancelar denegado): 2026-11-17 21:20:58 | usuario=prueba_cliente (id 11) | rol=USUARIO | accion=CANCELAR_PEDIDO | resultado=RECHAZADO | pedido=SO013 | motivo=Permiso denegado: el usuario 11 no puede realizar la operación PEDIDO_CANCELAR
  prueba_comercial cancela SO013: HTTP 200 estado=CANCELADO; stock Runner X 40 = 12
-   TXT +1 (cancelar): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=CANCELAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CANCELADO
-   2026-11-17 21:15:18 | prueba_comercial | CANCELAR_PEDIDO | Pedido SO013: CONFIRMADO -> CANCELADO
+   TXT +1 (cancelar): 2026-11-17 21:20:58 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=CANCELAR_PEDIDO | resultado=CORRECTO | pedido=SO013 | estado=CANCELADO
+   2026-11-17 21:20:58 | prueba_comercial | CANCELAR_PEDIDO | Pedido SO013: CONFIRMADO -> CANCELADO
 
 == Prueba I: usuarios y JSON ==
  prueba_admin exporta: HTTP 200 {"fichero":"usuarios_sneaker.json","usuarios":6}
-   TXT +1 (exportar): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=EXPORTAR_USUARIOS_JSON | resultado=CORRECTO | usuarios=6 | fichero=usuarios_sneaker.json
- prueba_admin crea almacen1: HTTP 201 id=7 json_actualizado=true
-   TXT +1 (crear usuario): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CREAR_USUARIO | resultado=CORRECTO | usuario_creado=almacen1 | rol_asignado=COMERCIAL
+   TXT +1 (exportar): 2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=EXPORTAR_USUARIOS_JSON | resultado=CORRECTO | usuarios=6 | fichero=usuarios_sneaker.json
+ prueba_admin crea almacen1: HTTP 201 id=12 json_actualizado=true
+   TXT +1 (crear usuario): 2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CREAR_USUARIO | resultado=CORRECTO | usuario_creado=almacen1 | rol_asignado=COMERCIAL
  JSON: 7 usuarios -> admin, comercial1, laura.martin@example.com, prueba_admin, prueba_comercial, prueba_cliente, almacen1
  prueba_admin desactiva almacen1: HTTP 200 activo=false
-   TXT +1 (desactivar): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=DESACTIVAR_USUARIO | resultado=CORRECTO | usuario_afectado=7
+   TXT +1 (desactivar): 2026-11-17 21:20:58 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=DESACTIVAR_USUARIO | resultado=CORRECTO | usuario_afectado=12
  JSON: 7 usuarios -> admin, comercial1, laura.martin@example.com, prueba_admin, prueba_comercial, prueba_cliente, almacen1 (inactivo)
  ¿contiene password/hash? no
  almacen1 desactivado intenta entrar: HTTP 401
-   TXT +1 (login inactivo): 2026-11-17 21:15:18 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=almacen1 | motivo=credenciales no válidas o usuario inactivo
+   TXT +1 (login inactivo): 2026-11-17 21:20:58 | usuario=(sin sesión) | rol=- | accion=INICIAR_SESION | resultado=RECHAZADO | intento=almacen1 | motivo=credenciales no válidas o usuario inactivo
  crear de nuevo almacen1: HTTP 409 Ya existe un usuario con ese nombre
-   TXT +1 (duplicado): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CREAR_USUARIO | resultado=RECHAZADO | usuario_creado=almacen1 | motivo=Ya existe un usuario con ese nombre
+   TXT +1 (duplicado): 2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CREAR_USUARIO | resultado=RECHAZADO | usuario_creado=almacen1 | motivo=Ya existe un usuario con ese nombre
  prueba_comercial intenta crear un usuario: HTTP 403 No tienes permiso para esta operación; existe 'intruso' en BD: 0
-   TXT +1 (crear denegado): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_GESTIONAR | ruta=POST /api/usuarios/
+   TXT +1 (crear denegado): 2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=ACCESO_DENEGADO | resultado=RECHAZADO | operacion=USUARIOS_GESTIONAR | ruta=POST /api/usuarios/
  prueba_admin concede AUDITORIA_VER a COMERCIAL: HTTP 200 {"rol":"COMERCIAL","operacion":"AUDITORIA_VER","permitido":true}
-   TXT +1 (permiso): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=true
+   TXT +1 (permiso): 2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=true
  y se lo vuelve a quitar: HTTP 200
-   TXT +1 (permiso): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=false
+   TXT +1 (permiso): 2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=CORRECTO | rol=COMERCIAL | operacion=AUDITORIA_VER | permitido=false
  prueba_admin intenta quitarse USUARIOS_GESTIONAR: HTTP 409 El rol ADMIN tiene que conservar todos sus permisos
-   TXT +1 (permiso admin): 2026-11-17 21:15:18 | usuario=prueba_admin (id 4) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=RECHAZADO | rol=ADMIN | operacion=USUARIOS_GESTIONAR | motivo=El rol ADMIN tiene que conservar todos sus permisos
-   2026-11-17 21:15:18 | prueba_admin | CREAR_USUARIO | Usuario almacen1 creado con el rol COMERCIAL
-   2026-11-17 21:15:18 | prueba_admin | DESACTIVAR_USUARIO | Usuario almacen1 desactivado
-   2026-11-17 21:15:18 | prueba_admin | CAMBIAR_PERMISO | Permiso AUDITORIA_VER del rol COMERCIAL: no -> sí
-   2026-11-17 21:15:18 | prueba_admin | CAMBIAR_PERMISO | Permiso AUDITORIA_VER del rol COMERCIAL: sí -> no
+   TXT +1 (permiso admin): 2026-11-17 21:20:59 | usuario=prueba_admin (id 9) | rol=ADMIN | accion=CAMBIAR_PERMISO | resultado=RECHAZADO | rol=ADMIN | operacion=USUARIOS_GESTIONAR | motivo=El rol ADMIN tiene que conservar todos sus permisos
+   2026-11-17 21:20:58 | prueba_admin | CREAR_USUARIO | Usuario almacen1 creado con el rol COMERCIAL
+   2026-11-17 21:20:58 | prueba_admin | DESACTIVAR_USUARIO | Usuario almacen1 desactivado
+   2026-11-17 21:20:59 | prueba_admin | CAMBIAR_PERMISO | Permiso AUDITORIA_VER del rol COMERCIAL: no -> sí
+   2026-11-17 21:20:59 | prueba_admin | CAMBIAR_PERMISO | Permiso AUDITORIA_VER del rol COMERCIAL: sí -> no
 
 == Prueba J: indicadores, stock bajo y CSV ==
  indicadores API: {"pedidos_totales":"13","pedidos_validos":"8","pares_vendidos":"96","importe_ventas":"12876.88","borrador":"2","confirmado":"3","entregado":"5","cancelado":"3"}
-   TXT +1 (indicadores): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=VER_INDICADORES | resultado=CORRECTO
+   TXT +1 (indicadores): 2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=VER_INDICADORES | resultado=CORRECTO
  SQL directo: pedidos=13 validos=8 pares=96 importe=12876.88
  stock bajo umbral 10: 4 filas -> Samba OG 38 (2); OMN1S 45 (3); Copa Pure II League FG 42 (10); Runner X 41 (10)
-   TXT +1 (stock bajo): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=10 | filas=4
+   TXT +1 (stock bajo): 2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=10 | filas=4
  stock bajo con el mínimo de cada talla: 2 filas
-   TXT +1 (stock bajo min): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=stock mínimo | filas=2
+   TXT +1 (stock bajo min): 2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=CONSULTAR_STOCK_BAJO | resultado=CORRECTO | umbral=stock mínimo | filas=2
  CSV: HTTP 200 text/csv; charset=utf-8
-   TXT +2 (csv): 2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5
-                2026-11-17 21:15:18 | usuario=prueba_comercial (id 5) | rol=COMERCIAL | accion=EXPORTAR_CSV_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5 | fichero=pedidos_20261117_211518.csv
+   TXT +2 (csv): 2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=BUSCAR_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5
+                2026-11-17 21:20:59 | usuario=prueba_comercial (id 10) | rol=COMERCIAL | accion=EXPORTAR_CSV_PEDIDOS | resultado=CORRECTO | filtros=estado:ENTREGADO,desde:2026-06-01 | filas=5 | fichero=pedidos_20261117_212059.csv
    ref_odoo,cliente,fecha_pedido,tipo,estado,pares,importe_total
    SO007,Club Halcones,2026-08-19 18:20:00,ESTANDAR,ENTREGADO,2,239.98
    SO004,Running Crew Sur,2026-07-08 16:00:00,ESTANDAR,ENTREGADO,7,929.57
