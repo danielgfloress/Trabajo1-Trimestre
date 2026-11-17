@@ -1,15 +1,3 @@
-// D3 Kicks · Pruebas de la aplicación (E, F, G, H, I y J del enunciado) contra la API.
-// No hace falta tener Node instalado: se ejecuta DENTRO del contenedor de la API.
-// Desde la raíz del repositorio, con los contenedores en marcha:
-//   docker exec -i d3kicks-api node --input-type=module - < acesso-a-datos/pruebas_api.mjs
-// Con las contraseñas reales de los usuarios de prueba se usan admin, comercial1 y laura:
-//   docker exec -i -e CLAVE_ADMIN='...' -e CLAVE_COMERCIAL='...' -e CLAVE_LAURA='...' \
-//     d3kicks-api node --input-type=module - < acesso-a-datos/pruebas_api.mjs
-// Sin contraseñas, el programa crea tres usuarios temporales (prueba_admin, prueba_comercial y
-// prueba_cliente, este unido al cliente CLI006) con contraseñas de prueba.
-// OJO: a diferencia de pruebas_ad.sql, estas pruebas SÍ cambian los datos (crean el pedido
-// SO013 y el usuario almacen1). Para volver al estado inicial: docker compose down -v y up.
-// El informe se guarda en salidas/resultado_pruebas_api.txt.
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
@@ -19,13 +7,13 @@ const SALIDAS = process.env.SALIDAS || process.env.SALIDAS_DIR || path.resolve("
 const TXT = path.join(SALIDAS, "actividad_sneaker.txt");
 const JSONF = path.join(SALIDAS, "usuarios_sneaker.json");
 
-// Consultas SQL de comprobación: dentro del contenedor con la librería pg de la API;
-// fuera, con psql a través de docker exec.
-let sql, cerrarSql = async () => {};
+let sql, cerrarSql = async () => { };
 if (process.env.DB_HOST && !process.env.PSQL) {
   const pg = (await import("pg")).default;
-  const pool = new pg.Pool({ host: process.env.DB_HOST, port: Number(process.env.DB_PORT), user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD, database: process.env.DB_NAME });
+  const pool = new pg.Pool({
+    host: process.env.DB_HOST, port: Number(process.env.DB_PORT), user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD, database: process.env.DB_NAME
+  });
   sql = async (q) => {
     const r = await pool.query(q);
     const ultimo = Array.isArray(r) ? r[r.length - 1] : r;

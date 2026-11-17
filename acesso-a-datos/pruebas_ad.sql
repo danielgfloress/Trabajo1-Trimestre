@@ -1,13 +1,3 @@
--- =====================================================================
--- D3 Kicks · Pruebas de Acceso a Datos
--- Cada prueba es un bloque DO que muestra sus resultados con RAISE NOTICE
--- (pestaña Messages de pgAdmin) y termina deshaciendo sus cambios, así que
--- se pueden repetir sin estropear los datos de prueba.
--- Truco para deshacer: los cambios van dentro de un bloque BEGIN ... EXCEPTION;
--- al final se lanza la excepción 'deshacer' y PostgreSQL vuelve al punto
--- de guardado del bloque, como si no se hubiera hecho nada.
--- =====================================================================
-
 -- PRUEBA 1. El precio de la línea y el total del pedido se calculan solos
 DO $$
 DECLARE
@@ -160,11 +150,7 @@ BEGIN
 	END;
 END $$;
 
--- =====================================================================
--- PRUEBAS DE LOS REQUISITOS MÍNIMOS DEL ENUNCIADO (Sneaker Factory)
--- =====================================================================
-
--- PRUEBA 7. DELETE: borrar una línea de un pedido en borrador (3.2)
+-- PRUEBA 7. DELETE: borrar una línea de un pedido en borrador
 -- El total se recalcula y la auditoría apunta BORRAR_LINEA. En un pedido
 -- confirmado el mismo DELETE se rechaza.
 DO $$
@@ -295,9 +281,7 @@ BEGIN
 	RAISE NOTICE 'Cambios deshechos. ¿Existe SO100? %', (SELECT COUNT(*) FROM pedidos WHERE ref_odoo = 'SO100');
 END $$;
 
--- PRUEBA 9. ROLLBACK deliberado (prueba D): ni el cambio ni su auditoría quedan.
--- Se usa una transacción normal con BEGIN ... ROLLBACK. Para ver además que otra
--- conexión no ve nada hasta el COMMIT, está prueba_d_dos_conexiones.sql.
+-- PRUEBA 9. ROLLBACK deliberado (prueba D)
 BEGIN;
 SELECT set_config('app.id_usuario', (SELECT id_usuario::TEXT FROM usuarios WHERE username = 'comercial1'), true);
 SELECT 'Antes' AS momento, (SELECT estado FROM pedidos WHERE ref_odoo = 'SO012') AS estado_so012,
@@ -315,11 +299,7 @@ SELECT 'Después del ROLLBACK' AS momento, (SELECT estado FROM pedidos WHERE ref
        (SELECT a.stock_disponible FROM almacen a JOIN lineas_pedido l ON l.id_almacen = a.id_almacen
         JOIN pedidos p ON p.id_pedido = l.id_pedido WHERE p.ref_odoo = 'SO012') AS stock_xt6_41;
 
--- PRUEBA 10. Inicio de sesión por rol (3.8)
--- Se crean tres usuarios temporales con contraseña conocida (uno por rol), se
--- comprueba fn_login y se deshace todo. Las contraseñas de los usuarios reales
--- no están en el repositorio.
-DO $$
+-- PRUEBA 10. Inicio de sesión por rol
 DECLARE
 	v_fila RECORD;
 BEGIN
@@ -345,8 +325,8 @@ BEGIN
 	END;
 END $$;
 
--- PRUEBA 11. Gestión de usuarios y permisos (3.8 y 3.11)
--- admin crea, cambia de rol y desactiva un usuario; cada paso queda en log_eventos
+-- PRUEBA 11. Gestión de usuarios y permisos
+-- admin crea, cambia de rol y desactiva un usuario, cada paso queda en log_eventos
 -- con su usuario y su hora. comercial1 intenta lo mismo y se rechaza sin cambios.
 DO $$
 DECLARE
@@ -407,7 +387,7 @@ BEGIN
 	END;
 END $$;
 
--- PRUEBA 12. Búsqueda con filtros y permisos en PostgreSQL (3.7, pruebas E y F)
+-- PRUEBA 12. Búsqueda con filtros y permisos en PostgreSQL
 DO $$
 DECLARE
 	v_comercial INTEGER;
@@ -434,7 +414,7 @@ BEGIN
 	END;
 END $$;
 
--- PRUEBA 13. Indicadores y stock bajo comparados con SQL directo (3.12, prueba J)
+-- PRUEBA 13. Indicadores y stock bajo comparados con SQL directo
 DO $$
 DECLARE
 	v_comercial INTEGER;

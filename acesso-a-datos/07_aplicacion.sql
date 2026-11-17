@@ -1,13 +1,3 @@
--- =====================================================================
--- D3 Kicks · Funciones para la aplicación y gestión de usuarios
--- Se carga después de 06_odoo.sql (en Docker se monta como 06_aplicacion.sql).
---   1. Funciones de consulta que comprueban los permisos dentro de PostgreSQL:
---      búsqueda de pedidos con filtros, indicadores, stock bajo y exportación
---      de usuarios. La API solo les pasa el usuario y los filtros.
---   2. Gestión de usuarios, roles y permisos protegida y auditada con triggers.
--- =====================================================================
-
--- Lanza un error si el usuario no tiene el permiso indicado
 CREATE OR REPLACE FUNCTION fn_exigir_permiso(p_id_usuario INTEGER, p_operacion VARCHAR)
 RETURNS VOID AS $$
 BEGIN
@@ -18,11 +8,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ---------------------------------------------------------------------
--- Búsqueda de pedidos con filtros opcionales.
--- Un filtro NULL no restringe. Si el usuario es un cliente (USUARIO), solo
--- ve los pedidos de su propio cliente aunque la aplicación pida otros.
--- ---------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION fn_buscar_pedidos(
 	p_id_usuario INTEGER,
 	p_cliente VARCHAR DEFAULT NULL,
@@ -67,11 +52,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ---------------------------------------------------------------------
--- Indicadores del panel. Ventas = pedidos CONFIRMADOS y ENTREGADOS
--- (se excluyen borradores y cancelados). Los pares salen de las líneas
--- de esos pedidos, sin contar dos veces la cabecera.
--- ---------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION fn_indicadores(p_id_usuario INTEGER)
 RETURNS TABLE (pedidos_totales BIGINT, pedidos_validos BIGINT, pares_vendidos BIGINT,
                importe_ventas NUMERIC, borrador BIGINT, confirmado BIGINT,
@@ -93,10 +73,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ---------------------------------------------------------------------
--- Stock bajo con umbral configurable. Sin umbral se usa el stock mínimo
--- de cada fila. Ordenado de lo más urgente a lo menos.
--- ---------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION fn_stock_bajo(p_id_usuario INTEGER, p_umbral INTEGER DEFAULT NULL)
 RETURNS TABLE (codigo_modelo VARCHAR, modelo VARCHAR, color VARCHAR, talla INTEGER,
                stock_disponible INTEGER, umbral INTEGER, faltan INTEGER) AS $$
@@ -116,10 +92,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ---------------------------------------------------------------------
--- Inventario de usuarios en JSON (sin contraseñas ni hashes), solo para
--- quien tenga USUARIOS_EXPORTAR. Reutiliza fn_usuarios_json().
--- ---------------------------------------------------------------------
+
 CREATE OR REPLACE FUNCTION fn_exportar_usuarios(p_id_usuario INTEGER)
 RETURNS JSON AS $$
 BEGIN
@@ -128,10 +101,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ---------------------------------------------------------------------
--- Alta de usuarios: la contraseña se cifra con bcrypt dentro de la base de datos.
--- El permiso lo comprueba el trigger trg_permisos_usuarios.
--- ---------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION fn_crear_usuario(p_username VARCHAR, p_password VARCHAR,
                                             p_rol VARCHAR, p_id_cliente INTEGER DEFAULT NULL)
 RETURNS INTEGER AS $$
@@ -156,13 +125,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ---------------------------------------------------------------------
--- Trigger de permisos para usuarios, roles y permisos_rol.
--- Con usuario en la sesión exige USUARIOS_GESTIONAR. Sin usuario (carga
--- inicial, administración directa o registro público de clientes) deja pasar.
--- Además protege dos reglas: siempre queda un ADMIN activo y el rol ADMIN
--- no puede perder ningún permiso.
--- ---------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION fn_comprobar_permiso_usuarios()
 RETURNS TRIGGER AS $$
 DECLARE
@@ -172,8 +134,6 @@ DECLARE
 BEGIN
 	SELECT id_rol INTO v_id_admin FROM roles WHERE nombre_rol = 'ADMIN';
 
-	-- (los IF van anidados porque PL/pgSQL no corta la evaluación de AND
-	--  y NEW/OLD no tienen las mismas columnas en las tres tablas)
 	IF TG_TABLE_NAME = 'permisos_rol' AND TG_OP <> 'DELETE' THEN
 		IF NEW.id_rol = v_id_admin AND NOT NEW.permitido THEN
 			RAISE EXCEPTION 'El rol ADMIN tiene que conservar todos sus permisos';
@@ -222,10 +182,6 @@ CREATE TRIGGER trg_permisos_permisos_rol
 BEFORE INSERT OR UPDATE OR DELETE ON permisos_rol
 FOR EACH ROW EXECUTE FUNCTION fn_comprobar_permiso_usuarios();
 
--- ---------------------------------------------------------------------
--- Auditoría de la gestión de usuarios y permisos en log_eventos.
--- Nunca guarda el hash de la contraseña.
--- ---------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION fn_auditoria_usuarios()
 RETURNS TRIGGER AS $$
 DECLARE
