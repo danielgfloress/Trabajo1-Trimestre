@@ -1,0 +1,1 @@
+Aquí deja la API actividad_sneaker.txt, usuarios_sneaker.json y exportaciones/ (montada en el contenedor como /app/salidas).

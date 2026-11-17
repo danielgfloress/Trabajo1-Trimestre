@@ -1,0 +1,117 @@
+NOTICE:  --- PRUEBA 1: precio y total automáticos ---
+NOTICE:  Línea insertada con precio 0 -> la base de datos pone 89.90
+NOTICE:  Total de SO011: antes 749.95 / después 929.75 (+179.80)
+NOTICE:  Cambios deshechos. Total actual de SO011: 749.95
+DO
+NOTICE:  --- PRUEBA 2: confirmar y cancelar SO012 ---
+NOTICE:  Stock inicial: 20
+NOTICE:  Tras confirmar: 18
+NOTICE:  Tras cancelar: 20
+NOTICE:  Auditoría: CANCELAR_PEDIDO | Pedido SO012: CONFIRMADO -> CANCELADO
+NOTICE:  Auditoría: CONFIRMAR_PEDIDO | Pedido SO012: BORRADOR -> CONFIRMADO
+NOTICE:  Cambios deshechos. SO012 vuelve a estar en BORRADOR
+DO
+NOTICE:  --- PRUEBA 3: stock insuficiente (SO011) ---
+NOTICE:  Rechazado: Stock insuficiente para OMN1S Blanco talla 45: se piden 5 y hay 3
+DO
+NOTICE:  --- PRUEBA 4: BORRADOR -> ENTREGADO (SO012) ---
+NOTICE:  Rechazado: No se puede pasar un pedido de BORRADOR a ENTREGADO
+DO
+NOTICE:  --- PRUEBA 5: pedido CUSTOM de 5 pares ---
+NOTICE:  Rechazado: Un pedido CUSTOM necesita al menos 20 pares (el pedido SO999 tiene 5)
+DO
+NOTICE:  --- PRUEBA 6: permisos y total protegido ---
+NOTICE:  admin puede ver la auditoría: t
+NOTICE:  comercial1 puede ver la auditoría: f
+NOTICE:  Rechazado: Permiso denegado: el usuario 3 no puede realizar la operación PEDIDO_CANCELAR
+NOTICE:  Rechazado: El importe total se calcula automáticamente y no se puede modificar
+DO
+NOTICE:  --- PRUEBA 7: DELETE de una línea ---
+NOTICE:  Línea 24 borrada de SO011. Total: 749.95 -> 0.00
+NOTICE:  Auditoría: BORRAR_LINEA | Línea 24 borrada del pedido 11
+NOTICE:  Rechazado en SO008: No se pueden borrar líneas de un pedido en estado CONFIRMADO
+NOTICE:  Rechazado borrar SO011: Los pedidos no se borran: hay que cancelarlos
+NOTICE:  Cambios deshechos. SO011 sigue con 1 líneas y un total de 749.95
+DO
+NOTICE:  --- PRUEBA 8: caso común, 40 pares de Runner X Custom ---
+NOTICE:  A. Cabecera: SO100 | CUSTOM | CONFIRMADO | 3996.00 €
+NOTICE:  A. Línea talla 38: 10 pares x 99.90 = 999.00
+NOTICE:  A. Línea talla 39: 10 pares x 99.90 = 999.00
+NOTICE:  A. Línea talla 40: 10 pares x 99.90 = 999.00
+NOTICE:  A. Línea talla 42: 10 pares x 99.90 = 999.00
+NOTICE:  A. Stock Runner X antes:   38:20 39:14 40:12 42:20
+NOTICE:  A. Stock Runner X después: 38:10 39:4 40:2 42:10
+NOTICE:  A. Auditoría: 2026-11-17 20:51:41 | comercial1 | CREAR_PEDIDO | Pedido SO100 creado (CUSTOM) para el cliente 3
+NOTICE:  A. Auditoría: 2026-11-17 20:51:41 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 117)
+NOTICE:  A. Auditoría: 2026-11-17 20:51:41 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 349)
+NOTICE:  A. Auditoría: 2026-11-17 20:51:41 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 175)
+NOTICE:  A. Auditoría: 2026-11-17 20:51:41 | comercial1 | ANADIR_LINEA | Línea añadida al pedido 14: 10 pares (almacén 233)
+NOTICE:  A. Auditoría: 2026-11-17 20:51:41 | comercial1 | CONFIRMAR_PEDIDO | Pedido SO100: BORRADOR -> CONFIRMADO
+NOTICE:  B. Rechazado: Stock insuficiente para Runner X Blanco talla 40: se piden 15 y hay 2
+NOTICE:  B. Sin cambios parciales: talla 36 = 20 (sigue igual), talla 40 = 2, ¿existe SO101? 0
+NOTICE:  B. Ningún stock negativo: 0
+NOTICE:  C. Estado: CANCELADO. Stock Runner X tras cancelar: 38:20 39:14 40:12 42:20
+NOTICE:  C. Auditoría: 2026-11-17 20:51:41 | CANCELAR_PEDIDO | Pedido SO100: CONFIRMADO -> CANCELADO
+NOTICE:  Cambios deshechos. ¿Existe SO100? 0
+DO
+BEGIN
+ set_config 
+------------
+ 2
+(1 row)
+
+ momento | estado_so012 | eventos_auditoria | stock_xt6_41 
+---------+--------------+-------------------+--------------
+ Antes   | BORRADOR     |                53 |           20
+(1 row)
+
+UPDATE 1
+         momento          | estado_so012 | eventos_auditoria | stock_xt6_41 
+--------------------------+--------------+-------------------+--------------
+ Dentro de la transacción | CONFIRMADO   |                54 |           18
+(1 row)
+
+ROLLBACK
+       momento        | estado_so012 | eventos_auditoria | stock_xt6_41 
+----------------------+--------------+-------------------+--------------
+ Después del ROLLBACK | BORRADOR     |                53 |           20
+(1 row)
+
+NOTICE:  --- PRUEBA 10: inicio de sesión por rol ---
+NOTICE:  Login prueba_admin -> rol ADMIN
+NOTICE:  Login prueba_comercial -> rol COMERCIAL
+NOTICE:  Login prueba_usuario -> rol USUARIO
+NOTICE:  Login prueba_admin con contraseña errónea -> 0 filas
+NOTICE:  Login prueba_comercial desactivado -> 0 filas
+NOTICE:  Hash guardado (inicio): $2a$10$...
+DO
+NOTICE:  --- PRUEBA 11: gestión de usuarios ---
+NOTICE:  JSON tras crear: ["admin", "comercial1", "laura.martin@example.com", "almacen1"]
+NOTICE:  JSON tras desactivar: ["admin", "comercial1", "laura.martin@example.com", "almacen1 (inactivo)"]
+NOTICE:  ¿El JSON contiene algún hash? f
+NOTICE:  Auditoría: 2026-11-17 20:51:42 | admin | CREAR_USUARIO | Usuario almacen1 creado con el rol COMERCIAL
+NOTICE:  Auditoría: 2026-11-17 20:51:42 | admin | CAMBIAR_ROL | Usuario almacen1: rol COMERCIAL -> ADMIN
+NOTICE:  Auditoría: 2026-11-17 20:51:42 | admin | CAMBIAR_ROL | Usuario almacen1: rol ADMIN -> COMERCIAL
+NOTICE:  Auditoría: 2026-11-17 20:51:42 | admin | DESACTIVAR_USUARIO | Usuario almacen1 desactivado
+NOTICE:  Rechazado quitar permisos al ADMIN: El rol ADMIN tiene que conservar todos sus permisos
+NOTICE:  Rechazado crear usuario: Permiso denegado: el usuario 2 no puede realizar la operación USUARIOS_GESTIONAR
+NOTICE:  Rechazado exportar usuarios: Permiso denegado: el usuario 2 no puede realizar la operación USUARIOS_EXPORTAR
+NOTICE:  ¿Existe intruso? 0
+DO
+NOTICE:  --- PRUEBA 12: búsqueda con filtros ---
+NOTICE:  Sin filtros: 12 pedidos (SQL directo: 12)
+NOTICE:  Cliente Halcones + ENTREGADO: SO007, SO003
+NOTICE:  Modelo Runner X + entre junio y julio: SO004, SO003
+NOTICE:  Sin coincidencias: 0 filas
+NOTICE:  Laura sin filtros (solo los suyos): SO009, SO002
+NOTICE:  Laura pidiendo los de Club Halcones: 0 filas
+DO
+NOTICE:  Consulta incorrecta: El estado PERDIDO no existe
+NOTICE:  Sin sesión: Permiso denegado: el usuario (sin sesión) no puede realizar la operación PEDIDO_CONSULTAR
+NOTICE:  --- PRUEBA 13: indicadores y stock bajo ---
+NOTICE:  fn_indicadores: 12 pedidos, 8 válidos, 96 pares, 12876.88 €, estados B/C/E/X = 2/3/5/2
+NOTICE:  SQL directo:    12 pedidos, 8 válidos, 96 pares, 12876.88 €
+NOTICE:  Stock bajo con umbral 10: Samba OG 38 (2); OMN1S 45 (3); Copa Pure II League FG 42 (10); Runner X 41 (10)
+NOTICE:  Stock bajo con el mínimo de cada talla: Samba OG 38 (2); OMN1S 45 (3)
+NOTICE:  Laura pide los indicadores: Permiso denegado: el usuario 3 no puede realizar la operación INDICADORES_VER
+DO
