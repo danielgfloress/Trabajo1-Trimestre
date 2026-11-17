@@ -300,6 +300,7 @@ SELECT 'Después del ROLLBACK' AS momento, (SELECT estado FROM pedidos WHERE ref
         JOIN pedidos p ON p.id_pedido = l.id_pedido WHERE p.ref_odoo = 'SO012') AS stock_xt6_41;
 
 -- PRUEBA 10. Inicio de sesión por rol
+DO $$
 DECLARE
 	v_fila RECORD;
 BEGIN
