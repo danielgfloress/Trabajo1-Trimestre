@@ -14,6 +14,10 @@ La usan la API (`backend/`), y a través de ella la web, Python (mediante CSV ex
 | `04_consultas.sql` | consultas de ejemplo para el informe (no se carga al arrancar) |
 | `05_datos.sql` | datos de prueba: catálogo, stock, clientes, diseños y pedidos |
 | `06_odoo.sql` | avisa a Odoo de cada cambio en clientes, modelos, stock y pedidos (`pg_notify`) |
+| `07_aplicacion.sql` | funciones para la aplicación (búsqueda con filtros, indicadores, stock bajo con umbral, exportación de usuarios) y gestión de usuarios y permisos protegida y auditada |
+| `pruebas_ad.sql` | 13 pruebas de las reglas y de los requisitos del enunciado (no se carga al arrancar; deshace sus cambios) |
+| `prueba_d_dos_conexiones.sql` | prueba del ROLLBACK y del COMMIT de la auditoría vista desde dos conexiones |
+| `exportar_fichas_psp.sh` | exporta a `psp/entrada/` la ficha CSV de los pedidos Custom |
 | `d3_kicks.dbm` | modelo de la base de datos para abrir con pgModeler |
 
 ## Cómo se carga
@@ -24,7 +28,7 @@ No hace falta ejecutar nada a mano. Desde la raíz del repositorio:
 docker compose up -d --build
 ```
 
-La primera vez, el contenedor `d3kicks-db` ejecuta los scripts en este orden: `d3_kicks.sql` → `02_triggers.sql` → `03_usuarios.sql` → `05_datos.sql` → `06_odoo.sql`. Los datos se quedan guardados en un volumen de Docker.
+La primera vez, el contenedor `d3kicks-db` ejecuta los scripts en este orden: `d3_kicks.sql` → `02_triggers.sql` → `03_usuarios.sql` → `05_datos.sql` → `06_odoo.sql` → `07_aplicacion.sql`. Los datos se quedan guardados en un volumen de Docker.
 
 Para empezar de cero con los datos iniciales:
 
@@ -82,7 +86,8 @@ modelos ──< almacen ──< lineas_pedido >── pedidos >── clientes
 
 - Cada cambio en pedidos, líneas, modelos o stock comprueba el permiso del usuario con `fn_tiene_permiso`. La API indica quién es el usuario con `set_config('app.id_usuario', ...)`.
 - Un cliente (`USUARIO`) solo puede tocar sus propios pedidos.
-- Todo cambio en pedidos y líneas se apunta en `log_eventos`.
+- Todo cambio en pedidos y líneas se apunta en `log_eventos`, igual que la gestión de usuarios y permisos (sin guardar nunca el hash de la contraseña).
+- Crear, cambiar o desactivar usuarios y cambiar permisos exige `USUARIOS_GESTIONAR`; siempre queda un `ADMIN` activo y el rol `ADMIN` no puede perder permisos.
 - Las contraseñas se guardan cifradas con bcrypt (`pgcrypto`) y se comprueban con `fn_login`.
 
 ## Permisos por rol
