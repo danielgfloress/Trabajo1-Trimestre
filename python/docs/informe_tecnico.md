@@ -11,7 +11,7 @@ Fuera del alcance, como indica el enunciado: conexión directa a PostgreSQL, API
 ## 2. Arquitectura
 
 ```
-scripts/exportar_acc.sh ─▶ entrada_acc/ ─▶ pipeline.py ─▶ analiticas.py ─┬─▶ segmentacion.py / prediccion.py
+scripts/exportar_acc.sh ─▶ entrada_acc/ ─▶ pipeline.py ─▶ analiticas.py ─┬─▶ segmentacion.py
                                            (carga y                       ├─▶ visualizaciones.py
                                             validación)                   ├─▶ main.py (consola) ─▶ outputs/
                                                                           └─▶ refresco.py ─▶ app_dashboard.py
@@ -19,7 +19,7 @@ generador_datos.py ─▶ datos_sinteticos/ ─▶ (mismo pipeline, rotulado SIN
 ```
 
 - `app_dashboard.py` y `main.py` solo orquestan: llaman a **las mismas funciones**, así que no hay dos fórmulas para un mismo KPI.
-- `pipeline.py`, `analiticas.py`, `segmentacion.py`, `prediccion.py` y `refresco.py` no importan Streamlit: se prueban con pytest.
+- `pipeline.py`, `analiticas.py`, `segmentacion.py` y `refresco.py` no importan Streamlit: se prueban con pytest.
 - Reglas, umbrales, rutas y semilla están en `config.py`. Las carpetas de entrada y logs se pueden cambiar con las variables `SNEAKER_ENTRADA` y `SNEAKER_LOGS`.
 
 ## 3. Contrato de datos y ETL
@@ -133,13 +133,13 @@ Todos son funciones de `analiticas.py` que devuelven un DataFrame con metadatos 
 | 11 precio y margen | «NO CALCULABLE» (no hay coste) |
 | 12 reconciliación SQL | `merge` *outer* + `np.select` |
 
-Además: `caracteristicas_clientes`, `demanda_modelo_mes`, `talla_mas_solicitada`, `estadistica_descriptiva`, `estadistica_por_grupo`, `hipotesis` y los de clustering y predicción.
+Además: `caracteristicas_clientes`, `demanda_modelo_mes`, `talla_mas_solicitada`, `estadistica_descriptiva`, `estadistica_por_grupo` y los de clustering.
 
 ## 9. Ingeniería de características
 
 Se han creado 16 variables (detalle, unidad y disponibilidad temporal en el diccionario). **Calendario:** año, trimestre, día de la semana, antigüedad. **Economía:** importe de línea, precio medio por par. **Comportamiento:** frecuencia, % Custom, intervalo medio entre compras. **Demanda:** unidades por modelo y mes, mes anterior, media de los 3 meses previos, mes del año. **Operaciones:** talla más pedida, alerta de stock, cobertura.
 
-La media de 3 meses se calcula con `shift(1).rolling(3)`: **no incluye el mes que se predice**. Lo comprueba `test_media_3_meses_previos_no_usa_el_mes_actual`.
+La media de 3 meses se calcula con `shift(1).rolling(3)`: **no incluye el mes actual**. Lo comprueba `test_media_3_meses_previos_no_usa_el_mes_actual`.
 
 ## 10. Análisis exploratorio
 
@@ -154,25 +154,9 @@ Regla de elección: si |media − mediana| / mediana > 10 %, la distribución se
 
 **Atípicos (IQR × 1,5 por categoría):** solo una línea, SO003 con 8 pares en una talla (límite 6,62). Es legítima: un pedido Custom de un club. Se conserva y se marca; no se borra ninguna anomalía de forma automática.
 
-Gráficos (`outputs/*/graficos/`): serie mensual, ranking, Pareto, histograma, boxplot, mapa de calor, dispersión, comparativa por tipo, grupos KMeans, predicción y alertas de stock.
+Gráficos (`outputs/*/graficos/`): serie mensual, ranking, Pareto, histograma, boxplot, mapa de calor, dispersión, comparativa por tipo, grupos KMeans y alertas de stock.
 
-## 11. Hipótesis e incertidumbre
-
-Se plantearon antes de mirar los resultados y se contrastan con un **intervalo de confianza del 95 % por bootstrap**: 2.000 remuestras con reemplazo, semilla 42 y percentiles 2,5 y 97,5. Se apoya si todo el intervalo está por encima de la referencia; hay evidencia insuficiente si la cruza.
-
-| Hipótesis | Real: observado · IC 95 % · conclusión | Sintético: observado · IC 95 % · conclusión |
-|---|---|---|
-| H1 · un pedido Custom factura de media más que uno estándar | +1.871,34 € · [849; 3.058] · **se apoya** | +3.968,94 € · [3.639; 4.318] · se apoya |
-| H2 · las tallas 40-42 son más de la mitad de los pares | 69,8 % · [45,5; 90,6] · **evidencia insuficiente** | 53,6 % · [49,9; 57,0] · evidencia insuficiente |
-| H3 · los Custom se cancelan más que los estándar | +12,5 puntos · [−25; 62,5] · **evidencia insuficiente** | +10,9 puntos · [3,8; 18,6] · se apoya (solo en la simulación) |
-
-**Lo que NO se puede afirmar:**
-- que ser Custom **cause** el mayor importe: los Custom exigen 20 pares o más, así que la diferencia viene del volumen;
-- que la mezcla de tallas valga para otros clientes: casi todos los pares vienen de 3-4 clubes;
-- nada sobre cancelaciones con datos reales: con 4 pedidos Custom, una sola cancelación cambia la tasa del 0 al 25 %;
-- el resultado sintético de H3 **no es evidencia**: refleja la regla de simulación S9 (14 % frente a 8 %) que pusimos nosotros.
-
-## 12. Segmentación de clientes
+## 11. Segmentación de clientes
 
 **RFM** (una fila por cliente; fecha de referencia = corte de la exportación; frecuencia = pedidos válidos distintos, nunca líneas; monetario = ingresos válidos):
 
@@ -195,28 +179,11 @@ Caso F: CLI002 tiene 2 compras (SO001 con 2 líneas y SO005 con 3), no 5.
 
 **KMeans frente a RFM:** 10 clientes que RFM llama «Campeón» caen en el grupo de ocasionales. Un grupo matemático junta clientes parecidos en números; una categoría comercial aplica umbrales de negocio. Además, los umbrales RFM están pensados para el volumen real (1-2 compras): en el sintético, 35 de 45 clientes son «Campeón», así que esos umbrales no discriminan allí.
 
-## 13. Predicción de demanda
-
-- **Objetivo:** pares de cada modelo en el mes objetivo (`unidades_modelo_mes`). Los meses sin ventas cuentan como 0.
-- **Predictores, todos disponibles antes del mes:** demanda del mes anterior, media de los 3 meses previos, mes del año y modelo (*one-hot*).
-- **Baseline:** repetir la demanda del mes anterior.
-- **Modelo:** `RandomForestRegressor` (300 árboles, profundidad máxima 6, mínimo 3 muestras por hoja, semilla 42). Capta la temporada y las diferencias entre modelos sin forma fija; la profundidad y la hoja mínima limitan el sobreajuste con pocas filas.
-- **Validación temporal:** entrena con 2025-04 a 2026-03 (168 filas) y evalúa con los **3 últimos meses**, 2026-04 a 2026-06 (42 filas). Nunca se separa al azar (`test_no_se_entrena_con_los_meses_de_prueba`).
-
-| Método | MAE | RMSE | Sesgo |
-|---|---|---|---|
-| Baseline (mes anterior) | 31,83 pares | 46,07 | +2,36 |
-| RandomForest | **23,50 pares** | **33,39** | **−9,73** |
-
-**Lectura:** el modelo reduce el MAE un 26,2 % y gana en 11 de 14 modelos. Pero **subestima** de forma sistemática (sesgo −9,7 pares por modelo y mes): un bosque de árboles no extrapola por encima de lo que ha visto, y el sintético crece un 1,5 % al mes. Por eso, sumando todos los modelos, la referencia se acerca más al total mensual en el gráfico. La variable con más peso es la media de 3 meses (57 %).
-
-**Con datos reales: NO CALCULABLE.** Hay 1 mes con historial completo y hacen falta 9. Nada de este apartado es una previsión real.
-
-## 14. Datos sintéticos
+## 12. Datos sintéticos
 
 `generador_datos.py`: 900 pedidos, 1.775 líneas, 45 clientes, 14 modelos y 18 meses (01/2025-06/2026), con semilla 42. Respeta las reglas de negocio: claves válidas, Custom ≥ 20 pares con recargo, importes = suma de líneas, estados según antigüedad. Sigue las hipótesis S1-S10 del diccionario (concentración de clientes, estacionalidad general y por categoría, popularidad, curva de tallas...). No pretende representar la demanda real. La copia `con_incidencias/` introduce 11 errores, uno por regla. Misma semilla → mismos CSV (`test_misma_semilla_mismos_datos`).
 
-## 15. Dashboard y refresco
+## 13. Dashboard y refresco
 
 Seis vistas: Dirección, Producto y ventas, Clientes, Almacén, Calidad y auditoría, y Laboratorio (sintético). Filtros transversales: periodo, modelo, talla, tipo, estado, cliente y umbral de stock. Hay 7 descargas CSV filtradas y una tabla de datos debajo de cada gráfico.
 
@@ -231,30 +198,26 @@ Cada 60 s (`st.fragment(run_every="60s")`), o al pulsar «Actualizar ahora», `r
 
 Los filtros y la vista se guardan en `st.session_state`, así que sobreviven al refresco. El laboratorio sintético se recalcula solo cuando cambia la huella de sus CSV.
 
-## 16. Pruebas
+## 14. Pruebas
 
-**53 pruebas automáticas** (`pytest`, unos 70 s), siempre sobre copias de `tests/datos/`.
+**18 pruebas automáticas** (`pytest`, unos 15 s), siempre sobre copias de `tests/datos/`.
 
 | Categoría del enunciado | Pruebas |
 |---|---|
-| Carga / esquema | ruta inexistente, CSV vacío, columna ausente, fecha corrupta |
-| Integridad | ID huérfano, duplicado (conserva sus líneas), cardinalidad del merge, cantidad negativa, caso D (3 alertas sin tocar el original) |
-| Cálculo | cancelados excluidos, pedido multilínea = 1 pedido, ticket entre pedidos, cifras SQL, RFM por pedidos (caso F), filtros, variables derivadas, estadística, hipótesis, reconciliación (caso N) |
-| Reproducibilidad | misma semilla en el bootstrap, el generador, el clustering y la predicción |
-| ML / temporalidad | no se entrena con meses de prueba, ninguna variable usa datos futuros, baseline = mes anterior, datos insuficientes (caso J) |
-| Generador | mínimos del enunciado, reglas de negocio, datos limpios sin incidencias, la copia con errores dispara las 11 reglas |
-| Consola | ejecución completa (CSV, PNG, origen, sin nombres, log), datos inválidos no publican, filtros |
-| Refresco | correcto, R5 sin cambios con 3 ciclos registrados, R1 pedido nuevo, R4 CSV defectuoso → desactualizado, caso M recuperación, huérfana sin resultado previo, CSV que cambia durante la lectura |
-| Dashboard | las 6 vistas sin errores, KPIs y descargas, R6 filtro persistente, CSV defectuoso → DESACTUALIZADO |
+| Carga / esquema (4) | ruta inexistente, CSV vacío, columna ausente, fecha corrupta |
+| Integridad (4) | ID huérfano, pedido duplicado (conserva sus líneas), cardinalidad del merge, cantidad negativa |
+| Cálculo (4) | cancelados excluidos, pedido multilínea = 1 pedido, ticket entre pedidos, cifras iguales que en SQL |
+| Reproducibilidad (2) | misma semilla en el generador y en el clustering |
+| Refresco (3) | R1 pedido nuevo cambia los KPIs, R4 CSV defectuoso → desactualizado, R5 sin cambios con 3 ciclos registrados |
+| Dashboard (1) | todas las vistas se abren sin errores |
 
 Las pruebas con la base de datos real (casos A, C, L, R1-R3 y K, con capturas antes y después) se describen en `docs/guia_pruebas_integracion.md`.
 
-## 17. Limitaciones y sesgos
+## 15. Limitaciones y sesgos
 
 - **Muestra real muy pequeña:** 12 pedidos, 8 válidos, 5 clientes compradores y 4 meses. Las cifras describen la situación, pero no permiten inferir tendencias ni estacionalidad reales.
 - **Concentración:** 3 pedidos Custom generan el 64,7 % de los ingresos. Cualquier cambio en uno de ellos mueve todos los indicadores.
 - **Stock = foto del corte**, no un histórico. No se pueden reconstruir roturas pasadas.
 - **Datos de prueba:** los pedidos de ACC son datos de demostración, no ventas reales de una empresa.
 - **Zona horaria:** la base de datos trabaja en UTC (una hora menos que España). Afecta a la hora mostrada del corte, no a los cálculos, porque pedidos y corte usan el mismo reloj.
-- **El sintético no es evidencia:** refleja las reglas S1-S10 que lo generan. Sus resultados de clustering, H3 y predicción solo demuestran que el método funciona.
-- **Predicción:** sesgo negativo por no extrapolar la tendencia. Antes de usarla en producción habría que añadir tendencia o probar un modelo lineal con más meses reales.
+- **El sintético no es evidencia:** refleja las reglas S1-S10 que lo generan. Sus resultados de clustering solo demuestran que el método funciona.

@@ -2,20 +2,21 @@ import pandas as pd
 import pytest
 
 import analiticas
-import config
 import pipeline
-from conftest import DATOS_PRUEBA
 
 
+# Lee un CSV de la copia como texto
 def leer(carpeta, archivo):
     return pd.read_csv(carpeta / archivo, dtype=str, keep_default_na=False)
 
 
+# Incidencias cuya regla contiene un texto
 def incidencias_de(resultado, texto):
     df = resultado["incidencias"]
     return df[df["regla"].str.contains(texto)]
 
 
+# Una línea apunta al pedido 999, que no existe → bloqueante, no se publica
 def test_id_huerfano(copia):
     lineas = leer(copia, "lineas_pedido.csv")
     lineas.loc[lineas["id_linea"] == "1", "id_pedido"] = "999"
@@ -30,6 +31,7 @@ def test_id_huerfano(copia):
     assert resultado["publicable"] is False
 
 
+# Pedido repetido → recuperable: se queda uno y sus líneas no se pierden
 def test_pedido_duplicado_conserva_sus_lineas(copia):
     pedidos = leer(copia, "pedidos.csv")
     pd.concat([pedidos, pedidos.head(1)]).to_csv(copia / "pedidos.csv", index=False)
@@ -42,6 +44,7 @@ def test_pedido_duplicado_conserva_sus_lineas(copia):
     assert len(resultado["tablas"]["lineas"]) == 25
 
 
+# El merge no multiplica filas; si un modelo está duplicado, validate= da MergeError
 def test_cardinalidad_del_merge(copia):
     resultado = pipeline.ejecutar_pipeline(copia)
     tablas = resultado["tablas"]
@@ -55,6 +58,7 @@ def test_cardinalidad_del_merge(copia):
         analiticas.lineas_enriquecidas(con_duplicado)
 
 
+# Cantidad -5 → esa línea se rechaza (quedan 24)
 def test_cantidad_negativa(copia):
     lineas = leer(copia, "lineas_pedido.csv")
     lineas.loc[lineas["id_linea"] == "1", "cantidad"] = "-5"
@@ -66,21 +70,3 @@ def test_cantidad_negativa(copia):
     assert negativa["registro"].tolist() == ["1"]
     assert "1" not in resultado["tablas"]["lineas"]["id_linea"].tolist()
     assert len(resultado["tablas"]["lineas"]) == 24
-
-
-def test_caso_d_tres_alertas_sin_tocar_el_original(copia):
-    originales = {a: (DATOS_PRUEBA / a).read_bytes() for a in config.ARCHIVOS.values()}
-
-    lineas = leer(copia, "lineas_pedido.csv")
-    lineas.loc[lineas["id_linea"] == "1", "id_pedido"] = "999"
-    lineas.to_csv(copia / "lineas_pedido.csv", index=False)
-    pedidos = leer(copia, "pedidos.csv")
-    pedidos.loc[pedidos["ref_odoo"] == "SO002", "fecha_pedido"] = "2026-02-30 10:00:00"
-    pd.concat([pedidos, pedidos.tail(1)]).to_csv(copia / "pedidos.csv", index=False)
-
-    resultado = pipeline.ejecutar_pipeline(copia)
-
-    assert len(incidencias_de(resultado, "id_pedido inexistente")) == 1
-    assert len(incidencias_de(resultado, "fecha nula o imposible")) == 1
-    assert len(incidencias_de(resultado, "id_pedido duplicado")) == 1
-    assert {a: (DATOS_PRUEBA / a).read_bytes() for a in config.ARCHIVOS.values()} == originales

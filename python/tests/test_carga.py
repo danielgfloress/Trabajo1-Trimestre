@@ -4,14 +4,17 @@ import config
 import pipeline
 
 
+# Lee un CSV de la copia como texto
 def leer(carpeta, archivo):
     return pd.read_csv(carpeta / archivo, dtype=str, keep_default_na=False)
 
 
+# Lista de reglas incumplidas
 def reglas(resultado):
     return resultado["incidencias"]["regla"]
 
 
+# La carpeta no existe → error de carga, no se publica y hay una incidencia por cada CSV
 def test_ruta_inexistente(tmp_path):
     resultado = pipeline.ejecutar_pipeline(tmp_path / "no_existe")
 
@@ -20,6 +23,7 @@ def test_ruta_inexistente(tmp_path):
     assert reglas(resultado).str.contains("fichero inexistente").sum() == len(config.ARCHIVOS)
 
 
+# clientes.csv vacío → incidencia bloqueante, no se publica
 def test_csv_vacio(copia):
     (copia / "clientes.csv").write_text("", encoding="utf-8")
 
@@ -31,6 +35,7 @@ def test_csv_vacio(copia):
     assert vacio["gravedad"].tolist() == ["bloqueante"]
 
 
+# A pedidos.csv le falta la columna fecha_pedido → no se publica
 def test_columna_ausente(copia):
     pedidos = leer(copia, "pedidos.csv")
     pedidos.drop(columns="fecha_pedido").to_csv(copia / "pedidos.csv", index=False)
@@ -41,6 +46,7 @@ def test_columna_ausente(copia):
     assert reglas(resultado).str.contains("faltan columnas: fecha_pedido").any()
 
 
+# Fecha imposible en SO001 → ese pedido se rechaza y quedan 11
 def test_fecha_corrupta(copia):
     pedidos = leer(copia, "pedidos.csv")
     pedidos.loc[pedidos["ref_odoo"] == "SO001", "fecha_pedido"] = "2026-13-45 10:00:00"

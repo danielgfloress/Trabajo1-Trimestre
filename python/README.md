@@ -34,18 +34,17 @@ Las versiones están fijadas en `requirements.txt`: pandas, NumPy, Matplotlib, s
 | `main.py` | ejecución por consola |
 | `pipeline.py` | carga, control de esquema, 12 reglas de calidad, incidencias, log |
 | `analiticas.py` | todos los DataFrames y KPIs (no importa Streamlit) |
-| `visualizaciones.py` | los 11 gráficos (Matplotlib) |
+| `visualizaciones.py` | los 10 gráficos (Matplotlib) |
 | `segmentacion.py` | KMeans de clientes |
-| `prediccion.py` | predicción de demanda, baseline y validación temporal |
 | `refresco.py` | ciclo de refresco de 60 s (huella, estados, último resultado válido) |
 | `generador_datos.py` | histórico sintético (semilla fija) y copia con incidencias |
 | `config.py` | estados, reglas, umbrales, rutas y semilla |
 | `scripts/exportar_acc.sh` | exporta los CSV desde PostgreSQL |
 | `entrada_acc/` | CSV **reales** exportados por ACC |
 | `datos_sinteticos/` | CSV **sintéticos** (y `con_incidencias/`) |
-| `outputs/real/`, `outputs/sintetico/` | resultados: 15 CSV + 11 PNG por modo |
+| `outputs/real/`, `outputs/sintetico/` | resultados: 13 CSV + 10 PNG por modo |
 | `logs/` | `ejecuciones.log` (consola) y `refresco.log` (dashboard) |
-| `tests/` | 53 pruebas automáticas (pytest) con datos fijos en `tests/datos/` |
+| `tests/` | 18 pruebas automáticas (pytest) con datos fijos en `tests/datos/` |
 | `docs/` | diccionario de datos, informes y guía de pruebas de integración |
 
 ## 3. Importar los CSV desde Acceso a Datos
@@ -86,7 +85,7 @@ python main.py --help                # todas las opciones
 
 | Opción | Uso |
 |---|---|
-| `--tarea` | `calidad`, `descriptivo`, `segmentacion`, `prediccion`, `graficos` o `todo` (por defecto) |
+| `--tarea` | `calidad`, `descriptivo`, `segmentacion`, `graficos` o `todo` (por defecto) |
 | `--entrada`, `--salida` | otras carpetas |
 | `--desde`, `--hasta` | periodo `AAAA-MM-DD` |
 | `--modelos D3-001 NIK-022` | por código de modelo |
@@ -98,7 +97,7 @@ python main.py --help                # todas las opciones
 
 Si los datos tienen errores bloqueantes, guarda solo la calidad (`resumen_calidad`, `incidencias`, `manifiesto_origen`), explica el motivo y termina con código 1. Cada ejecución añade una línea a `logs/ejecuciones.log`.
 
-**Salidas (15 CSV + 11 PNG por modo).** Cada CSV lleva las columnas `origen`, `generado` y `filtros`, y ninguno incluye nombres de clientes. Calidad: `resumen_calidad`, `incidencias`, `manifiesto_origen`, `auditoria_reconciliacion_sql`. Descriptivo: `kpis`, `pedidos_unicos`, `evolucion_mensual`, `modelos_abc`, `matriz_modelo_talla`, `stock_cobertura`. Segmentación: `clientes_rfm`, `cohortes`, `clustering_clientes`. Predicción: `prediccion_evaluacion`, `prediccion_detalle`. Gráficos en `graficos/`.
+**Salidas (13 CSV + 10 PNG por modo).** Cada CSV lleva las columnas `origen`, `generado` y `filtros`, y ninguno incluye nombres de clientes. Calidad: `resumen_calidad`, `incidencias`, `manifiesto_origen`, `auditoria_reconciliacion_sql`. Descriptivo: `kpis`, `pedidos_unicos`, `evolucion_mensual`, `modelos_abc`, `matriz_modelo_talla`, `stock_cobertura`. Segmentación: `clientes_rfm`, `cohortes`, `clustering_clientes`. Gráficos en `graficos/`.
 
 **Regenerar los resultados:** `outputs/` se puede borrar entero; `python main.py` y `python main.py --modo sintetico` lo vuelven a crear igual (salvo la hora de `generado`). Los resultados no se editan a mano.
 
@@ -117,7 +116,7 @@ Se abre en `http://localhost:8501`. Arranca siempre con los datos **reales** de 
 | Clientes | segmentos RFM con sus reglas, tabla filtrable, dispersión, cohortes, KMeans (o «no calculable») |
 | Almacén | aviso de foto de stock, alertas bajo umbral, cobertura en semanas (N/D si no hay demanda) |
 | Calidad y auditoría | semáforo por tabla, incidencias, huérfanas, conciliación con SQL, manifiesto, atípicos |
-| Laboratorio (sintético) | KMeans y predicción con el histórico sintético, rotulado como tal |
+| Laboratorio (sintético) | KMeans con el histórico sintético, rotulado como tal |
 
 **Filtros** (barra izquierda, combinables): periodo, modelo, talla, tipo, estado, cliente y umbral de stock. Un filtro vacío no restringe. «Restablecer filtros» los quita todos. Los filtros de modelo y talla reducen cada pedido a esas líneas, así que el denominador de los KPIs cambia; cada vista lo indica.
 
@@ -134,7 +133,7 @@ Debajo de cada gráfico, «Ver los datos del gráfico» muestra la tabla de la q
 | Códigos | `CLI001`, `SO001`, `D3-001`… | `SCLI001`, `SSO0001`, `SIM-01`… |
 | Dónde se ve | todas las vistas del dashboard, `outputs/real/` | solo «Laboratorio (sintético)», `outputs/sintetico/` |
 
-Nunca se mezclan. Con los datos reales (12 pedidos, 5 clientes compradores, 4 meses), el clustering y la predicción salen como **NO CALCULABLE** con su motivo. Se demuestran con el sintético y nunca se presentan como conclusiones de negocio.
+Nunca se mezclan. Con los datos reales (12 pedidos, 5 clientes compradores, 4 meses), el clustering sale como **NO CALCULABLE** con su motivo. Se demuestra con el sintético y nunca se presentan como conclusiones de negocio.
 
 ```powershell
 python generador_datos.py                # semilla 42 → siempre los mismos CSV
@@ -177,7 +176,7 @@ Para recuperarse, basta con volver a exportar (`bash python/scripts/exportar_acc
 pytest
 ```
 
-53 pruebas, en aproximadamente 1 minuto: carga y esquema, integridad, cálculos y KPIs, reconciliación, generador sintético, segmentación, predicción (sin entrenar con los meses de prueba ni usar datos futuros), consola, refresco y dashboard. Usan copias de `tests/datos/`, así que nunca modifican `entrada_acc/` ni `logs/`.
+18 pruebas, en unos 15 segundos: carga y esquema, integridad, cálculos, reproducibilidad, refresco y dashboard. Usan copias de `tests/datos/`, así que nunca modifican `entrada_acc/` ni `logs/`.
 
 ## 12. Documentación
 

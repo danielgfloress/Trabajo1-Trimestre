@@ -50,22 +50,22 @@ Para: dirección, producción y comercial. Datos: exportación de Acceso a Datos
 | | |
 |---|---|
 | **Observación** | Las tallas 41, 42 y 43 suman el **70,8 %** de los pares vendidos (68 de 96); la 42 sola, el 29 %. Las tallas 36, 37, 45 y 46 no se han vendido. |
-| **Interpretación** | Coincide con pedidos de equipos de adultos. Aun así, la prueba estadística de que «40-42 son más de la mitad» da **evidencia insuficiente**: el intervalo va del 45 % al 91 %. |
+| **Interpretación** | Coincide con pedidos de equipos de adultos. Aun así, son 96 pares de muy pocos clientes: la cifra es orientativa. |
 | **Propuesta** | En los pedidos Custom, proponer al club una curva por defecto centrada en 41-43, pero mantener siempre un mínimo de tallas extremas, sin recortarlas. |
 | **Impacto esperado** | Menos stock inmovilizado en tallas poco pedidas. |
 | **Riesgo / límite** | Casi todos los pares vienen de 3-4 clubes: otra plantilla, por ejemplo femenina o juvenil, cambiaría la curva por completo. |
-| **Evidencia** | `06_mapa_calor_modelo_talla.png`, `matriz_modelo_talla.csv`, hipótesis H2 · **Origen: REAL** |
+| **Evidencia** | `06_mapa_calor_modelo_talla.png`, `matriz_modelo_talla.csv` · **Origen: REAL** |
 
-### 5. Empezar a guardar el histórico mensual para poder prever la demanda
+### 5. Empezar a guardar el histórico mensual para poder planificar la demanda
 
 | | |
 |---|---|
-| **Observación** | Con datos reales, la predicción es **NO CALCULABLE**: hay 1 mes con historial completo y hacen falta 9. En el laboratorio con datos **simulados**, el modelo (RandomForest) se equivoca un **26 % menos** que repetir el mes anterior (23,5 frente a 31,8 pares por modelo y mes), pero **se queda corto** unos 10 pares de media. |
-| **Interpretación** | El método funciona y se puede aplicar en cuanto haya historia. El sesgo indica que, si la demanda crece, el modelo la infravalorará. |
-| **Propuesta** | Exportar los CSV al menos una vez al mes y conservar las exportaciones. Mientras no haya 9 meses reales, planificar con el mes anterior y la media de 3 meses. Cuando se use el modelo, añadir un margen de seguridad. |
-| **Impacto esperado** | Hacia mediados de 2027 habría una previsión mensual por modelo, contrastada con la referencia. |
-| **Riesgo / límite** | Los resultados vienen de datos simulados con reglas inventadas: **no son una previsión de Sneaker Factory**. |
-| **Evidencia** | Vista Laboratorio, `outputs/sintetico/graficos/10_prediccion_demanda.png`, `prediccion_evaluacion.csv` · **Origen: SINTÉTICO / PREDICTIVO** |
+| **Observación** | Con datos reales solo hay 4 meses de ventas. La variación del último mes es del 2.241,8 % porque el mes anterior fue muy pequeño: con tan poco histórico no se pueden ver tendencias ni temporadas. |
+| **Interpretación** | Cada mes depende de uno o dos pedidos, así que planificar mirando un solo mes es frágil. |
+| **Propuesta** | Exportar los CSV al menos una vez al mes y conservar las exportaciones. Mientras tanto, planificar cada modelo con la demanda del mes anterior y la media de los 3 meses previos (`demanda_modelo_mes`). |
+| **Impacto esperado** | Con un año de exportaciones se podrán comparar meses y detectar temporadas. |
+| **Riesgo / límite** | Hasta entonces, cualquier comparación entre meses es orientativa. |
+| **Evidencia** | `01_evolucion_mensual.png`, `evolucion_mensual.csv` · **Origen: REAL** |
 
 ---
 

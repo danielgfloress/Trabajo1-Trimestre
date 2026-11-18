@@ -116,12 +116,10 @@ Las genera `python main.py` (y `--modo sintetico`). Mismo formato que la entrada
 | clientes_rfm | cliente | última compra, frecuencia, gasto, recencia y segmento |
 | cohortes | mes de primera compra | clientes y % que vuelve a comprar 1, 2… meses después |
 | clustering_clientes | cliente comprador | grupo KMeans y su nombre (o NO CALCULABLE y motivo) |
-| prediccion_evaluacion | método | MAE, RMSE, sesgo, periodo y conclusión (o NO CALCULABLE y motivo) |
-| prediccion_detalle | modelo y mes de prueba | real, baseline, predicción y errores |
 
 ## Variables derivadas
 
-Calculadas en `analiticas.py` a partir de los CSV; no vienen de ACC. **Disponible antes del mes** indica si se conoce antes de empezar el mes que se quiere predecir (si no, no puede usarse como predictor).
+Calculadas en `analiticas.py` a partir de los CSV; no vienen de ACC. **Disponible antes del mes** indica si el dato se conoce antes de empezar ese mes.
 
 | Variable | Familia | Fórmula | Unidad | Nivel | Disponible antes del mes |
 |---|---|---|---|---|---|
@@ -134,7 +132,7 @@ Calculadas en `analiticas.py` a partir de los CSV; no vienen de ACC. **Disponibl
 | frecuencia_cliente | Comportamiento | nº de pedidos válidos distintos | pedidos | cliente | solo con pedidos anteriores |
 | porcentaje_custom | Comportamiento | pedidos CUSTOM ÷ pedidos válidos × 100 | % | cliente | solo con pedidos anteriores |
 | intervalo_medio_dias | Comportamiento | media de días entre compras válidas seguidas; vacío si solo hay una compra | días | cliente | solo con pedidos anteriores |
-| unidades_modelo_mes | Demanda | Σ pares vendidos del modelo en el mes; 0 si ese mes no se vendió | pares | modelo-mes | no (es el objetivo) |
+| unidades_modelo_mes | Demanda | Σ pares vendidos del modelo en el mes; 0 si ese mes no se vendió | pares | modelo-mes | no (es el dato del propio mes) |
 | demanda_mes_anterior | Demanda | `unidades_modelo_mes` del mes anterior | pares | modelo-mes | sí |
 | media_3_meses_previos | Demanda | media de los 3 meses anteriores, sin incluir el mes actual; vacío si no hay 3 | pares | modelo-mes | sí |
 | mes_del_anio | Demanda | número de mes (1-12) | mes | modelo-mes | sí |
@@ -146,7 +144,7 @@ Todas se calculan solo con ventas válidas (CONFIRMADO y ENTREGADO), salvo las d
 
 ## Datos sintéticos (`datos_sinteticos/`)
 
-> **No son datos de Sneaker Factory.** Los genera `generador_datos.py` para poder estudiar segmentación y predicción con un histórico largo. Nunca se mezclan con `entrada_acc/` y todo lo que sale de ellos se rotula **SINTÉTICO · generador_datos.py**. No describen la demanda real.
+> **No son datos de Sneaker Factory.** Los genera `generador_datos.py` para poder estudiar la segmentación con un histórico largo. Nunca se mezclan con `entrada_acc/` y todo lo que sale de ellos se rotula **SINTÉTICO · generador_datos.py**. No describen la demanda real.
 
 Mismo contrato que los CSV de ACC (mismas columnas y formatos), con códigos propios para que no se confundan: modelos `SIM-01`…`SIM-14` (marca `SIMULADA`), clientes `SCLI001`…`SCLI045`, pedidos `SSO0001`…`SSO0900`.
 
